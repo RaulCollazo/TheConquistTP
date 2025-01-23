@@ -1,0 +1,1 @@
+World submorphs    select: [ :morph | morph isKindOf: ImageMorph ]    thenDo: [ :morph | morph delete ].

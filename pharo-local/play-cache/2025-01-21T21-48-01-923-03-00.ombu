@@ -1,0 +1,55 @@
+OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T21:48:12.489-03:00' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : 'World submorphs\r    select: [ :morph | morph isKindOf: ImageMorph ]\r    thenDo: [ :morph | morph delete ].'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T21:57:45.477-03:00' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : 'Delay forSeconds: 10.\rWorld submorphs\r    select: [ :morph | morph isKindOf: ImageMorph ]\r    thenDo: [ :morph | morph delete ].'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T21:58:46.903-03:00' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : '[Delay forSeconds: 10 wait.\rWorld submorphs\r    select: [ :morph | morph isKindOf: ImageMorph ]\r    thenDo: [ :morph | morph delete ].]'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T21:59:15.249-03:00' ],
+		#self : OmReference [ '4' ]
+	},
+	#content : '[Delay forSeconds: 1 wait.\rWorld submorphs\r    select: [ :morph | morph isKindOf: ImageMorph ]\r    thenDo: [ :morph | morph delete ].]'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T21:59:22.42-03:00' ],
+		#self : OmReference [ '5' ]
+	},
+	#content : 'Delay forSeconds: 1 wait.\rWorld submorphs\r    select: [ :morph | morph isKindOf: ImageMorph ]\r    thenDo: [ :morph | morph delete ].'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T21:59:32.131-03:00' ],
+		#self : OmReference [ '6' ]
+	},
+	#content : 'Delay forSeconds: 2 wait.\rWorld submorphs\r    select: [ :morph | morph isKindOf: ImageMorph ]\r    thenDo: [ :morph | morph delete ].'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T22:00:08.408-03:00' ],
+		#self : OmReference [ '7' ]
+	},
+	#content : 'Delay forSeconds: 2. "Wait for 2 seconds"\rWorld submorphs\r    select: [ :morph | morph isKindOf: ImageMorph ]\r    thenDo: [ :morph | morph delete ].\r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T22:00:31.7-03:00' ],
+		#self : OmReference [ '8' ]
+	},
+	#content : '[ \r    Delay forSeconds: 2. "Wait for 2 seconds"\r    World submorphs\r        select: [ :morph | morph isKindOf: ImageMorph ]\r        thenDo: [ :morph | morph delete ].\r] fork.\r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T22:02:26.271-03:00' ],
+		#self : OmReference [ '9' ]
+	},
+	#content : '[ \r    (Delay forSeconds: 2)wait. "Wait for 2 seconds"\r    World submorphs\r        select: [ :morph | morph isKindOf: ImageMorph ]\r        thenDo: [ :morph | morph delete ].\r] fork.\r'
+}

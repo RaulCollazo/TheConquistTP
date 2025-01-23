@@ -1,0 +1,39 @@
+PhLImage {
+	#formatNumber : 68021,
+	#architecture : '64',
+	#pharoVersion : '120',
+	#originTemplate : PhLRemoteTemplate {
+		#name : 'Pharo 12.0 - 64bit (stable)',
+		#url : URL [ 'https://files.pharo.org/image/120/latest-64.zip' ]
+	},
+	#vmManager : PhLVirtualMachineManager {
+		#imageFile : FileLocator {
+			#path : RelativePath [ 'The Conquist', 'The Conquist.image' ],
+			#origin : #launcherImagesLocation
+		},
+		#imageFormatNumber : 68021,
+		#imageVersion : '120'
+	},
+	#launchConfigurations : OrderedCollection [
+		PhLLaunchConfiguration {
+			#image : @1,
+			#name : 'Default',
+			#imageArguments : OrderedCollection [ ],
+			#vm : PhLVirtualMachine {
+				#executableRef : FileLocator {
+					#path : RelativePath [ '120-x64', 'Pharo.exe' ],
+					#origin : #launcherVMsLocation
+				},
+				#vmBinaryRef : FileLocator {
+					#path : RelativePath [ '120-x64', 'Pharo.exe' ],
+					#origin : #launcherVMsLocation
+				},
+				#manager : @4,
+				#flavour : '',
+				#id : '120-x64',
+				#blessing : 'stable'
+			}
+		}
+	],
+	#shouldRunInitializationScript : false
+}

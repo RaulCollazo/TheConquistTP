@@ -1,0 +1,253 @@
+OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T21:35:21.948-03:00' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : '|juego|\rjuego := Juego new.\rjuego '
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T21:36:10.529-03:00' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : '|juego|\rjuego := Juego new.\rjuego dibujarFondo .'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T21:42:37.131-03:00' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : '|juego|\rjuego := Juego new.\rjuego dibujarFondo .\r\rjuego imagenMorph ifNotNil: [\r        juego imagenMorph delete.\r        juego imagenMorph: nil. "Limpia la referencia"\r    ].'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T21:42:48.984-03:00' ],
+		#self : OmReference [ '4' ]
+	},
+	#content : '|juego|\rjuego := Juego new.\rjuego dibujarFondo .\r\r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T21:43:03.084-03:00' ],
+		#self : OmReference [ '5' ]
+	},
+	#content : '|juego|\rjuego := Juego new.\rjuego dibujarFondo .\r\reliminarFondo\r    imagenMorph ifNotNil: [\r        imagenMorph delete.\r        imagenMorph := nil. "Limpia la referencia"\r    ].'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T21:43:20.295-03:00' ],
+		#self : OmReference [ '6' ]
+	},
+	#content : '|juego|\rjuego := Juego new.\rjuego dibujarFondo .\r\reliminarMorphs\rWorld submorphs do: [ :each |\r    (each class = Morph) ifTrue: [ each delete ].\r]'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T21:43:51.456-03:00' ],
+		#self : OmReference [ '7' ]
+	},
+	#content : '|juego|\rjuego := Juego new.\rjuego dibujarFondo .\r\reliminarFondo\r    imagenMorph ifNotNil: [\r        imagenMorph delete.\r        imagenMorph := nil. "Limpia la referencia"\r    ].\r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T21:43:54.877-03:00' ],
+		#self : OmReference [ '8' ]
+	},
+	#content : '|juego|\rjuego := Juego new.\rjuego dibujarFondo .\r\r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T21:44:24.984-03:00' ],
+		#self : OmReference [ '9' ]
+	},
+	#content : '|juego|\rjuego := Juego new.\r"juego dibujarFondo ."\rjuego eliminarMorphs'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T21:44:29.224-03:00' ],
+		#self : OmReference [ '10' ]
+	},
+	#content : '|juego|\rjuego := Juego new.\rjuego dibujarFondo .\rjuego eliminarMorphs'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T21:45:22.785-03:00' ],
+		#self : OmReference [ '11' ]
+	},
+	#content : '|juego|\rjuego := Juego new.\rjuego dibujarFondo .\rjuego inspect'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T21:45:29.553-03:00' ],
+		#self : OmReference [ '12' ]
+	},
+	#content : '|juego|\rjuego := Juego new.\rjuego inspect'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T21:46:18.819-03:00' ],
+		#self : OmReference [ '13' ]
+	},
+	#content : 'World submorphs\r    select: [ :morph | morph isKindOf: ImageMorph ]\r    thenDo: [ :morph | morph delete ].'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T21:47:07.844-03:00' ],
+		#self : OmReference [ '14' ]
+	},
+	#content : '|juego|\rjuego := Juego new.\rjuego dibujarFondo .\rwait: 5 seconds .\rjuego eliminarMorphs'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T21:47:27.404-03:00' ],
+		#self : OmReference [ '15' ]
+	},
+	#content : '|juego|\rjuego := Juego new.\rjuego dibujarFondo .\rDelay forSeconds: 5 wait.\rjuego eliminarMorphs'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T21:48:02.001-03:00' ],
+		#self : OmReference [ '16' ]
+	},
+	#content : '|juego|\rjuego := Juego new.\rjuego dibujarFondo .\rDelay forSeconds: 2 wait.\rjuego eliminarMorphs'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T21:49:14.531-03:00' ],
+		#self : OmReference [ '17' ]
+	},
+	#content : '|juego|\r[juego := Juego new.\rjuego dibujarFondo .\rDelay forSeconds: 2 wait.\rjuego eliminarMorphs]fork'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T21:49:52.245-03:00' ],
+		#self : OmReference [ '18' ]
+	},
+	#content : '| juego |\rjuego := Juego new.\rjuego dibujarFondo.\rDelay forSeconds: 2 wait.\rjuego eliminarMorphs.\r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T21:51:17.372-03:00' ],
+		#self : OmReference [ '19' ]
+	},
+	#content : '| juego |\rjuego := Juego new.\rjuego dibujarFondo.\r"Use fork only if you need asynchronous behavior"\r[\r    Delay forSeconds: 2. "No need to call wait"\r    juego eliminarMorphs.\r] fork.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T21:51:44.809-03:00' ],
+		#self : OmReference [ '20' ]
+	},
+	#content : '| juego |\rjuego := Juego new.\rjuego dibujarFondo.\r"Use fork only if you need asynchronous behavior"\r\r    Delay forSeconds: 2. "No need to call wait"\r    juego eliminarMorphs.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T21:53:15.624-03:00' ],
+		#self : OmReference [ '21' ]
+	},
+	#content : '| juego |\rjuego := Juego new.\rjuego dibujarFondo.\rDelay forSeconds: 2 wait.\rjuego eliminarMorphs.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T21:53:38.632-03:00' ],
+		#self : OmReference [ '22' ]
+	},
+	#content : '| juego |\rjuego := Juego new.\rjuego dibujarFondo.\rDelay forSeconds: 2.\rjuego eliminarMorphs.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T21:53:57.387-03:00' ],
+		#self : OmReference [ '23' ]
+	},
+	#content : '| juego |\rjuego := Juego new.\rjuego dibujarFondo.\rDelay forSeconds: 20.\rjuego eliminarMorphs.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T21:55:00.211-03:00' ],
+		#self : OmReference [ '24' ]
+	},
+	#content : '| juego |\rjuego := Juego new.\rjuego dibujarFondo.\rDelay forSeconds: 10. \rjuego eliminarMorphs.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T21:55:18.59-03:00' ],
+		#self : OmReference [ '25' ]
+	},
+	#content : '| juego |\rjuego := Juego new.\rjuego dibujarFondo.\r[Delay forSeconds: 10. \rjuego eliminarMorphs.]fork.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T21:55:30.38-03:00' ],
+		#self : OmReference [ '26' ]
+	},
+	#content : '| juego |\rjuego := Juego new.\rjuego dibujarFondo.\r[Delay forSeconds: 10. \rjuego eliminarMorphs.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T21:55:42.375-03:00' ],
+		#self : OmReference [ '27' ]
+	},
+	#content : '| juego |\rjuego := Juego new.\rjuego dibujarFondo.\r[Delay forSeconds: 10. \rjuego eliminarMorphs]fork.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T21:56:00.25-03:00' ],
+		#self : OmReference [ '28' ]
+	},
+	#content : '| juego |\rjuego := Juego new.\rjuego dibujarFondo.\r[Delay forSeconds: 1000. \rjuego eliminarMorphs]fork.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T21:56:41.448-03:00' ],
+		#self : OmReference [ '29' ]
+	},
+	#content : '| juego |\rjuego := Juego new.\rjuego dibujarFondo.\r[Delay forSeconds: 1. \rjuego eliminarMorphs]fork.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T21:57:05.973-03:00' ],
+		#self : OmReference [ '30' ]
+	},
+	#content : '| juego |\rjuego := Juego new.\rjuego dibujarFondo.\r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T22:38:58.067-03:00' ],
+		#self : OmReference [ '13' ]
+	},
+	#content : '|juego|\rjuego := Juego new.\rjuego dibujarFondo.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-22T05:25:06.216-03:00' ],
+		#self : OmReference [ '14' ]
+	},
+	#content : '|juego|\rjuego := Juego new.\rjuego dibujarFondo.\rJuego eliminarMorphs.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-22T05:25:18.433-03:00' ],
+		#self : OmReference [ '15' ]
+	},
+	#content : '|juego|\rjuego := Juego new.\rjuego dibujarFondo.\rJuego class eliminarMorphs.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-22T05:25:27.91-03:00' ],
+		#self : OmReference [ '16' ]
+	},
+	#content : '|juego|\rjuego := Juego new.\rjuego dibujarFondo.\rjuego eliminarMorphs '
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-22T05:25:36.617-03:00' ],
+		#self : OmReference [ '17' ]
+	},
+	#content : '|juego|\rjuego := Juego new.\r"juego dibujarFondo."\rjuego eliminarMorphs '
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-22T05:25:45.635-03:00' ],
+		#self : OmReference [ '18' ]
+	},
+	#content : '|juego|\rjuego := Juego new.\rjuego dibujarFondo.\rjuego eliminarMorphs '
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-22T05:29:08.475-03:00' ],
+		#self : OmReference [ '19' ]
+	},
+	#content : '|juego|\rJuego iniciar.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-22T05:30:40.12-03:00' ],
+		#self : OmReference [ '20' ]
+	},
+	#content : 'Juego iniciar.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-22T05:33:30.748-03:00' ],
+		#self : OmReference [ '21' ]
+	},
+	#content : '|juego|\rjuego := Juego iniciar.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-22T05:35:02.955-03:00' ],
+		#self : OmReference [ '22' ]
+	},
+	#content : 'Juego iniciar.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-22T05:35:15.165-03:00' ],
+		#self : OmReference [ '23' ]
+	},
+	#content : '|juego|\rjuego := Juego .'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-22T05:35:18.916-03:00' ],
+		#self : OmReference [ '24' ]
+	},
+	#content : '|juego|\rjuego := Juego iniciar.'
+}

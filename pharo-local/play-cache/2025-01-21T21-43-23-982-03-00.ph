@@ -1,0 +1,1 @@
+World submorphs do: [ :each |    (each class = Morph) ifTrue: [ each delete ].]

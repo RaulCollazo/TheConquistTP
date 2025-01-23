@@ -1,0 +1,13 @@
+OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T21:37:21.411-03:00' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : 'World submorphs \r    select: [ :morph | morph isKindOf: ImageMorph ] \r    thenDo: [ :morph | morph delete ].'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T21:42:00.282-03:00' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : 'World submorphs \r    select: [ :morph | morph isKindOf: ImageMorph ] \r    thenDo: [ :morph | morph delete ].\r\reliminarFondo\r    imagenMorph ifNotNil: [\r        imagenMorph delete.\r        imagenMorph := nil. "Limpia la referencia"\r    ].'
+}

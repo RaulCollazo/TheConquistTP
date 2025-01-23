@@ -1,0 +1,3090 @@
+OmEntry {
+	#tags : {
+		#prior : OmReference [ 'Pharo12.0-SNAPSHOT-64bit-0384a4d925.11AD42755480', '21' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : EpClassAddition {
+		#class : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Matriz\r\tslots: { #rows . #columns . #data };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Matriz,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matriz,
+						#isMeta : false
+					},
+					#name : #rows,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matriz,
+						#isMeta : false
+					},
+					#name : #columns,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matriz,
+						#isMeta : false
+					},
+					#name : #data,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Matriz class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Matriz class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Matriz,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '1' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Matriz\r\tslots: { #rows . #columns . #data };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Matriz,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matriz,
+						#isMeta : false
+					},
+					#name : #rows,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matriz,
+						#isMeta : false
+					},
+					#name : #columns,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matriz,
+						#isMeta : false
+					},
+					#name : #data,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Matriz class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Matriz class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Matriz,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#protocol : #'as yet unclassified'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '2' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matriz,
+				#isMeta : false
+			},
+			#name : #'rows:columns:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'rows: r columns: c \r        ^self new initializeRows: r columns: c\r    ',
+			#stamp : '1/23/2025 06:48',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '3' ],
+		#self : OmReference [ '4' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Matriz\r\tslots: { #rows . #columns . #data };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Matriz,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matriz,
+						#isMeta : false
+					},
+					#name : #rows,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matriz,
+						#isMeta : false
+					},
+					#name : #columns,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matriz,
+						#isMeta : false
+					},
+					#name : #data,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Matriz class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Matriz class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Matriz,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#protocol : #'instance creation'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '4' ],
+		#self : OmReference [ '5' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matriz,
+				#isMeta : false
+			},
+			#name : #'rows:columns:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'rows: r columns: c \r        ^self new initializeRows: r columns: c\r    ',
+			#stamp : '1/23/2025 06:48',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matriz,
+				#isMeta : false
+			},
+			#name : #'rows:columns:',
+			#protocol : #'instance creation',
+			#sourceCode : 'rows: r columns: c \r        ^self new initializeRows: r columns: c\r    ',
+			#stamp : '1/23/2025 06:48',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '5' ],
+		#self : OmReference [ '6' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Matriz\r\tslots: { #rows . #columns . #data };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Matriz,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matriz,
+						#isMeta : false
+					},
+					#name : #rows,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matriz,
+						#isMeta : false
+					},
+					#name : #columns,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matriz,
+						#isMeta : false
+					},
+					#name : #data,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Matriz class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Matriz class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Matriz,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#protocol : #'as yet unclassified'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '6' ],
+		#self : OmReference [ '7' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matriz,
+				#isMeta : false
+			},
+			#name : #'initializeRows:columns:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'initializeRows: r columns: c \r        rows := r.\r        columns := c.\r        data := Array new: rows * columns.\r    ',
+			#stamp : '1/23/2025 06:48',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '7' ],
+		#self : OmReference [ '8' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Matriz\r\tslots: { #rows . #columns . #data };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Matriz,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matriz,
+						#isMeta : false
+					},
+					#name : #rows,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matriz,
+						#isMeta : false
+					},
+					#name : #columns,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matriz,
+						#isMeta : false
+					},
+					#name : #data,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Matriz class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Matriz class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Matriz,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#protocol : #initialization
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '8' ],
+		#self : OmReference [ '9' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matriz,
+				#isMeta : false
+			},
+			#name : #'initializeRows:columns:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'initializeRows: r columns: c \r        rows := r.\r        columns := c.\r        data := Array new: rows * columns.\r    ',
+			#stamp : '1/23/2025 06:48',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matriz,
+				#isMeta : false
+			},
+			#name : #'initializeRows:columns:',
+			#protocol : #initialization,
+			#sourceCode : 'initializeRows: r columns: c \r        rows := r.\r        columns := c.\r        data := Array new: rows * columns.\r    ',
+			#stamp : '1/23/2025 06:48',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '9' ],
+		#self : OmReference [ '10' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Matriz\r\tslots: { #rows . #columns . #data };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Matriz,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matriz,
+						#isMeta : false
+					},
+					#name : #rows,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matriz,
+						#isMeta : false
+					},
+					#name : #columns,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matriz,
+						#isMeta : false
+					},
+					#name : #data,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Matriz class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Matriz class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Matriz,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#protocol : #'as yet unclassified'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '10' ],
+		#self : OmReference [ '11' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matriz,
+				#isMeta : false
+			},
+			#name : #'atRow:column:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'atRow: row column: col [\r        ^data at: ((row - 1) * columns + col)\r    ]',
+			#stamp : '1/23/2025 06:48',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '11' ],
+		#self : OmReference [ '12' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Matriz\r\tslots: { #rows . #columns . #data };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Matriz,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matriz,
+						#isMeta : false
+					},
+					#name : #rows,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matriz,
+						#isMeta : false
+					},
+					#name : #columns,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matriz,
+						#isMeta : false
+					},
+					#name : #data,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Matriz class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Matriz class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Matriz,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#protocol : #accessing
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '12' ],
+		#self : OmReference [ '13' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matriz,
+				#isMeta : false
+			},
+			#name : #'atRow:column:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'atRow: row column: col [\r        ^data at: ((row - 1) * columns + col)\r    ]',
+			#stamp : '1/23/2025 06:48',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matriz,
+				#isMeta : false
+			},
+			#name : #'atRow:column:',
+			#protocol : #accessing,
+			#sourceCode : 'atRow: row column: col [\r        ^data at: ((row - 1) * columns + col)\r    ]',
+			#stamp : '1/23/2025 06:48',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '13' ],
+		#self : OmReference [ '14' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Matriz\r\tslots: { #rows . #columns . #data };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Matriz,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matriz,
+						#isMeta : false
+					},
+					#name : #rows,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matriz,
+						#isMeta : false
+					},
+					#name : #columns,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matriz,
+						#isMeta : false
+					},
+					#name : #data,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Matriz class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Matriz class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Matriz,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#protocol : #'as yet unclassified'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '14' ],
+		#self : OmReference [ '15' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matriz,
+				#isMeta : false
+			},
+			#name : #'atRow:column:put:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'atRow: row column: col put: value [\r        data at: ((row - 1) * columns + col) put: value.\r    ]',
+			#stamp : '1/23/2025 06:48',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '15' ],
+		#self : OmReference [ '16' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matriz,
+				#isMeta : false
+			},
+			#name : #'atRow:column:put:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'atRow: row column: col put: value [\r        data at: ((row - 1) * columns + col) put: value.\r    ]',
+			#stamp : '1/23/2025 06:48',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matriz,
+				#isMeta : false
+			},
+			#name : #'atRow:column:put:',
+			#protocol : #accessing,
+			#sourceCode : 'atRow: row column: col put: value [\r        data at: ((row - 1) * columns + col) put: value.\r    ]',
+			#stamp : '1/23/2025 06:48',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '16' ],
+		#self : OmReference [ '17' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Matriz\r\tslots: { #rows . #columns . #data };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Matriz,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matriz,
+						#isMeta : false
+					},
+					#name : #rows,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matriz,
+						#isMeta : false
+					},
+					#name : #columns,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matriz,
+						#isMeta : false
+					},
+					#name : #data,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Matriz class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Matriz class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Matriz,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#protocol : #'as yet unclassified'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '17' ],
+		#self : OmReference [ '18' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matriz,
+				#isMeta : false
+			},
+			#name : #printMatrix,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'printMatrix \r        1 to: rows do: [ :row |\r            | rowString |\r            rowString := \'\'.\r            1 to: columns do: [ :col |\r                rowString := rowString , (self atRow: row column: col) asString , \' \'.\r            ].\r            Transcript show: rowString; cr.\r        ].',
+			#stamp : '1/23/2025 06:49',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '18' ],
+		#self : OmReference [ '19' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Matriz\r\tslots: { #rows . #columns . #data };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Matriz,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matriz,
+						#isMeta : false
+					},
+					#name : #rows,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matriz,
+						#isMeta : false
+					},
+					#name : #columns,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matriz,
+						#isMeta : false
+					},
+					#name : #data,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Matriz class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Matriz class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Matriz,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#protocol : #printing
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '19' ],
+		#self : OmReference [ '20' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matriz,
+				#isMeta : false
+			},
+			#name : #printMatrix,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'printMatrix \r        1 to: rows do: [ :row |\r            | rowString |\r            rowString := \'\'.\r            1 to: columns do: [ :col |\r                rowString := rowString , (self atRow: row column: col) asString , \' \'.\r            ].\r            Transcript show: rowString; cr.\r        ].',
+			#stamp : '1/23/2025 06:49',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matriz,
+				#isMeta : false
+			},
+			#name : #printMatrix,
+			#protocol : #printing,
+			#sourceCode : 'printMatrix \r        1 to: rows do: [ :row |\r            | rowString |\r            rowString := \'\'.\r            1 to: columns do: [ :col |\r                rowString := rowString , (self atRow: row column: col) asString , \' \'.\r            ].\r            Transcript show: rowString; cr.\r        ].',
+			#stamp : '1/23/2025 06:49',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '20' ],
+		#self : OmReference [ '21' ]
+	},
+	#content : EpCompositeRefactoring {
+		#childrenRefactorings : [ ]
+	}
+}OmEntry {
+	#tags : {
+		#trigger : OmReference [ '21' ],
+		#prior : @3,
+		#self : OmReference [ '22' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matriz,
+				#isMeta : false
+			},
+			#name : #rows,
+			#protocol : #accessing,
+			#sourceCode : 'rows\r\r\t^ rows',
+			#stamp : '1/23/2025 06:53',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#trigger : OmReference [ '21' ],
+		#prior : OmReference [ '22' ],
+		#self : OmReference [ '23' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matriz,
+				#isMeta : false
+			},
+			#name : #'rows:',
+			#protocol : #accessing,
+			#sourceCode : 'rows: anObject\r\r\trows := anObject',
+			#stamp : '1/23/2025 06:53',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#trigger : OmReference [ '21' ],
+		#prior : OmReference [ '23' ],
+		#self : OmReference [ '24' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matriz,
+				#isMeta : false
+			},
+			#name : #columns,
+			#protocol : #accessing,
+			#sourceCode : 'columns\r\r\t^ columns',
+			#stamp : '1/23/2025 06:53',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#trigger : OmReference [ '21' ],
+		#prior : OmReference [ '24' ],
+		#self : OmReference [ '25' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matriz,
+				#isMeta : false
+			},
+			#name : #'columns:',
+			#protocol : #accessing,
+			#sourceCode : 'columns: anObject\r\r\tcolumns := anObject',
+			#stamp : '1/23/2025 06:53',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#trigger : OmReference [ '21' ],
+		#prior : OmReference [ '25' ],
+		#self : OmReference [ '26' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matriz,
+				#isMeta : false
+			},
+			#name : #data,
+			#protocol : #accessing,
+			#sourceCode : 'data\r\r\t^ data',
+			#stamp : '1/23/2025 06:53',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#trigger : OmReference [ '21' ],
+		#prior : OmReference [ '26' ],
+		#self : OmReference [ '27' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matriz,
+				#isMeta : false
+			},
+			#name : #'data:',
+			#protocol : #accessing,
+			#sourceCode : 'data: anObject\r\r\tdata := anObject',
+			#stamp : '1/23/2025 06:53',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '27' ],
+		#self : OmReference [ '28' ]
+	},
+	#content : EpProtocolRemoval {
+		#behavior : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Matriz\r\tslots: { #rows . #columns . #data };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Matriz,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matriz,
+						#isMeta : false
+					},
+					#name : #rows,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matriz,
+						#isMeta : false
+					},
+					#name : #columns,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matriz,
+						#isMeta : false
+					},
+					#name : #data,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Matriz class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Matriz class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Matriz,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#protocol : #'instance creation'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '28' ],
+		#self : OmReference [ '29' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matriz,
+				#isMeta : false
+			},
+			#name : #'rows:columns:',
+			#protocol : #'instance creation',
+			#sourceCode : 'rows: r columns: c \r        ^self new initializeRows: r columns: c\r    ',
+			#stamp : '1/23/2025 06:48',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '29' ],
+		#self : OmReference [ '30' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGMetaclassDefinition {
+			#annotations : IdentityDictionary {
+				#definitionSource : 'Object class << Matriz class\r\tslots: {}',
+				#traitCompositionSource : '{}'
+			},
+			#name : #'Matriz class',
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [ ],
+			#baseClass : RGClassDefinition {
+				#annotations : IdentityDictionary {
+					#traitCompositionSource : '{}',
+					#definitionSource : 'Object << #Matriz\r\tslots: { #rows . #columns . #data };\r\tpackage: \'TheConquist\'',
+					#superclassName : #Object
+				},
+				#name : #Matriz,
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [
+					RGInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #Matriz,
+							#isMeta : false
+						},
+						#name : #rows,
+						#parent : @11
+					},
+					RGInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #Matriz,
+							#isMeta : false
+						},
+						#name : #columns,
+						#parent : @11
+					},
+					RGInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #Matriz,
+							#isMeta : false
+						},
+						#name : #data,
+						#parent : @11
+					}
+				],
+				#metaClass : @6,
+				#comment : RGCommentDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matriz,
+						#isMeta : false
+					},
+					#parent : @11,
+					#content : ''
+				},
+				#classVariables : OrderedCollection [ ],
+				#package : RGPackageDefinition {
+					#name : #TheConquist,
+					#definedClasses : IdentityDictionary { },
+					#definedMethods : IdentityDictionary { },
+					#extensionMethods : IdentityDictionary { }
+				},
+				#packageTag : #Uncategorized,
+				#sharedPools : OrderedCollection [ ]
+			}
+		},
+		#protocol : #'as yet unclassified'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '30' ],
+		#self : OmReference [ '31' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Matriz class',
+				#isMeta : true
+			},
+			#name : #'rows:columns:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'rows: r columns: c \r        ^self new initializeRows: r columns: c',
+			#stamp : '1/23/2025 06:55',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '31' ],
+		#self : OmReference [ '32' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGMetaclassDefinition {
+			#annotations : IdentityDictionary {
+				#definitionSource : 'Object class << Matriz class\r\tslots: {}',
+				#traitCompositionSource : '{}'
+			},
+			#name : #'Matriz class',
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [ ],
+			#baseClass : RGClassDefinition {
+				#annotations : IdentityDictionary {
+					#traitCompositionSource : '{}',
+					#definitionSource : 'Object << #Matriz\r\tslots: { #rows . #columns . #data };\r\tpackage: \'TheConquist\'',
+					#superclassName : #Object
+				},
+				#name : #Matriz,
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [
+					RGInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #Matriz,
+							#isMeta : false
+						},
+						#name : #rows,
+						#parent : @11
+					},
+					RGInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #Matriz,
+							#isMeta : false
+						},
+						#name : #columns,
+						#parent : @11
+					},
+					RGInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #Matriz,
+							#isMeta : false
+						},
+						#name : #data,
+						#parent : @11
+					}
+				],
+				#metaClass : @6,
+				#comment : RGCommentDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matriz,
+						#isMeta : false
+					},
+					#parent : @11,
+					#content : ''
+				},
+				#classVariables : OrderedCollection [ ],
+				#package : RGPackageDefinition {
+					#name : #TheConquist,
+					#definedClasses : IdentityDictionary { },
+					#definedMethods : IdentityDictionary { },
+					#extensionMethods : IdentityDictionary { }
+				},
+				#packageTag : #Uncategorized,
+				#sharedPools : OrderedCollection [ ]
+			}
+		},
+		#protocol : #'instance creation'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '32' ],
+		#self : OmReference [ '33' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Matriz class',
+				#isMeta : true
+			},
+			#name : #'rows:columns:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'rows: r columns: c \r        ^self new initializeRows: r columns: c',
+			#stamp : '1/23/2025 06:55',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Matriz class',
+				#isMeta : true
+			},
+			#name : #'rows:columns:',
+			#protocol : #'instance creation',
+			#sourceCode : 'rows: r columns: c \r        ^self new initializeRows: r columns: c',
+			#stamp : '1/23/2025 06:55',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '33' ],
+		#self : OmReference [ '34' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matriz,
+				#isMeta : false
+			},
+			#name : #'initializeRows:columns:',
+			#protocol : #initialization,
+			#sourceCode : 'initializeRows: r columns: c \r        rows := r.\r        columns := c.\r        data := Array new: rows * columns.\r    ',
+			#stamp : '1/23/2025 06:48',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '34' ],
+		#self : OmReference [ '35' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matriz,
+				#isMeta : false
+			},
+			#name : #printMatrix,
+			#protocol : #printing,
+			#sourceCode : 'printMatrix \r        1 to: rows do: [ :row |\r            | rowString |\r            rowString := \'\'.\r            1 to: columns do: [ :col |\r                rowString := rowString , (self atRow: row column: col) asString , \' \'.\r            ].\r            Transcript show: rowString; cr.\r        ].',
+			#stamp : '1/23/2025 06:49',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '35' ],
+		#self : OmReference [ '36' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matriz,
+				#isMeta : false
+			},
+			#name : #'columns:',
+			#protocol : #accessing,
+			#sourceCode : 'columns: anObject\r\r\tcolumns := anObject',
+			#stamp : '1/23/2025 06:53',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '36' ],
+		#self : OmReference [ '37' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matriz,
+				#isMeta : false
+			},
+			#name : #'atRow:column:',
+			#protocol : #accessing,
+			#sourceCode : 'atRow: row column: col [\r        ^data at: ((row - 1) * columns + col)\r    ]',
+			#stamp : '1/23/2025 06:48',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '37' ],
+		#self : OmReference [ '38' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matriz,
+				#isMeta : false
+			},
+			#name : #rows,
+			#protocol : #accessing,
+			#sourceCode : 'rows\r\r\t^ rows',
+			#stamp : '1/23/2025 06:53',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '38' ],
+		#self : OmReference [ '39' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matriz,
+				#isMeta : false
+			},
+			#name : #'rows:',
+			#protocol : #accessing,
+			#sourceCode : 'rows: anObject\r\r\trows := anObject',
+			#stamp : '1/23/2025 06:53',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '39' ],
+		#self : OmReference [ '40' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matriz,
+				#isMeta : false
+			},
+			#name : #'atRow:column:put:',
+			#protocol : #accessing,
+			#sourceCode : 'atRow: row column: col put: value [\r        data at: ((row - 1) * columns + col) put: value.\r    ]',
+			#stamp : '1/23/2025 06:48',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '40' ],
+		#self : OmReference [ '41' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matriz,
+				#isMeta : false
+			},
+			#name : #data,
+			#protocol : #accessing,
+			#sourceCode : 'data\r\r\t^ data',
+			#stamp : '1/23/2025 06:53',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '41' ],
+		#self : OmReference [ '42' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matriz,
+				#isMeta : false
+			},
+			#name : #columns,
+			#protocol : #accessing,
+			#sourceCode : 'columns\r\r\t^ columns',
+			#stamp : '1/23/2025 06:53',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '42' ],
+		#self : OmReference [ '43' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matriz,
+				#isMeta : false
+			},
+			#name : #'data:',
+			#protocol : #accessing,
+			#sourceCode : 'data: anObject\r\r\tdata := anObject',
+			#stamp : '1/23/2025 06:53',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '43' ],
+		#self : OmReference [ '44' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Matriz class',
+				#isMeta : true
+			},
+			#name : #'rows:columns:',
+			#protocol : #'instance creation',
+			#sourceCode : 'rows: r columns: c \r        ^self new initializeRows: r columns: c',
+			#stamp : '1/23/2025 06:55',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '44' ],
+		#self : OmReference [ '45' ]
+	},
+	#content : EpClassRemoval {
+		#classRemoved : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Matriz\r\tslots: { #rows . #columns . #data };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Matriz,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #AnObsoleteMatriz,
+						#isMeta : false
+					},
+					#name : #rows,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #AnObsoleteMatriz,
+						#isMeta : false
+					},
+					#name : #columns,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #AnObsoleteMatriz,
+						#isMeta : false
+					},
+					#name : #data,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Matriz class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'AnObsoleteMatriz class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #AnObsoleteMatriz,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : #TheConquist,
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '45' ],
+		#self : OmReference [ '46' ]
+	},
+	#content : EpClassAddition {
+		#class : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Matrix\r\tslots: { #rows . #cols . #data };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Matrix,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matrix,
+						#isMeta : false
+					},
+					#name : #rows,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matrix,
+						#isMeta : false
+					},
+					#name : #cols,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matrix,
+						#isMeta : false
+					},
+					#name : #data,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Matrix class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Matrix class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Matrix,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '46' ],
+		#self : OmReference [ '47' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGMetaclassDefinition {
+			#annotations : IdentityDictionary {
+				#definitionSource : 'Object class << Matrix class\r\tslots: {}',
+				#traitCompositionSource : '{}'
+			},
+			#name : #'Matrix class',
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [ ],
+			#baseClass : RGClassDefinition {
+				#annotations : IdentityDictionary {
+					#traitCompositionSource : '{}',
+					#definitionSource : 'Object << #Matrix\r\tslots: { #rows . #cols . #data };\r\tpackage: \'TheConquist\'',
+					#superclassName : #Object
+				},
+				#name : #Matrix,
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [
+					RGInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #Matrix,
+							#isMeta : false
+						},
+						#name : #rows,
+						#parent : @11
+					},
+					RGInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #Matrix,
+							#isMeta : false
+						},
+						#name : #cols,
+						#parent : @11
+					},
+					RGInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #Matrix,
+							#isMeta : false
+						},
+						#name : #data,
+						#parent : @11
+					}
+				],
+				#metaClass : @6,
+				#comment : RGCommentDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matrix,
+						#isMeta : false
+					},
+					#parent : @11,
+					#content : ''
+				},
+				#classVariables : OrderedCollection [ ],
+				#package : RGPackageDefinition {
+					#name : #TheConquist,
+					#definedClasses : IdentityDictionary { },
+					#definedMethods : IdentityDictionary { },
+					#extensionMethods : IdentityDictionary { }
+				},
+				#packageTag : #Uncategorized,
+				#sharedPools : OrderedCollection [ ]
+			}
+		},
+		#protocol : #'as yet unclassified'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '47' ],
+		#self : OmReference [ '48' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Matrix class',
+				#isMeta : true
+			},
+			#name : #'rows:columns:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'rows: rowsNumber columns: colsNumber [\r        | instance |\r        instance := self new.\r        instance rows: rowsNumber.\r        instance cols: colsNumber.\r        instance data: (Array new: rowsNumber * colsNumber).\r        ^ instance\r    ]',
+			#stamp : '1/23/2025 07:08',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '48' ],
+		#self : OmReference [ '49' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGMetaclassDefinition {
+			#annotations : IdentityDictionary {
+				#definitionSource : 'Object class << Matrix class\r\tslots: {}',
+				#traitCompositionSource : '{}'
+			},
+			#name : #'Matrix class',
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [ ],
+			#baseClass : RGClassDefinition {
+				#annotations : IdentityDictionary {
+					#traitCompositionSource : '{}',
+					#definitionSource : 'Object << #Matrix\r\tslots: { #rows . #cols . #data };\r\tpackage: \'TheConquist\'',
+					#superclassName : #Object
+				},
+				#name : #Matrix,
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [
+					RGInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #Matrix,
+							#isMeta : false
+						},
+						#name : #rows,
+						#parent : @11
+					},
+					RGInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #Matrix,
+							#isMeta : false
+						},
+						#name : #cols,
+						#parent : @11
+					},
+					RGInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #Matrix,
+							#isMeta : false
+						},
+						#name : #data,
+						#parent : @11
+					}
+				],
+				#metaClass : @6,
+				#comment : RGCommentDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matrix,
+						#isMeta : false
+					},
+					#parent : @11,
+					#content : ''
+				},
+				#classVariables : OrderedCollection [ ],
+				#package : RGPackageDefinition {
+					#name : #TheConquist,
+					#definedClasses : IdentityDictionary { },
+					#definedMethods : IdentityDictionary { },
+					#extensionMethods : IdentityDictionary { }
+				},
+				#packageTag : #Uncategorized,
+				#sharedPools : OrderedCollection [ ]
+			}
+		},
+		#protocol : #'instance creation'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '49' ],
+		#self : OmReference [ '50' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Matrix class',
+				#isMeta : true
+			},
+			#name : #'rows:columns:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'rows: rowsNumber columns: colsNumber [\r        | instance |\r        instance := self new.\r        instance rows: rowsNumber.\r        instance cols: colsNumber.\r        instance data: (Array new: rowsNumber * colsNumber).\r        ^ instance\r    ]',
+			#stamp : '1/23/2025 07:08',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Matrix class',
+				#isMeta : true
+			},
+			#name : #'rows:columns:',
+			#protocol : #'instance creation',
+			#sourceCode : 'rows: rowsNumber columns: colsNumber [\r        | instance |\r        instance := self new.\r        instance rows: rowsNumber.\r        instance cols: colsNumber.\r        instance data: (Array new: rowsNumber * colsNumber).\r        ^ instance\r    ]',
+			#stamp : '1/23/2025 07:08',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '50' ],
+		#self : OmReference [ '51' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Matrix\r\tslots: { #rows . #cols . #data };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Matrix,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matrix,
+						#isMeta : false
+					},
+					#name : #rows,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matrix,
+						#isMeta : false
+					},
+					#name : #cols,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matrix,
+						#isMeta : false
+					},
+					#name : #data,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Matrix class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Matrix class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Matrix,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#protocol : #'as yet unclassified'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '51' ],
+		#self : OmReference [ '52' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matrix,
+				#isMeta : false
+			},
+			#name : #rows,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'rows [\r        ^ rows\r    ]',
+			#stamp : '1/23/2025 07:08',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '52' ],
+		#self : OmReference [ '53' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Matrix\r\tslots: { #rows . #cols . #data };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Matrix,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matrix,
+						#isMeta : false
+					},
+					#name : #rows,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matrix,
+						#isMeta : false
+					},
+					#name : #cols,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matrix,
+						#isMeta : false
+					},
+					#name : #data,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Matrix class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Matrix class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Matrix,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#protocol : #accessing
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '53' ],
+		#self : OmReference [ '54' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matrix,
+				#isMeta : false
+			},
+			#name : #rows,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'rows [\r        ^ rows\r    ]',
+			#stamp : '1/23/2025 07:08',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matrix,
+				#isMeta : false
+			},
+			#name : #rows,
+			#protocol : #accessing,
+			#sourceCode : 'rows [\r        ^ rows\r    ]',
+			#stamp : '1/23/2025 07:08',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '54' ],
+		#self : OmReference [ '55' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matrix,
+				#isMeta : false
+			},
+			#name : #rows,
+			#protocol : #accessing,
+			#sourceCode : 'rows [\r        ^ rows\r    ]',
+			#stamp : '1/23/2025 07:08',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matrix,
+				#isMeta : false
+			},
+			#name : #rows,
+			#protocol : #accessing,
+			#sourceCode : 'rows \r        ^ rows\r    ',
+			#stamp : '1/23/2025 07:08',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '55' ],
+		#self : OmReference [ '56' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Matrix\r\tslots: { #rows . #cols . #data };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Matrix,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matrix,
+						#isMeta : false
+					},
+					#name : #rows,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matrix,
+						#isMeta : false
+					},
+					#name : #cols,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matrix,
+						#isMeta : false
+					},
+					#name : #data,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Matrix class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Matrix class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Matrix,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#protocol : #'as yet unclassified'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '56' ],
+		#self : OmReference [ '57' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matrix,
+				#isMeta : false
+			},
+			#name : #'rows:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'rows: aNumber \r        rows := aNumber\r    ',
+			#stamp : '1/23/2025 07:08',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '57' ],
+		#self : OmReference [ '58' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matrix,
+				#isMeta : false
+			},
+			#name : #'rows:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'rows: aNumber \r        rows := aNumber\r    ',
+			#stamp : '1/23/2025 07:08',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matrix,
+				#isMeta : false
+			},
+			#name : #'rows:',
+			#protocol : #accessing,
+			#sourceCode : 'rows: aNumber \r        rows := aNumber\r    ',
+			#stamp : '1/23/2025 07:08',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '58' ],
+		#self : OmReference [ '59' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Matrix\r\tslots: { #rows . #cols . #data };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Matrix,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matrix,
+						#isMeta : false
+					},
+					#name : #rows,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matrix,
+						#isMeta : false
+					},
+					#name : #cols,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matrix,
+						#isMeta : false
+					},
+					#name : #data,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Matrix class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Matrix class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Matrix,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#protocol : #'as yet unclassified'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '59' ],
+		#self : OmReference [ '60' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matrix,
+				#isMeta : false
+			},
+			#name : #cols,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'cols \r        ^ cols\r    \r',
+			#stamp : '1/23/2025 07:09',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '60' ],
+		#self : OmReference [ '61' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matrix,
+				#isMeta : false
+			},
+			#name : #cols,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'cols \r        ^ cols\r    \r',
+			#stamp : '1/23/2025 07:09',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matrix,
+				#isMeta : false
+			},
+			#name : #cols,
+			#protocol : #accessing,
+			#sourceCode : 'cols \r        ^ cols\r    \r',
+			#stamp : '1/23/2025 07:09',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '61' ],
+		#self : OmReference [ '62' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Matrix\r\tslots: { #rows . #cols . #data };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Matrix,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matrix,
+						#isMeta : false
+					},
+					#name : #rows,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matrix,
+						#isMeta : false
+					},
+					#name : #cols,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matrix,
+						#isMeta : false
+					},
+					#name : #data,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Matrix class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Matrix class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Matrix,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#protocol : #'as yet unclassified'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '62' ],
+		#self : OmReference [ '63' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matrix,
+				#isMeta : false
+			},
+			#name : #'cols:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'cols: aNumber \r        cols := aNumber\r    \r',
+			#stamp : '1/23/2025 07:09',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '63' ],
+		#self : OmReference [ '64' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matrix,
+				#isMeta : false
+			},
+			#name : #'cols:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'cols: aNumber \r        cols := aNumber\r    \r',
+			#stamp : '1/23/2025 07:09',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matrix,
+				#isMeta : false
+			},
+			#name : #'cols:',
+			#protocol : #accessing,
+			#sourceCode : 'cols: aNumber \r        cols := aNumber\r    \r',
+			#stamp : '1/23/2025 07:09',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '64' ],
+		#self : OmReference [ '65' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Matrix\r\tslots: { #rows . #cols . #data };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Matrix,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matrix,
+						#isMeta : false
+					},
+					#name : #rows,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matrix,
+						#isMeta : false
+					},
+					#name : #cols,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matrix,
+						#isMeta : false
+					},
+					#name : #data,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Matrix class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Matrix class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Matrix,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#protocol : #'as yet unclassified'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '65' ],
+		#self : OmReference [ '66' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matrix,
+				#isMeta : false
+			},
+			#name : #data,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'data [\r        ^ data\r    ]',
+			#stamp : '1/23/2025 07:09',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '66' ],
+		#self : OmReference [ '67' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matrix,
+				#isMeta : false
+			},
+			#name : #data,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'data [\r        ^ data\r    ]',
+			#stamp : '1/23/2025 07:09',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matrix,
+				#isMeta : false
+			},
+			#name : #data,
+			#protocol : #accessing,
+			#sourceCode : 'data [\r        ^ data\r    ]',
+			#stamp : '1/23/2025 07:09',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '67' ],
+		#self : OmReference [ '68' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Matrix\r\tslots: { #rows . #cols . #data };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Matrix,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matrix,
+						#isMeta : false
+					},
+					#name : #rows,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matrix,
+						#isMeta : false
+					},
+					#name : #cols,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matrix,
+						#isMeta : false
+					},
+					#name : #data,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Matrix class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Matrix class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Matrix,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#protocol : #'as yet unclassified'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '68' ],
+		#self : OmReference [ '69' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matrix,
+				#isMeta : false
+			},
+			#name : #'data:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'data: anArray [\r        data := anArray\r    ]',
+			#stamp : '1/23/2025 07:09',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '69' ],
+		#self : OmReference [ '70' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matrix,
+				#isMeta : false
+			},
+			#name : #'data:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'data: anArray [\r        data := anArray\r    ]',
+			#stamp : '1/23/2025 07:09',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matrix,
+				#isMeta : false
+			},
+			#name : #'data:',
+			#protocol : #accessing,
+			#sourceCode : 'data: anArray [\r        data := anArray\r    ]',
+			#stamp : '1/23/2025 07:09',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '70' ],
+		#self : OmReference [ '71' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Matrix\r\tslots: { #rows . #cols . #data };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Matrix,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matrix,
+						#isMeta : false
+					},
+					#name : #rows,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matrix,
+						#isMeta : false
+					},
+					#name : #cols,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matrix,
+						#isMeta : false
+					},
+					#name : #data,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Matrix class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Matrix class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Matrix,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#protocol : #'as yet unclassified'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '71' ],
+		#self : OmReference [ '72' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matrix,
+				#isMeta : false
+			},
+			#name : #'at:column:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'at: rowIndex column: colIndex [\r        ^ data at: (rowIndex - 1) * cols + colIndex\r    ]\r',
+			#stamp : '1/23/2025 07:09',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '72' ],
+		#self : OmReference [ '73' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matrix,
+				#isMeta : false
+			},
+			#name : #'at:column:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'at: rowIndex column: colIndex [\r        ^ data at: (rowIndex - 1) * cols + colIndex\r    ]\r',
+			#stamp : '1/23/2025 07:09',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matrix,
+				#isMeta : false
+			},
+			#name : #'at:column:',
+			#protocol : #accessing,
+			#sourceCode : 'at: rowIndex column: colIndex [\r        ^ data at: (rowIndex - 1) * cols + colIndex\r    ]\r',
+			#stamp : '1/23/2025 07:09',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '73' ],
+		#self : OmReference [ '74' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Matrix\r\tslots: { #rows . #cols . #data };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Matrix,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matrix,
+						#isMeta : false
+					},
+					#name : #rows,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matrix,
+						#isMeta : false
+					},
+					#name : #cols,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Matrix,
+						#isMeta : false
+					},
+					#name : #data,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Matrix class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Matrix class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Matrix,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#protocol : #'as yet unclassified'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '74' ],
+		#self : OmReference [ '75' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matrix,
+				#isMeta : false
+			},
+			#name : #'at:column:put:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'at: rowIndex column: colIndex put: value [\r        data at: (rowIndex - 1) * cols + colIndex put: value\r    ]',
+			#stamp : '1/23/2025 07:09',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '75' ],
+		#self : OmReference [ '76' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matrix,
+				#isMeta : false
+			},
+			#name : #'at:column:put:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'at: rowIndex column: colIndex put: value [\r        data at: (rowIndex - 1) * cols + colIndex put: value\r    ]',
+			#stamp : '1/23/2025 07:09',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matrix,
+				#isMeta : false
+			},
+			#name : #'at:column:put:',
+			#protocol : #accessing,
+			#sourceCode : 'at: rowIndex column: colIndex put: value [\r        data at: (rowIndex - 1) * cols + colIndex put: value\r    ]',
+			#stamp : '1/23/2025 07:09',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '76' ],
+		#self : OmReference [ '77' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matrix,
+				#isMeta : false
+			},
+			#name : #'at:column:put:',
+			#protocol : #accessing,
+			#sourceCode : 'at: rowIndex column: colIndex put: value [\r        data at: (rowIndex - 1) * cols + colIndex put: value\r    ]',
+			#stamp : '1/23/2025 07:09',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matrix,
+				#isMeta : false
+			},
+			#name : #'at:column:put:',
+			#protocol : #accessing,
+			#sourceCode : 'at: rowIndex column: colIndex put: value \r        data at: (rowIndex - 1) * cols + colIndex put: value\r    ',
+			#stamp : '1/23/2025 07:10',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '77' ],
+		#self : OmReference [ '78' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matrix,
+				#isMeta : false
+			},
+			#name : #'at:column:',
+			#protocol : #accessing,
+			#sourceCode : 'at: rowIndex column: colIndex [\r        ^ data at: (rowIndex - 1) * cols + colIndex\r    ]\r',
+			#stamp : '1/23/2025 07:09',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matrix,
+				#isMeta : false
+			},
+			#name : #'at:column:',
+			#protocol : #accessing,
+			#sourceCode : 'at: rowIndex column: colIndex \r        ^ data at: (rowIndex - 1) * cols + colIndex\r    \r',
+			#stamp : '1/23/2025 07:10',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '78' ],
+		#self : OmReference [ '79' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matrix,
+				#isMeta : false
+			},
+			#name : #data,
+			#protocol : #accessing,
+			#sourceCode : 'data [\r        ^ data\r    ]',
+			#stamp : '1/23/2025 07:09',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matrix,
+				#isMeta : false
+			},
+			#name : #data,
+			#protocol : #accessing,
+			#sourceCode : 'data \r        ^ data\r    ',
+			#stamp : '1/23/2025 07:10',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '79' ],
+		#self : OmReference [ '80' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matrix,
+				#isMeta : false
+			},
+			#name : #'data:',
+			#protocol : #accessing,
+			#sourceCode : 'data: anArray [\r        data := anArray\r    ]',
+			#stamp : '1/23/2025 07:09',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Matrix,
+				#isMeta : false
+			},
+			#name : #'data:',
+			#protocol : #accessing,
+			#sourceCode : 'data: anArray \r        data := anArray\r    ',
+			#stamp : '1/23/2025 07:10',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '80' ],
+		#self : OmReference [ '81' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Matrix class',
+				#isMeta : true
+			},
+			#name : #'rows:columns:',
+			#protocol : #'instance creation',
+			#sourceCode : 'rows: rowsNumber columns: colsNumber [\r        | instance |\r        instance := self new.\r        instance rows: rowsNumber.\r        instance cols: colsNumber.\r        instance data: (Array new: rowsNumber * colsNumber).\r        ^ instance\r    ]',
+			#stamp : '1/23/2025 07:08',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Matrix class',
+				#isMeta : true
+			},
+			#name : #'rows:columns:',
+			#protocol : #'instance creation',
+			#sourceCode : 'rows: rowsNumber columns: colsNumber \r        | instance |\r        instance := self new.\r        instance rows: rowsNumber.\r        instance cols: colsNumber.\r        instance data: (Array new: rowsNumber * colsNumber).\r        ^ instance\r   ',
+			#stamp : '1/23/2025 07:11',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '81' ],
+		#self : OmReference [ '82' ]
+	},
+	#content : EpSessionSnapshot {
+		#imageName : 'C:\\Users\\Educacion\\Documents\\Pharo\\images\\The Conquist\\The Conquist.image'
+	}
+}

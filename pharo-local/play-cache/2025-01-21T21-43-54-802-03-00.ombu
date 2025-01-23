@@ -1,0 +1,7 @@
+OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T21:44:00.35-03:00' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : '\r    imagenMorph ifNotNil: [\r        imagenMorph delete.\r        imagenMorph := nil. "Limpia la referencia"\r    ].\r'
+}

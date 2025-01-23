@@ -1,0 +1,1 @@
+[     (Delay forSeconds: 2)wait. "Wait for 2 seconds"    World submorphs        select: [ :morph | morph isKindOf: ImageMorph ]        thenDo: [ :morph | morph delete ].] fork.

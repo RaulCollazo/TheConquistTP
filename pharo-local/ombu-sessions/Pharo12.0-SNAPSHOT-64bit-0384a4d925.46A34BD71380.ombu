@@ -1,0 +1,1765 @@
+OmEntry {
+	#tags : {
+		#prior : OmReference [ 'Pharo12.0-SNAPSHOT-64bit-0384a4d925.4178F0CA03A0', '1' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : EpPackageAddition {
+		#packageName : #TheConquist
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '1' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : EpPackageTagAddition {
+		#packageTagName : #Uncategorized,
+		#packageName : #TheConquist
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '2' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : EpClassAddition {
+		#class : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Casilla\r\tslots: { #morph };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Casilla,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Casilla,
+						#isMeta : false
+					},
+					#name : #morph,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Casilla class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Casilla class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Casilla,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '3' ],
+		#self : OmReference [ '4' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Casilla\r\tslots: { #morph };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Casilla,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Casilla,
+						#isMeta : false
+					},
+					#name : #morph,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Casilla class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Casilla class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Casilla,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#protocol : #'as yet unclassified'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '4' ],
+		#self : OmReference [ '5' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #'crearCasilla:and:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearCasilla: x and: y\r    "Crear un Morph cuadrado y almacenarlo en la variable de instancia"\r    morph := Morph new.\r    morph color: Color blue.\r    morph extent: 100@100. "Tamaño del cuadrado (100x100 píxeles)"\r    morph position: x@y. "Posicionar el morph según las coordenadas pasadas"\r    World addMorph: morph.',
+			#stamp : '1/21/2025 16:53',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '5' ],
+		#self : OmReference [ '6' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #eliminarCasilla,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'eliminarCasilla\r    "Eliminar el Morph del mundo si existe"\r    morph ifNotNil: [\r        morph delete.\r        morph := nil.\r    ].',
+			#stamp : '1/21/2025 16:54',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '6' ],
+		#self : OmReference [ '7' ]
+	},
+	#content : EpClassAddition {
+		#class : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #TableroLogico\r\tslots: {};\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #TableroLogico,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [ ],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << TableroLogico class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'TableroLogico class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #TableroLogico,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '7' ],
+		#self : OmReference [ '8' ]
+	},
+	#content : EpClassAddition {
+		#class : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Juego\r\tslots: { #CantNPC . #CantJugadores . #PantallaActual };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Juego,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #CantNPC,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #CantJugadores,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #PantallaActual,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Juego class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Juego class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Juego,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '8' ],
+		#self : OmReference [ '9' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Juego\r\tslots: { #CantNPC . #CantJugadores . #PantallaActual };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Juego,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #CantNPC,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #CantJugadores,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #PantallaActual,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Juego class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Juego class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Juego,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#protocol : #'as yet unclassified'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '9' ],
+		#self : OmReference [ '10' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #eliminarMorphs,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'eliminarMorphs\rWorld submorphs do: [ :each |\r    (each class = Morph) ifTrue: [ each delete ].\r]',
+			#stamp : '1/21/2025 16:55',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '10' ],
+		#self : OmReference [ '11' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\r    | flag|\rself crearPantalla.\r    flag := false.\r    "Solicitar la cantidad de NPCs"\r    [ flag not ] whileTrue: [\r        CantNPC := (UIManager default request: \'¿Cuántos participantes hay?\') asNumber.\r        ((CantNPC sqrt \\\\ 2) = 0)\r            ifTrue: [ flag := true ]\r            ifFalse: [ UIManager default inform: \'Valor inválido\' ].\r    ].\r\r    "Solicitar la cantidad de jugadores humanos"\r    CantJugadores := (UIManager default request: \'¿Cuántos participantes humanos habrá?\') asNumber.\r',
+			#stamp : '1/21/2025 19:39',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '11' ],
+		#self : OmReference [ '12' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarPantalla,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarPantalla',
+			#stamp : '1/21/2025 19:38',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '12' ],
+		#self : OmReference [ '13' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r|imagen imagenMorph|\rimagen := Form fromFileNamed: FileSystem workingDirectory , \'/assets/backgrounds/background.png\'.\rimagenMorph := ImageMorph new.\rimagenMorph image: imagen.\rimagenMorph openInWorld.',
+			#stamp : '1/21/2025 21:24',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '13' ],
+		#self : OmReference [ '14' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Juego\r\tslots: { #CantNPC . #CantJugadores . #PantallaActual };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Juego,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #CantNPC,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #CantJugadores,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #PantallaActual,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Juego class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Juego class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Juego,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#protocol : #accessing
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '14' ],
+		#self : OmReference [ '15' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #cantNPC,
+			#protocol : #accessing,
+			#sourceCode : 'cantNPC\r\r\t^ CantNPC',
+			#stamp : '1/21/2025 19:35',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '15' ],
+		#self : OmReference [ '16' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #'cantNPC:',
+			#protocol : #accessing,
+			#sourceCode : 'cantNPC: anObject\r\r\tCantNPC := anObject',
+			#stamp : '1/21/2025 19:35',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '16' ],
+		#self : OmReference [ '17' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #cantJugadores,
+			#protocol : #accessing,
+			#sourceCode : 'cantJugadores\r\r\t^ CantJugadores',
+			#stamp : '1/21/2025 19:35',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '17' ],
+		#self : OmReference [ '18' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #'cantJugadores:',
+			#protocol : #accessing,
+			#sourceCode : 'cantJugadores: anObject\r\r\tCantJugadores := anObject',
+			#stamp : '1/21/2025 19:35',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '18' ],
+		#self : OmReference [ '19' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #pantallaActual,
+			#protocol : #accessing,
+			#sourceCode : 'pantallaActual\r\r\t^ PantallaActual',
+			#stamp : '1/21/2025 19:35',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '19' ],
+		#self : OmReference [ '20' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #'pantallaActual:',
+			#protocol : #accessing,
+			#sourceCode : 'pantallaActual: anObject\r\r\tPantallaActual := anObject',
+			#stamp : '1/21/2025 19:35',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '20' ],
+		#self : OmReference [ '21' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Juego\r\tslots: { #CantNPC . #CantJugadores . #PantallaActual };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Juego,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #CantNPC,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #CantJugadores,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #PantallaActual,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Juego class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Juego class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Juego,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#protocol : #initialization
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '21' ],
+		#self : OmReference [ '22' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #initialize,
+			#protocol : #initialization,
+			#sourceCode : 'initialize\rPantallaActual := 0.',
+			#stamp : '1/21/2025 19:36',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '22' ],
+		#self : OmReference [ '23' ]
+	},
+	#content : EpClassAddition {
+		#class : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Jugador\r\tslots: { #Nombre . #Tema };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Jugador,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Jugador,
+						#isMeta : false
+					},
+					#name : #Nombre,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Jugador,
+						#isMeta : false
+					},
+					#name : #Tema,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Jugador class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Jugador class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Jugador,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '23' ],
+		#self : OmReference [ '24' ]
+	},
+	#content : EpSessionSnapshot {
+		#imageName : 'C:\\Users\\Educacion\\Documents\\Pharo\\images\\The Conquist\\The Conquist.image'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '24' ],
+		#self : OmReference [ '25' ]
+	},
+	#content : EpClassAddition {
+		#class : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Juego\r\tslots: { #CantNPC . #CantJugadores . #PantallaActual . #imagenMorph };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Juego,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #CantNPC,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #CantJugadores,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #PantallaActual,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #imagenMorph,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Juego class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Juego class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Juego,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '25' ],
+		#self : OmReference [ '26' ]
+	},
+	#content : EpClassModification {
+		#oldClass : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Juego\r\tslots: { #CantNPC . #CantJugadores . #PantallaActual };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Juego,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #CantNPC,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #CantJugadores,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #PantallaActual,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Juego class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Juego class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Juego,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#newClass : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Juego\r\tslots: { #CantNPC . #CantJugadores . #PantallaActual . #imagenMorph };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Juego,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #CantNPC,
+					#parent : @30
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #CantJugadores,
+					#parent : @30
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #PantallaActual,
+					#parent : @30
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #imagenMorph,
+					#parent : @30
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Juego class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Juego class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @30
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Juego,
+					#isMeta : false
+				},
+				#parent : @30,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '26' ],
+		#self : OmReference [ '27' ]
+	},
+	#content : EpCompositeRefactoring {
+		#childrenRefactorings : [ ]
+	}
+}OmEntry {
+	#tags : {
+		#trigger : OmReference [ '27' ],
+		#prior : @3,
+		#self : OmReference [ '28' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #imagenMorph,
+			#protocol : #accessing,
+			#sourceCode : 'imagenMorph\r\r\t^ imagenMorph',
+			#stamp : '1/21/2025 21:41',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#trigger : OmReference [ '27' ],
+		#prior : OmReference [ '28' ],
+		#self : OmReference [ '29' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #'imagenMorph:',
+			#protocol : #accessing,
+			#sourceCode : 'imagenMorph: anObject\r\r\timagenMorph := anObject',
+			#stamp : '1/21/2025 21:41',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '29' ],
+		#self : OmReference [ '30' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r|imagen imagenMorph|\rimagen := Form fromFileNamed: FileSystem workingDirectory , \'/assets/backgrounds/background.png\'.\rimagenMorph := ImageMorph new.\rimagenMorph image: imagen.\rimagenMorph openInWorld.',
+			#stamp : '1/21/2025 21:24',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r|imagen|\rimagen := Form fromFileNamed: FileSystem workingDirectory , \'/assets/backgrounds/background.png\'.\rimagenMorph := ImageMorph new.\rimagenMorph image: imagen.\rimagenMorph openInWorld.',
+			#stamp : '1/21/2025 21:41',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '30' ],
+		#self : OmReference [ '31' ]
+	},
+	#content : EpSessionSnapshot {
+		#imageName : 'C:\\Users\\Educacion\\Documents\\Pharo\\images\\The Conquist\\The Conquist.image'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '31' ],
+		#self : OmReference [ '32' ]
+	},
+	#content : EpSessionSnapshot {
+		#imageName : 'C:\\Users\\Educacion\\Documents\\Pharo\\images\\The Conquist\\The Conquist.image'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '32' ],
+		#self : OmReference [ '33' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #eliminarMorphs,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'eliminarMorphs\rWorld submorphs do: [ :each |\r    (each class = Morph) ifTrue: [ each delete ].\r]',
+			#stamp : '1/21/2025 16:55',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #eliminarMorphs,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'eliminarMorphs\rWorld submorphs\r    select: [ :morph | morph isKindOf: ImageMorph ]\r    thenDo: [ :morph | morph delete ].',
+			#stamp : '1/21/2025 21:52',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '33' ],
+		#self : OmReference [ '34' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r|imagen|\rimagen := Form fromFileNamed: FileSystem workingDirectory , \'/assets/backgrounds/background.png\'.\rimagenMorph := ImageMorph new.\rimagenMorph image: imagen.\rimagenMorph openInWorld.',
+			#stamp : '1/21/2025 21:41',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r|imagen boton1|\rimagen := Form fromFileNamed: FileSystem workingDirectory , \'/assets/backgrounds/background.png\'.\rimagenMorph := ImageMorph new.\rimagenMorph image: imagen.\r\rboton1 := PluggableTabButtonMorph new.\rboton1 label: \'Nuevo Juego\'. "Define el texto del botón"\rboton1 position: 100@100. "Posición del botón dentro de la ventana"\rboton1 extent: 100@40. "Tamaño del botón"\rboton1 action: [ Transcript show: \'Nuevo Juego presionado\'; cr ]. "Acción al presionar el botón"\rimagenMorph addMorph: boton1.\r\r\rimagenMorph openInWorld.',
+			#stamp : '1/21/2025 22:07',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '34' ],
+		#self : OmReference [ '35' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r|imagen boton1|\rimagen := Form fromFileNamed: FileSystem workingDirectory , \'/assets/backgrounds/background.png\'.\rimagenMorph := ImageMorph new.\rimagenMorph image: imagen.\r\rboton1 := PluggableTabButtonMorph new.\rboton1 label: \'Nuevo Juego\'. "Define el texto del botón"\rboton1 position: 100@100. "Posición del botón dentro de la ventana"\rboton1 extent: 100@40. "Tamaño del botón"\rboton1 action: [ Transcript show: \'Nuevo Juego presionado\'; cr ]. "Acción al presionar el botón"\rimagenMorph addMorph: boton1.\r\r\rimagenMorph openInWorld.',
+			#stamp : '1/21/2025 22:07',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r|imagen boton1|\rimagen := Form fromFileNamed: FileSystem workingDirectory , \'/assets/backgrounds/background.png\'.\rimagenMorph := ImageMorph new.\rimagenMorph image: imagen.\r\rboton1 := PluggableToggleButtonMorph new.\rboton1 label: \'Nuevo Juego\'. "Define el texto del botón"\rboton1 position: 100@100. "Posición del botón dentro de la ventana"\rboton1 extent: 100@40. "Tamaño del botón"\rboton1 action: [ Transcript show: \'Nuevo Juego presionado\'; cr ]. "Acción al presionar el botón"\rimagenMorph addMorph: boton1.\r\r\rimagenMorph openInWorld.',
+			#stamp : '1/21/2025 22:07',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '35' ],
+		#self : OmReference [ '36' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r|imagen boton1|\rimagen := Form fromFileNamed: FileSystem workingDirectory , \'/assets/backgrounds/background.png\'.\rimagenMorph := ImageMorph new.\rimagenMorph image: imagen.\r\rboton1 := PluggableToggleButtonMorph new.\rboton1 label: \'Nuevo Juego\'. "Define el texto del botón"\rboton1 position: 100@100. "Posición del botón dentro de la ventana"\rboton1 extent: 100@40. "Tamaño del botón"\rboton1 action: [ Transcript show: \'Nuevo Juego presionado\'; cr ]. "Acción al presionar el botón"\rimagenMorph addMorph: boton1.\r\r\rimagenMorph openInWorld.',
+			#stamp : '1/21/2025 22:07',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r|imagen boton1|\rimagen := Form fromFileNamed: FileSystem workingDirectory , \'/assets/backgrounds/background.png\'.\rimagenMorph := ImageMorph new.\rimagenMorph image: imagen.\r\rboton1 := PluggableToggleButtonMorph new.\rboton1 label: \'Nuevo Juego\'. "Define el texto del botón"\rboton1 position: World center. "Posición del botón dentro de la ventana"\rboton1 extent: 100@40. "Tamaño del botón"\rboton1 action: [ Transcript show: \'Nuevo Juego presionado\'; cr ]. "Acción al presionar el botón"\rimagenMorph addMorph: boton1.\r\r\rimagenMorph openInWorld.',
+			#stamp : '1/21/2025 22:09',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '36' ],
+		#self : OmReference [ '37' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r|imagen boton1|\rimagen := Form fromFileNamed: FileSystem workingDirectory , \'/assets/backgrounds/background.png\'.\rimagenMorph := ImageMorph new.\rimagenMorph image: imagen.\r\rboton1 := PluggableToggleButtonMorph new.\rboton1 label: \'Nuevo Juego\'. "Define el texto del botón"\rboton1 position: World center. "Posición del botón dentro de la ventana"\rboton1 extent: 100@40. "Tamaño del botón"\rboton1 action: [ Transcript show: \'Nuevo Juego presionado\'; cr ]. "Acción al presionar el botón"\rimagenMorph addMorph: boton1.\r\r\rimagenMorph openInWorld.',
+			#stamp : '1/21/2025 22:09',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r|imagen boton1|\rimagen := Form fromFileNamed: FileSystem workingDirectory , \'/assets/backgrounds/background.png\'.\rimagenMorph := ImageMorph new.\rimagenMorph image: imagen.\r\rboton1 := PluggableToggleButtonMorph new.\rboton1 label: \'Nuevo Juego\'. "Define el texto del botón"\rboton1 position: imagenMorph center. "Posición del botón dentro de la ventana"\rboton1 extent: 100@40. "Tamaño del botón"\rboton1 action: [ Transcript show: \'Nuevo Juego presionado\'; cr ]. "Acción al presionar el botón"\rimagenMorph addMorph: boton1.\r\r\rimagenMorph openInWorld.',
+			#stamp : '1/21/2025 22:09',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '37' ],
+		#self : OmReference [ '38' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r|imagen boton1|\rimagen := Form fromFileNamed: FileSystem workingDirectory , \'/assets/backgrounds/background.png\'.\rimagenMorph := ImageMorph new.\rimagenMorph image: imagen.\r\rboton1 := PluggableToggleButtonMorph new.\rboton1 label: \'Nuevo Juego\'. "Define el texto del botón"\rboton1 position: imagenMorph center. "Posición del botón dentro de la ventana"\rboton1 extent: 100@40. "Tamaño del botón"\rboton1 action: [ Transcript show: \'Nuevo Juego presionado\'; cr ]. "Acción al presionar el botón"\rimagenMorph addMorph: boton1.\r\r\rimagenMorph openInWorld.',
+			#stamp : '1/21/2025 22:09',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r|imagen boton1|\rimagen := Form fromFileNamed: FileSystem workingDirectory , \'/assets/backgrounds/background.png\'.\rimagenMorph := ImageMorph new.\rimagenMorph image: imagen.\r\rboton1 := PluggableToggleButtonMorph new.\rboton1 label: \'Nuevo Juego\'. "Define el texto del botón"\rboton1 position: imagenMorph center. "Posición del botón dentro de la ventana"\rboton1 extent: 100@40. "Tamaño del botón"\rboton1 action: [ Transcript show: \'Nuevo Juego presionado\'; cr ]. "Acción al presionar el botón"\rimagenMorph addMorph: boton1.\r\r\rimagenMorph openInWorld center.',
+			#stamp : '1/21/2025 22:10',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '38' ],
+		#self : OmReference [ '39' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r|imagen boton1|\rimagen := Form fromFileNamed: FileSystem workingDirectory , \'/assets/backgrounds/background.png\'.\rimagenMorph := ImageMorph new.\rimagenMorph image: imagen.\r\rboton1 := PluggableToggleButtonMorph new.\rboton1 label: \'Nuevo Juego\'. "Define el texto del botón"\rboton1 position: imagenMorph center. "Posición del botón dentro de la ventana"\rboton1 extent: 100@40. "Tamaño del botón"\rboton1 action: [ Transcript show: \'Nuevo Juego presionado\'; cr ]. "Acción al presionar el botón"\rimagenMorph addMorph: boton1.\r\r\rimagenMorph openInWorld center.',
+			#stamp : '1/21/2025 22:10',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r|imagen boton1|\rimagen := Form fromFileNamed: FileSystem workingDirectory , \'/assets/backgrounds/background.png\'.\rimagenMorph := ImageMorph new.\rimagenMorph image: imagen.\r\rboton1 := PluggableToggleButtonMorph new.\rboton1 label: \'Nuevo Juego\'. "Define el texto del botón"\rboton1 position: imagenMorph center. "Posición del botón dentro de la ventana"\rboton1 extent: 100@40. "Tamaño del botón"\rboton1 action: [ Transcript show: \'Nuevo Juego presionado\'; cr ]. "Acción al presionar el botón"\rimagenMorph addMorph: boton1.\r\rimagenMorph openInWorld center.',
+			#stamp : '1/21/2025 22:11',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '39' ],
+		#self : OmReference [ '40' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r|imagen boton1|\rimagen := Form fromFileNamed: FileSystem workingDirectory , \'/assets/backgrounds/background.png\'.\rimagenMorph := ImageMorph new.\rimagenMorph image: imagen.\r\rboton1 := PluggableToggleButtonMorph new.\rboton1 label: \'Nuevo Juego\'. "Define el texto del botón"\rboton1 position: imagenMorph center. "Posición del botón dentro de la ventana"\rboton1 extent: 100@40. "Tamaño del botón"\rboton1 action: [ Transcript show: \'Nuevo Juego presionado\'; cr ]. "Acción al presionar el botón"\rimagenMorph addMorph: boton1.\r\rimagenMorph openInWorld center.',
+			#stamp : '1/21/2025 22:11',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r|imagen boton1|\rimagen := Form fromFileNamed: FileSystem workingDirectory , \'/assets/backgrounds/background.png\'.\rimagenMorph := ImageMorph new.\rimagenMorph image: imagen.\r\rboton1 := PluggableButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Define el texto del botón"\r    boton1 target: self. "Define el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #nuevoJuego. "Define el método a llamar cuando se presiona el botón"\r    boton1 position: (imagenMorph width // 2 - 50) @ (imagenMorph height // 2 - 20). "Posicionar el botón en el centro de la imagen"\r\rimagenMorph openInWorld center.',
+			#stamp : '1/21/2025 22:12',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '40' ],
+		#self : OmReference [ '41' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r|imagen boton1|\rimagen := Form fromFileNamed: FileSystem workingDirectory , \'/assets/backgrounds/background.png\'.\rimagenMorph := ImageMorph new.\rimagenMorph image: imagen.\r\rboton1 := PluggableButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Define el texto del botón"\r    boton1 target: self. "Define el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #nuevoJuego. "Define el método a llamar cuando se presiona el botón"\r    boton1 position: (imagenMorph width // 2 - 50) @ (imagenMorph height // 2 - 20). "Posicionar el botón en el centro de la imagen"\r\rimagenMorph openInWorld center.',
+			#stamp : '1/21/2025 22:12',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r|imagen boton1|\rimagen := Form fromFileNamed: FileSystem workingDirectory , \'/assets/backgrounds/background.png\'.\rimagenMorph := ImageMorph new.\rimagenMorph image: imagen.\r\rboton1 := PluggableButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Define el texto del botón"\r    boton1 target: self. "Define el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #nuevoJuego. "Define el método a llamar cuando se presiona el botón"\r    boton1 position: (imagenMorph width // 2 - 50) @ (imagenMorph height // 2 - 20). "Posicionar el botón en el centro de la imagen"\rimagenMorph addMorph: boton1.\r\rimagenMorph openInWorld center.',
+			#stamp : '1/21/2025 22:12',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '41' ],
+		#self : OmReference [ '42' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #nuevoJuego,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'nuevoJuego\rTranscript show: \'dea\'.',
+			#stamp : '1/21/2025 22:15',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '42' ],
+		#self : OmReference [ '43' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r|imagen boton1|\rimagen := Form fromFileNamed: FileSystem workingDirectory , \'/assets/backgrounds/background.png\'.\rimagenMorph := ImageMorph new.\rimagenMorph image: imagen.\r\rboton1 := PluggableButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Define el texto del botón"\r    boton1 target: self. "Define el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #nuevoJuego. "Define el método a llamar cuando se presiona el botón"\r    boton1 position: (imagenMorph width // 2 - 50) @ (imagenMorph height // 2 - 20). "Posicionar el botón en el centro de la imagen"\rimagenMorph addMorph: boton1.\r\rimagenMorph openInWorld center.',
+			#stamp : '1/21/2025 22:15',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r|imagen boton1|\rimagen := Form fromFileNamed: FileSystem workingDirectory , \'/assets/backgrounds/background.png\'.\rimagenMorph := ImageMorph new.\rimagenMorph image: imagen.\r\rboton1 := PluggableButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Define el texto del botón"\r    boton1 target: self. "Define el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: Juego nuevoJuego. "Define el método a llamar cuando se presiona el botón"\r    boton1 position: (imagenMorph width // 2 - 50) @ (imagenMorph height // 2 - 20). "Posicionar el botón en el centro de la imagen"\rimagenMorph addMorph: boton1.\r\rimagenMorph openInWorld center.',
+			#stamp : '1/21/2025 22:16',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '43' ],
+		#self : OmReference [ '44' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r|imagen boton1|\rimagen := Form fromFileNamed: FileSystem workingDirectory , \'/assets/backgrounds/background.png\'.\rimagenMorph := ImageMorph new.\rimagenMorph image: imagen.\r\rboton1 := PluggableButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Define el texto del botón"\r    boton1 target: self. "Define el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: Juego nuevoJuego. "Define el método a llamar cuando se presiona el botón"\r    boton1 position: (imagenMorph width // 2 - 50) @ (imagenMorph height // 2 - 20). "Posicionar el botón en el centro de la imagen"\rimagenMorph addMorph: boton1.\r\rimagenMorph openInWorld center.',
+			#stamp : '1/21/2025 22:16',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r|imagen boton1|\rimagen := Form fromFileNamed: FileSystem workingDirectory , \'/assets/backgrounds/background.png\'.\rimagenMorph := ImageMorph new.\rimagenMorph image: imagen.\r\rboton1 := PluggableButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Define el texto del botón"\r    boton1 target: self. "Define el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: self nuevoJuego. "Define el método a llamar cuando se presiona el botón"\r    boton1 position: (imagenMorph width // 2 - 50) @ (imagenMorph height // 2 - 20). "Posicionar el botón en el centro de la imagen"\rimagenMorph addMorph: boton1.\r\rimagenMorph openInWorld center.',
+			#stamp : '1/21/2025 22:16',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '44' ],
+		#self : OmReference [ '45' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r|imagen boton1|\rimagen := Form fromFileNamed: FileSystem workingDirectory , \'/assets/backgrounds/background.png\'.\rimagenMorph := ImageMorph new.\rimagenMorph image: imagen.\r\rboton1 := PluggableButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Define el texto del botón"\r    boton1 target: self. "Define el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: self nuevoJuego. "Define el método a llamar cuando se presiona el botón"\r    boton1 position: (imagenMorph width // 2 - 50) @ (imagenMorph height // 2 - 20). "Posicionar el botón en el centro de la imagen"\rimagenMorph addMorph: boton1.\r\rimagenMorph openInWorld center.',
+			#stamp : '1/21/2025 22:16',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r|imagen boton1|\rimagen := Form fromFileNamed: FileSystem workingDirectory , \'/assets/backgrounds/background.png\'.\rimagenMorph := ImageMorph new.\rimagenMorph image: imagen.\r\rboton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Define el texto del botón"\r    boton1 action: Transcript show: \'Nuevo Juego\'. "Define el método a llamar cuando se presiona el botón"\r    boton1 position: (imagenMorph width // 2 - 50) @ (imagenMorph height // 2 - 20). "Posicionar el botón en el centro de la imagen"\rimagenMorph addMorph: boton1.\r\rimagenMorph openInWorld center.',
+			#stamp : '1/21/2025 22:19',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '45' ],
+		#self : OmReference [ '46' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r|imagen boton1|\rimagen := Form fromFileNamed: FileSystem workingDirectory , \'/assets/backgrounds/background.png\'.\rimagenMorph := ImageMorph new.\rimagenMorph image: imagen.\r\rboton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Define el texto del botón"\r    boton1 action: Transcript show: \'Nuevo Juego\'. "Define el método a llamar cuando se presiona el botón"\r    boton1 position: (imagenMorph width // 2 - 50) @ (imagenMorph height // 2 - 20). "Posicionar el botón en el centro de la imagen"\rimagenMorph addMorph: boton1.\r\rimagenMorph openInWorld center.',
+			#stamp : '1/21/2025 22:19',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r|imagen boton1|\rimagen := Form fromFileNamed: FileSystem workingDirectory , \'/assets/backgrounds/background.png\'.\rimagenMorph := ImageMorph new.\rimagenMorph image: imagen.\r\rboton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Define el texto del botón"\r    boton1 action: [Transcript show: \'Nuevo Juego\']. "Define el método a llamar cuando se presiona el botón"\r    boton1 position: (imagenMorph width // 2 - 50) @ (imagenMorph height // 2 - 20). "Posicionar el botón en el centro de la imagen"\rimagenMorph addMorph: boton1.\r\rimagenMorph openInWorld center.',
+			#stamp : '1/21/2025 22:19',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '46' ],
+		#self : OmReference [ '47' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r|imagen boton1|\rimagen := Form fromFileNamed: FileSystem workingDirectory , \'/assets/backgrounds/background.png\'.\rimagenMorph := ImageMorph new.\rimagenMorph image: imagen.\r\rboton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Define el texto del botón"\r    boton1 action: [Transcript show: \'Nuevo Juego\']. "Define el método a llamar cuando se presiona el botón"\r    boton1 position: (imagenMorph width // 2 - 50) @ (imagenMorph height // 2 - 20). "Posicionar el botón en el centro de la imagen"\rimagenMorph addMorph: boton1.\r\rimagenMorph openInWorld center.',
+			#stamp : '1/21/2025 22:19',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r|imagen boton1|\rimagen := Form fromFileNamed: FileSystem workingDirectory , \'/assets/backgrounds/background.png\'.\rimagenMorph := ImageMorph new.\rimagenMorph image: imagen.\r\rboton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Define el texto del botón"\r    boton1 action: [Transcript show: \'Nuevo Juego\';cr]. "Define el método a llamar cuando se presiona el botón"\r    boton1 position: (imagenMorph width // 2 - 50) @ (imagenMorph height // 2 - 20). "Posicionar el botón en el centro de la imagen"\rimagenMorph addMorph: boton1.\r\rimagenMorph openInWorld center.',
+			#stamp : '1/21/2025 22:19',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '47' ],
+		#self : OmReference [ '48' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r|imagen boton1|\rimagen := Form fromFileNamed: FileSystem workingDirectory , \'/assets/backgrounds/background.png\'.\rimagenMorph := ImageMorph new.\rimagenMorph image: imagen.\r\rboton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Define el texto del botón"\r    boton1 action: [Transcript show: \'Nuevo Juego\';cr]. "Define el método a llamar cuando se presiona el botón"\r    boton1 position: (imagenMorph width // 2 - 50) @ (imagenMorph height // 2 - 20). "Posicionar el botón en el centro de la imagen"\rimagenMorph addMorph: boton1.\r\rimagenMorph openInWorld center.',
+			#stamp : '1/21/2025 22:19',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen imagenMorph boton1 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 action: [ Transcript show: \'Nuevo Juego\'; cr ]. "Definir la acción al presionar el botón"\r    \r    "Posicionar el botón en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2)).\r    \r    "Agregar el botón al ImageMorph"\r    imagenMorph addMorph: boton1.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '1/21/2025 22:20',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '48' ],
+		#self : OmReference [ '49' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen imagenMorph boton1 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 action: [ Transcript show: \'Nuevo Juego\'; cr ]. "Definir la acción al presionar el botón"\r    \r    "Posicionar el botón en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2)).\r    \r    "Agregar el botón al ImageMorph"\r    imagenMorph addMorph: boton1.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '1/21/2025 22:20',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r|imagen boton1|\rimagen := Form fromFileNamed: FileSystem workingDirectory , \'/assets/backgrounds/background.png\'.\rimagenMorph := ImageMorph new.\rimagenMorph image: imagen.\r\rboton1 := PluggableButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Define el texto del botón"\r    boton1 target: self. "Define el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #nuevoJuego. "Define el método a llamar cuando se presiona el botón"\r    boton1 position: (imagenMorph width // 2 - 50) @ (imagenMorph height // 2 - 20). "Posicionar el botón en el centro de la imagen"\rimagenMorph addMorph: boton1.\r\rimagenMorph openInWorld center.',
+			#stamp : '1/21/2025 22:21',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '49' ],
+		#self : OmReference [ '50' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r|imagen boton1|\rimagen := Form fromFileNamed: FileSystem workingDirectory , \'/assets/backgrounds/background.png\'.\rimagenMorph := ImageMorph new.\rimagenMorph image: imagen.\r\rboton1 := PluggableButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Define el texto del botón"\r    boton1 target: self. "Define el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #nuevoJuego. "Define el método a llamar cuando se presiona el botón"\r    boton1 position: (imagenMorph width // 2 - 50) @ (imagenMorph height // 2 - 20). "Posicionar el botón en el centro de la imagen"\rimagenMorph addMorph: boton1.\r\rimagenMorph openInWorld center.',
+			#stamp : '1/21/2025 22:21',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r|imagen boton1|\rimagen := Form fromFileNamed: FileSystem workingDirectory , \'/assets/backgrounds/background.png\'.\rimagenMorph := ImageMorph new.\rimagenMorph image: imagen.\r\rboton1 := PluggableButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Define el texto del botón"\r    boton1 target: self. "Define el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: [Transcript show: \'hola\';cr]. "Define el método a llamar cuando se presiona el botón"\r    boton1 position: (imagenMorph width // 2 - 50) @ (imagenMorph height // 2 - 20). "Posicionar el botón en el centro de la imagen"\rimagenMorph addMorph: boton1.\r\rimagenMorph openInWorld center.',
+			#stamp : '1/21/2025 22:21',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '50' ],
+		#self : OmReference [ '51' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #nuevoJuego,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'nuevoJuego\rTranscript show: \'dea\'.',
+			#stamp : '1/21/2025 22:15',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #nuevoJuego,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'nuevoJuego\r    Transcript show: \'Nuevo Juego presionado\'; cr.',
+			#stamp : '1/21/2025 22:22',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '51' ],
+		#self : OmReference [ '52' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r|imagen boton1|\rimagen := Form fromFileNamed: FileSystem workingDirectory , \'/assets/backgrounds/background.png\'.\rimagenMorph := ImageMorph new.\rimagenMorph image: imagen.\r\rboton1 := PluggableButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Define el texto del botón"\r    boton1 target: self. "Define el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: [Transcript show: \'hola\';cr]. "Define el método a llamar cuando se presiona el botón"\r    boton1 position: (imagenMorph width // 2 - 50) @ (imagenMorph height // 2 - 20). "Posicionar el botón en el centro de la imagen"\rimagenMorph addMorph: boton1.\r\rimagenMorph openInWorld center.',
+			#stamp : '1/21/2025 22:21',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen imagenMorph boton1 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón"\r    boton1 := PluggableButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #nuevoJuego. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2)).\r    \r    "Agregar el botón al ImageMorph"\r    imagenMorph addMorph: boton1.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '1/21/2025 22:23',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '52' ],
+		#self : OmReference [ '53' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen imagenMorph boton1 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón"\r    boton1 := PluggableButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #nuevoJuego. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2)).\r    \r    "Agregar el botón al ImageMorph"\r    imagenMorph addMorph: boton1.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '1/21/2025 22:23',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen imagenMorph boton1 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón"\r    boton1 := PluggableButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: self nuevoJuego. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2)).\r    \r    "Agregar el botón al ImageMorph"\r    imagenMorph addMorph: boton1.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '1/21/2025 22:24',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '53' ],
+		#self : OmReference [ '54' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen imagenMorph boton1 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón"\r    boton1 := PluggableButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: self nuevoJuego. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2)).\r    \r    "Agregar el botón al ImageMorph"\r    imagenMorph addMorph: boton1.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '1/21/2025 22:24',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen imagenMorph boton1 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón"\r    boton1 := PluggableButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #nuevoJuego. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2)).\r    \r    "Agregar el botón al ImageMorph"\r    imagenMorph addMorph: boton1.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '1/21/2025 22:30',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '54' ],
+		#self : OmReference [ '55' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen imagenMorph boton1 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón"\r    boton1 := PluggableButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #nuevoJuego. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2)).\r    \r    "Agregar el botón al ImageMorph"\r    imagenMorph addMorph: boton1.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '1/21/2025 22:32',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen imagenMorph boton1 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #nuevoJuego. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2)).\r    \r    "Agregar el botón al ImageMorph"\r    imagenMorph addMorph: boton1.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '1/21/2025 22:35',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '55' ],
+		#self : OmReference [ '56' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen imagenMorph boton1 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #nuevoJuego. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2)).\r    \r    "Agregar el botón al ImageMorph"\r    imagenMorph addMorph: boton1.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '1/21/2025 22:35',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen imagenMorph boton1 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #nuevoJuego. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2)-10).\r    \r    "Agregar el botón al ImageMorph"\r    imagenMorph addMorph: boton1.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '1/21/2025 22:37',
+			#package : #TheConquist
+		}
+	}
+}

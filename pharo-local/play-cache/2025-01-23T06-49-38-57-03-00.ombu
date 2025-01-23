@@ -1,0 +1,91 @@
+OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-23T06:50:29.019-03:00' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : '|matriz|\rmatriz := Matriz new.\rmatriz initializeRows: 3 columns:3.\rmatriz printMatrix. '
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-23T06:51:01.913-03:00' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : '| matriz |\rmatriz := Matriz rows: 3 columns: 3.\rmatriz atRow: 1 column: 1 put: 5.\rmatriz atRow: 2 column: 2 put: 8.\rmatriz printMatrix.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-23T06:51:22.378-03:00' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : '| matriz |\rmatriz := Matriz new.\rmatriz := Matriz rows: 3 columns: 3.\rmatriz atRow: 1 column: 1 put: 5.\rmatriz atRow: 2 column: 2 put: 8.\rmatriz printMatrix.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-23T06:51:47.621-03:00' ],
+		#self : OmReference [ '4' ]
+	},
+	#content : '| matriz |\rmatriz := Matriz new.\rmatriz initializeRows: 3 columns: 3.\rmatriz atRow: 1 column: 1 put: 5.\rmatriz atRow: 2 column: 2 put: 8.\rmatriz printMatrix.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-23T06:53:39.854-03:00' ],
+		#self : OmReference [ '5' ]
+	},
+	#content : '"Test de la clase Matriz"\r| matriz testPassed |\r\rTranscript clear.\r\r"1. Crear una matriz 3x3"\rmatriz := Matriz rows: 3 columns: 3.\r\r"2. Asignar valores a la matriz"\rmatriz atRow: 1 column: 1 put: 5.\rmatriz atRow: 1 column: 2 put: 10.\rmatriz atRow: 1 column: 3 put: 15.\rmatriz atRow: 2 column: 1 put: 20.\rmatriz atRow: 2 column: 2 put: 25.\rmatriz atRow: 2 column: 3 put: 30.\rmatriz atRow: 3 column: 1 put: 35.\rmatriz atRow: 3 column: 2 put: 40.\rmatriz atRow: 3 column: 3 put: 45.\r\r"3. Verificar los valores asignados"\rtestPassed := true.\rtestPassed := testPassed & (matriz atRow: 1 column: 1 = 5).\rtestPassed := testPassed & (matriz atRow: 1 column: 2 = 10).\rtestPassed := testPassed & (matriz atRow: 1 column: 3 = 15).\rtestPassed := testPassed & (matriz atRow: 2 column: 1 = 20).\rtestPassed := testPassed & (matriz atRow: 2 column: 2 = 25).\rtestPassed := testPassed & (matriz atRow: 2 column: 3 = 30).\rtestPassed := testPassed & (matriz atRow: 3 column: 1 = 35).\rtestPassed := testPassed & (matriz atRow: 3 column: 2 = 40).\rtestPassed := testPassed & (matriz atRow: 3 column: 3 = 45).\r\r"4. Imprimir la matriz"\rTranscript show: \'Matriz creada e inicializada:\'; cr.\rmatriz printMatrix.\r\r"5. Mostrar resultado del test"\rtestPassed\r    ifTrue: [ Transcript show: \'Todos los tests pasaron correctamente.\'; cr ]\r    ifFalse: [ Transcript show: \'Error en los tests.\'; cr ].\r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-23T06:55:44.822-03:00' ],
+		#self : OmReference [ '6' ]
+	},
+	#content : '| matriz |\rmatriz := Matriz new.\rmatriz initializeRows: 3 columns: 3.\rmatriz atRow: 1 column: 1 put: 5.\rmatriz atRow: 2 column: 2 put: 8.\rmatriz printMatrix.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-23T06:55:54.843-03:00' ],
+		#self : OmReference [ '7' ]
+	},
+	#content : '| matriz |\rmatriz := Matriz new.\rmatriz := Matriz rows: 3 columns: 3.\rmatriz atRow: 1 column: 1 put: 5.\rmatriz atRow: 2 column: 2 put: 8.\rmatriz printMatrix.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-23T06:56:02.229-03:00' ],
+		#self : OmReference [ '8' ]
+	},
+	#content : '|matriz|\rmatriz := Matriz new.\rmatriz initializeRows: 3 columns:3.\rmatriz printMatrix. '
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-23T06:56:09.004-03:00' ],
+		#self : OmReference [ '9' ]
+	},
+	#content : '|matriz|\rmatriz := Matriz new.\rmatriz initializeRows: 3 columns:3.\rmatriz printMatrix. \rTranscript clear.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-23T06:56:19.475-03:00' ],
+		#self : OmReference [ '10' ]
+	},
+	#content : '|matriz|\rmatriz := Matriz new.\rmatriz initializeRows: 3 columns:3.\rmatriz printMatrix. \r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-23T06:58:36.332-03:00' ],
+		#self : OmReference [ '11' ]
+	},
+	#content : '| matriz |\r\r"Crear una matriz 3x3 con todos los valores inicializados en 0"\rmatriz := Matriz rows: 3 columns: 3.\r\r"Imprimir la matriz para verificar que está llena de ceros"\rTranscript clear.\rTranscript show: \'Matriz inicializada con ceros:\'; cr.\rmatriz printMatrix.\r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-23T07:00:58.157-03:00' ],
+		#self : OmReference [ '12' ]
+	},
+	#content : '| matriz |\rmatriz := Matriz rows: 3 columns: 3.\rmatriz atRow: 1 column: 1 put: 5.\rmatriz atRow: 2 column: 2 put: 8.\rmatriz printMatrix.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-23T07:05:26.952-03:00' ],
+		#self : OmReference [ '13' ]
+	},
+	#content : '| matriz |\rmatriz := Matriz rows: 1 columns: 1.\rmatriz atRow: 1 column: 1 put: 1.\r\rmatriz printMatrix.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-23T07:10:27.158-03:00' ],
+		#self : OmReference [ '14' ]
+	},
+	#content : '| matrix |\rmatrix := Matrix rows: 3 columns: 3.\rmatrix at: 1 column: 1 put: 5.\rmatrix at: 1 column: 2 put: 10.\rmatrix at: 1 column: 3 put: 15.\r\rTranscript show: (matrix at: 1 column: 1); cr.  "Debería mostrar 5"\rTranscript show: (matrix at: 1 column: 2); cr.  "Debería mostrar 10"\rTranscript show: (matrix at: 1 column: 3); cr.  "Debería mostrar 15"'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-23T07:10:45.852-03:00' ],
+		#self : OmReference [ '15' ]
+	},
+	#content : '| matrix |\rmatrix := Matrix rows: 3 columns: 3.\rmatrix inspect.\rmatrix at: 1 column: 1 put: 5.\rmatrix at: 1 column: 2 put: 10.\rmatrix at: 1 column: 3 put: 15.\r\rTranscript show: (matrix at: 1 column: 1); cr.  "Debería mostrar 5"\rTranscript show: (matrix at: 1 column: 2); cr.  "Debería mostrar 10"\rTranscript show: (matrix at: 1 column: 3); cr.  "Debería mostrar 15"'
+}

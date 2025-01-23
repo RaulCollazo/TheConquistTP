@@ -1,0 +1,1 @@
+    imagenMorph ifNotNil: [        imagenMorph delete.        imagenMorph := nil. "Limpia la referencia"    ].

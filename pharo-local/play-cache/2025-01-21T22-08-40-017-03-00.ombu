@@ -1,0 +1,7 @@
+OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T22:08:42.386-03:00' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : 'World submorphs\r    select: [ :morph | morph isKindOf: ImageMorph ]\r    thenDo: [ :morph | morph delete ].'
+}

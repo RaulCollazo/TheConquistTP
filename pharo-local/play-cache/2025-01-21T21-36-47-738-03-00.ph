@@ -1,0 +1,1 @@
+World submorphs     select: [ :morph | morph isKindOf: ImageMorph ]     thenDo: [ :morph | morph delete ].eliminarFondo    imagenMorph ifNotNil: [        imagenMorph delete.        imagenMorph := nil. "Limpia la referencia"    ].

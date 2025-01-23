@@ -1,0 +1,603 @@
+OmEntry {
+	#tags : {
+		#prior : OmReference [ 'Pharo12.0-SNAPSHOT-64bit-0384a4d925.4A18B5DF97C0', '15' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarPantalla,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarPantalla',
+			#stamp : '1/21/2025 19:38',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '1' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerCantJugadores,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'obtenerCantJugadores\r    | flag|\r    flag := false.\r    "Solicitar la cantidad de NPCs"\r    [ flag not ] whileTrue: [\r        CantNPC := (UIManager default request: \'¿Cuántos participantes hay?\') asNumber.\r        ((CantNPC sqrt \\\\ 2) = 0)\r            ifTrue: [ flag := true ]\r            ifFalse: [ UIManager default inform: \'Valor inválido\' ].\r    ].\r\r    "Solicitar la cantidad de jugadores humanos"\r    CantJugadores := (UIManager default request: \'¿Cuántos participantes humanos habrá?\') asNumber.\r',
+			#stamp : '1/22/2025 05:26',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '2' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #iniciar. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2) - 30).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2) + 30).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '1/21/2025 22:56',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2) - 30).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2) + 30).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '1/22/2025 05:27',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '3' ],
+		#self : OmReference [ '4' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #eliminarMorphs,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'eliminarMorphs\rWorld submorphs\r        select: [ :morph | morph isKindOf: ImageMorph ]\r        thenDo: [ :morph | morph delete ].',
+			#stamp : '1/21/2025 22:39',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #eliminarMorphs,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'eliminarMorphs\rWorld submorphs "Selecciona a todos los submorphs y descide si es un ImageMorph para eliminarlo"\r        select: [ :morph | morph isKindOf: ImageMorph ]\r        thenDo: [ :morph | morph delete ].',
+			#stamp : '1/22/2025 05:28',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '4' ],
+		#self : OmReference [ '5' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\r    | flag|\r    flag := false.\r    "Solicitar la cantidad de NPCs"\r    [ flag not ] whileTrue: [\r        CantNPC := (UIManager default request: \'¿Cuántos participantes hay?\') asNumber.\r        ((CantNPC sqrt \\\\ 2) = 0)\r            ifTrue: [ flag := true ]\r            ifFalse: [ UIManager default inform: \'Valor inválido\' ].\r    ].\r\r    "Solicitar la cantidad de jugadores humanos"\r    CantJugadores := (UIManager default request: \'¿Cuántos participantes humanos habrá?\') asNumber.\r',
+			#stamp : '1/21/2025 22:55',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\r|juego|\rjuego := Juego new.\rjuego obtenerCantJugadores.',
+			#stamp : '1/22/2025 05:28',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '5' ],
+		#self : OmReference [ '6' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\r|juego|\rjuego := Juego new.\rjuego obtenerCantJugadores.',
+			#stamp : '1/22/2025 05:28',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\r^self new.\rself obtenerCantJugadores.',
+			#stamp : '1/22/2025 05:32',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '6' ],
+		#self : OmReference [ '7' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\r^self new.\rself obtenerCantJugadores.',
+			#stamp : '1/22/2025 05:32',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\r^ self new.\rself obtenerCantJugadores.',
+			#stamp : '1/22/2025 05:32',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '7' ],
+		#self : OmReference [ '8' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\r^ self new.\rself obtenerCantJugadores.',
+			#stamp : '1/22/2025 05:32',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\rself new.\rself obtenerCantJugadores.',
+			#stamp : '1/22/2025 05:33',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '8' ],
+		#self : OmReference [ '9' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\rself new.\rself obtenerCantJugadores.',
+			#stamp : '1/22/2025 05:33',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '9' ],
+		#self : OmReference [ '10' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\r^self new.\rself obtenerCantJugadores.',
+			#stamp : '1/22/2025 05:34',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '10' ],
+		#self : OmReference [ '11' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGMetaclassDefinition {
+			#annotations : IdentityDictionary {
+				#definitionSource : 'Object class << Juego class\r\tslots: {}',
+				#traitCompositionSource : '{}'
+			},
+			#name : #'Juego class',
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [ ],
+			#baseClass : RGClassDefinition {
+				#annotations : IdentityDictionary {
+					#traitCompositionSource : '{}',
+					#definitionSource : 'Object << #Juego\r\tslots: { #CantNPC . #CantJugadores . #PantallaActual . #imagenMorph };\r\tpackage: \'TheConquist\'',
+					#superclassName : #Object
+				},
+				#name : #Juego,
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [
+					RGInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #Juego,
+							#isMeta : false
+						},
+						#name : #CantNPC,
+						#parent : @11
+					},
+					RGInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #Juego,
+							#isMeta : false
+						},
+						#name : #CantJugadores,
+						#parent : @11
+					},
+					RGInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #Juego,
+							#isMeta : false
+						},
+						#name : #PantallaActual,
+						#parent : @11
+					},
+					RGInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #Juego,
+							#isMeta : false
+						},
+						#name : #imagenMorph,
+						#parent : @11
+					}
+				],
+				#metaClass : @6,
+				#comment : RGCommentDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#parent : @11,
+					#content : ''
+				},
+				#classVariables : OrderedCollection [ ],
+				#package : RGPackageDefinition {
+					#name : #TheConquist,
+					#definedClasses : IdentityDictionary { },
+					#definedMethods : IdentityDictionary { },
+					#extensionMethods : IdentityDictionary { }
+				},
+				#packageTag : #Uncategorized,
+				#sharedPools : OrderedCollection [ ]
+			}
+		},
+		#protocol : #'as yet unclassified'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '11' ],
+		#self : OmReference [ '12' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\r^self new.\rself obtenerCantJugadores.',
+			#stamp : '1/22/2025 05:34',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '12' ],
+		#self : OmReference [ '13' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\r^self new.\rself obtenerCantJugadores.',
+			#stamp : '1/22/2025 05:34',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '13' ],
+		#self : OmReference [ '14' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\r^self new.\rself obtenerCantJugadores.',
+			#stamp : '1/22/2025 05:34',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '14' ],
+		#self : OmReference [ '15' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGMetaclassDefinition {
+			#annotations : IdentityDictionary {
+				#definitionSource : 'Object class << Juego class\r\tslots: {}',
+				#traitCompositionSource : '{}'
+			},
+			#name : #'Juego class',
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [ ],
+			#baseClass : RGClassDefinition {
+				#annotations : IdentityDictionary {
+					#traitCompositionSource : '{}',
+					#definitionSource : 'Object << #Juego\r\tslots: { #CantNPC . #CantJugadores . #PantallaActual . #imagenMorph };\r\tpackage: \'TheConquist\'',
+					#superclassName : #Object
+				},
+				#name : #Juego,
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [
+					RGInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #Juego,
+							#isMeta : false
+						},
+						#name : #CantNPC,
+						#parent : @11
+					},
+					RGInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #Juego,
+							#isMeta : false
+						},
+						#name : #CantJugadores,
+						#parent : @11
+					},
+					RGInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #Juego,
+							#isMeta : false
+						},
+						#name : #PantallaActual,
+						#parent : @11
+					},
+					RGInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #Juego,
+							#isMeta : false
+						},
+						#name : #imagenMorph,
+						#parent : @11
+					}
+				],
+				#metaClass : @6,
+				#comment : RGCommentDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#parent : @11,
+					#content : ''
+				},
+				#classVariables : OrderedCollection [ ],
+				#package : RGPackageDefinition {
+					#name : #TheConquist,
+					#definedClasses : IdentityDictionary { },
+					#definedMethods : IdentityDictionary { },
+					#extensionMethods : IdentityDictionary { }
+				},
+				#packageTag : #Uncategorized,
+				#sharedPools : OrderedCollection [ ]
+			}
+		},
+		#protocol : #'as yet unclassified'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '15' ],
+		#self : OmReference [ '16' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar [\r        | instancia |\r        instancia := self new. "Crea una instancia de Juego"\r        ^ instancia obtenerCantJugadores. "Llama al método obtenerCantJug y devuelve su resultado"\r    ].',
+			#stamp : '1/22/2025 05:38',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '16' ],
+		#self : OmReference [ '17' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar [\r        | instancia |\r        instancia := self new. "Crea una instancia de Juego"\r        ^ instancia obtenerCantJugadores. "Llama al método obtenerCantJug y devuelve su resultado"\r    ].',
+			#stamp : '1/22/2025 05:38',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\r\r        | instancia |\r        instancia := self new. "Crea una instancia de Juego"\r        ^ instancia obtenerCantJugadores. "Llama al método obtenerCantJug y devuelve su resultado"',
+			#stamp : '1/22/2025 05:38',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '17' ],
+		#self : OmReference [ '18' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\r\r        | instancia |\r        instancia := self new. "Crea una instancia de Juego"\r        ^ instancia obtenerCantJugadores. "Llama al método obtenerCantJug y devuelve su resultado"',
+			#stamp : '1/22/2025 05:38',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\r| instancia |\rinstancia := self new. "Crea una instancia de Juego"\r^ instancia obtenerCantJugadores. "Llama al método obtenerCantJug y devuelve su resultado"',
+			#stamp : '1/22/2025 05:38',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '18' ],
+		#self : OmReference [ '19' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\r| instancia |\rinstancia := self new. "Crea una instancia de Juego"\r^ instancia obtenerCantJugadores. "Llama al método obtenerCantJug y devuelve su resultado"',
+			#stamp : '1/22/2025 05:38',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\r| instancia |\rinstancia := self new. "Crea una instancia de Juego"\r^ instancia dibujarFondo . "Llama al método obtenerCantJug y devuelve su resultado"',
+			#stamp : '1/22/2025 05:38',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '19' ],
+		#self : OmReference [ '20' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\r| instancia |\rinstancia := self new. "Crea una instancia de Juego"\r^ instancia dibujarFondo . "Llama al método obtenerCantJug y devuelve su resultado"',
+			#stamp : '1/22/2025 05:38',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\r| instancia |\rinstancia := self new. "Crea una instancia de Juego"\r^ instancia dibujarFondo. "Llama al método obtenerCantJug y devuelve su resultado"',
+			#stamp : '1/22/2025 05:38',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '20' ],
+		#self : OmReference [ '21' ]
+	},
+	#content : EpSessionSnapshot {
+		#imageName : 'C:\\Users\\Educacion\\Documents\\Pharo\\images\\The Conquist\\The Conquist.image'
+	}
+}

@@ -1,0 +1,19 @@
+OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T22:38:27.076-03:00' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : 'World submorphs do: [ :each |\r    (each class = Morph) ifTrue: [ each delete ].\r]'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T22:39:08.416-03:00' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : '\rWorld submorphs do: [ :each |\r    (each class = Morph) ifTrue: [ each delete ].\r]'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-21T22:39:17.879-03:00' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : 'World submorphs\r        select: [ :morph | morph isKindOf: ImageMorph ]\r        thenDo: [ :morph | morph delete ].'
+}
