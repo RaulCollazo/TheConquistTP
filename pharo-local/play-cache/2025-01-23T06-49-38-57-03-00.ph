@@ -1,1 +1,1 @@
-| matrix |matrix := Matrix rows: 3 columns: 3.matrix inspect.matrix at: 1 column: 1 put: 5.matrix at: 1 column: 2 put: 10.matrix at: 1 column: 3 put: 15.Transcript show: (matrix at: 1 column: 1); cr.  "Debería mostrar 5"Transcript show: (matrix at: 1 column: 2); cr.  "Debería mostrar 10"Transcript show: (matrix at: 1 column: 3); cr.  "Debería mostrar 15"
+|owo|owo := TableroLogico crearMatrizTemas: 64

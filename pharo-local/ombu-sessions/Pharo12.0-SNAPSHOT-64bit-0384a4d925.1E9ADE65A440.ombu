@@ -1,0 +1,665 @@
+OmEntry {
+	#tags : {
+		#prior : OmReference [ 'Pharo12.0-SNAPSHOT-64bit-0384a4d925.15DCC371BF00', '82' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGMetaclassDefinition {
+			#annotations : IdentityDictionary {
+				#definitionSource : 'Object class << TableroLogico class\r\tslots: {}',
+				#traitCompositionSource : '{}'
+			},
+			#name : #'TableroLogico class',
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [ ],
+			#baseClass : RGClassDefinition {
+				#annotations : IdentityDictionary {
+					#traitCompositionSource : '{}',
+					#definitionSource : 'Object << #TableroLogico\r\tslots: {};\r\tpackage: \'TheConquist\'',
+					#superclassName : #Object
+				},
+				#name : #TableroLogico,
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#metaClass : @6,
+				#comment : RGCommentDefinition {
+					#annotations : IdentityDictionary {
+						#className : #TableroLogico,
+						#isMeta : false
+					},
+					#parent : @11,
+					#content : ''
+				},
+				#classVariables : OrderedCollection [ ],
+				#package : RGPackageDefinition {
+					#name : #TheConquist,
+					#definedClasses : IdentityDictionary { },
+					#definedMethods : IdentityDictionary { },
+					#extensionMethods : IdentityDictionary { }
+				},
+				#packageTag : #Uncategorized,
+				#sharedPools : OrderedCollection [ ]
+			}
+		},
+		#protocol : #'as yet unclassified'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '1' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #crearMatrizTemas,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas\r| file contents elements matrix |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\r\r    "Crear una matriz 8x8"\r    matrix := Matrix rows: 8 columns: 8.\r\r    "Recorrer los elementos y asignarlos a la matriz"\r    1 to: elements size do: [:i |\r        | row col |\r        row := (i - 1) // 8 + 1.  "Calcula la fila (1 a 8)"\r        col := (i - 1) \\\\ 8 + 1.   "Calcula la columna (1 a 8)"\r        matrix at: row column: col put: (elements at: i).\r    ].\r\r    "Imprimir la matriz para verificar"\r    1 to: matrix rows do: [:rowIndex |  "Iterar sobre las filas"\r        1 to: matrix cols do: [:colIndex |  "Iterar sobre las columnas"\r            Transcript show: (matrix at: rowIndex column: colIndex); space.\r        ].\r        Transcript cr.\r    ].\r\relements inspect',
+			#stamp : '1/23/2025 09:31',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '2' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizTemas:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas: cantJugadores\r| file contents elements matrix |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\r\r    "Crear la matriz"\r    matrix := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r    "Recorrer los elementos y asignarlos a la matriz"\r    1 to: elements size do: [:i |\r        | row col |\r        row := (i - 1) // 8 + 1.  "Calcula la fila (1 a 8)"\r        col := (i - 1) \\\\ 8 + 1.   "Calcula la columna (1 a 8)"\r        matrix at: row column: col put: (elements at: i).\r    ].\r\r    "Imprimir la matriz para verificar"\r    1 to: matrix rows do: [:rowIndex |  "Iterar sobre las filas"\r        1 to: matrix cols do: [:colIndex |  "Iterar sobre las columnas"\r            Transcript show: (matrix at: rowIndex column: colIndex); space.\r        ].\r        Transcript cr.\r    ].\r\relements inspect',
+			#stamp : '1/23/2025 09:43',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '3' ],
+		#self : OmReference [ '4' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #crearMatrizTemas,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas\r| file contents elements matrix |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\r\r    "Crear una matriz 8x8"\r    matrix := Matrix rows: 8 columns: 8.\r\r    "Recorrer los elementos y asignarlos a la matriz"\r    1 to: elements size do: [:i |\r        | row col |\r        row := (i - 1) // 8 + 1.  "Calcula la fila (1 a 8)"\r        col := (i - 1) \\\\ 8 + 1.   "Calcula la columna (1 a 8)"\r        matrix at: row column: col put: (elements at: i).\r    ].\r\r    "Imprimir la matriz para verificar"\r    1 to: matrix rows do: [:rowIndex |  "Iterar sobre las filas"\r        1 to: matrix cols do: [:colIndex |  "Iterar sobre las columnas"\r            Transcript show: (matrix at: rowIndex column: colIndex); space.\r        ].\r        Transcript cr.\r    ].\r\relements inspect',
+			#stamp : '1/23/2025 09:31',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '4' ],
+		#self : OmReference [ '5' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\r| instancia |\rinstancia := self new. "Crea una instancia de Juego"\r^ instancia dibujarFondo. "Llama al método obtenerCantJug y devuelve su resultado"',
+			#stamp : '1/22/2025 05:39',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\r| instancia Matriz |\rinstancia := self new. "Crea una instancia de Juego"\rinstancia dibujarFondo. "Llama al método obtenerCantJug y devuelve su resultado"\rMatriz := Matrix new.\r^Matriz crearMatrizTemas: Juego cantNPC.\r',
+			#stamp : '1/23/2025 09:46',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '5' ],
+		#self : OmReference [ '6' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\r| instancia Matriz |\rinstancia := self new. "Crea una instancia de Juego"\rinstancia dibujarFondo. "Llama al método obtenerCantJug y devuelve su resultado"\rMatriz := Matrix new.\r^Matriz crearMatrizTemas: Juego cantNPC.\r',
+			#stamp : '1/23/2025 09:46',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\r| instancia Matriz |\rinstancia := self new. "Crea una instancia de Juego"\rinstancia dibujarFondo. "Llama al método obtenerCantJug y devuelve su resultado"\rMatriz := Matrix new.\rMatriz crearMatrizTemas: Juego cantNPC.\r',
+			#stamp : '1/23/2025 09:46',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '6' ],
+		#self : OmReference [ '7' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\r| instancia Matriz |\rinstancia := self new. "Crea una instancia de Juego"\rinstancia dibujarFondo. "Llama al método obtenerCantJug y devuelve su resultado"\rMatriz := Matrix new.\rMatriz crearMatrizTemas: Juego cantNPC.\r',
+			#stamp : '1/23/2025 09:46',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\r| instancia Matriz |\rinstancia := self new. "Crea una instancia de Juego"\rinstancia dibujarFondo. "Llama al método obtenerCantJug y devuelve su resultado"\rMatriz := Matrix new.\rMatriz crearMatrizTemas: self cantNPC.\r',
+			#stamp : '1/23/2025 09:47',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '7' ],
+		#self : OmReference [ '8' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\r| instancia Matriz |\rinstancia := self new. "Crea una instancia de Juego"\rinstancia dibujarFondo. "Llama al método obtenerCantJug y devuelve su resultado"\rMatriz := Matrix new.\rMatriz crearMatrizTemas: self cantNPC.\r',
+			#stamp : '1/23/2025 09:47',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\r| instancia Matriz |\rinstancia := self new. "Crea una instancia de Juego"\rinstancia dibujarFondo. "Llama al método obtenerCantJug y devuelve su resultado"\rMatriz := Matrix new.\rMatriz crearMatrizTemas: instancia cantNPC.\r',
+			#stamp : '1/23/2025 09:47',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '8' ],
+		#self : OmReference [ '9' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\r| instancia Matriz |\rinstancia := self new. "Crea una instancia de Juego"\rinstancia dibujarFondo. "Llama al método obtenerCantJug y devuelve su resultado"\rMatriz := Matrix new.\rMatriz crearMatrizTemas: instancia cantNPC.\r',
+			#stamp : '1/23/2025 09:47',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\r| instancia Matriz |\rinstancia := self new. "Crea una instancia de Juego"\rinstancia dibujarFondo. "Llama al método obtenerCantJug y devuelve su resultado"\rMatriz := Matrix new.\rMatriz crearMatrizTemas: (instancia cantNPC)asNumber .\r',
+			#stamp : '1/23/2025 09:48',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '9' ],
+		#self : OmReference [ '10' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\r| instancia Matriz |\rinstancia := self new. "Crea una instancia de Juego"\rinstancia dibujarFondo. "Llama al método obtenerCantJug y devuelve su resultado"\rMatriz := Matrix new.\rMatriz crearMatrizTemas: (instancia cantNPC)asNumber .\r',
+			#stamp : '1/23/2025 09:48',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\r| instancia Matriz |\rinstancia := self new. "Crea una instancia de Juego"\rinstancia dibujarFondo. "Llama al método obtenerCantJug y devuelve su resultado"\rMatriz := Matrix new.\rMatriz crearMatrizTemas: (instancia cantNPC).\r',
+			#stamp : '1/23/2025 09:48',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '10' ],
+		#self : OmReference [ '11' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\r| instancia Matriz |\rinstancia := self new. "Crea una instancia de Juego"\rinstancia dibujarFondo. "Llama al método obtenerCantJug y devuelve su resultado"\rMatriz := Matrix new.\rMatriz crearMatrizTemas: (instancia cantNPC).\r',
+			#stamp : '1/23/2025 09:48',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\r| instancia MatrizTemas |\rinstancia := self new. "Crea una instancia de Juego"\rinstancia dibujarFondo. "Llama al método obtenerCantJug y devuelve su resultado"\rMatrizTemas := Matrix new.\rMatrizTemas crearMatrizTemas: (instancia cantNPC).\r',
+			#stamp : '1/23/2025 09:49',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '11' ],
+		#self : OmReference [ '12' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\r| instancia MatrizTemas |\rinstancia := self new. "Crea una instancia de Juego"\rinstancia dibujarFondo. "Llama al método obtenerCantJug y devuelve su resultado"\rMatrizTemas := Matrix new.\rMatrizTemas crearMatrizTemas: (instancia cantNPC).\r',
+			#stamp : '1/23/2025 09:49',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\r| instancia MatrizTemas |\rinstancia := self new. "Crea una instancia de Juego"\rinstancia dibujarFondo. "Llama al método obtenerCantJug y devuelve su resultado"',
+			#stamp : '1/23/2025 09:50',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '12' ],
+		#self : OmReference [ '13' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\r| instancia MatrizTemas |\rinstancia := self new. "Crea una instancia de Juego"\rinstancia dibujarFondo. "Llama al método obtenerCantJug y devuelve su resultado"',
+			#stamp : '1/23/2025 09:50',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\r| instancia|\rinstancia := self new. "Crea una instancia de Juego"\rinstancia dibujarFondo. "Llama al método obtenerCantJug y devuelve su resultado"',
+			#stamp : '1/23/2025 09:50',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '13' ],
+		#self : OmReference [ '14' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerCantJugadores,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'obtenerCantJugadores\r    | flag|\r    flag := false.\r    "Solicitar la cantidad de NPCs"\r    [ flag not ] whileTrue: [\r        CantNPC := (UIManager default request: \'¿Cuántos participantes hay?\') asNumber.\r        ((CantNPC sqrt \\\\ 2) = 0)\r            ifTrue: [ flag := true ]\r            ifFalse: [ UIManager default inform: \'Valor inválido\' ].\r    ].\r\r    "Solicitar la cantidad de jugadores humanos"\r    CantJugadores := (UIManager default request: \'¿Cuántos participantes humanos habrá?\') asNumber.\r',
+			#stamp : '1/23/2025 09:47',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerCantJugadores,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'obtenerCantJugadores\r    | flag MatrizTemas|\r    flag := false.\r    "Solicitar la cantidad de NPCs"\r    [ flag not ] whileTrue: [\r        CantNPC := (UIManager default request: \'¿Cuántos participantes hay?\') asNumber.\r        ((CantNPC sqrt \\\\ 2) = 0)\r            ifTrue: [ flag := true ]\r            ifFalse: [ UIManager default inform: \'Valor inválido\' ].\r    ].\r\r    "Solicitar la cantidad de jugadores humanos"\r    CantJugadores := (UIManager default request: \'¿Cuántos participantes humanos habrá?\') asNumber.\r',
+			#stamp : '1/23/2025 09:52',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '14' ],
+		#self : OmReference [ '15' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\r| instancia|\rinstancia := self new. "Crea una instancia de Juego"\rinstancia dibujarFondo. "Llama al método obtenerCantJug y devuelve su resultado"',
+			#stamp : '1/23/2025 09:50',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\r| instancia|\rinstancia := self new. "Crea una instancia de Juego"\rinstancia dibujarFondo. "Llama al método obtenerCantJug y devuelve su resultado"\rinstancia inspect.\r"MatrizTemas := Matrix new.\rMatrizTemas crearMatrizTemas: Jueg cantNPC."',
+			#stamp : '1/23/2025 09:52',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '15' ],
+		#self : OmReference [ '16' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerCantJugadores,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'obtenerCantJugadores\r    | flag MatrizTemas|\r    flag := false.\r    "Solicitar la cantidad de NPCs"\r    [ flag not ] whileTrue: [\r        CantNPC := (UIManager default request: \'¿Cuántos participantes hay?\') asNumber.\r        ((CantNPC sqrt \\\\ 2) = 0)\r            ifTrue: [ flag := true ]\r            ifFalse: [ UIManager default inform: \'Valor inválido\' ].\r    ].\r\r    "Solicitar la cantidad de jugadores humanos"\r    CantJugadores := (UIManager default request: \'¿Cuántos participantes humanos habrá?\') asNumber.\r',
+			#stamp : '1/23/2025 09:52',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerCantJugadores,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'obtenerCantJugadores\r    | flag|\r    flag := false.\r    "Solicitar la cantidad de NPCs"\r    [ flag not ] whileTrue: [\r        CantNPC := (UIManager default request: \'¿Cuántos participantes hay?\') asNumber.\r        ((CantNPC sqrt \\\\ 2) = 0)\r            ifTrue: [ flag := true ]\r            ifFalse: [ UIManager default inform: \'Valor inválido\' ].\r    ].\r\r    "Solicitar la cantidad de jugadores humanos"\r    CantJugadores := (UIManager default request: \'¿Cuántos participantes humanos habrá?\') asNumber.\rself inspect.',
+			#stamp : '1/23/2025 09:56',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '16' ],
+		#self : OmReference [ '17' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\r| instancia|\rinstancia := self new. "Crea una instancia de Juego"\rinstancia dibujarFondo. "Llama al método obtenerCantJug y devuelve su resultado"\rinstancia inspect.\r"MatrizTemas := Matrix new.\rMatrizTemas crearMatrizTemas: Jueg cantNPC."',
+			#stamp : '1/23/2025 09:52',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #iniciar,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'iniciar\r| instancia|\rinstancia := self new. "Crea una instancia de Juego"\rinstancia dibujarFondo. "Llama al método obtenerCantJug y devuelve su resultado"\r',
+			#stamp : '1/23/2025 09:56',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '17' ],
+		#self : OmReference [ '18' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerCantJugadores,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'obtenerCantJugadores\r    | flag|\r    flag := false.\r    "Solicitar la cantidad de NPCs"\r    [ flag not ] whileTrue: [\r        CantNPC := (UIManager default request: \'¿Cuántos participantes hay?\') asNumber.\r        ((CantNPC sqrt \\\\ 2) = 0)\r            ifTrue: [ flag := true ]\r            ifFalse: [ UIManager default inform: \'Valor inválido\' ].\r    ].\r\r    "Solicitar la cantidad de jugadores humanos"\r    CantJugadores := (UIManager default request: \'¿Cuántos participantes humanos habrá?\') asNumber.\rself inspect.',
+			#stamp : '1/23/2025 09:56',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerCantJugadores,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'obtenerCantJugadores\r    | flag MatrizTemas|\r    flag := false.\r    "Solicitar la cantidad de NPCs"\r    [ flag not ] whileTrue: [\r        CantNPC := (UIManager default request: \'¿Cuántos participantes hay?\') asNumber.\r        ((CantNPC sqrt \\\\ 2) = 0)\r            ifTrue: [ flag := true ]\r            ifFalse: [ UIManager default inform: \'Valor inválido\' ].\r    ].\r\r    "Solicitar la cantidad de jugadores humanos"\r    CantJugadores := (UIManager default request: \'¿Cuántos participantes humanos habrá?\') asNumber.\rMatrizTemas := Matrix new.\rMatrizTemas crearMatrizTemas: CantNPC.',
+			#stamp : '1/23/2025 09:57',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '18' ],
+		#self : OmReference [ '19' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerCantJugadores,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'obtenerCantJugadores\r    | flag MatrizTemas|\r    flag := false.\r    "Solicitar la cantidad de NPCs"\r    [ flag not ] whileTrue: [\r        CantNPC := (UIManager default request: \'¿Cuántos participantes hay?\') asNumber.\r        ((CantNPC sqrt \\\\ 2) = 0)\r            ifTrue: [ flag := true ]\r            ifFalse: [ UIManager default inform: \'Valor inválido\' ].\r    ].\r\r    "Solicitar la cantidad de jugadores humanos"\r    CantJugadores := (UIManager default request: \'¿Cuántos participantes humanos habrá?\') asNumber.\rMatrizTemas := Matrix new.\rMatrizTemas crearMatrizTemas: CantNPC.',
+			#stamp : '1/23/2025 09:57',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerCantJugadores,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'obtenerCantJugadores\r    | flag MatrizTemas|\r    flag := false.\r    "Solicitar la cantidad de NPCs"\r    [ flag not ] whileTrue: [\r        CantNPC := (UIManager default request: \'¿Cuántos participantes hay?\') asNumber.\r        ((CantNPC sqrt \\\\ 2) = 0)\r            ifTrue: [ flag := true ]\r            ifFalse: [ UIManager default inform: \'Valor inválido\' ].\r    ].\r\r    "Solicitar la cantidad de jugadores humanos"\r    CantJugadores := (UIManager default request: \'¿Cuántos participantes humanos habrá?\') asNumber.\rMatrizTemas := Matrix new.\rMatrizTemas crearMatrizTemas: CantNPC.\rMatrizTemas inspect.',
+			#stamp : '1/23/2025 09:57',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '19' ],
+		#self : OmReference [ '20' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizTemas:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas: cantJugadores\r| file contents elements matrix |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\r\r    "Crear la matriz"\r    matrix := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r    "Recorrer los elementos y asignarlos a la matriz"\r    1 to: elements size do: [:i |\r        | row col |\r        row := (i - 1) // 8 + 1.  "Calcula la fila (1 a 8)"\r        col := (i - 1) \\\\ 8 + 1.   "Calcula la columna (1 a 8)"\r        matrix at: row column: col put: (elements at: i).\r    ].\r\r    "Imprimir la matriz para verificar"\r    1 to: matrix rows do: [:rowIndex |  "Iterar sobre las filas"\r        1 to: matrix cols do: [:colIndex |  "Iterar sobre las columnas"\r            Transcript show: (matrix at: rowIndex column: colIndex); space.\r        ].\r        Transcript cr.\r    ].\r\relements inspect',
+			#stamp : '1/23/2025 09:43',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '20' ],
+		#self : OmReference [ '21' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #TableroLogico\r\tslots: {};\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #TableroLogico,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [ ],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << TableroLogico class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'TableroLogico class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #TableroLogico,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#protocol : #'as yet unclassified'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '21' ],
+		#self : OmReference [ '22' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #TableroLogico,
+				#isMeta : false
+			},
+			#name : #'crearMatrizTemas:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas: cantJugadores\r| file contents elements matrix |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\r\r    "Crear la matriz"\r    matrix := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r    "Recorrer los elementos y asignarlos a la matriz"\r    1 to: elements size do: [:i |\r        | row col |\r        row := (i - 1) // 8 + 1.  "Calcula la fila (1 a 8)"\r        col := (i - 1) \\\\ 8 + 1.   "Calcula la columna (1 a 8)"\r        matrix at: row column: col put: (elements at: i).\r    ].\r\r    "Imprimir la matriz para verificar"\r    1 to: matrix rows do: [:rowIndex |  "Iterar sobre las filas"\r        1 to: matrix cols do: [:colIndex |  "Iterar sobre las columnas"\r            Transcript show: (matrix at: rowIndex column: colIndex); space.\r        ].\r        Transcript cr.\r    ].\r\relements inspect',
+			#stamp : '1/23/2025 10:02',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '22' ],
+		#self : OmReference [ '23' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerCantJugadores,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'obtenerCantJugadores\r    | flag MatrizTemas|\r    flag := false.\r    "Solicitar la cantidad de NPCs"\r    [ flag not ] whileTrue: [\r        CantNPC := (UIManager default request: \'¿Cuántos participantes hay?\') asNumber.\r        ((CantNPC sqrt \\\\ 2) = 0)\r            ifTrue: [ flag := true ]\r            ifFalse: [ UIManager default inform: \'Valor inválido\' ].\r    ].\r\r    "Solicitar la cantidad de jugadores humanos"\r    CantJugadores := (UIManager default request: \'¿Cuántos participantes humanos habrá?\') asNumber.\rMatrizTemas := Matrix new.\rMatrizTemas crearMatrizTemas: CantNPC.\rMatrizTemas inspect.',
+			#stamp : '1/23/2025 10:01',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerCantJugadores,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'obtenerCantJugadores\r    | flag MatrizTemas|\r    flag := false.\r    "Solicitar la cantidad de NPCs"\r    [ flag not ] whileTrue: [\r        CantNPC := (UIManager default request: \'¿Cuántos participantes hay?\') asNumber.\r        ((CantNPC sqrt \\\\ 2) = 0)\r            ifTrue: [ flag := true ]\r            ifFalse: [ UIManager default inform: \'Valor inválido\' ].\r    ].\r\r    "Solicitar la cantidad de jugadores humanos"\r    CantJugadores := (UIManager default request: \'¿Cuántos participantes humanos habrá?\') asNumber.\rMatrizTemas := TableroLogico new.\rMatrizTemas crearMatrizTemas: CantNPC.\rMatrizTemas inspect.',
+			#stamp : '1/23/2025 10:11',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '23' ],
+		#self : OmReference [ '24' ]
+	},
+	#content : EpSessionSnapshot {
+		#imageName : 'C:\\Users\\Educacion\\Documents\\Pharo\\images\\The Conquist\\The Conquist.image'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '24' ],
+		#self : OmReference [ '25' ]
+	},
+	#content : EpSessionSnapshot {
+		#imageName : 'C:\\Users\\Educacion\\Documents\\Pharo\\images\\The Conquist\\The Conquist.image'
+	}
+}

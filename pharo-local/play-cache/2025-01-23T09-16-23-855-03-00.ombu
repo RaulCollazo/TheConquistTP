@@ -1,0 +1,13 @@
+OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-23T09:16:28.744-03:00' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : '| matrix text elements |\rtext := Form fromFileNamed: FileSystem workingDirectory / \'assets/temas.txt\'.\relements := text substrings: \'|\'.\rtext close.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-23T09:17:24.154-03:00' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : '| file contents elements |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\r[ \r    contents := file readStream contents.\r] ensure: [ file close ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\r\r"Imprime los elementos en el Transcript"\rTranscript show: elements; cr.'
+}
