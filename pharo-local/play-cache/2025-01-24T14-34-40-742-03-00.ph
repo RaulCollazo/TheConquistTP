@@ -1,0 +1,1 @@
+World submorphs "Selecciona a todos los submorphs y descide si es un ImageMorph para eliminarlo"        select: [ :morph | morph isKindOf: ]        thenDo: [ :morph | morph delete ].

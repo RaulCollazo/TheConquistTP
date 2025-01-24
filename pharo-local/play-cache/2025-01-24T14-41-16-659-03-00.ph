@@ -1,0 +1,1 @@
+|casilla|casilla := Casilla new.casilla crearCasilla: 1 and: 1.World morph delete.

@@ -1,0 +1,509 @@
+OmEntry {
+	#tags : {
+		#prior : OmReference [ 'Pharo12.0-SNAPSHOT-64bit-0384a4d925.300E52A1A280', '3' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #'crearCasilla:and:imageMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearCasilla: x and: y imageMorph: imageMorph\r    "Crear un Morph cuadrado y almacenarlo en la variable de instancia"\r    morph := Morph new.\r    morph color: Color random.\r    morph extent: 100@100. "Tamaño del cuadrado (100x100 píxeles)"\r    morph position: x@y. "Posicionar el morph según las coordenadas pasadas"\r    imageMorph addMorph: morph.',
+			#stamp : '1/24/2025 14:44',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '1' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #'crearCasilla:and:imageMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearCasilla: x and: y imageMorph: imageMorph\r    "Crear un Morph cuadrado y almacenarlo en la variable de instancia"\r    morph := Morph new.\r    morph color: Color random.\r    morph extent: 100@100. "Tamaño del cuadrado (100x100 píxeles)"\r    morph position: x@y. "Posicionar el morph según las coordenadas pasadas"\r    imageMorph addMorph: morph.',
+			#stamp : '1/24/2025 14:44',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #'crearCasilla:and:imageMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearCasilla: x and: y imageMorph: imageMorph\r    "Crear un Morph cuadrado y almacenarlo en la variable de instancia"\r    morph := Morph new.\r    morph color: Color random.\r    morph extent: 100@100. "Tamaño del cuadrado (100x100 píxeles)"\r    morph position: x@y. "Posicionar el morph según las coordenadas pasadas"\r    imageMorph addMorph: morph.\r^morph.',
+			#stamp : '1/24/2025 14:47',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '2' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r|imagen |\rimagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.jpg\'.\rimagenMorph removeAllMorphs.\rimagenMorph image: imagen.',
+			#stamp : '1/24/2025 09:19',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r|imagen casilla|\rcasilla := Casilla new.\rimagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.jpg\'.\rimagenMorph removeAllMorphs.\rimagenMorph image: imagen.\rimagenMorph addMorph: casilla crearCasilla: 1 and: 2 imageMorph: imagenMorph. ',
+			#stamp : '1/24/2025 14:47',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '3' ],
+		#self : OmReference [ '4' ]
+	},
+	#content : EpCompositeRefactoring {
+		#childrenRefactorings : [ ]
+	}
+}OmEntry {
+	#tags : {
+		#trigger : OmReference [ '4' ],
+		#prior : @3,
+		#self : OmReference [ '5' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Casilla\r\tslots: { #morph };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Casilla,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Casilla,
+						#isMeta : false
+					},
+					#name : #morph,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Casilla class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Casilla class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Casilla,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#protocol : #accessing
+	}
+}OmEntry {
+	#tags : {
+		#trigger : OmReference [ '4' ],
+		#prior : OmReference [ '5' ],
+		#self : OmReference [ '6' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #morph,
+			#protocol : #accessing,
+			#sourceCode : 'morph\r\r\t^ morph',
+			#stamp : '1/24/2025 14:47',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#trigger : OmReference [ '4' ],
+		#prior : OmReference [ '6' ],
+		#self : OmReference [ '7' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #'morph:',
+			#protocol : #accessing,
+			#sourceCode : 'morph: anObject\r\r\tmorph := anObject',
+			#stamp : '1/24/2025 14:47',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '7' ],
+		#self : OmReference [ '8' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r|imagen casilla|\rcasilla := Casilla new.\rimagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.jpg\'.\rimagenMorph removeAllMorphs.\rimagenMorph image: imagen.\rimagenMorph addMorph: casilla crearCasilla: 1 and: 2 imageMorph: imagenMorph. ',
+			#stamp : '1/24/2025 14:47',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r|imagen casilla|\rcasilla := Casilla new.\rimagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.jpg\'.\rimagenMorph removeAllMorphs.\rimagenMorph image: imagen.\rimagenMorph addMorph: casilla crearCasilla: 1 and: 2 imageMorph: imagenMorph.',
+			#stamp : '1/24/2025 14:48',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '8' ],
+		#self : OmReference [ '9' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r|imagen casilla|\rcasilla := Casilla new.\rimagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.jpg\'.\rimagenMorph removeAllMorphs.\rimagenMorph image: imagen.\rimagenMorph addMorph: casilla crearCasilla: 1 and: 2 imageMorph: imagenMorph.',
+			#stamp : '1/24/2025 14:48',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r|imagen casilla|\rcasilla := Casilla new.\rimagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.jpg\'.\rimagenMorph removeAllMorphs.\rimagenMorph image: imagen.\rimagenMorph addMorph: casilla crearCasilla: 1 and: 2 imageMorph: self.',
+			#stamp : '1/24/2025 14:48',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '9' ],
+		#self : OmReference [ '10' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #'crearCasilla:and:imageMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearCasilla: x and: y imageMorph: imageMorph\r    "Crear un Morph cuadrado y almacenarlo en la variable de instancia"\r    morph := Morph new.\r    morph color: Color random.\r    morph extent: 100@100. "Tamaño del cuadrado (100x100 píxeles)"\r    morph position: x@y. "Posicionar el morph según las coordenadas pasadas"\r    imageMorph addMorph: morph.\r^morph.',
+			#stamp : '1/24/2025 14:47',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '10' ],
+		#self : OmReference [ '11' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #eliminarCasilla,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'eliminarCasilla\r    "Eliminar el Morph del mundo si existe"\r    morph ifNotNil: [\r        morph delete.\r        morph := nil.\r    ].',
+			#stamp : '1/21/2025 16:54',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '11' ],
+		#self : OmReference [ '12' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r|imagen casilla|\rcasilla := Casilla new.\rimagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.jpg\'.\rimagenMorph removeAllMorphs.\rimagenMorph image: imagen.\rimagenMorph addMorph: casilla crearCasilla: 1 and: 2 imageMorph: self.',
+			#stamp : '1/24/2025 14:48',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r|imagen casilla|\rcasilla := Casilla new.\rcasilla crearCasilla: 1 and: 1. \rimagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.jpg\'.\rimagenMorph removeAllMorphs.\rimagenMorph image: imagen.\rimagenMorph addMorph: casilla morph.',
+			#stamp : '1/24/2025 14:50',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '12' ],
+		#self : OmReference [ '13' ]
+	},
+	#content : EpClassAddition {
+		#class : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Casilla\r\tslots: { #morph . #color . #tema };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Casilla,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Casilla,
+						#isMeta : false
+					},
+					#name : #morph,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Casilla,
+						#isMeta : false
+					},
+					#name : #color,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Casilla,
+						#isMeta : false
+					},
+					#name : #tema,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Casilla class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Casilla class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Casilla,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '13' ],
+		#self : OmReference [ '14' ]
+	},
+	#content : EpClassModification {
+		#oldClass : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Casilla\r\tslots: { #morph };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Casilla,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Casilla,
+						#isMeta : false
+					},
+					#name : #morph,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Casilla class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Casilla class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Casilla,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#newClass : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Casilla\r\tslots: { #morph . #color . #tema };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Casilla,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Casilla,
+						#isMeta : false
+					},
+					#name : #morph,
+					#parent : @26
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Casilla,
+						#isMeta : false
+					},
+					#name : #color,
+					#parent : @26
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Casilla,
+						#isMeta : false
+					},
+					#name : #tema,
+					#parent : @26
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Casilla class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Casilla class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @26
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Casilla,
+					#isMeta : false
+				},
+				#parent : @26,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '14' ],
+		#self : OmReference [ '15' ]
+	},
+	#content : EpSessionSnapshot {
+		#imageName : 'C:\\Users\\Educacion\\Documents\\Pharo\\images\\The Conquist\\The Conquist.image'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '15' ],
+		#self : OmReference [ '16' ]
+	},
+	#content : EpSessionSnapshot {
+		#imageName : 'C:\\Users\\Educacion\\Documents\\Pharo\\images\\The Conquist\\The Conquist.image'
+	}
+}

@@ -1,0 +1,31 @@
+OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-24T14:41:41.715-03:00' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : '|casilla|\rcasilla := Casilla new.\rcasilla crearCasilla: 1 and: 1.\rcasilla eliminarCasilla'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-24T14:42:00.161-03:00' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : '|casilla|\rcasilla := Casilla new.\r"casilla crearCasilla: 1 and: 1."\rcasilla eliminarCasilla'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-24T14:42:15.224-03:00' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : '|casilla|\rcasilla := Casilla new.\rcasilla crearCasilla: 1 and: 1.\rcasilla eliminarCasilla'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-24T14:43:19.671-03:00' ],
+		#self : OmReference [ '4' ]
+	},
+	#content : '|casilla|\rcasilla := Casilla new.\rcasilla crearCasilla: 1 and: 1.\rcasilla morph delete.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-24T14:43:35.208-03:00' ],
+		#self : OmReference [ '5' ]
+	},
+	#content : '|casilla|\rcasilla := Casilla new.\rcasilla crearCasilla: 1 and: 1.\rWorld morph delete.'
+}

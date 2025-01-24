@@ -1,0 +1,7 @@
+OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-24T14:40:28.183-03:00' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : '|casilla|\rcasilla := Casilla new.\rcasilla crearCasilla: 1 and: 1. '
+}

@@ -1,0 +1,37 @@
+OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-24T14:34:58.617-03:00' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : 'Casilla crearCasilla: 2 and: 10 '
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-24T14:35:39.755-03:00' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : '|casilla|\rcasilla := Casilla crearCasilla: 2 and: 10 '
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-24T14:36:22.662-03:00' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : '|casilla|\rcasilla := Casilla crearCasilla'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-24T14:36:41.092-03:00' ],
+		#self : OmReference [ '4' ]
+	},
+	#content : '|casilla|\rcasilla := Casilla new.\rcasilla crearCasilla'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-24T14:37:04.277-03:00' ],
+		#self : OmReference [ '5' ]
+	},
+	#content : '|casilla|\rcasilla := Casilla new.\rcasilla crearCasilla\rcasilla delete'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-24T14:37:48.38-03:00' ],
+		#self : OmReference [ '6' ]
+	},
+	#content : 'World submorphs "Selecciona a todos los submorphs y descide si es un ImageMorph para eliminarlo"\r        select: [ :morph | morph isKindOf: ]\r        thenDo: [ :morph | morph delete ].'
+}
