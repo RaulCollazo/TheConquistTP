@@ -1,0 +1,933 @@
+OmEntry {
+	#tags : {
+		#prior : OmReference [ 'Pharo12.0-SNAPSHOT-64bit-0384a4d925.33F95CEE62C0', '8' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2) + 120).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    boton2 extent: 120@50.\r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2))  @ (imagenMorph height // 2 - (boton2 height // 2) + 220).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '1/23/2025 15:54',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2) + 120).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    boton2 extent: 120@50.\r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2))  @ (imagenMorph height // 2 - (boton2 height // 2) + 220).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWindowLabeled: \'TheConquist\'.',
+			#stamp : '1/23/2025 16:11',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '1' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #borrarVentanasLabeledParticulas,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'borrarVentanasLabeledParticulas\r    "Este método borra todas las ventanas etiquetadas con el label \'particulas\'"\r    World submorphs do: [ :morph |\r        morph isWindow ifTrue: [\r            morph label = \'particulas\' ifTrue: [\r                morph close. "Cierra la ventana si tiene el label \'particulas\'"\r            ].\r        ].\r    ].',
+			#stamp : '1/23/2025 16:13',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '2' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #borrarVentanasLabeledParticulas,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'borrarVentanasLabeledParticulas\r    "Este método borra todas las ventanas etiquetadas con el label \'particulas\'"\r    World submorphs do: [ :morph |\r        morph isWindow ifTrue: [\r            morph label = \'particulas\' ifTrue: [\r                morph close. "Cierra la ventana si tiene el label \'particulas\'"\r            ].\r        ].\r    ].',
+			#stamp : '1/23/2025 16:13',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #borrarVentanasLabeledParticulas,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'borrarVentanasLabeledParticulas\r    "Este método borra todas las ventanas etiquetadas con el label \'particulas\'"\r    World submorphs do: [ :morph |\r        morph isWindow ifTrue: [\r            morph label = \'TheConquist\' ifTrue: [\r                morph close. "Cierra la ventana si tiene el label \'particulas\'"\r            ].\r        ].\r    ].',
+			#stamp : '1/23/2025 16:13',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '3' ],
+		#self : OmReference [ '4' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #borrarVentanasLabeledParticulas,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'borrarVentanasLabeledParticulas\r    "Este método borra todas las ventanas etiquetadas con el label \'particulas\'"\r    World submorphs do: [ :morph |\r        morph isWindow ifTrue: [\r            morph label = \'TheConquist\' ifTrue: [\r                morph close. "Cierra la ventana si tiene el label \'particulas\'"\r            ].\r        ].\r    ].',
+			#stamp : '1/23/2025 16:13',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #borrarVentanasLabeledParticulas,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'borrarVentanasLabeledParticulas\r    "Este método borra todas las ventanas etiquetadas con el label \'particulas\'"\r    World submorphs do: [ :morph |\r            morph label = \'TheConquist\' ifTrue: [\r                morph close. "Cierra la ventana si tiene el label \'particulas\'"\r        ].\r    ].',
+			#stamp : '1/23/2025 16:13',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '4' ],
+		#self : OmReference [ '5' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2) + 120).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    boton2 extent: 120@50.\r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2))  @ (imagenMorph height // 2 - (boton2 height // 2) + 220).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWindowLabeled: \'TheConquist\'.',
+			#stamp : '1/23/2025 16:11',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2) + 120).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #borrarVentanasLabeledParticular. "Definir el método a llamar cuando se presiona el botón"\r    boton2 extent: 120@50.\r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2))  @ (imagenMorph height // 2 - (boton2 height // 2) + 220).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWindowLabeled: \'TheConquist\'.',
+			#stamp : '1/23/2025 16:14',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '5' ],
+		#self : OmReference [ '6' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #borrarVentanasLabeledParticular,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'borrarVentanasLabeledParticular\r    "Este método borra todas las ventanas etiquetadas con el label \'particulas\'"\r    World submorphs do: [ :morph |\r            morph label = \'TheConquist\' ifTrue: [\r                morph close. "Cierra la ventana si tiene el label \'particulas\'"\r        ].\r    ].',
+			#stamp : '1/23/2025 16:14',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '6' ],
+		#self : OmReference [ '7' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #borrarVentanasLabeledParticulas,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'borrarVentanasLabeledParticulas\r    "Este método borra todas las ventanas etiquetadas con el label \'particulas\'"\r    World submorphs do: [ :morph |\r            morph label = \'TheConquist\' ifTrue: [\r                morph close. "Cierra la ventana si tiene el label \'particulas\'"\r        ].\r    ].',
+			#stamp : '1/23/2025 16:13',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '7' ],
+		#self : OmReference [ '8' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #borrarVentanasLabeledParticular,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'borrarVentanasLabeledParticular\r    "Este método borra todas las ventanas etiquetadas con el label \'particulas\'"\r    World submorphs do: [ :morph |\r            morph label = \'TheConquist\' ifTrue: [\r                morph close. "Cierra la ventana si tiene el label \'particulas\'"\r        ].\r    ].',
+			#stamp : '1/23/2025 16:14',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #borrarVentanasLabeledParticular,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'borrarVentanasLabeledParticular\r    "Cierra todas las ventanas que tienen el título \'The Conquist\'."\r    | windowsToClose |\r    windowsToClose := UIManager default openWindows select: [ :window | window label = \'The Conquist\' ].\r    windowsToClose do: [ :window | window close ].',
+			#stamp : '1/23/2025 16:15',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '8' ],
+		#self : OmReference [ '9' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #borrarVentanasLabeledParticular,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'borrarVentanasLabeledParticular\r    "Cierra todas las ventanas que tienen el título \'The Conquist\'."\r    | windowsToClose |\r    windowsToClose := UIManager default openWindows select: [ :window | window label = \'The Conquist\' ].\r    windowsToClose do: [ :window | window close ].',
+			#stamp : '1/23/2025 16:15',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #borrarVentanasLabeledParticular,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'borrarVentanasLabeledParticular\rWorld submorphs do: [:morph |\r        "Verificar si la ventana tiene la etiqueta \'TheConquist\'"\r        (morph isWindow and: [(morph label = \'TheConquist\')]) ifTrue: [\r            morph close. "Cerrar la ventana"\r        ]\r    ].',
+			#stamp : '1/23/2025 16:18',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '9' ],
+		#self : OmReference [ '10' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #borrarVentanasLabeledParticular,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'borrarVentanasLabeledParticular\rWorld submorphs do: [:morph |\r        "Verificar si la ventana tiene la etiqueta \'TheConquist\'"\r        (morph isWindow and: [(morph label = \'TheConquist\')]) ifTrue: [\r            morph close. "Cerrar la ventana"\r        ]\r    ].',
+			#stamp : '1/23/2025 16:18',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #borrarVentanasLabeledParticular,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'borrarVentanasLabeledParticular\rWorld submorphs do: [:morph |\r        "Verificar si la ventana tiene la etiqueta \'TheConquist\'"\r        [(morph label = \'TheConquist\')] ifTrue: [\r            morph close. "Cerrar la ventana"\r        ]\r    ].',
+			#stamp : '1/23/2025 16:18',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '10' ],
+		#self : OmReference [ '11' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #borrarVentanasLabeledParticular,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'borrarVentanasLabeledParticular\rWorld submorphs do: [:morph |\r        "Verificar si la ventana tiene la etiqueta \'TheConquist\'"\r        [(morph label = \'TheConquist\')] ifTrue: [\r            morph close. "Cerrar la ventana"\r        ]\r    ].',
+			#stamp : '1/23/2025 16:18',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #borrarVentanasLabeledParticular,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'borrarVentanasLabeledParticular\rWorld submorphs do: [:morph |\r        "Verificar si la ventana tiene la etiqueta \'TheConquist\'"\r        [(morph label = \'TheConquist\')] ifTrue: [\r            morph delete. "Cerrar la ventana"\r        ]\r    ].',
+			#stamp : '1/23/2025 16:19',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '11' ],
+		#self : OmReference [ '12' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #borrarVentanasLabeledParticular,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'borrarVentanasLabeledParticular\rWorld submorphs do: [:morph |\r        "Verificar si la ventana tiene la etiqueta \'TheConquist\'"\r        [(morph label = \'TheConquist\')] ifTrue: [\r            morph delete. "Cerrar la ventana"\r        ]\r    ].',
+			#stamp : '1/23/2025 16:20',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #borrarVentanasLabeledParticular,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'borrarVentanasLabeledParticular\r   World submorphs do: [:morph |\r        "Verificar si el morph es una ventana y tiene la etiqueta correcta"\r        (morph isWindow and: [(morph label = \'TheConquist\')]) ifTrue: [\r            morph close. "Cerrar la ventana"\r        ]\r    ].',
+			#stamp : '1/23/2025 16:21',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '12' ],
+		#self : OmReference [ '13' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #borrarVentanasLabeledParticular,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'borrarVentanasLabeledParticular\r   World submorphs do: [:morph |\r        "Verificar si el morph es una ventana y tiene la etiqueta correcta"\r        (morph isWindow and: [(morph label = \'TheConquist\')]) ifTrue: [\r            morph close. "Cerrar la ventana"\r        ]\r    ].',
+			#stamp : '1/23/2025 16:21',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #borrarVentanasLabeledParticular,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'borrarVentanasLabeledParticular\r   World submorphs do: [:morph |\r        "Verificar si el morph es una ventana y tiene la etiqueta correcta"\r        (morph isOpenInWindow and: [(morph label = \'TheConquist\')]) ifTrue: [\r            morph close. "Cerrar la ventana"\r        ]\r    ].',
+			#stamp : '1/23/2025 16:22',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '13' ],
+		#self : OmReference [ '14' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #borrarVentanasLabeledParticular,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'borrarVentanasLabeledParticular\r   World submorphs do: [:morph |\r        "Verificar si el morph es una ventana y tiene la etiqueta correcta"\r        (morph isOpenInWindow and: [(morph label = \'TheConquist\')]) ifTrue: [\r            morph close. "Cerrar la ventana"\r        ]\r    ].',
+			#stamp : '1/23/2025 16:22',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #borrarVentanasLabeledParticular,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'borrarVentanasLabeledParticular\r   World submorphs do: [:morph |\r        "Verificar si el morph es una ventana y tiene la etiqueta correcta"\r        (morph label = \'TheConquist\') ifTrue: [\r            morph close. "Cerrar la ventana"\r        ]\r    ].',
+			#stamp : '1/23/2025 16:23',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '14' ],
+		#self : OmReference [ '15' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #borrarVentanasLabeledParticular,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'borrarVentanasLabeledParticular\r   World submorphs do: [:morph |\r        "Verificar si el morph es una ventana y tiene la etiqueta correcta"\r        (morph label = \'TheConquist\') ifTrue: [\r            morph close. "Cerrar la ventana"\r        ]\r    ].',
+			#stamp : '1/23/2025 16:23',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #borrarVentanasLabeledParticular,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'borrarVentanasLabeledParticular\r   | ventana |\r   ventana := World submorphs detect: [:each | each label = \'TheConquist\'] ifNone: [nil].\r   ventana ifNotNil: [ventana close].',
+			#stamp : '1/23/2025 16:26',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '15' ],
+		#self : OmReference [ '16' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #borrarVentanasLabeledParticular,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'borrarVentanasLabeledParticular\r   | ventana |\r   ventana := World submorphs detect: [:each | each label = \'TheConquist\'] ifNone: [nil].\r   ventana ifNotNil: [ventana close].',
+			#stamp : '1/23/2025 16:26',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #borrarVentanasLabeledParticular,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'borrarVentanasLabeledParticular\r   | ventana |\r   ventana := World submorphs detect: [:each | \r       (each isWindow and: [each label = \'TheConquist\']) \r   ] ifNone: [nil].\r   ventana ifNotNil: [ventana close].',
+			#stamp : '1/23/2025 16:28',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '16' ],
+		#self : OmReference [ '17' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #borrarVentanasLabeledParticular,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'borrarVentanasLabeledParticular\r   | ventana |\r   ventana := World submorphs detect: [:each | \r       (each isWindow and: [each label = \'TheConquist\']) \r   ] ifNone: [nil].\r   ventana ifNotNil: [ventana close].',
+			#stamp : '1/23/2025 16:28',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #borrarVentanasLabeledParticular,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'borrarVentanasLabeledParticular\r| allMorphs targetMorphs |\r"Obtenemos todos los morphs presentes en el sistema"\rallMorphs := World submorphs.\r\r"Filtramos los morphs que tengan la etiqueta \'The conquist\'"\rtargetMorphs := allMorphs select: [ :each | each label = \'TheConquist\' ].\r\r"Eliminamos los morphs encontrados"\rtargetMorphs do: [ :each | each delete ].',
+			#stamp : '1/23/2025 16:29',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '17' ],
+		#self : OmReference [ '18' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #borrarVentanasLabeledParticular,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'borrarVentanasLabeledParticular\r| allMorphs targetMorphs |\r"Obtenemos todos los morphs presentes en el sistema"\rallMorphs := World submorphs.\r\r"Filtramos los morphs que tengan la etiqueta \'The conquist\'"\rtargetMorphs := allMorphs select: [ :each | each label = \'TheConquist\' ].\r\r"Eliminamos los morphs encontrados"\rtargetMorphs do: [ :each | each delete ].',
+			#stamp : '1/23/2025 16:29',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #borrarVentanasLabeledParticular,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'borrarVentanasLabeledParticular\r SystemWindow allInstances do: [ :each | \r        (each label = \'TheConquist\') ifTrue: [\r            each close. "Cierra la ventana"\r        ].\r    ].',
+			#stamp : '1/23/2025 16:32',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '18' ],
+		#self : OmReference [ '19' ]
+	},
+	#content : EpSessionSnapshot {
+		#imageName : 'C:\\Users\\Educacion\\Documents\\Pharo\\images\\The Conquist\\The Conquist.image'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '19' ],
+		#self : OmReference [ '20' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #TableroLogico,
+				#isMeta : false
+			},
+			#name : #'crearMatrizTemas:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas: cantJugadores\r| file contents elements matrix |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\r\r    "Crear la matriz"\r    matrix := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r    "Recorrer los elementos y asignarlos a la matriz"\r    1 to: elements size do: [:i |\r        | row col |\r        row := (i - 1) // 8 + 1.  "Calcula la fila (1 a 8)"\r        col := (i - 1) \\\\ 8 + 1.   "Calcula la columna (1 a 8)"\r        matrix at: row column: col put: (elements at: i).\r    ].\r\r    "Imprimir la matriz para verificar"\r    1 to: matrix rows do: [:rowIndex |  "Iterar sobre las filas"\r        1 to: matrix cols do: [:colIndex |  "Iterar sobre las columnas"\r            Transcript show: (matrix at: rowIndex column: colIndex); space.\r        ].\r        Transcript cr.\r    ].\r\relements inspect',
+			#stamp : '1/23/2025 10:02',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #TableroLogico,
+				#isMeta : false
+			},
+			#name : #'crearMatrizTemas:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas: cantJugadores\r| file contents elements matrix |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\relements := elements shuffled.\r\r    "Crear la matriz"\r    matrix := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r    "Recorrer los elementos y asignarlos a la matriz"\r    1 to: elements size do: [:i |\r        | row col |\r        row := (i - 1) // 8 + 1.  "Calcula la fila (1 a 8)"\r        col := (i - 1) \\\\ 8 + 1.   "Calcula la columna (1 a 8)"\r        matrix at: row column: col put: (elements at: i).\r    ].\r\r    "Imprimir la matriz para verificar"\r    1 to: matrix rows do: [:rowIndex |  "Iterar sobre las filas"\r        1 to: matrix cols do: [:colIndex |  "Iterar sobre las columnas"\r            Transcript show: (matrix at: rowIndex column: colIndex); space.\r        ].\r        Transcript cr.\r    ].\r\relements inspect',
+			#stamp : '1/23/2025 17:32',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '20' ],
+		#self : OmReference [ '21' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #TableroLogico,
+				#isMeta : false
+			},
+			#name : #'crearMatrizTemas:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas: cantJugadores\r| file contents elements matrix |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\relements := elements shuffled.\r\r    "Crear la matriz"\r    matrix := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r    "Recorrer los elementos y asignarlos a la matriz"\r    1 to: elements size do: [:i |\r        | row col |\r        row := (i - 1) // 8 + 1.  "Calcula la fila (1 a 8)"\r        col := (i - 1) \\\\ 8 + 1.   "Calcula la columna (1 a 8)"\r        matrix at: row column: col put: (elements at: i).\r    ].\r\r    "Imprimir la matriz para verificar"\r    1 to: matrix rows do: [:rowIndex |  "Iterar sobre las filas"\r        1 to: matrix cols do: [:colIndex |  "Iterar sobre las columnas"\r            Transcript show: (matrix at: rowIndex column: colIndex); space.\r        ].\r        Transcript cr.\r    ].\r\relements inspect',
+			#stamp : '1/23/2025 17:32',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #TableroLogico,
+				#isMeta : false
+			},
+			#name : #'crearMatrizTemas:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas: cantJugadores\r| file contents elements matrix |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\relements := elements shuffled.\r\r    "Crear la matriz"\r    matrix := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r    "Recorrer los elementos y asignarlos a la matriz"\r    1 to: elements size do: [:i |\r        | row col |\r        row := (i - 1) // 8 + 1.  "Calcula la fila (1 a 8)"\r        col := (i - 1) \\\\ 8 + 1.   "Calcula la columna (1 a 8)"\r        matrix at: row column: col put: (elements at: i).\r    ].\relements inspect.',
+			#stamp : '1/23/2025 17:35',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '21' ],
+		#self : OmReference [ '22' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerCantJugadores,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'obtenerCantJugadores\r    | flag MatrizTemas|\r    flag := false.\r    "Solicitar la cantidad de NPCs"\r    [ flag not ] whileTrue: [\r        CantNPC := (UIManager default request: \'¿Cuántos participantes hay?\') asNumber.\r        ((CantNPC sqrt \\\\ 2) = 0)\r            ifTrue: [ flag := true ]\r            ifFalse: [ UIManager default inform: \'Valor inválido\' ].\r    ].\r\r    "Solicitar la cantidad de jugadores humanos"\r    CantJugadores := (UIManager default request: \'¿Cuántos participantes humanos habrá?\') asNumber.\rMatrizTemas := TableroLogico new.\rMatrizTemas crearMatrizTemas: CantNPC.\rMatrizTemas inspect.',
+			#stamp : '1/23/2025 10:11',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerCantJugadores,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'obtenerCantJugadores\r    | flag MatrizTemas|\r    flag := false.\r    "Solicitar la cantidad de NPCs"\r    [ flag not ] whileTrue: [\r        CantNPC := (UIManager default request: \'¿Cuántos participantes hay?\') asNumber.\r        (((CantNPC sqrt) \\\\ 2) = 0)\r            ifTrue: [ flag := true ]\r            ifFalse: [ UIManager default inform: \'Valor inválido\' ].\r    ].\r\r    "Solicitar la cantidad de jugadores humanos"\r    CantJugadores := (UIManager default request: \'¿Cuántos participantes humanos habrá?\') asNumber.\rMatrizTemas := TableroLogico new.\rMatrizTemas crearMatrizTemas: CantNPC.\rMatrizTemas inspect.',
+			#stamp : '1/23/2025 17:39',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '22' ],
+		#self : OmReference [ '23' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerCantJugadores,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'obtenerCantJugadores\r    | flag MatrizTemas|\r    flag := false.\r    "Solicitar la cantidad de NPCs"\r    [ flag not ] whileTrue: [\r        CantNPC := (UIManager default request: \'¿Cuántos participantes hay?\') asNumber.\r        (((CantNPC sqrt) \\\\ 2) = 0)\r            ifTrue: [ flag := true ]\r            ifFalse: [ UIManager default inform: \'Valor inválido\' ].\r    ].\r\r    "Solicitar la cantidad de jugadores humanos"\r    CantJugadores := (UIManager default request: \'¿Cuántos participantes humanos habrá?\') asNumber.\rMatrizTemas := TableroLogico new.\rMatrizTemas crearMatrizTemas: CantNPC.\rMatrizTemas inspect.',
+			#stamp : '1/23/2025 17:39',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerCantJugadores,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'obtenerCantJugadores\r    | flag MatrizTemas|\r    flag := false.\r    "Solicitar la cantidad de NPCs"\r    [ flag not ] whileTrue: [\r        CantNPC := (UIManager default request: \'¿Cuántos participantes hay?\') asNumber.\r        ((CantNPC sqrt isInteger and: [CantNPC sqrt \\\\ 2 = 0]))\r            ifTrue: [ flag := true ]\r            ifFalse: [ UIManager default inform: \'Valor inválido\' ].\r    ].\r\r    "Solicitar la cantidad de jugadores humanos"\r    CantJugadores := (UIManager default request: \'¿Cuántos participantes humanos habrá?\') asNumber.\rMatrizTemas := TableroLogico new.\rMatrizTemas crearMatrizTemas: CantNPC.\rMatrizTemas inspect.',
+			#stamp : '1/23/2025 17:40',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '23' ],
+		#self : OmReference [ '24' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerCantJugadores,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'obtenerCantJugadores\r    | flag MatrizTemas|\r    flag := false.\r    "Solicitar la cantidad de NPCs"\r    [ flag not ] whileTrue: [\r        CantNPC := (UIManager default request: \'¿Cuántos participantes hay?\') asNumber.\r        ((CantNPC sqrt isInteger and: [CantNPC sqrt \\\\ 2 = 0]))\r            ifTrue: [ flag := true ]\r            ifFalse: [ UIManager default inform: \'Valor inválido\' ].\r    ].\r\r    "Solicitar la cantidad de jugadores humanos"\r    CantJugadores := (UIManager default request: \'¿Cuántos participantes humanos habrá?\') asNumber.\rMatrizTemas := TableroLogico new.\rMatrizTemas crearMatrizTemas: CantNPC.\rMatrizTemas inspect.',
+			#stamp : '1/23/2025 17:40',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerCantJugadores,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'obtenerCantJugadores\r    | flag MatrizTemas|\r    flag := false.\r    "Solicitar la cantidad de NPCs"\r    [ flag not ] whileTrue: [\r        CantNPC := (UIManager default request: \'¿Cuántos participantes hay?\') asNumber.\r        (CantNPC sqrt isInteger )\r            ifTrue: [ flag := true ]\r            ifFalse: [ UIManager default inform: \'Valor inválido\' ].\r    ].\r\r    "Solicitar la cantidad de jugadores humanos"\r    CantJugadores := (UIManager default request: \'¿Cuántos participantes humanos habrá?\') asNumber.\rMatrizTemas := TableroLogico new.\rMatrizTemas crearMatrizTemas: CantNPC.\rMatrizTemas inspect.',
+			#stamp : '1/23/2025 17:42',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '24' ],
+		#self : OmReference [ '25' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #TableroLogico,
+				#isMeta : false
+			},
+			#name : #'crearMatrizTemas:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas: cantJugadores\r| file contents elements matrix |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\relements := elements shuffled.\r\r    "Crear la matriz"\r    matrix := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r    "Recorrer los elementos y asignarlos a la matriz"\r    1 to: elements size do: [:i |\r        | row col |\r        row := (i - 1) // 8 + 1.  "Calcula la fila (1 a 8)"\r        col := (i - 1) \\\\ 8 + 1.   "Calcula la columna (1 a 8)"\r        matrix at: row column: col put: (elements at: i).\r    ].\relements inspect.',
+			#stamp : '1/23/2025 17:35',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #TableroLogico,
+				#isMeta : false
+			},
+			#name : #'crearMatrizTemas:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas: cantJugadores\r| file contents elements matrix |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\relements := elements shuffled.\r\r    "Crear la matriz"\r    matrix := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r    "Recorrer los elementos y asignarlos a la matriz"\r    1 to: elements size do: [:i |\r        | row col |\r        row := (i - 1) // (cantJugadores sqrt) + 1.  "Calcula la fila (1 a 8)"\r        col := (i - 1) \\\\ (cantJugadores ) + 1.   "Calcula la columna (1 a 8)"\r        matrix at: row column: col put: (elements at: i).\r    ].\relements inspect.',
+			#stamp : '1/23/2025 17:43',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '25' ],
+		#self : OmReference [ '26' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #TableroLogico,
+				#isMeta : false
+			},
+			#name : #'crearMatrizTemas:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas: cantJugadores\r| file contents elements matrix |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\relements := elements shuffled.\r\r    "Crear la matriz"\r    matrix := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r    "Recorrer los elementos y asignarlos a la matriz"\r    1 to: elements size do: [:i |\r        | row col |\r        row := (i - 1) // (cantJugadores sqrt) + 1.  "Calcula la fila (1 a 8)"\r        col := (i - 1) \\\\ (cantJugadores ) + 1.   "Calcula la columna (1 a 8)"\r        matrix at: row column: col put: (elements at: i).\r    ].\relements inspect.',
+			#stamp : '1/23/2025 17:43',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #TableroLogico,
+				#isMeta : false
+			},
+			#name : #'crearMatrizTemas:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas: cantJugadores\r| file contents elements matrix |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\relements := elements shuffled.\relements := elements removeAllFrom: cantJugadores.\r    "Crear la matriz"\r    matrix := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r    "Recorrer los elementos y asignarlos a la matriz"\r    1 to: elements size do: [:i |\r        | row col |\r        row := (i - 1) // (cantJugadores sqrt) + 1.  "Calcula la fila (1 a 8)"\r        col := (i - 1) \\\\ (cantJugadores ) + 1.   "Calcula la columna (1 a 8)"\r        matrix at: row column: col put: (elements at: i).\r    ].\relements inspect.',
+			#stamp : '1/23/2025 17:46',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '26' ],
+		#self : OmReference [ '27' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #TableroLogico,
+				#isMeta : false
+			},
+			#name : #'crearMatrizTemas:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas: cantJugadores\r| file contents elements matrix |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\relements := elements shuffled.\relements := elements removeAllFrom: cantJugadores.\r    "Crear la matriz"\r    matrix := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r    "Recorrer los elementos y asignarlos a la matriz"\r    1 to: elements size do: [:i |\r        | row col |\r        row := (i - 1) // (cantJugadores sqrt) + 1.  "Calcula la fila (1 a 8)"\r        col := (i - 1) \\\\ (cantJugadores ) + 1.   "Calcula la columna (1 a 8)"\r        matrix at: row column: col put: (elements at: i).\r    ].\relements inspect.',
+			#stamp : '1/23/2025 17:46',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #TableroLogico,
+				#isMeta : false
+			},
+			#name : #'crearMatrizTemas:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas: cantJugadores\r| file contents elements matrix |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\relements := elements shuffled.\relements := (elements) asOrderedCollection removeAllFrom: cantJugadores.\r    "Crear la matriz"\r    matrix := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r    "Recorrer los elementos y asignarlos a la matriz"\r    1 to: elements size do: [:i |\r        | row col |\r        row := (i - 1) // (cantJugadores sqrt) + 1.  "Calcula la fila (1 a 8)"\r        col := (i - 1) \\\\ (cantJugadores ) + 1.   "Calcula la columna (1 a 8)"\r        matrix at: row column: col put: (elements at: i).\r    ].\relements inspect.',
+			#stamp : '1/23/2025 17:47',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '27' ],
+		#self : OmReference [ '28' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #TableroLogico,
+				#isMeta : false
+			},
+			#name : #'crearMatrizTemas:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas: cantJugadores\r| file contents elements matrix |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\relements := elements shuffled.\relements := (elements) asOrderedCollection removeAllFrom: cantJugadores.\r    "Crear la matriz"\r    matrix := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r    "Recorrer los elementos y asignarlos a la matriz"\r    1 to: elements size do: [:i |\r        | row col |\r        row := (i - 1) // (cantJugadores sqrt) + 1.  "Calcula la fila (1 a 8)"\r        col := (i - 1) \\\\ (cantJugadores ) + 1.   "Calcula la columna (1 a 8)"\r        matrix at: row column: col put: (elements at: i).\r    ].\relements inspect.',
+			#stamp : '1/23/2025 17:47',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #TableroLogico,
+				#isMeta : false
+			},
+			#name : #'crearMatrizTemas:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas: cantJugadores\r| file contents elements matrix |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\relements := elements shuffled.\relements := elements asOrderedCollection removeAllFrom: cantJugadores.\r    "Crear la matriz"\r    matrix := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r    "Recorrer los elementos y asignarlos a la matriz"\r    1 to: elements size do: [:i |\r        | row col |\r        row := (i - 1) // (cantJugadores sqrt) + 1.  "Calcula la fila (1 a 8)"\r        col := (i - 1) \\\\ (cantJugadores ) + 1.   "Calcula la columna (1 a 8)"\r        matrix at: row column: col put: (elements at: i).\r    ].\relements inspect.',
+			#stamp : '1/23/2025 17:48',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '28' ],
+		#self : OmReference [ '29' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #TableroLogico,
+				#isMeta : false
+			},
+			#name : #'crearMatrizTemas:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas: cantJugadores\r| file contents elements matrix |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\relements := elements shuffled.\relements := elements asOrderedCollection removeAllFrom: cantJugadores.\r    "Crear la matriz"\r    matrix := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r    "Recorrer los elementos y asignarlos a la matriz"\r    1 to: elements size do: [:i |\r        | row col |\r        row := (i - 1) // (cantJugadores sqrt) + 1.  "Calcula la fila (1 a 8)"\r        col := (i - 1) \\\\ (cantJugadores ) + 1.   "Calcula la columna (1 a 8)"\r        matrix at: row column: col put: (elements at: i).\r    ].\relements inspect.',
+			#stamp : '1/23/2025 17:48',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #TableroLogico,
+				#isMeta : false
+			},
+			#name : #'crearMatrizTemas:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas: cantJugadores\r| file contents elements matrix |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\relements := elements shuffled.\relements := elements asOrderedCollection removeAllFrom: cantJugadores.\relements := elements asArray .\r    "Crear la matriz"\r    matrix := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r    "Recorrer los elementos y asignarlos a la matriz"\r    1 to: elements size do: [:i |\r        | row col |\r        row := (i - 1) // (cantJugadores sqrt) + 1.  "Calcula la fila (1 a 8)"\r        col := (i - 1) \\\\ (cantJugadores ) + 1.   "Calcula la columna (1 a 8)"\r        matrix at: row column: col put: (elements at: i).\r    ].\relements inspect.',
+			#stamp : '1/23/2025 17:48',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '29' ],
+		#self : OmReference [ '30' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #TableroLogico,
+				#isMeta : false
+			},
+			#name : #'crearMatrizTemas:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas: cantJugadores\r| file contents elements matrix |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\relements := elements shuffled.\relements := elements asOrderedCollection removeAllFrom: cantJugadores.\relements := elements asArray .\r    "Crear la matriz"\r    matrix := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r    "Recorrer los elementos y asignarlos a la matriz"\r    1 to: elements size do: [:i |\r        | row col |\r        row := (i - 1) // (cantJugadores sqrt) + 1.  "Calcula la fila (1 a 8)"\r        col := (i - 1) \\\\ (cantJugadores ) + 1.   "Calcula la columna (1 a 8)"\r        matrix at: row column: col put: (elements at: i).\r    ].\relements inspect.',
+			#stamp : '1/23/2025 17:48',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #TableroLogico,
+				#isMeta : false
+			},
+			#name : #'crearMatrizTemas:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas: cantJugadores\r| file contents elements matrix |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\relements := elements shuffled.\relements := elements copyFrom: 1 to: cantJugadores. \r    "Crear la matriz"\r    matrix := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r    "Recorrer los elementos y asignarlos a la matriz"\r    1 to: elements size do: [:i |\r        | row col |\r        row := (i - 1) // (cantJugadores sqrt) + 1.  "Calcula la fila (1 a 8)"\r        col := (i - 1) \\\\ (cantJugadores ) + 1.   "Calcula la columna (1 a 8)"\r        matrix at: row column: col put: (elements at: i).\r    ].\relements inspect.',
+			#stamp : '1/23/2025 17:49',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '30' ],
+		#self : OmReference [ '31' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #TableroLogico,
+				#isMeta : false
+			},
+			#name : #'crearMatrizTemas:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas: cantJugadores\r| file contents elements matrix |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\relements := elements shuffled.\relements := elements copyFrom: 1 to: cantJugadores. \r    "Crear la matriz"\r    matrix := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r    "Recorrer los elementos y asignarlos a la matriz"\r    1 to: elements size do: [:i |\r        | row col |\r        row := (i - 1) // (cantJugadores sqrt) + 1.  "Calcula la fila (1 a 8)"\r        col := (i - 1) \\\\ (cantJugadores ) + 1.   "Calcula la columna (1 a 8)"\r        matrix at: row column: col put: (elements at: i).\r    ].\relements inspect.',
+			#stamp : '1/23/2025 17:49',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #TableroLogico,
+				#isMeta : false
+			},
+			#name : #'crearMatrizTemas:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas: cantJugadores\r| file contents elements matrix |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\relements := elements shuffled.\relements := elements copyFrom: 1 to: cantJugadores - 1. \r    "Crear la matriz"\r    matrix := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r    "Recorrer los elementos y asignarlos a la matriz"\r    1 to: elements size do: [:i |\r        | row col |\r        row := (i - 1) // (cantJugadores sqrt) + 1.  "Calcula la fila (1 a 8)"\r        col := (i - 1) \\\\ (cantJugadores ) + 1.   "Calcula la columna (1 a 8)"\r        matrix at: row column: col put: (elements at: i).\r    ].\relements inspect.',
+			#stamp : '1/23/2025 17:50',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '31' ],
+		#self : OmReference [ '32' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #TableroLogico,
+				#isMeta : false
+			},
+			#name : #'crearMatrizTemas:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas: cantJugadores\r| file contents elements matrix |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\relements := elements shuffled.\relements := elements copyFrom: 1 to: cantJugadores - 1. \r    "Crear la matriz"\r    matrix := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r    "Recorrer los elementos y asignarlos a la matriz"\r    1 to: elements size do: [:i |\r        | row col |\r        row := (i - 1) // (cantJugadores sqrt) + 1.  "Calcula la fila (1 a 8)"\r        col := (i - 1) \\\\ (cantJugadores ) + 1.   "Calcula la columna (1 a 8)"\r        matrix at: row column: col put: (elements at: i).\r    ].\relements inspect.',
+			#stamp : '1/23/2025 17:50',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #TableroLogico,
+				#isMeta : false
+			},
+			#name : #'crearMatrizTemas:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas: cantJugadores\r| file contents elements matrix |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\r"elements := elements shuffled."\relements := elements copyFrom: 1 to: (cantJugadores - 1). \r    "Crear la matriz"\r    matrix := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r    "Recorrer los elementos y asignarlos a la matriz"\r    1 to: elements size do: [:i |\r        | row col |\r        row := (i - 1) // (cantJugadores sqrt) + 1.  "Calcula la fila (1 a 8)"\r        col := (i - 1) \\\\ (cantJugadores ) + 1.   "Calcula la columna (1 a 8)"\r        matrix at: row column: col put: (elements at: i).\r    ].\relements inspect.',
+			#stamp : '1/23/2025 17:51',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '32' ],
+		#self : OmReference [ '33' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #TableroLogico,
+				#isMeta : false
+			},
+			#name : #'crearMatrizTemas:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas: cantJugadores\r| file contents elements matrix |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\r"elements := elements shuffled."\relements := elements copyFrom: 1 to: (cantJugadores - 1). \r    "Crear la matriz"\r    matrix := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r    "Recorrer los elementos y asignarlos a la matriz"\r    1 to: elements size do: [:i |\r        | row col |\r        row := (i - 1) // (cantJugadores sqrt) + 1.  "Calcula la fila (1 a 8)"\r        col := (i - 1) \\\\ (cantJugadores ) + 1.   "Calcula la columna (1 a 8)"\r        matrix at: row column: col put: (elements at: i).\r    ].\relements inspect.',
+			#stamp : '1/23/2025 17:51',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #TableroLogico,
+				#isMeta : false
+			},
+			#name : #'crearMatrizTemas:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas: cantJugadores\r| file contents elements matrix |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\r"elements := elements shuffled."\relements := elements copyFrom: 1 to: cantJugadores. \r    "Crear la matriz"\r    matrix := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r    "Recorrer los elementos y asignarlos a la matriz"\r    1 to: elements size do: [:i |\r        | row col |\r        row := (i - 1) // (cantJugadores sqrt) + 1.  "Calcula la fila (1 a 8)"\r        col := (i - 1) \\\\ (cantJugadores ) + 1.   "Calcula la columna (1 a 8)"\r        matrix at: row column: col put: (elements at: i).\r    ].\relements inspect.',
+			#stamp : '1/23/2025 17:52',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '33' ],
+		#self : OmReference [ '34' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #TableroLogico,
+				#isMeta : false
+			},
+			#name : #'crearMatrizTemas:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas: cantJugadores\r| file contents elements matrix |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\r"elements := elements shuffled."\relements := elements copyFrom: 1 to: cantJugadores. \r    "Crear la matriz"\r    matrix := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r    "Recorrer los elementos y asignarlos a la matriz"\r    1 to: elements size do: [:i |\r        | row col |\r        row := (i - 1) // (cantJugadores sqrt) + 1.  "Calcula la fila (1 a 8)"\r        col := (i - 1) \\\\ (cantJugadores ) + 1.   "Calcula la columna (1 a 8)"\r        matrix at: row column: col put: (elements at: i).\r    ].\relements inspect.',
+			#stamp : '1/23/2025 17:52',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #TableroLogico,
+				#isMeta : false
+			},
+			#name : #'crearMatrizTemas:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas: cantJugadores\r| file contents elements matrix |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\r"elements := elements shuffled."\r    "Crear la matriz"\r    matrix := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r    "Recorrer los elementos y asignarlos a la matriz"\r    1 to: elements size do: [:i |\r        | row col |\r        row := (i - 1) // (cantJugadores sqrt) + 1.  "Calcula la fila (1 a 8)"\r        col := (i - 1) \\\\ (cantJugadores ) + 1.   "Calcula la columna (1 a 8)"\r        matrix at: row column: col put: (elements at: i).\r    ].\relements inspect.',
+			#stamp : '1/23/2025 17:53',
+			#package : #TheConquist
+		}
+	}
+}

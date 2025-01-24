@@ -1,0 +1,1 @@
+|duel|duel := Juego iniciar

@@ -1,0 +1,871 @@
+OmEntry {
+	#tags : {
+		#prior : OmReference [ 'Pharo12.0-SNAPSHOT-64bit-0384a4d925.1E9ADE65A440', '25' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2) - 30).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2) + 30).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '1/22/2025 05:27',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 extent: 100@50. "Cambia el tamaño del botón (ancho@alto)"\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2) - 30).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2) + 30).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '1' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 extent: 100@50. "Cambia el tamaño del botón (ancho@alto)"\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2) - 30).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2) + 30).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 extent: 500@100. "Cambia el tamaño del botón (ancho@alto)"\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2) - 30).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2) + 30).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '2' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 extent: 500@100. "Cambia el tamaño del botón (ancho@alto)"\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2) - 30).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2) + 30).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 extent: 32@21. "Cambia el tamaño del botón (ancho@alto)"\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2) - 30).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2) + 30).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '3' ],
+		#self : OmReference [ '4' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 extent: 32@21. "Cambia el tamaño del botón (ancho@alto)"\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2) - 30).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2) + 30).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 extent: 300@200. "Cambia el tamaño del botón (ancho@alto)"\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2) - 30).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2) + 30).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '4' ],
+		#self : OmReference [ '5' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 extent: 300@200. "Cambia el tamaño del botón (ancho@alto)"\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2) - 30).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2) + 30).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2) - 30).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2) + 30).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '5' ],
+		#self : OmReference [ '6' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2) - 30).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2) + 30).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2) - 50).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2) + 30).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '6' ],
+		#self : OmReference [ '7' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2) - 50).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2) + 30).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2)) - 50.\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2) + 30).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '7' ],
+		#self : OmReference [ '8' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2)) - 50.\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2) + 30).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2) -50 ) @ (imagenMorph height // 2 - (boton1 height // 2) - 30).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2) + 30).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '8' ],
+		#self : OmReference [ '9' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2) -50 ) @ (imagenMorph height // 2 - (boton1 height // 2) - 30).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2) + 30).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) - 20 @ (imagenMorph height // 2 - (boton1 height // 2) - 30).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2) + 30).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '9' ],
+		#self : OmReference [ '10' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) - 20 @ (imagenMorph height // 2 - (boton1 height // 2) - 30).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2) + 30).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) - 20 @ (imagenMorph height // 2 - (boton1 height // 2)).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2) + 30).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '10' ],
+		#self : OmReference [ '11' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) - 20 @ (imagenMorph height // 2 - (boton1 height // 2)).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2) + 30).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) - 50 @ (imagenMorph height // 2 - (boton1 height // 2)).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2) + 30).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '11' ],
+		#self : OmReference [ '12' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) - 50 @ (imagenMorph height // 2 - (boton1 height // 2)).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2) + 30).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) - 50 @ (imagenMorph height // 2 - (boton1 height // 2)- 30).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2) + 30).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '12' ],
+		#self : OmReference [ '13' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) - 50 @ (imagenMorph height // 2 - (boton1 height // 2)- 30).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2) + 30).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2)- 30).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2) + 30).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '13' ],
+		#self : OmReference [ '14' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2)- 30).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2) + 30).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2)).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2) + 30).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '14' ],
+		#self : OmReference [ '15' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2)).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2) + 30).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) - 50 @ (imagenMorph height // 2 - (boton1 height // 2)).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2) + 30).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '15' ],
+		#self : OmReference [ '16' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) - 50 @ (imagenMorph height // 2 - (boton1 height // 2)).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2) + 30).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) - 50 @ (imagenMorph height // 2 - (boton1 height // 2)).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) - 60 @ (imagenMorph height // 2 - (boton2 height // 2) + 30).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '16' ],
+		#self : OmReference [ '17' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) - 50 @ (imagenMorph height // 2 - (boton1 height // 2)).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) - 60 @ (imagenMorph height // 2 - (boton2 height // 2) + 30).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2)).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) - 60 @ (imagenMorph height // 2 - (boton2 height // 2) + 30).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '17' ],
+		#self : OmReference [ '18' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2)).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) - 60 @ (imagenMorph height // 2 - (boton2 height // 2) + 30).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2)) - 60.\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2)) - 80.\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '18' ],
+		#self : OmReference [ '19' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2)) - 60.\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2)) - 80.\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2)) + 60.\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2)) + 80.\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '19' ],
+		#self : OmReference [ '20' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2)) + 60.\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2)) + 80.\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2)) + 60.\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: 0@0.\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '20' ],
+		#self : OmReference [ '21' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2)) + 60.\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: 0@0.\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2)).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2)) + 80.\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '21' ],
+		#self : OmReference [ '22' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2)).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2)) + 80.\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2)).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2)).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '22' ],
+		#self : OmReference [ '23' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2)).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2)).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2)).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2)) + 60.\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '23' ],
+		#self : OmReference [ '24' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2)).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) @ (imagenMorph height // 2 - (boton2 height // 2)) + 60.\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2)).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) + 60 @ (imagenMorph height // 2 - (boton2 height // 2)) + 60.\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '24' ],
+		#self : OmReference [ '25' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2)).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) + 60 @ (imagenMorph height // 2 - (boton2 height // 2)) + 60.\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2)).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) -60 @ (imagenMorph height // 2 - (boton2 height // 2)) + 60.\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '25' ],
+		#self : OmReference [ '26' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2)).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) -60 @ (imagenMorph height // 2 - (boton2 height // 2)) + 60.\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2)).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) -120 @ (imagenMorph height // 2 - (boton2 height // 2)) + 120.\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '26' ],
+		#self : OmReference [ '27' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2)).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) -120 @ (imagenMorph height // 2 - (boton2 height // 2)) + 120.\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2)).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) -220 @ (imagenMorph height // 2 - (boton2 height // 2)) + 220.\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '27' ],
+		#self : OmReference [ '28' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2)).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) -220 @ (imagenMorph height // 2 - (boton2 height // 2)) + 220.\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) - 120 @ (imagenMorph height // 2 - (boton1 height // 2)) + 120.\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) -220 @ (imagenMorph height // 2 - (boton2 height // 2)) + 220.\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '28' ],
+		#self : OmReference [ '29' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) - 120 @ (imagenMorph height // 2 - (boton1 height // 2)) + 120.\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    \r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) -220 @ (imagenMorph height // 2 - (boton2 height // 2)) + 220.\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) - 120 @ (imagenMorph height // 2 - (boton1 height // 2)) + 120.\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    boton2 extent: 150@50.\r\r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) -220 @ (imagenMorph height // 2 - (boton2 height // 2)) + 220.\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '29' ],
+		#self : OmReference [ '30' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) - 120 @ (imagenMorph height // 2 - (boton1 height // 2)) + 120.\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    boton2 extent: 150@50.\r\r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) -220 @ (imagenMorph height // 2 - (boton2 height // 2)) + 220.\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWorld.',
+			#stamp : '',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) - 120 @ (imagenMorph height // 2 - (boton1 height // 2)) + 120.\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #eliminarMorphs. "Definir el método a llamar cuando se presiona el botón"\r    boton2 extent: 150@50.\r\r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2)) -220 @ (imagenMorph height // 2 - (boton2 height // 2)) + 220.\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInExternalWindow.',
+			#stamp : '',
+			#package : #TheConquist
+		}
+	}
+}

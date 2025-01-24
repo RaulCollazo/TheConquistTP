@@ -1,317 +1,50 @@
-[31mMessage not understood: Juego class >> #cantNPC
-[0mJuego class(Object)>>doesNotUnderstand: #cantNPC
-Juego class>>iniciar
-UndefinedObject>>DoIt
-OCReceiverDoItSemanticScope(OCDoItSemanticScope)>>evaluateDoIt:
-OpalCompiler>>evaluate
+[31m5 in #('Historia' 'Geografía' 'Literatura' 'Arte')
+[0mArray(Object)>>errorSubscriptBounds:
+Array(Object)>>at:put:
+Matrix>>at:column:put:
+TableroLogico>>crearMatrizTemas:
+Juego>>obtenerCantJugadores
+[target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
+FullBlockClosure(BlockClosure)>>ensure:
+CursorWithMask(Cursor)>>showWhile:
+SimpleButtonMorph>>doButtonAction
+SimpleButtonMorph>>mouseUp:
+SimpleButtonMorph(Morph)>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+SimpleButtonMorph(Morph)>>handleEvent:
+SimpleButtonMorph(Morph)>>handleFocusEvent:
 [
-		self announcer announce: (SpCodeWillBeEvaluatedAnnouncement newContent: aString).
-		oldBindings := self interactionModel bindings copy.
-		result := self interactionModel compiler
-			source: aString;
-			environment: self environment;
-			failBlock:  [ 
-				self announcer announce: (SpCodeEvaluationFailedAnnouncement newContent: aString).
-				^ compileErrorBlock value ];
-			evaluate.
-		oldBindings size = self interactionModel bindings size 
-			ifFalse: [ self withAdapterDo: [ :anAdapter | anAdapter refreshStyling ] ].
-		self announcer announce: (SpCodeEvaluationSucceedAnnouncement newContent: aString).
-		result ] in SpCodePresenter>>evaluate:onCompileError:onError: in Block: [...
+		result := focusHolder handleFocusEvent: transformedEvent.
+	] in HandMorph>>sendFocusEvent:to:clear: in Block: [...
 FullBlockClosure(BlockClosure)>>on:do:
-SpCodePresenter>>evaluate:onCompileError:onError:
-SpCodeDoItCommand(SpCodeSelectionCommand)>>evaluate:andDo:
-SpCodeDoItCommand(SpCodeSelectionCommand)>>evaluateSelectionAndDo:
-SpCodeDoItCommand>>execute
-SpCommand(CmCommandDecorator)>>execute
-[ self decoratedCommand execute ] in SpToolCurrentApplicationCommand>>execute in Block: [ self decoratedCommand execute ]
-[ activeProcess
-			psValueAt: index
-			put: anObject.
-		aBlock value ] in SpToolCurrentApplication(DynamicVariable)>>value:during: in Block: [ activeProcess...
-FullBlockClosure(BlockClosure)>>ensure:
-SpToolCurrentApplication(DynamicVariable)>>value:during:
-SpToolCurrentApplication class(DynamicVariable class)>>value:during:
-SpToolCurrentApplicationCommand>>execute
-[ self decoratedCommand execute ] in SpToolCurrentApplicationCommand>>execute in Block: [ self decoratedCommand execute ]
-[ activeProcess
-			psValueAt: index
-			put: anObject.
-		aBlock value ] in SpToolCurrentApplication(DynamicVariable)>>value:during: in Block: [ activeProcess...
-FullBlockClosure(BlockClosure)>>ensure:
-SpToolCurrentApplication(DynamicVariable)>>value:during:
-SpToolCurrentApplication class(DynamicVariable class)>>value:during:
-SpToolCurrentApplicationCommand>>execute
-[ 
-			aCmCommand canBeExecuted 
-				ifTrue: [ aCmCommand execute ] ] in SpKMCategoryBuilder>>visitCommand: in Block: [ ...
-FullBlockClosure(BlockClosure)>>cull:
-FullBlockClosure(BlockClosure)>>cull:cull:
-FullBlockClosure(BlockClosure)>>cull:cull:cull:
-KMCategoryBinding>>completeMatch:buffer:
-[ :l | l completeMatch: self buffer: aBuffer ] in KMKeymap>>notifyCompleteMatchTo:buffer: in Block: [ :l | l completeMatch: self buffer: aBuffer ]
-[0m[31mMessage not understood: Matrix >> #crearMatrizTemas:
-[0mMatrix(Object)>>doesNotUnderstand: #crearMatrizTemas:
-Juego class>>iniciar
-UndefinedObject>>DoIt
-OCReceiverDoItSemanticScope(OCDoItSemanticScope)>>evaluateDoIt:
-OpalCompiler>>evaluate
+WorldMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendMouseEvent:
+HandMorph>>handleEvent:
 [
-		self announcer announce: (SpCodeWillBeEvaluatedAnnouncement newContent: aString).
-		oldBindings := self interactionModel bindings copy.
-		result := self interactionModel compiler
-			source: aString;
-			environment: self environment;
-			failBlock:  [ 
-				self announcer announce: (SpCodeEvaluationFailedAnnouncement newContent: aString).
-				^ compileErrorBlock value ];
-			evaluate.
-		oldBindings size = self interactionModel bindings size 
-			ifFalse: [ self withAdapterDo: [ :anAdapter | anAdapter refreshStyling ] ].
-		self announcer announce: (SpCodeEvaluationSucceedAnnouncement newContent: aString).
-		result ] in SpCodePresenter>>evaluate:onCompileError:onError: in Block: [...
-FullBlockClosure(BlockClosure)>>on:do:
-SpCodePresenter>>evaluate:onCompileError:onError:
-SpCodeDoItCommand(SpCodeSelectionCommand)>>evaluate:andDo:
-SpCodeDoItCommand(SpCodeSelectionCommand)>>evaluateSelectionAndDo:
-SpCodeDoItCommand>>execute
-SpCommand(CmCommandDecorator)>>execute
-[ self decoratedCommand execute ] in SpToolCurrentApplicationCommand>>execute in Block: [ self decoratedCommand execute ]
-[ activeProcess
-			psValueAt: index
-			put: anObject.
-		aBlock value ] in SpToolCurrentApplication(DynamicVariable)>>value:during: in Block: [ activeProcess...
+		(morphicWorld activeHand isNotNil and: [ anEvent hand isNotNil ]) ifTrue: [
+			morphicWorld activeHand handleEvent: anEvent
+		]
+	] in OSWindowMorphicEventHandler>>dispatchMorphicEvent: in Block: [...
+WorldState>>runStepMethodsIn:
+WorldMorph>>runStepMethods
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycleNow
+WorldMorph>>doOneCycle
+[
+		| extraWorldsToDraw |
+		extraWorldsToDraw := ExtraWorldListMutex critical: [
+			                     self extraWorldList ].
+		extraWorldsToDraw do: [ :world | world doOneCycle ].
+
+		(self currentWorld isNotNil and: [
+			 (extraWorldsToDraw includes: self currentWorld) not ]) ifTrue: [
+			self currentWorld doOneCycle ] ] in WorldMorph class>>doOneCycle in Block: [...
 FullBlockClosure(BlockClosure)>>ensure:
-SpToolCurrentApplication(DynamicVariable)>>value:during:
-SpToolCurrentApplication class(DynamicVariable class)>>value:during:
-SpToolCurrentApplicationCommand>>execute
-[ self decoratedCommand execute ] in SpToolCurrentApplicationCommand>>execute in Block: [ self decoratedCommand execute ]
-[ activeProcess
-			psValueAt: index
-			put: anObject.
-		aBlock value ] in SpToolCurrentApplication(DynamicVariable)>>value:during: in Block: [ activeProcess...
-FullBlockClosure(BlockClosure)>>ensure:
-SpToolCurrentApplication(DynamicVariable)>>value:during:
-SpToolCurrentApplication class(DynamicVariable class)>>value:during:
-SpToolCurrentApplicationCommand>>execute
-[ 
-			aCmCommand canBeExecuted 
-				ifTrue: [ aCmCommand execute ] ] in SpKMCategoryBuilder>>visitCommand: in Block: [ ...
-FullBlockClosure(BlockClosure)>>cull:
-FullBlockClosure(BlockClosure)>>cull:cull:
-FullBlockClosure(BlockClosure)>>cull:cull:cull:
-KMCategoryBinding>>completeMatch:buffer:
-[ :l | l completeMatch: self buffer: aBuffer ] in KMKeymap>>notifyCompleteMatchTo:buffer: in Block: [ :l | l completeMatch: self buffer: aBuffer ]
+WorldState class>>doDrawCycleWith:
 [0m[31mreceiver of "asNumber" is nil
 [0mUndefinedObject(Object)>>doesNotUnderstand: #asNumber
-Juego class>>iniciar
-UndefinedObject>>DoIt
-OCReceiverDoItSemanticScope(OCDoItSemanticScope)>>evaluateDoIt:
-OpalCompiler>>evaluate
-[
-		self announcer announce: (SpCodeWillBeEvaluatedAnnouncement newContent: aString).
-		oldBindings := self interactionModel bindings copy.
-		result := self interactionModel compiler
-			source: aString;
-			environment: self environment;
-			failBlock:  [ 
-				self announcer announce: (SpCodeEvaluationFailedAnnouncement newContent: aString).
-				^ compileErrorBlock value ];
-			evaluate.
-		oldBindings size = self interactionModel bindings size 
-			ifFalse: [ self withAdapterDo: [ :anAdapter | anAdapter refreshStyling ] ].
-		self announcer announce: (SpCodeEvaluationSucceedAnnouncement newContent: aString).
-		result ] in SpCodePresenter>>evaluate:onCompileError:onError: in Block: [...
-FullBlockClosure(BlockClosure)>>on:do:
-SpCodePresenter>>evaluate:onCompileError:onError:
-SpCodeDoItCommand(SpCodeSelectionCommand)>>evaluate:andDo:
-SpCodeDoItCommand(SpCodeSelectionCommand)>>evaluateSelectionAndDo:
-SpCodeDoItCommand>>execute
-SpCommand(CmCommandDecorator)>>execute
-[ self decoratedCommand execute ] in SpToolCurrentApplicationCommand>>execute in Block: [ self decoratedCommand execute ]
-[ activeProcess
-			psValueAt: index
-			put: anObject.
-		aBlock value ] in SpToolCurrentApplication(DynamicVariable)>>value:during: in Block: [ activeProcess...
-FullBlockClosure(BlockClosure)>>ensure:
-SpToolCurrentApplication(DynamicVariable)>>value:during:
-SpToolCurrentApplication class(DynamicVariable class)>>value:during:
-SpToolCurrentApplicationCommand>>execute
-[ self decoratedCommand execute ] in SpToolCurrentApplicationCommand>>execute in Block: [ self decoratedCommand execute ]
-[ activeProcess
-			psValueAt: index
-			put: anObject.
-		aBlock value ] in SpToolCurrentApplication(DynamicVariable)>>value:during: in Block: [ activeProcess...
-FullBlockClosure(BlockClosure)>>ensure:
-SpToolCurrentApplication(DynamicVariable)>>value:during:
-SpToolCurrentApplication class(DynamicVariable class)>>value:during:
-SpToolCurrentApplicationCommand>>execute
-[ 
-			aCmCommand canBeExecuted 
-				ifTrue: [ aCmCommand execute ] ] in SpKMCategoryBuilder>>visitCommand: in Block: [ ...
-FullBlockClosure(BlockClosure)>>cull:
-FullBlockClosure(BlockClosure)>>cull:cull:
-FullBlockClosure(BlockClosure)>>cull:cull:cull:
-KMCategoryBinding>>completeMatch:buffer:
-[ :l | l completeMatch: self buffer: aBuffer ] in KMKeymap>>notifyCompleteMatchTo:buffer: in Block: [ :l | l completeMatch: self buffer: aBuffer ]
-[0m[31mMessage not understood: Matrix >> #crearMatrizTemas:
-[0mMatrix(Object)>>doesNotUnderstand: #crearMatrizTemas:
-Juego class>>iniciar
-UndefinedObject>>DoIt
-OCReceiverDoItSemanticScope(OCDoItSemanticScope)>>evaluateDoIt:
-OpalCompiler>>evaluate
-[
-		self announcer announce: (SpCodeWillBeEvaluatedAnnouncement newContent: aString).
-		oldBindings := self interactionModel bindings copy.
-		result := self interactionModel compiler
-			source: aString;
-			environment: self environment;
-			failBlock:  [ 
-				self announcer announce: (SpCodeEvaluationFailedAnnouncement newContent: aString).
-				^ compileErrorBlock value ];
-			evaluate.
-		oldBindings size = self interactionModel bindings size 
-			ifFalse: [ self withAdapterDo: [ :anAdapter | anAdapter refreshStyling ] ].
-		self announcer announce: (SpCodeEvaluationSucceedAnnouncement newContent: aString).
-		result ] in SpCodePresenter>>evaluate:onCompileError:onError: in Block: [...
-FullBlockClosure(BlockClosure)>>on:do:
-SpCodePresenter>>evaluate:onCompileError:onError:
-SpCodeDoItCommand(SpCodeSelectionCommand)>>evaluate:andDo:
-SpCodeDoItCommand(SpCodeSelectionCommand)>>evaluateSelectionAndDo:
-SpCodeDoItCommand>>execute
-SpCommand(CmCommandDecorator)>>execute
-[ self decoratedCommand execute ] in SpToolCurrentApplicationCommand>>execute in Block: [ self decoratedCommand execute ]
-[ activeProcess
-			psValueAt: index
-			put: anObject.
-		aBlock value ] in SpToolCurrentApplication(DynamicVariable)>>value:during: in Block: [ activeProcess...
-FullBlockClosure(BlockClosure)>>ensure:
-SpToolCurrentApplication(DynamicVariable)>>value:during:
-SpToolCurrentApplication class(DynamicVariable class)>>value:during:
-SpToolCurrentApplicationCommand>>execute
-[ self decoratedCommand execute ] in SpToolCurrentApplicationCommand>>execute in Block: [ self decoratedCommand execute ]
-[ activeProcess
-			psValueAt: index
-			put: anObject.
-		aBlock value ] in SpToolCurrentApplication(DynamicVariable)>>value:during: in Block: [ activeProcess...
-FullBlockClosure(BlockClosure)>>ensure:
-SpToolCurrentApplication(DynamicVariable)>>value:during:
-SpToolCurrentApplication class(DynamicVariable class)>>value:during:
-SpToolCurrentApplicationCommand>>execute
-[ 
-			aCmCommand canBeExecuted 
-				ifTrue: [ aCmCommand execute ] ] in SpKMCategoryBuilder>>visitCommand: in Block: [ ...
-FullBlockClosure(BlockClosure)>>cull:
-FullBlockClosure(BlockClosure)>>cull:cull:
-FullBlockClosure(BlockClosure)>>cull:cull:cull:
-KMCategoryBinding>>completeMatch:buffer:
-[ :l | l completeMatch: self buffer: aBuffer ] in KMKeymap>>notifyCompleteMatchTo:buffer: in Block: [ :l | l completeMatch: self buffer: aBuffer ]
-[0m[31mMessage not understood: Matrix >> #crearMatrizTemas:
-[0mMatrix(Object)>>doesNotUnderstand: #crearMatrizTemas:
-Juego class>>iniciar
-UndefinedObject>>DoIt
-OCReceiverDoItSemanticScope(OCDoItSemanticScope)>>evaluateDoIt:
-OpalCompiler>>evaluate
-[
-		self announcer announce: (SpCodeWillBeEvaluatedAnnouncement newContent: aString).
-		oldBindings := self interactionModel bindings copy.
-		result := self interactionModel compiler
-			source: aString;
-			environment: self environment;
-			failBlock:  [ 
-				self announcer announce: (SpCodeEvaluationFailedAnnouncement newContent: aString).
-				^ compileErrorBlock value ];
-			evaluate.
-		oldBindings size = self interactionModel bindings size 
-			ifFalse: [ self withAdapterDo: [ :anAdapter | anAdapter refreshStyling ] ].
-		self announcer announce: (SpCodeEvaluationSucceedAnnouncement newContent: aString).
-		result ] in SpCodePresenter>>evaluate:onCompileError:onError: in Block: [...
-FullBlockClosure(BlockClosure)>>on:do:
-SpCodePresenter>>evaluate:onCompileError:onError:
-SpCodeDoItCommand(SpCodeSelectionCommand)>>evaluate:andDo:
-SpCodeDoItCommand(SpCodeSelectionCommand)>>evaluateSelectionAndDo:
-SpCodeDoItCommand>>execute
-SpCommand(CmCommandDecorator)>>execute
-[ self decoratedCommand execute ] in SpToolCurrentApplicationCommand>>execute in Block: [ self decoratedCommand execute ]
-[ activeProcess
-			psValueAt: index
-			put: anObject.
-		aBlock value ] in SpToolCurrentApplication(DynamicVariable)>>value:during: in Block: [ activeProcess...
-FullBlockClosure(BlockClosure)>>ensure:
-SpToolCurrentApplication(DynamicVariable)>>value:during:
-SpToolCurrentApplication class(DynamicVariable class)>>value:during:
-SpToolCurrentApplicationCommand>>execute
-[ self decoratedCommand execute ] in SpToolCurrentApplicationCommand>>execute in Block: [ self decoratedCommand execute ]
-[ activeProcess
-			psValueAt: index
-			put: anObject.
-		aBlock value ] in SpToolCurrentApplication(DynamicVariable)>>value:during: in Block: [ activeProcess...
-FullBlockClosure(BlockClosure)>>ensure:
-SpToolCurrentApplication(DynamicVariable)>>value:during:
-SpToolCurrentApplication class(DynamicVariable class)>>value:during:
-SpToolCurrentApplicationCommand>>execute
-[ 
-			aCmCommand canBeExecuted 
-				ifTrue: [ aCmCommand execute ] ] in SpKMCategoryBuilder>>visitCommand: in Block: [ ...
-FullBlockClosure(BlockClosure)>>cull:
-FullBlockClosure(BlockClosure)>>cull:cull:
-FullBlockClosure(BlockClosure)>>cull:cull:cull:
-KMCategoryBinding>>completeMatch:buffer:
-[ :l | l completeMatch: self buffer: aBuffer ] in KMKeymap>>notifyCompleteMatchTo:buffer: in Block: [ :l | l completeMatch: self buffer: aBuffer ]
-[0m[31mMessage not understood: Matrix >> #crearMatrizTemas:
-[0mMatrix(Object)>>doesNotUnderstand: #crearMatrizTemas:
-Juego class>>iniciar
-UndefinedObject>>DoIt
-OCReceiverDoItSemanticScope(OCDoItSemanticScope)>>evaluateDoIt:
-OpalCompiler>>evaluate
-[
-		self announcer announce: (SpCodeWillBeEvaluatedAnnouncement newContent: aString).
-		oldBindings := self interactionModel bindings copy.
-		result := self interactionModel compiler
-			source: aString;
-			environment: self environment;
-			failBlock:  [ 
-				self announcer announce: (SpCodeEvaluationFailedAnnouncement newContent: aString).
-				^ compileErrorBlock value ];
-			evaluate.
-		oldBindings size = self interactionModel bindings size 
-			ifFalse: [ self withAdapterDo: [ :anAdapter | anAdapter refreshStyling ] ].
-		self announcer announce: (SpCodeEvaluationSucceedAnnouncement newContent: aString).
-		result ] in SpCodePresenter>>evaluate:onCompileError:onError: in Block: [...
-FullBlockClosure(BlockClosure)>>on:do:
-SpCodePresenter>>evaluate:onCompileError:onError:
-SpCodeInspectItCommand(SpCodeSelectionCommand)>>evaluate:andDo:
-SpCodeInspectItCommand(SpCodeSelectionCommand)>>evaluateSelectionAndDo:
-SpCodeInspectItCommand>>execute
-SpCommand(CmCommandDecorator)>>execute
-[ self decoratedCommand execute ] in SpToolCurrentApplicationCommand>>execute in Block: [ self decoratedCommand execute ]
-[ activeProcess
-			psValueAt: index
-			put: anObject.
-		aBlock value ] in SpToolCurrentApplication(DynamicVariable)>>value:during: in Block: [ activeProcess...
-FullBlockClosure(BlockClosure)>>ensure:
-SpToolCurrentApplication(DynamicVariable)>>value:during:
-SpToolCurrentApplication class(DynamicVariable class)>>value:during:
-SpToolCurrentApplicationCommand>>execute
-[ self decoratedCommand execute ] in SpToolCurrentApplicationCommand>>execute in Block: [ self decoratedCommand execute ]
-[ activeProcess
-			psValueAt: index
-			put: anObject.
-		aBlock value ] in SpToolCurrentApplication(DynamicVariable)>>value:during: in Block: [ activeProcess...
-FullBlockClosure(BlockClosure)>>ensure:
-SpToolCurrentApplication(DynamicVariable)>>value:during:
-SpToolCurrentApplication class(DynamicVariable class)>>value:during:
-SpToolCurrentApplicationCommand>>execute
-[ 
-			aCmCommand canBeExecuted 
-				ifTrue: [ aCmCommand execute ] ] in SpKMCategoryBuilder>>visitCommand: in Block: [ ...
-FullBlockClosure(BlockClosure)>>cull:
-FullBlockClosure(BlockClosure)>>cull:cull:
-FullBlockClosure(BlockClosure)>>cull:cull:cull:
-KMCategoryBinding>>completeMatch:buffer:
-[ :l | l completeMatch: self buffer: aBuffer ] in KMKeymap>>notifyCompleteMatchTo:buffer: in Block: [ :l | l completeMatch: self buffer: aBuffer ]
-[0m[31mMessage not understood: Matrix >> #crearMatrizTemas:
-[0mMatrix(Object)>>doesNotUnderstand: #crearMatrizTemas:
 Juego>>obtenerCantJugadores
 [target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
 FullBlockClosure(BlockClosure)>>ensure:
@@ -355,8 +88,8 @@ WorldState class>>doDrawCycleWith:
 WorldMorph class>>doOneCycle
 MorphicRenderLoop>>doOneCycle
 MorphicRenderLoop>>doOneCycleWhile:
-[0m[31mMessage not understood: Matrix >> #crearMatrizTemas:
-[0mMatrix(Object)>>doesNotUnderstand: #crearMatrizTemas:
+[0m[31mreceiver of "asNumber" is nil
+[0mUndefinedObject(Object)>>doesNotUnderstand: #asNumber
 Juego>>obtenerCantJugadores
 [target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
 FullBlockClosure(BlockClosure)>>ensure:
@@ -400,8 +133,145 @@ WorldState class>>doDrawCycleWith:
 WorldMorph class>>doOneCycle
 MorphicRenderLoop>>doOneCycle
 MorphicRenderLoop>>doOneCycleWhile:
-[0m[31mMessage not understood: Matrix >> #crearMatrizTemas:
-[0mMatrix(Object)>>doesNotUnderstand: #crearMatrizTemas:
+[0m[31m5 in #('Historia' 'Geografía' 'Literatura' 'Arte')
+[0mArray(Object)>>errorSubscriptBounds:
+Array(Object)>>at:put:
+Matrix>>at:column:put:
+TableroLogico>>crearMatrizTemas:
+Juego>>obtenerCantJugadores
+[target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
+FullBlockClosure(BlockClosure)>>ensure:
+CursorWithMask(Cursor)>>showWhile:
+SimpleButtonMorph>>doButtonAction
+SimpleButtonMorph>>mouseUp:
+SimpleButtonMorph(Morph)>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+SimpleButtonMorph(Morph)>>handleEvent:
+SimpleButtonMorph(Morph)>>handleFocusEvent:
+[
+		result := focusHolder handleFocusEvent: transformedEvent.
+	] in HandMorph>>sendFocusEvent:to:clear: in Block: [...
+FullBlockClosure(BlockClosure)>>on:do:
+WorldMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendMouseEvent:
+HandMorph>>handleEvent:
+[
+		(morphicWorld activeHand isNotNil and: [ anEvent hand isNotNil ]) ifTrue: [
+			morphicWorld activeHand handleEvent: anEvent
+		]
+	] in OSWindowMorphicEventHandler>>dispatchMorphicEvent: in Block: [...
+WorldState>>runStepMethodsIn:
+WorldMorph>>runStepMethods
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycleNow
+WorldMorph>>doOneCycle
+[
+		| extraWorldsToDraw |
+		extraWorldsToDraw := ExtraWorldListMutex critical: [
+			                     self extraWorldList ].
+		extraWorldsToDraw do: [ :world | world doOneCycle ].
+
+		(self currentWorld isNotNil and: [
+			 (extraWorldsToDraw includes: self currentWorld) not ]) ifTrue: [
+			self currentWorld doOneCycle ] ] in WorldMorph class>>doOneCycle in Block: [...
+FullBlockClosure(BlockClosure)>>ensure:
+WorldState class>>doDrawCycleWith:
+[0m[31m10 in #('Historia' 'Geografía' 'Literatura' 'Tecnología' 'Política' 'Economía' 'Medicina' 'Psicología' 'Religión')
+[0mArray(Object)>>errorSubscriptBounds:
+Array(Object)>>at:put:
+Matrix>>at:column:put:
+TableroLogico>>crearMatrizTemas:
+Juego>>obtenerCantJugadores
+[target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
+FullBlockClosure(BlockClosure)>>ensure:
+CursorWithMask(Cursor)>>showWhile:
+SimpleButtonMorph>>doButtonAction
+SimpleButtonMorph>>mouseUp:
+SimpleButtonMorph(Morph)>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+SimpleButtonMorph(Morph)>>handleEvent:
+SimpleButtonMorph(Morph)>>handleFocusEvent:
+[
+		result := focusHolder handleFocusEvent: transformedEvent.
+	] in HandMorph>>sendFocusEvent:to:clear: in Block: [...
+FullBlockClosure(BlockClosure)>>on:do:
+WorldMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendMouseEvent:
+HandMorph>>handleEvent:
+[
+		(morphicWorld activeHand isNotNil and: [ anEvent hand isNotNil ]) ifTrue: [
+			morphicWorld activeHand handleEvent: anEvent
+		]
+	] in OSWindowMorphicEventHandler>>dispatchMorphicEvent: in Block: [...
+WorldState>>runStepMethodsIn:
+WorldMorph>>runStepMethods
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycleNow
+WorldMorph>>doOneCycle
+[
+		| extraWorldsToDraw |
+		extraWorldsToDraw := ExtraWorldListMutex critical: [
+			                     self extraWorldList ].
+		extraWorldsToDraw do: [ :world | world doOneCycle ].
+
+		(self currentWorld isNotNil and: [
+			 (extraWorldsToDraw includes: self currentWorld) not ]) ifTrue: [
+			self currentWorld doOneCycle ] ] in WorldMorph class>>doOneCycle in Block: [...
+FullBlockClosure(BlockClosure)>>ensure:
+WorldState class>>doDrawCycleWith:
+[0m[31m10 in #('Historia' 'Geografía' 'Literatura' 'Tecnología' 'Política' 'Economía' 'Medicina' 'Psicología' 'Religión')
+[0mArray(Object)>>errorSubscriptBounds:
+Array(Object)>>at:put:
+Matrix>>at:column:put:
+TableroLogico>>crearMatrizTemas:
+Juego>>obtenerCantJugadores
+[target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
+FullBlockClosure(BlockClosure)>>ensure:
+CursorWithMask(Cursor)>>showWhile:
+SimpleButtonMorph>>doButtonAction
+SimpleButtonMorph>>mouseUp:
+SimpleButtonMorph(Morph)>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+SimpleButtonMorph(Morph)>>handleEvent:
+SimpleButtonMorph(Morph)>>handleFocusEvent:
+[
+		result := focusHolder handleFocusEvent: transformedEvent.
+	] in HandMorph>>sendFocusEvent:to:clear: in Block: [...
+FullBlockClosure(BlockClosure)>>on:do:
+WorldMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendMouseEvent:
+HandMorph>>handleEvent:
+[
+		(morphicWorld activeHand isNotNil and: [ anEvent hand isNotNil ]) ifTrue: [
+			morphicWorld activeHand handleEvent: anEvent
+		]
+	] in OSWindowMorphicEventHandler>>dispatchMorphicEvent: in Block: [...
+WorldState>>runStepMethodsIn:
+WorldMorph>>runStepMethods
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycleNow
+WorldMorph>>doOneCycle
+[
+		| extraWorldsToDraw |
+		extraWorldsToDraw := ExtraWorldListMutex critical: [
+			                     self extraWorldList ].
+		extraWorldsToDraw do: [ :world | world doOneCycle ].
+
+		(self currentWorld isNotNil and: [
+			 (extraWorldsToDraw includes: self currentWorld) not ]) ifTrue: [
+			self currentWorld doOneCycle ] ] in WorldMorph class>>doOneCycle in Block: [...
+FullBlockClosure(BlockClosure)>>ensure:
+WorldState class>>doDrawCycleWith:
+[0m[31m0 in #('Historia' 'Geografía' 'Literatura' 'Arte' 'Ciencia' 'Filosofía' 'MúsicaCine' 'Deportes' 'Tecnología' 'Política' 'Economía' 'Medicina' 'Psicología' 'Religión' 'Astronomía' 'Mitología' 'Medio ambiente' 'Matemáticas' 'Lenguas' 'Sociología' 'Antropología' 'Economía global' 'Arquitectura' 'Innovaciones tecnológicas' 'Historia del arte' 'Educación' 'Grandes civilizaciones' 'Derechos humanos' 'Cultura pop' 'Poesía' 'Biografías de personajes históricos' 'Exploración espacial' 'Literatura clásica' 'Filosofía oriental' 'Literatura contemporánea' 'Expresiones artísticas' 'Sociología urbana' 'Fotografía' 'Historia de la música' 'Moda' 'Historia de la moda' 'Cultura asiática' 'Cultura latina' 'Cultura europea' 'Historia de la guerra' 'Política internacional' 'Movimientos sociales' 'Cultura digital' 'Historia del cine' 'Derechos animales' 'Psicología del comportamiento' 'Historia de la ciencia' 'Filosofía política' 'Desarrollo sostenible' 'Tendencias tecnológicas' 'Literatura feminista' 'Arquitectura moderna' 'Historia de la tecnología' 'Literatura infantil' 'Grandes inventos' 'Juegos tradicionales' 'Filosofía occidental' 'Estilos musicales' 'Culturas indígenas')
+[0mArray(Object)>>errorSubscriptBounds:
+Array(Object)>>at:
+TableroLogico>>crearMatrizTemas:
 Juego>>obtenerCantJugadores
 [target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
 FullBlockClosure(BlockClosure)>>ensure:
@@ -443,218 +313,221 @@ WorldMorph>>doOneCycle
 FullBlockClosure(BlockClosure)>>ensure:
 WorldState class>>doDrawCycleWith:
 WorldMorph class>>doOneCycle
-MorphicRenderLoop>>doOneCycle
-MorphicRenderLoop>>doOneCycleWhile:
-[0m[31mMessage not understood: TableroLogico class >> #crearMatrizTemas
-[0mTableroLogico class(Object)>>doesNotUnderstand: #crearMatrizTemas
-UndefinedObject>>DoIt
-OCReceiverDoItSemanticScope(OCDoItSemanticScope)>>evaluateDoIt:
-OpalCompiler>>evaluate
+[0m[31m5 in #('Historia' 'Geografía' 'Literatura' 'Arte')
+[0mArray(Object)>>errorSubscriptBounds:
+Array(Object)>>at:put:
+Matrix>>at:column:put:
+TableroLogico>>crearMatrizTemas:
+Juego>>obtenerCantJugadores
+[target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
+FullBlockClosure(BlockClosure)>>ensure:
+CursorWithMask(Cursor)>>showWhile:
+SimpleButtonMorph>>doButtonAction
+SimpleButtonMorph>>mouseUp:
+SimpleButtonMorph(Morph)>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+SimpleButtonMorph(Morph)>>handleEvent:
+SimpleButtonMorph(Morph)>>handleFocusEvent:
 [
-		self announcer announce: (SpCodeWillBeEvaluatedAnnouncement newContent: aString).
-		oldBindings := self interactionModel bindings copy.
-		result := self interactionModel compiler
-			source: aString;
-			environment: self environment;
-			failBlock:  [ 
-				self announcer announce: (SpCodeEvaluationFailedAnnouncement newContent: aString).
-				^ compileErrorBlock value ];
-			evaluate.
-		oldBindings size = self interactionModel bindings size 
-			ifFalse: [ self withAdapterDo: [ :anAdapter | anAdapter refreshStyling ] ].
-		self announcer announce: (SpCodeEvaluationSucceedAnnouncement newContent: aString).
-		result ] in SpCodePresenter>>evaluate:onCompileError:onError: in Block: [...
+		result := focusHolder handleFocusEvent: transformedEvent.
+	] in HandMorph>>sendFocusEvent:to:clear: in Block: [...
 FullBlockClosure(BlockClosure)>>on:do:
-SpCodePresenter>>evaluate:onCompileError:onError:
-SpCodeDoItCommand(SpCodeSelectionCommand)>>evaluate:andDo:
-SpCodeDoItCommand(SpCodeSelectionCommand)>>evaluateSelectionAndDo:
-SpCodeDoItCommand>>execute
-SpCommand(CmCommandDecorator)>>execute
-[ self decoratedCommand execute ] in SpToolCurrentApplicationCommand>>execute in Block: [ self decoratedCommand execute ]
-[ activeProcess
-			psValueAt: index
-			put: anObject.
-		aBlock value ] in SpToolCurrentApplication(DynamicVariable)>>value:during: in Block: [ activeProcess...
+WorldMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendMouseEvent:
+HandMorph>>handleEvent:
+[
+		(morphicWorld activeHand isNotNil and: [ anEvent hand isNotNil ]) ifTrue: [
+			morphicWorld activeHand handleEvent: anEvent
+		]
+	] in OSWindowMorphicEventHandler>>dispatchMorphicEvent: in Block: [...
+WorldState>>runStepMethodsIn:
+WorldMorph>>runStepMethods
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycleNow
+WorldMorph>>doOneCycle
+[
+		| extraWorldsToDraw |
+		extraWorldsToDraw := ExtraWorldListMutex critical: [
+			                     self extraWorldList ].
+		extraWorldsToDraw do: [ :world | world doOneCycle ].
+
+		(self currentWorld isNotNil and: [
+			 (extraWorldsToDraw includes: self currentWorld) not ]) ifTrue: [
+			self currentWorld doOneCycle ] ] in WorldMorph class>>doOneCycle in Block: [...
 FullBlockClosure(BlockClosure)>>ensure:
-SpToolCurrentApplication(DynamicVariable)>>value:during:
-SpToolCurrentApplication class(DynamicVariable class)>>value:during:
-SpToolCurrentApplicationCommand>>execute
-[ self decoratedCommand execute ] in SpToolCurrentApplicationCommand>>execute in Block: [ self decoratedCommand execute ]
-[ activeProcess
-			psValueAt: index
-			put: anObject.
-		aBlock value ] in SpToolCurrentApplication(DynamicVariable)>>value:during: in Block: [ activeProcess...
+WorldState class>>doDrawCycleWith:
+[0mMorph>>sendMouseEvent:
+HandMorph>>handleEvent:
+[
+		(morphicWorld activeHand isNotNil and: [ anEvent hand isNotNil ]) ifTrue: [
+			morphicWorld activeHand handleEvent: anEvent
+		]
+	] in OSWindowMorphicEventHandler>>dispatchMorphicEvent: in Block: [...
+WorldState>>runStepMethodsIn:
+WorldMorph>>runStepMethods
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycleNow
+WorldMorph>>doOneCycle
+[
+		| extraWorldsToDraw |
+		extraWorldsToDraw := ExtraWorldListMutex critical: [
+			                     self extraWorldList ].
+		extraWorldsToDraw do: [ :world | world doOneCycle ].
+
+		(self currentWorld isNotNil and: [
+			 (extraWorldsToDraw includes: self currentWorld) not ]) ifTrue: [
+			self currentWorld doOneCycle ] ] in WorldMorph class>>doOneCycle in Block: [...
 FullBlockClosure(BlockClosure)>>ensure:
-SpToolCurrentApplication(DynamicVariable)>>value:during:
-SpToolCurrentApplication class(DynamicVariable class)>>value:during:
-SpToolCurrentApplicationCommand>>execute
-[ 
-			aCmCommand canBeExecuted 
-				ifTrue: [ aCmCommand execute ] ] in SpKMCategoryBuilder>>visitCommand: in Block: [ ...
-FullBlockClosure(BlockClosure)>>cull:
-FullBlockClosure(BlockClosure)>>cull:cull:
-FullBlockClosure(BlockClosure)>>cull:cull:cull:
-KMCategoryBinding>>completeMatch:buffer:
-[ :l | l completeMatch: self buffer: aBuffer ] in KMKeymap>>notifyCompleteMatchTo:buffer: in Block: [ :l | l completeMatch: self buffer: aBuffer ]
+WorldState class>>doDrawCycleWith:
+WorldMorph class>>doOneCycle
+[0m[31mMessage not understood: MenubarMorph >> #label
+[0mMenubarMorph(Object)>>doesNotUnderstand: #label
+[:each | each label = 'TheConquist'] in Juego>>borrarVentanasLabeledParticular in Block: [:each | each label = 'TheConquist']
+[ :each |
+			(aBlock value: each)
+				ifTrue: [ ^ foundBlock cull: each ] ] in Array(Collection)>>detect:ifFound:ifNone: in Block: [ :each |...
 Array(SequenceableCollection)>>do:
-[0m[31mMessage not understood: TableroLogico class >> #crearMatrizTemas
-[0mTableroLogico class(Object)>>doesNotUnderstand: #crearMatrizTemas
-UndefinedObject>>DoIt
-OCReceiverDoItSemanticScope(OCDoItSemanticScope)>>evaluateDoIt:
-OpalCompiler>>evaluate
+Array(Collection)>>detect:ifFound:ifNone:
+Array(Collection)>>detect:ifNone:
+Juego>>borrarVentanasLabeledParticular
+[target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
+FullBlockClosure(BlockClosure)>>ensure:
+CursorWithMask(Cursor)>>showWhile:
+SimpleButtonMorph>>doButtonAction
+SimpleButtonMorph>>mouseUp:
+SimpleButtonMorph(Morph)>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+SimpleButtonMorph(Morph)>>handleEvent:
+SimpleButtonMorph(Morph)>>handleFocusEvent:
 [
-		self announcer announce: (SpCodeWillBeEvaluatedAnnouncement newContent: aString).
-		oldBindings := self interactionModel bindings copy.
-		result := self interactionModel compiler
-			source: aString;
-			environment: self environment;
-			failBlock:  [ 
-				self announcer announce: (SpCodeEvaluationFailedAnnouncement newContent: aString).
-				^ compileErrorBlock value ];
-			evaluate.
-		oldBindings size = self interactionModel bindings size 
-			ifFalse: [ self withAdapterDo: [ :anAdapter | anAdapter refreshStyling ] ].
-		self announcer announce: (SpCodeEvaluationSucceedAnnouncement newContent: aString).
-		result ] in SpCodePresenter>>evaluate:onCompileError:onError: in Block: [...
+		result := focusHolder handleFocusEvent: transformedEvent.
+	] in HandMorph>>sendFocusEvent:to:clear: in Block: [...
 FullBlockClosure(BlockClosure)>>on:do:
-SpCodePresenter>>evaluate:onCompileError:onError:
-SpCodeDoItCommand(SpCodeSelectionCommand)>>evaluate:andDo:
-SpCodeDoItCommand(SpCodeSelectionCommand)>>evaluateSelectionAndDo:
-SpCodeDoItCommand>>execute
-SpCommand(CmCommandDecorator)>>execute
-[ self decoratedCommand execute ] in SpToolCurrentApplicationCommand>>execute in Block: [ self decoratedCommand execute ]
-[ activeProcess
-			psValueAt: index
-			put: anObject.
-		aBlock value ] in SpToolCurrentApplication(DynamicVariable)>>value:during: in Block: [ activeProcess...
-FullBlockClosure(BlockClosure)>>ensure:
-SpToolCurrentApplication(DynamicVariable)>>value:during:
-SpToolCurrentApplication class(DynamicVariable class)>>value:during:
-SpToolCurrentApplicationCommand>>execute
-[ self decoratedCommand execute ] in SpToolCurrentApplicationCommand>>execute in Block: [ self decoratedCommand execute ]
-[ activeProcess
-			psValueAt: index
-			put: anObject.
-		aBlock value ] in SpToolCurrentApplication(DynamicVariable)>>value:during: in Block: [ activeProcess...
-FullBlockClosure(BlockClosure)>>ensure:
-SpToolCurrentApplication(DynamicVariable)>>value:during:
-SpToolCurrentApplication class(DynamicVariable class)>>value:during:
-SpToolCurrentApplicationCommand>>execute
-[ 
-			aCmCommand canBeExecuted 
-				ifTrue: [ aCmCommand execute ] ] in SpKMCategoryBuilder>>visitCommand: in Block: [ ...
-FullBlockClosure(BlockClosure)>>cull:
-FullBlockClosure(BlockClosure)>>cull:cull:
-FullBlockClosure(BlockClosure)>>cull:cull:cull:
-KMCategoryBinding>>completeMatch:buffer:
-[ :l | l completeMatch: self buffer: aBuffer ] in KMKeymap>>notifyCompleteMatchTo:buffer: in Block: [ :l | l completeMatch: self buffer: aBuffer ]
-Array(SequenceableCollection)>>do:
-[0m[31mMessage not understood: TableroLogico class >> #crearMatrizTemas:
-[0mTableroLogico class(Object)>>doesNotUnderstand: #crearMatrizTemas:
-UndefinedObject>>DoIt
-OCReceiverDoItSemanticScope(OCDoItSemanticScope)>>evaluateDoIt:
-OpalCompiler>>evaluate
+WorldMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendMouseEvent:
+HandMorph>>handleEvent:
 [
-		self announcer announce: (SpCodeWillBeEvaluatedAnnouncement newContent: aString).
-		oldBindings := self interactionModel bindings copy.
-		result := self interactionModel compiler
-			source: aString;
-			environment: self environment;
-			failBlock:  [ 
-				self announcer announce: (SpCodeEvaluationFailedAnnouncement newContent: aString).
-				^ compileErrorBlock value ];
-			evaluate.
-		oldBindings size = self interactionModel bindings size 
-			ifFalse: [ self withAdapterDo: [ :anAdapter | anAdapter refreshStyling ] ].
-		self announcer announce: (SpCodeEvaluationSucceedAnnouncement newContent: aString).
-		result ] in SpCodePresenter>>evaluate:onCompileError:onError: in Block: [...
-FullBlockClosure(BlockClosure)>>on:do:
-SpCodePresenter>>evaluate:onCompileError:onError:
-SpCodeDoItCommand(SpCodeSelectionCommand)>>evaluate:andDo:
-SpCodeDoItCommand(SpCodeSelectionCommand)>>evaluateSelectionAndDo:
-SpCodeDoItCommand>>execute
-SpCommand(CmCommandDecorator)>>execute
-[ self decoratedCommand execute ] in SpToolCurrentApplicationCommand>>execute in Block: [ self decoratedCommand execute ]
-[ activeProcess
-			psValueAt: index
-			put: anObject.
-		aBlock value ] in SpToolCurrentApplication(DynamicVariable)>>value:during: in Block: [ activeProcess...
-FullBlockClosure(BlockClosure)>>ensure:
-SpToolCurrentApplication(DynamicVariable)>>value:during:
-SpToolCurrentApplication class(DynamicVariable class)>>value:during:
-SpToolCurrentApplicationCommand>>execute
-[ self decoratedCommand execute ] in SpToolCurrentApplicationCommand>>execute in Block: [ self decoratedCommand execute ]
-[ activeProcess
-			psValueAt: index
-			put: anObject.
-		aBlock value ] in SpToolCurrentApplication(DynamicVariable)>>value:during: in Block: [ activeProcess...
-FullBlockClosure(BlockClosure)>>ensure:
-SpToolCurrentApplication(DynamicVariable)>>value:during:
-SpToolCurrentApplication class(DynamicVariable class)>>value:during:
-SpToolCurrentApplicationCommand>>execute
-[ 
-			aCmCommand canBeExecuted 
-				ifTrue: [ aCmCommand execute ] ] in SpKMCategoryBuilder>>visitCommand: in Block: [ ...
-FullBlockClosure(BlockClosure)>>cull:
-FullBlockClosure(BlockClosure)>>cull:cull:
-FullBlockClosure(BlockClosure)>>cull:cull:cull:
-KMCategoryBinding>>completeMatch:buffer:
-[ :l | l completeMatch: self buffer: aBuffer ] in KMKeymap>>notifyCompleteMatchTo:buffer: in Block: [ :l | l completeMatch: self buffer: aBuffer ]
-Array(SequenceableCollection)>>do:
-[0m[31mMessage not understood: TableroLogico class >> #crearMatrizTemas:
-[0mTableroLogico class(Object)>>doesNotUnderstand: #crearMatrizTemas:
-UndefinedObject>>DoIt
-OCReceiverDoItSemanticScope(OCDoItSemanticScope)>>evaluateDoIt:
-OpalCompiler>>evaluate
+		(morphicWorld activeHand isNotNil and: [ anEvent hand isNotNil ]) ifTrue: [
+			morphicWorld activeHand handleEvent: anEvent
+		]
+	] in OSWindowMorphicEventHandler>>dispatchMorphicEvent: in Block: [...
+WorldState>>runStepMethodsIn:
+WorldMorph>>runStepMethods
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycleNow
+WorldMorph>>doOneCycle
 [
-		self announcer announce: (SpCodeWillBeEvaluatedAnnouncement newContent: aString).
-		oldBindings := self interactionModel bindings copy.
-		result := self interactionModel compiler
-			source: aString;
-			environment: self environment;
-			failBlock:  [ 
-				self announcer announce: (SpCodeEvaluationFailedAnnouncement newContent: aString).
-				^ compileErrorBlock value ];
-			evaluate.
-		oldBindings size = self interactionModel bindings size 
-			ifFalse: [ self withAdapterDo: [ :anAdapter | anAdapter refreshStyling ] ].
-		self announcer announce: (SpCodeEvaluationSucceedAnnouncement newContent: aString).
-		result ] in SpCodePresenter>>evaluate:onCompileError:onError: in Block: [...
-FullBlockClosure(BlockClosure)>>on:do:
-SpCodePresenter>>evaluate:onCompileError:onError:
-SpCodeInspectItCommand(SpCodeSelectionCommand)>>evaluate:andDo:
-SpCodeInspectItCommand(SpCodeSelectionCommand)>>evaluateSelectionAndDo:
-SpCodeInspectItCommand>>execute
-SpCommand(CmCommandDecorator)>>execute
-[ self decoratedCommand execute ] in SpToolCurrentApplicationCommand>>execute in Block: [ self decoratedCommand execute ]
-[ activeProcess
-			psValueAt: index
-			put: anObject.
-		aBlock value ] in SpToolCurrentApplication(DynamicVariable)>>value:during: in Block: [ activeProcess...
-FullBlockClosure(BlockClosure)>>ensure:
-SpToolCurrentApplication(DynamicVariable)>>value:during:
-SpToolCurrentApplication class(DynamicVariable class)>>value:during:
-SpToolCurrentApplicationCommand>>execute
-[ self decoratedCommand execute ] in SpToolCurrentApplicationCommand>>execute in Block: [ self decoratedCommand execute ]
-[ activeProcess
-			psValueAt: index
-			put: anObject.
-		aBlock value ] in SpToolCurrentApplication(DynamicVariable)>>value:during: in Block: [ activeProcess...
-FullBlockClosure(BlockClosure)>>ensure:
-SpToolCurrentApplication(DynamicVariable)>>value:during:
-SpToolCurrentApplication class(DynamicVariable class)>>value:during:
-SpToolCurrentApplicationCommand>>execute
-[ 
-			aCmCommand canBeExecuted 
-				ifTrue: [ aCmCommand execute ] ] in SpKMCategoryBuilder>>visitCommand: in Block: [ ...
-FullBlockClosure(BlockClosure)>>cull:
-FullBlockClosure(BlockClosure)>>cull:cull:
-FullBlockClosure(BlockClosure)>>cull:cull:cull:
-KMCategoryBinding>>completeMatch:buffer:
-[ :l | l completeMatch: self buffer: aBuffer ] in KMKeymap>>notifyCompleteMatchTo:buffer: in Block: [ :l | l completeMatch: self buffer: aBuffer ]
+		| extraWorldsToDraw |
+		extraWorldsToDraw := ExtraWorldListMutex critical: [
+			                     self extraWorldList ].
+		extraWorldsToDraw do: [ :world | world doOneCycle ].
+
+		(self currentWorld isNotNil and: [
+			 (extraWorldsToDraw includes: self currentWorld) not ]) ifTrue: [
+			self currentWorld doOneCycle ] ] in WorldMorph class>>doOneCycle in Block: [...
+[0m[31mMessage not understood: MenubarMorph >> #isWindow
+[0mMenubarMorph(Object)>>doesNotUnderstand: #isWindow
+[:each | 
+       (each isWindow and: [each label = 'TheConquist']) 
+   ] in Juego>>borrarVentanasLabeledParticular in Block: [:each | ...
+[ :each |
+			(aBlock value: each)
+				ifTrue: [ ^ foundBlock cull: each ] ] in Array(Collection)>>detect:ifFound:ifNone: in Block: [ :each |...
 Array(SequenceableCollection)>>do:
-[0m[31mMessage not understood: Matrix >> #crearMatrizTemas:
-[0mMatrix(Object)>>doesNotUnderstand: #crearMatrizTemas:
+Array(Collection)>>detect:ifFound:ifNone:
+Array(Collection)>>detect:ifNone:
+Juego>>borrarVentanasLabeledParticular
+[target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
+FullBlockClosure(BlockClosure)>>ensure:
+CursorWithMask(Cursor)>>showWhile:
+SimpleButtonMorph>>doButtonAction
+SimpleButtonMorph>>mouseUp:
+SimpleButtonMorph(Morph)>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+SimpleButtonMorph(Morph)>>handleEvent:
+SimpleButtonMorph(Morph)>>handleFocusEvent:
+[
+		result := focusHolder handleFocusEvent: transformedEvent.
+	] in HandMorph>>sendFocusEvent:to:clear: in Block: [...
+FullBlockClosure(BlockClosure)>>on:do:
+WorldMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendMouseEvent:
+HandMorph>>handleEvent:
+[
+		(morphicWorld activeHand isNotNil and: [ anEvent hand isNotNil ]) ifTrue: [
+			morphicWorld activeHand handleEvent: anEvent
+		]
+	] in OSWindowMorphicEventHandler>>dispatchMorphicEvent: in Block: [...
+WorldState>>runStepMethodsIn:
+WorldMorph>>runStepMethods
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycleNow
+WorldMorph>>doOneCycle
+[
+		| extraWorldsToDraw |
+		extraWorldsToDraw := ExtraWorldListMutex critical: [
+			                     self extraWorldList ].
+		extraWorldsToDraw do: [ :world | world doOneCycle ].
+
+		(self currentWorld isNotNil and: [
+			 (extraWorldsToDraw includes: self currentWorld) not ]) ifTrue: [
+			self currentWorld doOneCycle ] ] in WorldMorph class>>doOneCycle in Block: [...
+[0m[31mMessage not understood: MenubarMorph >> #label
+[0mMenubarMorph(Object)>>doesNotUnderstand: #label
+[ :each | each label = 'TheConquist' ] in Juego>>borrarVentanasLabeledParticular in Block: [ :each | each label = 'TheConquist' ]
+[ :stream|
+		1 to: self size do: [ :index |
+			(aBlock value: (each := self at: index))
+				ifTrue: [ stream nextPut: each ]]] in Array(SequenceableCollection)>>select: in Block: [ :stream|...
+Array class(SequenceableCollection class)>>new:streamContents:
+Array(SequenceableCollection)>>select:
+Juego>>borrarVentanasLabeledParticular
+[target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
+FullBlockClosure(BlockClosure)>>ensure:
+CursorWithMask(Cursor)>>showWhile:
+SimpleButtonMorph>>doButtonAction
+SimpleButtonMorph>>mouseUp:
+SimpleButtonMorph(Morph)>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+SimpleButtonMorph(Morph)>>handleEvent:
+SimpleButtonMorph(Morph)>>handleFocusEvent:
+[
+		result := focusHolder handleFocusEvent: transformedEvent.
+	] in HandMorph>>sendFocusEvent:to:clear: in Block: [...
+FullBlockClosure(BlockClosure)>>on:do:
+WorldMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendMouseEvent:
+HandMorph>>handleEvent:
+[
+		(morphicWorld activeHand isNotNil and: [ anEvent hand isNotNil ]) ifTrue: [
+			morphicWorld activeHand handleEvent: anEvent
+		]
+	] in OSWindowMorphicEventHandler>>dispatchMorphicEvent: in Block: [...
+WorldState>>runStepMethodsIn:
+WorldMorph>>runStepMethods
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycleNow
+WorldMorph>>doOneCycle
+[
+		| extraWorldsToDraw |
+		extraWorldsToDraw := ExtraWorldListMutex critical: [
+			                     self extraWorldList ].
+		extraWorldsToDraw do: [ :world | world doOneCycle ].
+
+		(self currentWorld isNotNil and: [
+			 (extraWorldsToDraw includes: self currentWorld) not ]) ifTrue: [
+			self currentWorld doOneCycle ] ] in WorldMorph class>>doOneCycle in Block: [...
+FullBlockClosure(BlockClosure)>>ensure:
+[0m[31mreceiver of "asNumber" is nil
+[0mUndefinedObject(Object)>>doesNotUnderstand: #asNumber
 Juego>>obtenerCantJugadores
 [target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
 FullBlockClosure(BlockClosure)>>ensure:
@@ -698,8 +571,53 @@ WorldState class>>doDrawCycleWith:
 WorldMorph class>>doOneCycle
 MorphicRenderLoop>>doOneCycle
 MorphicRenderLoop>>doOneCycleWhile:
-[0m[31mMessage not understood: Matrix >> #crearMatrizTemas:
-[0mMatrix(Object)>>doesNotUnderstand: #crearMatrizTemas:
+[0m[31m5 in #('Literatura feminista' 'Historia de la moda' 'Derechos animales' 'Psicología')
+[0mArray(Object)>>errorSubscriptBounds:
+Array(Object)>>at:put:
+Matrix>>at:column:put:
+TableroLogico>>crearMatrizTemas:
+Juego>>obtenerCantJugadores
+[target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
+FullBlockClosure(BlockClosure)>>ensure:
+CursorWithMask(Cursor)>>showWhile:
+SimpleButtonMorph>>doButtonAction
+SimpleButtonMorph>>mouseUp:
+SimpleButtonMorph(Morph)>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+SimpleButtonMorph(Morph)>>handleEvent:
+SimpleButtonMorph(Morph)>>handleFocusEvent:
+[
+		result := focusHolder handleFocusEvent: transformedEvent.
+	] in HandMorph>>sendFocusEvent:to:clear: in Block: [...
+FullBlockClosure(BlockClosure)>>on:do:
+WorldMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendMouseEvent:
+HandMorph>>handleEvent:
+[
+		(morphicWorld activeHand isNotNil and: [ anEvent hand isNotNil ]) ifTrue: [
+			morphicWorld activeHand handleEvent: anEvent
+		]
+	] in OSWindowMorphicEventHandler>>dispatchMorphicEvent: in Block: [...
+WorldState>>runStepMethodsIn:
+WorldMorph>>runStepMethods
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycleNow
+WorldMorph>>doOneCycle
+[
+		| extraWorldsToDraw |
+		extraWorldsToDraw := ExtraWorldListMutex critical: [
+			                     self extraWorldList ].
+		extraWorldsToDraw do: [ :world | world doOneCycle ].
+
+		(self currentWorld isNotNil and: [
+			 (extraWorldsToDraw includes: self currentWorld) not ]) ifTrue: [
+			self currentWorld doOneCycle ] ] in WorldMorph class>>doOneCycle in Block: [...
+FullBlockClosure(BlockClosure)>>ensure:
+WorldState class>>doDrawCycleWith:
+[0m[31mreceiver of "asNumber" is nil
+[0mUndefinedObject(Object)>>doesNotUnderstand: #asNumber
 Juego>>obtenerCantJugadores
 [target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
 FullBlockClosure(BlockClosure)>>ensure:
@@ -743,292 +661,547 @@ WorldState class>>doDrawCycleWith:
 WorldMorph class>>doOneCycle
 MorphicRenderLoop>>doOneCycle
 MorphicRenderLoop>>doOneCycleWhile:
-[0mf environment;
-			failBlock:  [ 
-				self announcer announce: (SpCodeEvaluationFailedAnnouncement newContent: aString).
-				^ compileErrorBlock value ];
-			evaluate.
-		oldBindings size = self interactionModel bindings size 
-			ifFalse: [ self withAdapterDo: [ :anAdapter | anAdapter refreshStyling ] ].
-		self announcer announce: (SpCodeEvaluationSucceedAnnouncement newContent: aString).
-		result ] in SpCodePresenter>>evaluate:onCompileError:onError: in Block: [...
-FullBlockClosure(BlockClosure)>>on:do:
-SpCodePresenter>>evaluate:onCompileError:onError:
-SpCodeDoItCommand(SpCodeSelectionCommand)>>evaluate:andDo:
-SpCodeDoItCommand(SpCodeSelectionCommand)>>evaluateSelectionAndDo:
-SpCodeDoItCommand>>execute
-SpCommand(CmCommandDecorator)>>execute
-[ self decoratedCommand execute ] in SpToolCurrentApplicationCommand>>execute in Block: [ self decoratedCommand execute ]
-[ activeProcess
-			psValueAt: index
-			put: anObject.
-		aBlock value ] in SpToolCurrentApplication(DynamicVariable)>>value:during: in Block: [ activeProcess...
+[0m[31m5 in #('Filosofía' 'Historia de la ciencia' 'Sociología urbana' 'Historia de la tecnología')
+[0mArray(Object)>>errorSubscriptBounds:
+Array(Object)>>at:put:
+Matrix>>at:column:put:
+TableroLogico>>crearMatrizTemas:
+Juego>>obtenerCantJugadores
+[target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
 FullBlockClosure(BlockClosure)>>ensure:
-SpToolCurrentApplication(DynamicVariable)>>value:during:
-SpToolCurrentApplication class(DynamicVariable class)>>value:during:
-SpToolCurrentApplicationCommand>>execute
-[ self decoratedCommand execute ] in SpToolCurrentApplicationCommand>>execute in Block: [ self decoratedCommand execute ]
-[ activeProcess
-			psValueAt: index
-			put: anObject.
-		aBlock value ] in SpToolCurrentApplication(DynamicVariable)>>value:during: in Block: [ activeProcess...
-FullBlockClosure(BlockClosure)>>ensure:
-SpToolCurrentApplication(DynamicVariable)>>value:during:
-SpToolCurrentApplication class(DynamicVariable class)>>value:during:
-SpToolCurrentApplicationCommand>>execute
-[ 
-			aCmCommand canBeExecuted 
-				ifTrue: [ aCmCommand execute ] ] in SpKMCategoryBuilder>>visitCommand: in Block: [ ...
-FullBlockClosure(BlockClosure)>>cull:
-FullBlockClosure(BlockClosure)>>cull:cull:
-FullBlockClosure(BlockClosure)>>cull:cull:cull:
-KMCategoryBinding>>completeMatch:buffer:
-[0m[31mMessage not understood: FileReference >> #close
-[0mFileReference(Object)>>doesNotUnderstand: #close
-Message>>sentTo:
-FileReference(Object)>>doesNotUnderstand: #close
-[ file close ] in UndefinedObject>>DoIt in Block: [ file close ]
-FullBlockClosure(BlockClosure)>>ensure:
-FullBlockClosure(BlockClosure)>>ensure:
-UndefinedObject>>DoIt
-OCReceiverDoItSemanticScope(OCDoItSemanticScope)>>evaluateDoIt:
-OpalCompiler>>evaluate
+CursorWithMask(Cursor)>>showWhile:
+SimpleButtonMorph>>doButtonAction
+SimpleButtonMorph>>mouseUp:
+SimpleButtonMorph(Morph)>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+SimpleButtonMorph(Morph)>>handleEvent:
+SimpleButtonMorph(Morph)>>handleFocusEvent:
 [
-		self announcer announce: (SpCodeWillBeEvaluatedAnnouncement newContent: aString).
-		oldBindings := self interactionModel bindings copy.
-		result := self interactionModel compiler
-			source: aString;
-			environment: self environment;
-			failBlock:  [ 
-				self announcer announce: (SpCodeEvaluationFailedAnnouncement newContent: aString).
-				^ compileErrorBlock value ];
-			evaluate.
-		oldBindings size = self interactionModel bindings size 
-			ifFalse: [ self withAdapterDo: [ :anAdapter | anAdapter refreshStyling ] ].
-		self announcer announce: (SpCodeEvaluationSucceedAnnouncement newContent: aString).
-		result ] in SpCodePresenter>>evaluate:onCompileError:onError: in Block: [...
+		result := focusHolder handleFocusEvent: transformedEvent.
+	] in HandMorph>>sendFocusEvent:to:clear: in Block: [...
 FullBlockClosure(BlockClosure)>>on:do:
-SpCodePresenter>>evaluate:onCompileError:onError:
-SpCodeDoItCommand(SpCodeSelectionCommand)>>evaluate:andDo:
-SpCodeDoItCommand(SpCodeSelectionCommand)>>evaluateSelectionAndDo:
-SpCodeDoItCommand>>execute
-SpCommand(CmCommandDecorator)>>execute
-[ self decoratedCommand execute ] in SpToolCurrentApplicationCommand>>execute in Block: [ self decoratedCommand execute ]
-[ activeProcess
-			psValueAt: index
-			put: anObject.
-		aBlock value ] in SpToolCurrentApplication(DynamicVariable)>>value:during: in Block: [ activeProcess...
-FullBlockClosure(BlockClosure)>>ensure:
-SpToolCurrentApplication(DynamicVariable)>>value:during:
-SpToolCurrentApplication class(DynamicVariable class)>>value:during:
-SpToolCurrentApplicationCommand>>execute
-[ self decoratedCommand execute ] in SpToolCurrentApplicationCommand>>execute in Block: [ self decoratedCommand execute ]
-[ activeProcess
-			psValueAt: index
-			put: anObject.
-		aBlock value ] in SpToolCurrentApplication(DynamicVariable)>>value:during: in Block: [ activeProcess...
-FullBlockClosure(BlockClosure)>>ensure:
-SpToolCurrentApplication(DynamicVariable)>>value:during:
-SpToolCurrentApplication class(DynamicVariable class)>>value:during:
-SpToolCurrentApplicationCommand>>execute
-[ 
-			aCmCommand canBeExecuted 
-				ifTrue: [ aCmCommand execute ] ] in SpKMCategoryBuilder>>visitCommand: in Block: [ ...
-FullBlockClosure(BlockClosure)>>cull:
-[0m[31mMessage not understood: FileReference >> #close
-[0mFileReference(Object)>>doesNotUnderstand: #close
-Message>>sentTo:
-FileReference(Object)>>doesNotUnderstand: #close
-Message>>sentTo:
-FileReference(Object)>>doesNotUnderstand: #close
-[ file close ] in UndefinedObject>>DoIt in Block: [ file close ]
-FullBlockClosure(BlockClosure)>>ensure:
-FullBlockClosure(BlockClosure)>>ensure:
-FullBlockClosure(BlockClosure)>>ensure:
-UndefinedObject>>DoIt
-OCReceiverDoItSemanticScope(OCDoItSemanticScope)>>evaluateDoIt:
-OpalCompiler>>evaluate
+WorldMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendMouseEvent:
+HandMorph>>handleEvent:
 [
-		self announcer announce: (SpCodeWillBeEvaluatedAnnouncement newContent: aString).
-		oldBindings := self interactionModel bindings copy.
-		result := self interactionModel compiler
-			source: aString;
-			environment: self environment;
-			failBlock:  [ 
-				self announcer announce: (SpCodeEvaluationFailedAnnouncement newContent: aString).
-				^ compileErrorBlock value ];
-			evaluate.
-		oldBindings size = self interactionModel bindings size 
-			ifFalse: [ self withAdapterDo: [ :anAdapter | anAdapter refreshStyling ] ].
-		self announcer announce: (SpCodeEvaluationSucceedAnnouncement newContent: aString).
-		result ] in SpCodePresenter>>evaluate:onCompileError:onError: in Block: [...
-FullBlockClosure(BlockClosure)>>on:do:
-SpCodePresenter>>evaluate:onCompileError:onError:
-SpCodeDoItCommand(SpCodeSelectionCommand)>>evaluate:andDo:
-SpCodeDoItCommand(SpCodeSelectionCommand)>>evaluateSelectionAndDo:
-SpCodeDoItCommand>>execute
-SpCommand(CmCommandDecorator)>>execute
-[ self decoratedCommand execute ] in SpToolCurrentApplicationCommand>>execute in Block: [ self decoratedCommand execute ]
-[ activeProcess
-			psValueAt: index
-			put: anObject.
-		aBlock value ] in SpToolCurrentApplication(DynamicVariable)>>value:during: in Block: [ activeProcess...
-FullBlockClosure(BlockClosure)>>ensure:
-SpToolCurrentApplication(DynamicVariable)>>value:during:
-SpToolCurrentApplication class(DynamicVariable class)>>value:during:
-SpToolCurrentApplicationCommand>>execute
-[ self decoratedCommand execute ] in SpToolCurrentApplicationCommand>>execute in Block: [ self decoratedCommand execute ]
-[ activeProcess
-			psValueAt: index
-			put: anObject.
-		aBlock value ] in SpToolCurrentApplication(DynamicVariable)>>value:during: in Block: [ activeProcess...
-FullBlockClosure(BlockClosure)>>ensure:
-SpToolCurrentApplication(DynamicVariable)>>value:during:
-SpToolCurrentApplication class(DynamicVariable class)>>value:during:
-[0m[31mMessage not understood: FileReference >> #close
-[0mFileReference(Object)>>doesNotUnderstand: #close
-Message>>sentTo:
-FileReference(Object)>>doesNotUnderstand: #close
-Message>>sentTo:
-FileReference(Object)>>doesNotUnderstand: #close
-Message>>sentTo:
-FileReference(Object)>>doesNotUnderstand: #close
-[ file close ] in UndefinedObject>>DoIt in Block: [ file close ]
-FullBlockClosure(BlockClosure)>>ensure:
-FullBlockClosure(BlockClosure)>>ensure:
-FullBlockClosure(BlockClosure)>>ensure:
-FullBlockClosure(BlockClosure)>>ensure:
-UndefinedObject>>DoIt
-OCReceiverDoItSemanticScope(OCDoItSemanticScope)>>evaluateDoIt:
-OpalCompiler>>evaluate
+		(morphicWorld activeHand isNotNil and: [ anEvent hand isNotNil ]) ifTrue: [
+			morphicWorld activeHand handleEvent: anEvent
+		]
+	] in OSWindowMorphicEventHandler>>dispatchMorphicEvent: in Block: [...
+WorldState>>runStepMethodsIn:
+WorldMorph>>runStepMethods
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycleNow
+WorldMorph>>doOneCycle
 [
-		self announcer announce: (SpCodeWillBeEvaluatedAnnouncement newContent: aString).
-		oldBindings := self interactionModel bindings copy.
-		result := self interactionModel compiler
-			source: aString;
-			environment: self environment;
-			failBlock:  [ 
-				self announcer announce: (SpCodeEvaluationFailedAnnouncement newContent: aString).
-				^ compileErrorBlock value ];
-			evaluate.
-		oldBindings size = self interactionModel bindings size 
-			ifFalse: [ self withAdapterDo: [ :anAdapter | anAdapter refreshStyling ] ].
-		self announcer announce: (SpCodeEvaluationSucceedAnnouncement newContent: aString).
-		result ] in SpCodePresenter>>evaluate:onCompileError:onError: in Block: [...
-FullBlockClosure(BlockClosure)>>on:do:
-SpCodePresenter>>evaluate:onCompileError:onError:
-SpCodeDoItCommand(SpCodeSelectionCommand)>>evaluate:andDo:
-SpCodeDoItCommand(SpCodeSelectionCommand)>>evaluateSelectionAndDo:
-SpCodeDoItCommand>>execute
-SpCommand(CmCommandDecorator)>>execute
-[ self decoratedCommand execute ] in SpToolCurrentApplicationCommand>>execute in Block: [ self decoratedCommand execute ]
-[ activeProcess
-			psValueAt: index
-			put: anObject.
-		aBlock value ] in SpToolCurrentApplication(DynamicVariable)>>value:during: in Block: [ activeProcess...
+		| extraWorldsToDraw |
+		extraWorldsToDraw := ExtraWorldListMutex critical: [
+			                     self extraWorldList ].
+		extraWorldsToDraw do: [ :world | world doOneCycle ].
+
+		(self currentWorld isNotNil and: [
+			 (extraWorldsToDraw includes: self currentWorld) not ]) ifTrue: [
+			self currentWorld doOneCycle ] ] in WorldMorph class>>doOneCycle in Block: [...
 FullBlockClosure(BlockClosure)>>ensure:
-SpToolCurrentApplication(DynamicVariable)>>value:during:
-SpToolCurrentApplication class(DynamicVariable class)>>value:during:
-SpToolCurrentApplicationCommand>>execute
-[ self decoratedCommand execute ] in SpToolCurrentApplicationCommand>>execute in Block: [ self decoratedCommand execute ]
-[ activeProcess
-			psValueAt: index
-			put: anObject.
-		aBlock value ] in SpToolCurrentApplication(DynamicVariable)>>value:during: in Block: [ activeProcess...
-[0m[31mMessage not understood: FileReference >> #close
-[0mFileReference(Object)>>doesNotUnderstand: #close
-Message>>sentTo:
-FileReference(Object)>>doesNotUnderstand: #close
-Message>>sentTo:
-FileReference(Object)>>doesNotUnderstand: #close
-Message>>sentTo:
-FileReference(Object)>>doesNotUnderstand: #close
-Message>>sentTo:
-FileReference(Object)>>doesNotUnderstand: #close
-[ file close ] in UndefinedObject>>DoIt in Block: [ file close ]
+WorldState class>>doDrawCycleWith:
+[0m[31m10 in #('Juegos tradicionales' 'Economía global' 'Psicología' 'Derechos animales' 'Ciencia' 'Arquitectura' 'Deportes' 'Historia de la ciencia' 'Cultura pop')
+[0mArray(Object)>>errorSubscriptBounds:
+Array(Object)>>at:put:
+Matrix>>at:column:put:
+TableroLogico>>crearMatrizTemas:
+Juego>>obtenerCantJugadores
+[target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
 FullBlockClosure(BlockClosure)>>ensure:
-FullBlockClosure(BlockClosure)>>ensure:
-FullBlockClosure(BlockClosure)>>ensure:
-FullBlockClosure(BlockClosure)>>ensure:
-FullBlockClosure(BlockClosure)>>ensure:
-UndefinedObject>>DoIt
-OCReceiverDoItSemanticScope(OCDoItSemanticScope)>>evaluateDoIt:
-OpalCompiler>>evaluate
+CursorWithMask(Cursor)>>showWhile:
+SimpleButtonMorph>>doButtonAction
+SimpleButtonMorph>>mouseUp:
+SimpleButtonMorph(Morph)>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+SimpleButtonMorph(Morph)>>handleEvent:
+SimpleButtonMorph(Morph)>>handleFocusEvent:
 [
-		self announcer announce: (SpCodeWillBeEvaluatedAnnouncement newContent: aString).
-		oldBindings := self interactionModel bindings copy.
-		result := self interactionModel compiler
-			source: aString;
-			environment: self environment;
-			failBlock:  [ 
-				self announcer announce: (SpCodeEvaluationFailedAnnouncement newContent: aString).
-				^ compileErrorBlock value ];
-			evaluate.
-		oldBindings size = self interactionModel bindings size 
-			ifFalse: [ self withAdapterDo: [ :anAdapter | anAdapter refreshStyling ] ].
-		self announcer announce: (SpCodeEvaluationSucceedAnnouncement newContent: aString).
-		result ] in SpCodePresenter>>evaluate:onCompileError:onError: in Block: [...
+		result := focusHolder handleFocusEvent: transformedEvent.
+	] in HandMorph>>sendFocusEvent:to:clear: in Block: [...
 FullBlockClosure(BlockClosure)>>on:do:
-SpCodePresenter>>evaluate:onCompileError:onError:
-SpCodeDoItCommand(SpCodeSelectionCommand)>>evaluate:andDo:
-SpCodeDoItCommand(SpCodeSelectionCommand)>>evaluateSelectionAndDo:
-SpCodeDoItCommand>>execute
-SpCommand(CmCommandDecorator)>>execute
-[ self decoratedCommand execute ] in SpToolCurrentApplicationCommand>>execute in Block: [ self decoratedCommand execute ]
-[ activeProcess
-			psValueAt: index
-			put: anObject.
-		aBlock value ] in SpToolCurrentApplication(DynamicVariable)>>value:during: in Block: [ activeProcess...
-FullBlockClosure(BlockClosure)>>ensure:
-SpToolCurrentApplication(DynamicVariable)>>value:during:
-SpToolCurrentApplication class(DynamicVariable class)>>value:during:
-[0m[31mMessage not understood: FileReference >> #close
-[0mFileReference(Object)>>doesNotUnderstand: #close
-Message>>sentTo:
-FileReference(Object)>>doesNotUnderstand: #close
-Message>>sentTo:
-FileReference(Object)>>doesNotUnderstand: #close
-Message>>sentTo:
-FileReference(Object)>>doesNotUnderstand: #close
-Message>>sentTo:
-FileReference(Object)>>doesNotUnderstand: #close
-Message>>sentTo:
-FileReference(Object)>>doesNotUnderstand: #close
-[ file close ] in UndefinedObject>>DoIt in Block: [ file close ]
-FullBlockClosure(BlockClosure)>>ensure:
-FullBlockClosure(BlockClosure)>>ensure:
-FullBlockClosure(BlockClosure)>>ensure:
-FullBlockClosure(BlockClosure)>>ensure:
-FullBlockClosure(BlockClosure)>>ensure:
-FullBlockClosure(BlockClosure)>>ensure:
-UndefinedObject>>DoIt
-OCReceiverDoItSemanticScope(OCDoItSemanticScope)>>evaluateDoIt:
-OpalCompiler>>evaluate
+WorldMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendMouseEvent:
+HandMorph>>handleEvent:
 [
-		self announcer announce: (SpCodeWillBeEvaluatedAnnouncement newContent: aString).
-		oldBindings := self interactionModel bindings copy.
-		result := self interactionModel compiler
-			source: aString;
-			environment: self environment;
-			failBlock:  [ 
-				self announcer announce: (SpCodeEvaluationFailedAnnouncement newContent: aString).
-				^ compileErrorBlock value ];
-			evaluate.
-		oldBindings size = self interactionModel bindings size 
-			ifFalse: [ self withAdapterDo: [ :anAdapter | anAdapter refreshStyling ] ].
-		self announcer announce: (SpCodeEvaluationSucceedAnnouncement newContent: aString).
-		result ] in SpCodePresenter>>evaluate:onCompileError:onError: in Block: [...
+		(morphicWorld activeHand isNotNil and: [ anEvent hand isNotNil ]) ifTrue: [
+			morphicWorld activeHand handleEvent: anEvent
+		]
+	] in OSWindowMorphicEventHandler>>dispatchMorphicEvent: in Block: [...
+WorldState>>runStepMethodsIn:
+WorldMorph>>runStepMethods
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycleNow
+WorldMorph>>doOneCycle
+[
+		| extraWorldsToDraw |
+		extraWorldsToDraw := ExtraWorldListMutex critical: [
+			                     self extraWorldList ].
+		extraWorldsToDraw do: [ :world | world doOneCycle ].
+
+		(self currentWorld isNotNil and: [
+			 (extraWorldsToDraw includes: self currentWorld) not ]) ifTrue: [
+			self currentWorld doOneCycle ] ] in WorldMorph class>>doOneCycle in Block: [...
+FullBlockClosure(BlockClosure)>>ensure:
+WorldState class>>doDrawCycleWith:
+[0m[31m13 in #('Economía global' 'Arquitectura' 'Historia de la ciencia' nil nil nil 'Biografías de personajes históricos' 'Antropología' 'Mitología')
+[0mArray(Object)>>errorSubscriptBounds:
+Array(Object)>>at:put:
+Matrix>>at:column:put:
+TableroLogico>>crearMatrizTemas:
+Juego>>obtenerCantJugadores
+[target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
+FullBlockClosure(BlockClosure)>>ensure:
+CursorWithMask(Cursor)>>showWhile:
+SimpleButtonMorph>>doButtonAction
+SimpleButtonMorph>>mouseUp:
+SimpleButtonMorph(Morph)>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+SimpleButtonMorph(Morph)>>handleEvent:
+SimpleButtonMorph(Morph)>>handleFocusEvent:
+[
+		result := focusHolder handleFocusEvent: transformedEvent.
+	] in HandMorph>>sendFocusEvent:to:clear: in Block: [...
 FullBlockClosure(BlockClosure)>>on:do:
-SpCodePresenter>>evaluate:onCompileError:onError:
-SpCodeDoItCommand(SpCodeSelectionCommand)>>evaluate:andDo:
-SpCodeDoItCommand(SpCodeSelectionCommand)>>evaluateSelectionAndDo:
-SpCodeDoItCommand>>execute
-SpCommand(CmCommandDecorator)>>execute
-[ self decoratedCommand execute ] in SpToolCurrentApplicationCommand>>execute in Block: [ self decoratedCommand execute ]
-[ activeProcess
-			psValueAt: index
-			put: anObject.
-		aBlock value ] in SpToolCurrentApplication(DynamicVariable)>>value:during: in Block: [ activeProcess...
+WorldMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendMouseEvent:
+HandMorph>>handleEvent:
+[
+		(morphicWorld activeHand isNotNil and: [ anEvent hand isNotNil ]) ifTrue: [
+			morphicWorld activeHand handleEvent: anEvent
+		]
+	] in OSWindowMorphicEventHandler>>dispatchMorphicEvent: in Block: [...
+WorldState>>runStepMethodsIn:
+WorldMorph>>runStepMethods
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycleNow
+WorldMorph>>doOneCycle
+[
+		| extraWorldsToDraw |
+		extraWorldsToDraw := ExtraWorldListMutex critical: [
+			                     self extraWorldList ].
+		extraWorldsToDraw do: [ :world | world doOneCycle ].
+
+		(self currentWorld isNotNil and: [
+			 (extraWorldsToDraw includes: self currentWorld) not ]) ifTrue: [
+			self currentWorld doOneCycle ] ] in WorldMorph class>>doOneCycle in Block: [...
+FullBlockClosure(BlockClosure)>>ensure:
+WorldState class>>doDrawCycleWith:
+[0m[31m13 in #('Historia de la guerra' 'Astronomía' 'Literatura clásica' nil nil nil 'Economía' 'Historia de la música' 'Desarrollo sostenible')
+[0mArray(Object)>>errorSubscriptBounds:
+Array(Object)>>at:put:
+Matrix>>at:column:put:
+TableroLogico>>crearMatrizTemas:
+Juego>>obtenerCantJugadores
+[target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
+FullBlockClosure(BlockClosure)>>ensure:
+CursorWithMask(Cursor)>>showWhile:
+SimpleButtonMorph>>doButtonAction
+SimpleButtonMorph>>mouseUp:
+SimpleButtonMorph(Morph)>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+SimpleButtonMorph(Morph)>>handleEvent:
+SimpleButtonMorph(Morph)>>handleFocusEvent:
+[
+		result := focusHolder handleFocusEvent: transformedEvent.
+	] in HandMorph>>sendFocusEvent:to:clear: in Block: [...
+FullBlockClosure(BlockClosure)>>on:do:
+WorldMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendMouseEvent:
+HandMorph>>handleEvent:
+[
+		(morphicWorld activeHand isNotNil and: [ anEvent hand isNotNil ]) ifTrue: [
+			morphicWorld activeHand handleEvent: anEvent
+		]
+	] in OSWindowMorphicEventHandler>>dispatchMorphicEvent: in Block: [...
+WorldState>>runStepMethodsIn:
+WorldMorph>>runStepMethods
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycleNow
+WorldMorph>>doOneCycle
+[
+		| extraWorldsToDraw |
+		extraWorldsToDraw := ExtraWorldListMutex critical: [
+			                     self extraWorldList ].
+		extraWorldsToDraw do: [ :world | world doOneCycle ].
+
+		(self currentWorld isNotNil and: [
+			 (extraWorldsToDraw includes: self currentWorld) not ]) ifTrue: [
+			self currentWorld doOneCycle ] ] in WorldMorph class>>doOneCycle in Block: [...
+FullBlockClosure(BlockClosure)>>ensure:
+WorldState class>>doDrawCycleWith:
+[0m[31mreceiver of "asNumber" is nil
+[0mUndefinedObject(Object)>>doesNotUnderstand: #asNumber
+Juego>>obtenerCantJugadores
+[target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
+FullBlockClosure(BlockClosure)>>ensure:
+CursorWithMask(Cursor)>>showWhile:
+SimpleButtonMorph>>doButtonAction
+SimpleButtonMorph>>mouseUp:
+SimpleButtonMorph(Morph)>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+SimpleButtonMorph(Morph)>>handleEvent:
+SimpleButtonMorph(Morph)>>handleFocusEvent:
+[
+		result := focusHolder handleFocusEvent: transformedEvent.
+	] in HandMorph>>sendFocusEvent:to:clear: in Block: [...
+FullBlockClosure(BlockClosure)>>on:do:
+WorldMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendMouseEvent:
+HandMorph>>handleEvent:
+[
+		(morphicWorld activeHand isNotNil and: [ anEvent hand isNotNil ]) ifTrue: [
+			morphicWorld activeHand handleEvent: anEvent
+		]
+	] in OSWindowMorphicEventHandler>>dispatchMorphicEvent: in Block: [...
+WorldState>>runStepMethodsIn:
+WorldMorph>>runStepMethods
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycleNow
+WorldMorph>>doOneCycle
+[
+		| extraWorldsToDraw |
+		extraWorldsToDraw := ExtraWorldListMutex critical: [
+			                     self extraWorldList ].
+		extraWorldsToDraw do: [ :world | world doOneCycle ].
+
+		(self currentWorld isNotNil and: [
+			 (extraWorldsToDraw includes: self currentWorld) not ]) ifTrue: [
+			self currentWorld doOneCycle ] ] in WorldMorph class>>doOneCycle in Block: [...
+FullBlockClosure(BlockClosure)>>ensure:
+WorldState class>>doDrawCycleWith:
+WorldMorph class>>doOneCycle
+MorphicRenderLoop>>doOneCycle
+MorphicRenderLoop>>doOneCycleWhile:
+[0m[31mMessage not understood: Array >> #removeAllFrom:
+[0mArray(Object)>>doesNotUnderstand: #removeAllFrom:
+TableroLogico>>crearMatrizTemas:
+Juego>>obtenerCantJugadores
+[target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
+FullBlockClosure(BlockClosure)>>ensure:
+CursorWithMask(Cursor)>>showWhile:
+SimpleButtonMorph>>doButtonAction
+SimpleButtonMorph>>mouseUp:
+SimpleButtonMorph(Morph)>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+SimpleButtonMorph(Morph)>>handleEvent:
+SimpleButtonMorph(Morph)>>handleFocusEvent:
+[
+		result := focusHolder handleFocusEvent: transformedEvent.
+	] in HandMorph>>sendFocusEvent:to:clear: in Block: [...
+FullBlockClosure(BlockClosure)>>on:do:
+WorldMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendMouseEvent:
+HandMorph>>handleEvent:
+[
+		(morphicWorld activeHand isNotNil and: [ anEvent hand isNotNil ]) ifTrue: [
+			morphicWorld activeHand handleEvent: anEvent
+		]
+	] in OSWindowMorphicEventHandler>>dispatchMorphicEvent: in Block: [...
+WorldState>>runStepMethodsIn:
+WorldMorph>>runStepMethods
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycleNow
+WorldMorph>>doOneCycle
+[
+		| extraWorldsToDraw |
+		extraWorldsToDraw := ExtraWorldListMutex critical: [
+			                     self extraWorldList ].
+		extraWorldsToDraw do: [ :world | world doOneCycle ].
+
+		(self currentWorld isNotNil and: [
+			 (extraWorldsToDraw includes: self currentWorld) not ]) ifTrue: [
+			self currentWorld doOneCycle ] ] in WorldMorph class>>doOneCycle in Block: [...
+FullBlockClosure(BlockClosure)>>ensure:
+WorldState class>>doDrawCycleWith:
+WorldMorph class>>doOneCycle
+MorphicRenderLoop>>doOneCycle
+[0m[31mMessage not understood: OrderedCollection >> #removeAllFrom:
+[0mOrderedCollection(Object)>>doesNotUnderstand: #removeAllFrom:
+TableroLogico>>crearMatrizTemas:
+Juego>>obtenerCantJugadores
+[target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
+FullBlockClosure(BlockClosure)>>ensure:
+CursorWithMask(Cursor)>>showWhile:
+SimpleButtonMorph>>doButtonAction
+SimpleButtonMorph>>mouseUp:
+SimpleButtonMorph(Morph)>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+SimpleButtonMorph(Morph)>>handleEvent:
+SimpleButtonMorph(Morph)>>handleFocusEvent:
+[
+		result := focusHolder handleFocusEvent: transformedEvent.
+	] in HandMorph>>sendFocusEvent:to:clear: in Block: [...
+FullBlockClosure(BlockClosure)>>on:do:
+WorldMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendMouseEvent:
+HandMorph>>handleEvent:
+[
+		(morphicWorld activeHand isNotNil and: [ anEvent hand isNotNil ]) ifTrue: [
+			morphicWorld activeHand handleEvent: anEvent
+		]
+	] in OSWindowMorphicEventHandler>>dispatchMorphicEvent: in Block: [...
+WorldState>>runStepMethodsIn:
+WorldMorph>>runStepMethods
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycleNow
+WorldMorph>>doOneCycle
+[
+		| extraWorldsToDraw |
+		extraWorldsToDraw := ExtraWorldListMutex critical: [
+			                     self extraWorldList ].
+		extraWorldsToDraw do: [ :world | world doOneCycle ].
+
+		(self currentWorld isNotNil and: [
+			 (extraWorldsToDraw includes: self currentWorld) not ]) ifTrue: [
+			self currentWorld doOneCycle ] ] in WorldMorph class>>doOneCycle in Block: [...
+FullBlockClosure(BlockClosure)>>ensure:
+WorldState class>>doDrawCycleWith:
+WorldMorph class>>doOneCycle
+MorphicRenderLoop>>doOneCycle
+[0m[31m5 in #('Medio ambiente' 'Grandes civilizaciones' nil nil)
+[0mArray(Object)>>errorSubscriptBounds:
+Array(Object)>>at:put:
+Matrix>>at:column:put:
+TableroLogico>>crearMatrizTemas:
+Juego>>obtenerCantJugadores
+[target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
+FullBlockClosure(BlockClosure)>>ensure:
+CursorWithMask(Cursor)>>showWhile:
+SimpleButtonMorph>>doButtonAction
+SimpleButtonMorph>>mouseUp:
+SimpleButtonMorph(Morph)>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+SimpleButtonMorph(Morph)>>handleEvent:
+SimpleButtonMorph(Morph)>>handleFocusEvent:
+[
+		result := focusHolder handleFocusEvent: transformedEvent.
+	] in HandMorph>>sendFocusEvent:to:clear: in Block: [...
+FullBlockClosure(BlockClosure)>>on:do:
+WorldMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendMouseEvent:
+HandMorph>>handleEvent:
+[
+		(morphicWorld activeHand isNotNil and: [ anEvent hand isNotNil ]) ifTrue: [
+			morphicWorld activeHand handleEvent: anEvent
+		]
+	] in OSWindowMorphicEventHandler>>dispatchMorphicEvent: in Block: [...
+WorldState>>runStepMethodsIn:
+WorldMorph>>runStepMethods
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycleNow
+WorldMorph>>doOneCycle
+[
+		| extraWorldsToDraw |
+		extraWorldsToDraw := ExtraWorldListMutex critical: [
+			                     self extraWorldList ].
+		extraWorldsToDraw do: [ :world | world doOneCycle ].
+
+		(self currentWorld isNotNil and: [
+			 (extraWorldsToDraw includes: self currentWorld) not ]) ifTrue: [
+			self currentWorld doOneCycle ] ] in WorldMorph class>>doOneCycle in Block: [...
+FullBlockClosure(BlockClosure)>>ensure:
+WorldState class>>doDrawCycleWith:
+[0m[31m5 in #('Mitología' 'Arquitectura' nil nil)
+[0mArray(Object)>>errorSubscriptBounds:
+Array(Object)>>at:put:
+Matrix>>at:column:put:
+TableroLogico>>crearMatrizTemas:
+Juego>>obtenerCantJugadores
+[target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
+FullBlockClosure(BlockClosure)>>ensure:
+CursorWithMask(Cursor)>>showWhile:
+SimpleButtonMorph>>doButtonAction
+SimpleButtonMorph>>mouseUp:
+SimpleButtonMorph(Morph)>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+SimpleButtonMorph(Morph)>>handleEvent:
+SimpleButtonMorph(Morph)>>handleFocusEvent:
+[
+		result := focusHolder handleFocusEvent: transformedEvent.
+	] in HandMorph>>sendFocusEvent:to:clear: in Block: [...
+FullBlockClosure(BlockClosure)>>on:do:
+WorldMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendMouseEvent:
+HandMorph>>handleEvent:
+[
+		(morphicWorld activeHand isNotNil and: [ anEvent hand isNotNil ]) ifTrue: [
+			morphicWorld activeHand handleEvent: anEvent
+		]
+	] in OSWindowMorphicEventHandler>>dispatchMorphicEvent: in Block: [...
+WorldState>>runStepMethodsIn:
+WorldMorph>>runStepMethods
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycleNow
+WorldMorph>>doOneCycle
+[
+		| extraWorldsToDraw |
+		extraWorldsToDraw := ExtraWorldListMutex critical: [
+			                     self extraWorldList ].
+		extraWorldsToDraw do: [ :world | world doOneCycle ].
+
+		(self currentWorld isNotNil and: [
+			 (extraWorldsToDraw includes: self currentWorld) not ]) ifTrue: [
+			self currentWorld doOneCycle ] ] in WorldMorph class>>doOneCycle in Block: [...
+FullBlockClosure(BlockClosure)>>ensure:
+WorldState class>>doDrawCycleWith:
+[0m[31m5 in #('Historia' 'Geografía' nil nil)
+[0mArray(Object)>>errorSubscriptBounds:
+Array(Object)>>at:put:
+Matrix>>at:column:put:
+TableroLogico>>crearMatrizTemas:
+Juego>>obtenerCantJugadores
+[target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
+FullBlockClosure(BlockClosure)>>ensure:
+CursorWithMask(Cursor)>>showWhile:
+SimpleButtonMorph>>doButtonAction
+SimpleButtonMorph>>mouseUp:
+SimpleButtonMorph(Morph)>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+SimpleButtonMorph(Morph)>>handleEvent:
+SimpleButtonMorph(Morph)>>handleFocusEvent:
+[
+		result := focusHolder handleFocusEvent: transformedEvent.
+	] in HandMorph>>sendFocusEvent:to:clear: in Block: [...
+FullBlockClosure(BlockClosure)>>on:do:
+WorldMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendMouseEvent:
+HandMorph>>handleEvent:
+[
+		(morphicWorld activeHand isNotNil and: [ anEvent hand isNotNil ]) ifTrue: [
+			morphicWorld activeHand handleEvent: anEvent
+		]
+	] in OSWindowMorphicEventHandler>>dispatchMorphicEvent: in Block: [...
+WorldState>>runStepMethodsIn:
+WorldMorph>>runStepMethods
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycleNow
+WorldMorph>>doOneCycle
+[
+		| extraWorldsToDraw |
+		extraWorldsToDraw := ExtraWorldListMutex critical: [
+			                     self extraWorldList ].
+		extraWorldsToDraw do: [ :world | world doOneCycle ].
+
+		(self currentWorld isNotNil and: [
+			 (extraWorldsToDraw includes: self currentWorld) not ]) ifTrue: [
+			self currentWorld doOneCycle ] ] in WorldMorph class>>doOneCycle in Block: [...
+FullBlockClosure(BlockClosure)>>ensure:
+WorldState class>>doDrawCycleWith:
+[0m[31m5 in #('Historia' 'Geografía' nil nil)
+[0mArray(Object)>>errorSubscriptBounds:
+Array(Object)>>at:put:
+Matrix>>at:column:put:
+TableroLogico>>crearMatrizTemas:
+Juego>>obtenerCantJugadores
+[target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
+FullBlockClosure(BlockClosure)>>ensure:
+CursorWithMask(Cursor)>>showWhile:
+SimpleButtonMorph>>doButtonAction
+SimpleButtonMorph>>mouseUp:
+SimpleButtonMorph(Morph)>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+SimpleButtonMorph(Morph)>>handleEvent:
+SimpleButtonMorph(Morph)>>handleFocusEvent:
+[
+		result := focusHolder handleFocusEvent: transformedEvent.
+	] in HandMorph>>sendFocusEvent:to:clear: in Block: [...
+FullBlockClosure(BlockClosure)>>on:do:
+WorldMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendMouseEvent:
+HandMorph>>handleEvent:
+[
+		(morphicWorld activeHand isNotNil and: [ anEvent hand isNotNil ]) ifTrue: [
+			morphicWorld activeHand handleEvent: anEvent
+		]
+	] in OSWindowMorphicEventHandler>>dispatchMorphicEvent: in Block: [...
+WorldState>>runStepMethodsIn:
+WorldMorph>>runStepMethods
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycleNow
+WorldMorph>>doOneCycle
+[
+		| extraWorldsToDraw |
+		extraWorldsToDraw := ExtraWorldListMutex critical: [
+			                     self extraWorldList ].
+		extraWorldsToDraw do: [ :world | world doOneCycle ].
+
+		(self currentWorld isNotNil and: [
+			 (extraWorldsToDraw includes: self currentWorld) not ]) ifTrue: [
+			self currentWorld doOneCycle ] ] in WorldMorph class>>doOneCycle in Block: [...
+FullBlockClosure(BlockClosure)>>ensure:
+WorldState class>>doDrawCycleWith:
+[0m[31m5 in #('Historia' 'Geografía' nil nil)
+[0mArray(Object)>>errorSubscriptBounds:
+Array(Object)>>at:put:
+Matrix>>at:column:put:
+TableroLogico>>crearMatrizTemas:
+Juego>>obtenerCantJugadores
+[target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
+FullBlockClosure(BlockClosure)>>ensure:
+CursorWithMask(Cursor)>>showWhile:
+SimpleButtonMorph>>doButtonAction
+SimpleButtonMorph>>mouseUp:
+SimpleButtonMorph(Morph)>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+SimpleButtonMorph(Morph)>>handleEvent:
+SimpleButtonMorph(Morph)>>handleFocusEvent:
+[
+		result := focusHolder handleFocusEvent: transformedEvent.
+	] in HandMorph>>sendFocusEvent:to:clear: in Block: [...
+FullBlockClosure(BlockClosure)>>on:do:
+WorldMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendMouseEvent:
+HandMorph>>handleEvent:
+[
+		(morphicWorld activeHand isNotNil and: [ anEvent hand isNotNil ]) ifTrue: [
+			morphicWorld activeHand handleEvent: anEvent
+		]
+	] in OSWindowMorphicEventHandler>>dispatchMorphicEvent: in Block: [...
+WorldState>>runStepMethodsIn:
+WorldMorph>>runStepMethods
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycleNow
+WorldMorph>>doOneCycle
+[
+		| extraWorldsToDraw |
+		extraWorldsToDraw := ExtraWorldListMutex critical: [
+			                     self extraWorldList ].
+		extraWorldsToDraw do: [ :world | world doOneCycle ].
+
+		(self currentWorld isNotNil and: [
+			 (extraWorldsToDraw includes: self currentWorld) not ]) ifTrue: [
+			self currentWorld doOneCycle ] ] in WorldMorph class>>doOneCycle in Block: [...
+FullBlockClosure(BlockClosure)>>ensure:
+WorldState class>>doDrawCycleWith:
+[0ming: in Block: [ activeProcess...
 [0m[31mMessage not understood: FileReference >> #close
 [0mFileReference(Object)>>doesNotUnderstand: #close
 Message>>sentTo:
