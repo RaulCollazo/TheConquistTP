@@ -1,8 +1,6 @@
-[31m5 in #('Historia' 'Geografía' 'Literatura' 'Arte')
-[0mArray(Object)>>errorSubscriptBounds:
-Array(Object)>>at:put:
-Matrix>>at:column:put:
-TableroLogico>>crearMatrizTemas:
+[31mreceiver of "image:" is nil
+[0mUndefinedObject(Object)>>doesNotUnderstand: #image:
+Juego>>dibujarFondoTablero
 Juego>>obtenerCantJugadores
 [target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
 FullBlockClosure(BlockClosure)>>ensure:
@@ -43,6 +41,8 @@ WorldMorph>>doOneCycle
 			self currentWorld doOneCycle ] ] in WorldMorph class>>doOneCycle in Block: [...
 FullBlockClosure(BlockClosure)>>ensure:
 WorldState class>>doDrawCycleWith:
+WorldMorph class>>doOneCycle
+MorphicRenderLoop>>doOneCycle
 [0m[31mreceiver of "asNumber" is nil
 [0mUndefinedObject(Object)>>doesNotUnderstand: #asNumber
 Juego>>obtenerCantJugadores
@@ -133,11 +133,16 @@ WorldState class>>doDrawCycleWith:
 WorldMorph class>>doOneCycle
 MorphicRenderLoop>>doOneCycle
 MorphicRenderLoop>>doOneCycleWhile:
-[0m[31m5 in #('Historia' 'Geografía' 'Literatura' 'Arte')
-[0mArray(Object)>>errorSubscriptBounds:
-Array(Object)>>at:put:
-Matrix>>at:column:put:
-TableroLogico>>crearMatrizTemas:
+[0m[31m'C:\Users\Educacion\Documents\Pharo\images\The Conquist\assets\backgrounds\background-table.png'
+[0mFile>>openForWrite:
+File>>openForRead
+File>>readStream
+FileHandle>>binaryReadStream
+FileSystem>>binaryReadStreamOn:
+FileReference>>binaryReadStream
+FileReference(AbstractFileReference)>>binaryReadStreamDo:
+Form class>>fromFileNamed:
+Juego>>dibujarFondoTablero
 Juego>>obtenerCantJugadores
 [target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
 FullBlockClosure(BlockClosure)>>ensure:
@@ -165,13 +170,7 @@ HandMorph>>handleEvent:
 WorldState>>runStepMethodsIn:
 WorldMorph>>runStepMethods
 WorldState>>doOneCycleFor:
-WorldMorph>>doOneCycleNow
-WorldMorph>>doOneCycle
-[
-		| extraWorldsToDraw |
-		extraWorldsToDraw := ExtraWorldListMutex critical: [
-			                     self extraWorldList ].
-		extraWorldsToDraw do: [ :world | world doOneCycle ].
+[0mToDraw do: [ :world | world doOneCycle ].
 
 		(self currentWorld isNotNil and: [
 			 (extraWorldsToDraw includes: self currentWorld) not ]) ifTrue: [

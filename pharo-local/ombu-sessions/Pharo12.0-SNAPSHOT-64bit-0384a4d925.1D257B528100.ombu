@@ -1,0 +1,404 @@
+OmEntry {
+	#tags : {
+		#prior : OmReference [ 'Pharo12.0-SNAPSHOT-64bit-0384a4d925.3A98ACF24AC0', '10' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2) + 120).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #borrarVentanasLabeledParticular. "Definir el método a llamar cuando se presiona el botón"\r    boton2 extent: 120@50.\r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2))  @ (imagenMorph height // 2 - (boton2 height // 2) + 220).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    \r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWindowLabeled: \'TheConquist\'.',
+			#stamp : '1/23/2025 16:14',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2) + 120).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #borrarVentanasLabeledParticular. "Definir el método a llamar cuando se presiona el botón"\r    boton2 extent: 120@50.\r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2))  @ (imagenMorph height // 2 - (boton2 height // 2) + 220).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWindowLabeled: \'TheConquist\'.',
+			#stamp : '1/24/2025 08:56',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '1' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r|imagen|\rimagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.png\'.',
+			#stamp : '1/24/2025 08:59',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '2' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r|imagen|\rimagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.png\'.',
+			#stamp : '1/24/2025 08:59',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r|imagen|\rimagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.png\'.\rimagenMorph image: imagen.\rimagenMorph position: 0@0.',
+			#stamp : '1/24/2025 09:00',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '3' ],
+		#self : OmReference [ '4' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerCantJugadores,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'obtenerCantJugadores\r    | flag MatrizTemas|\r    flag := false.\r    "Solicitar la cantidad de NPCs"\r    [ flag not ] whileTrue: [\r        CantNPC := (UIManager default request: \'¿Cuántos participantes hay?\') asNumber.\r        ((CantNPC sqrt isInteger)) \r            ifTrue: [ flag := true ]\r            ifFalse: [ UIManager default inform: \'Valor inválido\' ].\r    ].\r\r    "Solicitar la cantidad de jugadores humanos"\r    CantJugadores := (UIManager default request: \'¿Cuántos participantes humanos habrá?\') asNumber.\rMatrizTemas := TableroLogico new.\rMatrizTemas crearMatrizTemas: CantNPC.\rMatrizTemas inspect.',
+			#stamp : '1/24/2025 08:55',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerCantJugadores,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'obtenerCantJugadores\r    | flag MatrizTemas|\r    flag := false.\r    "Solicitar la cantidad de NPCs"\r    [ flag not ] whileTrue: [\r        CantNPC := (UIManager default request: \'¿Cuántos participantes hay?\') asNumber.\r        ((CantNPC sqrt isInteger)) \r            ifTrue: [ flag := true ]\r            ifFalse: [ UIManager default inform: \'Valor inválido\' ].\r    ].\r\r    "Solicitar la cantidad de jugadores humanos"\r    CantJugadores := (UIManager default request: \'¿Cuántos participantes humanos habrá?\') asNumber.\rMatrizTemas := TableroLogico new.\rMatrizTemas crearMatrizTemas: CantNPC.\rMatrizTemas inspect.\rself dibujarFondoTablero .',
+			#stamp : '1/24/2025 09:01',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '4' ],
+		#self : OmReference [ '5' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r|imagen|\rimagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.png\'.\rimagenMorph image: imagen.\rimagenMorph position: 0@0.',
+			#stamp : '1/24/2025 09:00',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r|imagen|\rself eliminarMorphs.\rimagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.png\'.\rimagenMorph image: imagen.\rimagenMorph position: 0@0.',
+			#stamp : '1/24/2025 09:02',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '5' ],
+		#self : OmReference [ '6' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r|imagen|\rself eliminarMorphs.\rimagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.png\'.\rimagenMorph image: imagen.\rimagenMorph position: 0@0.',
+			#stamp : '1/24/2025 09:02',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r|imagen|\rself eliminarMorphs.\rimagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.png\'.\rimagenMorph := nil.\rimagenMorph image: imagen.\rimagenMorph position: 0@0.',
+			#stamp : '1/24/2025 09:03',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '6' ],
+		#self : OmReference [ '7' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r|imagen|\rself eliminarMorphs.\rimagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.png\'.\rimagenMorph := nil.\rimagenMorph image: imagen.\rimagenMorph position: 0@0.',
+			#stamp : '1/24/2025 09:03',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r|imagen|\rself eliminarMorphs.\rimagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.png\'.\rimagenMorph := nil.\rimagenMorph := ImageMorph new.\rimagenMorph image: imagen.\rimagenMorph position: 0@0.',
+			#stamp : '1/24/2025 09:04',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '7' ],
+		#self : OmReference [ '8' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r|imagen|\rself eliminarMorphs.\rimagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.png\'.\rimagenMorph := nil.\rimagenMorph := ImageMorph new.\rimagenMorph image: imagen.\rimagenMorph position: 0@0.',
+			#stamp : '1/24/2025 09:04',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r|imagen|\rimagenMorph := nil.\rimagenMorph := ImageMorph new.\rimagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.png\'.\rimagenMorph image: imagen.\rimagenMorph position: 0@0.',
+			#stamp : '1/24/2025 09:13',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '8' ],
+		#self : OmReference [ '9' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r|imagen|\rimagenMorph := nil.\rimagenMorph := ImageMorph new.\rimagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.png\'.\rimagenMorph image: imagen.\rimagenMorph position: 0@0.',
+			#stamp : '1/24/2025 09:13',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r|imagen|\rimagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.png\'.\rimagenMorph image: imagen.',
+			#stamp : '1/24/2025 09:13',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '9' ],
+		#self : OmReference [ '10' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r|imagen|\rimagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.png\'.\rimagenMorph image: imagen.',
+			#stamp : '1/24/2025 09:13',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r|imagen|\rimagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.png\'.\rimagenMorph removeAllMorphs.\rimagenMorph image: imagen.',
+			#stamp : '1/24/2025 09:15',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '10' ],
+		#self : OmReference [ '11' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r|imagen|\rimagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.png\'.\rimagenMorph removeAllMorphs.\rimagenMorph image: imagen.',
+			#stamp : '1/24/2025 09:15',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r|imagen|\rimagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.jpg\'.\rimagenMorph removeAllMorphs.\rimagenMorph image: imagen.',
+			#stamp : '1/24/2025 09:17',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '11' ],
+		#self : OmReference [ '12' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r|imagen|\rimagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.jpg\'.\rimagenMorph removeAllMorphs.\rimagenMorph image: imagen.',
+			#stamp : '1/24/2025 09:17',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r|imagen screenSize|\rimagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.jpg\'.\rimagenMorph removeAllMorphs.\rimagenMorph image: imagen.\rimagenMorph ',
+			#stamp : '1/24/2025 09:19',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '12' ],
+		#self : OmReference [ '13' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r|imagen screenSize|\rimagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.jpg\'.\rimagenMorph removeAllMorphs.\rimagenMorph image: imagen.\rimagenMorph ',
+			#stamp : '1/24/2025 09:19',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r|imagen screenSize|\rimagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.jpg\'.\rimagenMorph removeAllMorphs.\rimagenMorph image: imagen.',
+			#stamp : '1/24/2025 09:19',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '13' ],
+		#self : OmReference [ '14' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r|imagen screenSize|\rimagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.jpg\'.\rimagenMorph removeAllMorphs.\rimagenMorph image: imagen.',
+			#stamp : '1/24/2025 09:19',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r|imagen |\rimagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.jpg\'.\rimagenMorph removeAllMorphs.\rimagenMorph image: imagen.',
+			#stamp : '1/24/2025 09:19',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '14' ],
+		#self : OmReference [ '15' ]
+	},
+	#content : EpSessionSnapshot {
+		#imageName : 'C:\\Users\\Educacion\\Documents\\Pharo\\images\\The Conquist\\The Conquist.image'
+	}
+}
