@@ -1,0 +1,1 @@
+| temas tablero |TableroLogico crearMatrizTemas: 64.TableroLogico crearMatrizTablero: 64 NPCs: 3."Para acceder a las matrices"temas := TableroLogico matrizdeTemas.tablero := TableroLogico matrizdeTablero.Transcript show: temas; cr.Transcript show: tablero; cr.

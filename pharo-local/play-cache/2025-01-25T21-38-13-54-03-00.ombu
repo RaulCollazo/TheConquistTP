@@ -1,0 +1,31 @@
+OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-25T21:38:46.314-03:00' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : '|tablero|\rtablero := TableroLogico new.\rtablero crearMatrizTemas.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-25T21:39:22.107-03:00' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : '|tablero|\rtablero := TableroLogico new.\rtablero crearMatrizTemas: 64.\rtablero crearMatrizTablero: 64 NPCs: 3 '
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-25T21:39:41.556-03:00' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : '|tablero|\rtablero := TableroLogico new.\rtablero crearMatrizTemas: 64.\rtablero crearMatrizTablero: 64 NPCs: 3. '
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-25T21:55:22.245-03:00' ],
+		#self : OmReference [ '4' ]
+	},
+	#content : '| temas tablero |\rTableroLogico crearMatrizTemas: 64.\rTableroLogico crearMatrizTablero: 64 NPCs: 3.\r\r"Para acceder a las matrices"\r\rtemas := TableroLogico matrizDeTemas.\rtablero := TableroLogico matrizDeTablero.\r\rTranscript show: temas; cr.\rTranscript show: tablero; cr.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-25T21:56:29.225-03:00' ],
+		#self : OmReference [ '5' ]
+	},
+	#content : '| temas tablero |\rTableroLogico crearMatrizTemas: 64.\rTableroLogico crearMatrizTablero: 64 NPCs: 3.\r\r"Para acceder a las matrices"\r\rtemas := TableroLogico matrizdeTemas.\rtablero := TableroLogico matrizdeTablero.\r\rTranscript show: temas; cr.\rTranscript show: tablero; cr.'
+}

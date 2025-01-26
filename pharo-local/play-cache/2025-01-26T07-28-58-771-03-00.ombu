@@ -1,0 +1,85 @@
+OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-26T07:29:37.756-03:00' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : '|juego|\rjuego := TableroLogico new.\rjuego crearMatrizTablero: 64 NPCs:3. '
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-26T07:30:23.453-03:00' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : '| tableroLogico matrizDeTemas resultado |\r"Define una matriz de temas de ejemplo"\rmatrizDeTemas := Matrix rows: 3 columns: 3.\r1 to: matrizDeTemas numberOfRows do: [:fila |\r    1 to: matrizDeTemas numberOfColumns do: [:columna |\r        matrizDeTemas at: fila column: columna put: \'Tema \', fila printString, \'-\', columna printString.\r    ].\r].\r\r"Define el objeto TableroLogico y su matriz de temas"\rtableroLogico := TableroLogico new.\rtableroLogico matrizDeTemas: matrizDeTemas.\r\r"Prueba el método con parámetros"\rresultado := tableroLogico crearMatrizTablero: 9 NPCs: 4.\r\r"Inspecciona el resultado"\rresultado inspect.\r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-26T07:30:54.867-03:00' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : '| tableroLogico matrizDeTemas resultado |\r"Define una matriz de temas de ejemplo"\rmatrizDeTemas := Matrix rows: 3 columns: 3.\r1 to: matrizDeTemas do: [:fila |\r    1 to: matrizDeTemas numberOfColumns do: [:columna |\r        matrizDeTemas at: fila column: columna put: \'Tema \', fila printString, \'-\', columna printString.\r    ].\r].\r\r"Define el objeto TableroLogico y su matriz de temas"\rtableroLogico := TableroLogico new.\rtableroLogico matrizDeTemas: matrizDeTemas.\r\r"Prueba el método con parámetros"\rresultado := tableroLogico crearMatrizTablero: 9 NPCs: 4.\r\r"Inspecciona el resultado"\rresultado inspect.\r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-26T07:31:14.362-03:00' ],
+		#self : OmReference [ '4' ]
+	},
+	#content : '| tableroLogico matrizDeTemas resultado |\r"Define una matriz de temas de ejemplo"\rmatrizDeTemas := Matrix rows: 8 columns: 8.\r1 to: (matrizDeTemas sqrt)  do: [:fila |\r    1 to: matrizDeTemas numberOfColumns do: [:columna |\r        matrizDeTemas at: fila column: columna put: \'Tema \', fila printString, \'-\', columna printString.\r    ].\r].\r\r"Define el objeto TableroLogico y su matriz de temas"\rtableroLogico := TableroLogico new.\rtableroLogico matrizDeTemas: matrizDeTemas.\r\r"Prueba el método con parámetros"\rresultado := tableroLogico crearMatrizTablero: 9 NPCs: 4.\r\r"Inspecciona el resultado"\rresultado inspect.\r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-26T07:31:27.71-03:00' ],
+		#self : OmReference [ '5' ]
+	},
+	#content : '| tableroLogico matrizDeTemas resultado |\r"Define una matriz de temas de ejemplo"\rmatrizDeTemas := Matrix rows: 8 columns: 8.\r1 to: 8  do: [:fila |\r    1 to: matrizDeTemas numberOfColumns do: [:columna |\r        matrizDeTemas at: fila column: columna put: \'Tema \', fila printString, \'-\', columna printString.\r    ].\r].\r\r"Define el objeto TableroLogico y su matriz de temas"\rtableroLogico := TableroLogico new.\rtableroLogico matrizDeTemas: matrizDeTemas.\r\r"Prueba el método con parámetros"\rresultado := tableroLogico crearMatrizTablero: 9 NPCs: 4.\r\r"Inspecciona el resultado"\rresultado inspect.\r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-26T07:31:36.184-03:00' ],
+		#self : OmReference [ '6' ]
+	},
+	#content : '| tableroLogico matrizDeTemas resultado |\r"Define una matriz de temas de ejemplo"\rmatrizDeTemas := Matrix rows: 8 columns: 8.\r1 to: 8  do: [:fila |\r    1 to: 8 do: [:columna |\r        matrizDeTemas at: fila column: columna put: \'Tema \', fila printString, \'-\', columna printString.\r    ].\r].\r\r"Define el objeto TableroLogico y su matriz de temas"\rtableroLogico := TableroLogico new.\rtableroLogico matrizDeTemas: matrizDeTemas.\r\r"Prueba el método con parámetros"\rresultado := tableroLogico crearMatrizTablero: 9 NPCs: 4.\r\r"Inspecciona el resultado"\rresultado inspect.\r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-26T07:32:17.294-03:00' ],
+		#self : OmReference [ '7' ]
+	},
+	#content : '| tableroLogico matrizDeTemas resultado |\r"Define una matriz de temas de ejemplo"\rmatrizDeTemas := Matrix rows: 8 columns: 8.\r1 to: 8  do: [:fila |\r    1 to: 8 do: [:columna |\r        matrizDeTemas at: fila column: columna put: \'Tema \', fila printString, \'-\', columna printString.\r    ].\r].\r\r"Define el objeto TableroLogico y su matriz de temas"\rtableroLogico := TableroLogico new.\rtableroLogico matrizDeTemas: 64.\r\r"Prueba el método con parámetros"\rresultado := tableroLogico crearMatrizTablero: 9 NPCs: 4.\r\r"Inspecciona el resultado"\rresultado inspect.\r'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-26T07:32:53.034-03:00' ],
+		#self : OmReference [ '8' ]
+	},
+	#content : '|matrizDeTemas|\rmatrizDeTemas := TableroLogico new.\rmatrizDeTemas crearMatrizTemas: 64.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-26T07:34:29.07-03:00' ],
+		#self : OmReference [ '9' ]
+	},
+	#content : '|matrizDeTemas|\rmatrizDeTemas := TableroLogico crearMatrizTemas: 64.\rmatrizDeTemas inspect.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-26T07:34:47.197-03:00' ],
+		#self : OmReference [ '10' ]
+	},
+	#content : '|matrizDeTemas|\rmatrizDeTemas := TableroLogico crearMatrizTemas: 64.\rTableroLogico inspect.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-26T07:35:02.952-03:00' ],
+		#self : OmReference [ '11' ]
+	},
+	#content : '|matrizDeTemas|\rmatrizDeTemas := TableroLogico crearMatrizTemas: 64.\rTableroLogico matrizDeTemas inspect.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-26T07:35:16.309-03:00' ],
+		#self : OmReference [ '12' ]
+	},
+	#content : '|matrizDeTemas|\rTableroLogico crearMatrizTemas: 64.\rTableroLogico matrizDeTemas inspect.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-26T07:35:56.176-03:00' ],
+		#self : OmReference [ '13' ]
+	},
+	#content : '|matrizDeTemas|\rTableroLogico crearMatrizTemas: 64.\rTableroLogico matrizDeTemas inspect.\rTableroLogico crearMatrizTablero: 64 NPCs: 3\rTableroLogico  '
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-26T07:36:38.76-03:00' ],
+		#self : OmReference [ '14' ]
+	},
+	#content : '|matrizDeTemas|\rTableroLogico crearMatrizTemas: 64.\rTableroLogico matrizDeTemas inspect.\rTableroLogico crearMatrizTablero: 64 NPCs: 3'
+}

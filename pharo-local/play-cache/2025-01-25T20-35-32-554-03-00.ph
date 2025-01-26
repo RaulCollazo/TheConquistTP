@@ -1,0 +1,1 @@
+| random booleanValue |random := Random new.booleanValue := random next < 0.5. "Devuelve true si el número aleatorio es menor a 0.5, false en caso contrario"Transcript show: booleanValue asString; cr.

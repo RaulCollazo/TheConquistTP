@@ -1,0 +1,543 @@
+OmEntry {
+	#tags : {
+		#prior : OmReference [ 'Pharo12.0-SNAPSHOT-64bit-0384a4d925.1CB4CC859EC0', '3' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #TableroLogico,
+				#isMeta : false
+			},
+			#name : #'crearMatrizTemas:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas: cantJugadores\r| file contents elements matrix matrixSize |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\relements := elements shuffled.\r"Crear la matriz"\rmatrixSize := cantJugadores sqrt.\rmatrix := Matrix rows: matrixSize columns: matrixSize.\r\r"Recorrer los elementos y asignarlos a la matriz"\r1 to: (matrixSize * matrixSize) do: [:i |\r    | row col |\r    row := (i - 1) // matrixSize + 1.  "Calcula la fila"\r    col := (i - 1) \\\\ matrixSize + 1.   "Calcula la columna"\r    (i <= elements size) ifTrue: [\r        matrix at: row column: col put: (elements at: i).\r    ] ifFalse: [\r        matrix at: row column: col put: nil. "O algún valor por defecto"\r    ].\r].\rmatrix inspect.\relements inspect.',
+			#stamp : '1/23/2025 18:09',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '1' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGMetaclassDefinition {
+			#annotations : IdentityDictionary {
+				#definitionSource : 'Object class << TableroLogico class\r\tslots: {}',
+				#traitCompositionSource : '{}'
+			},
+			#name : #'TableroLogico class',
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [ ],
+			#baseClass : RGClassDefinition {
+				#annotations : IdentityDictionary {
+					#traitCompositionSource : '{}',
+					#definitionSource : 'Object << #TableroLogico\r\tslots: {};\r\tpackage: \'TheConquist\'',
+					#superclassName : #Object
+				},
+				#name : #TableroLogico,
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#metaClass : @6,
+				#comment : RGCommentDefinition {
+					#annotations : IdentityDictionary {
+						#className : #TableroLogico,
+						#isMeta : false
+					},
+					#parent : @11,
+					#content : ''
+				},
+				#classVariables : OrderedCollection [ ],
+				#package : RGPackageDefinition {
+					#name : #TheConquist,
+					#definedClasses : IdentityDictionary { },
+					#definedMethods : IdentityDictionary { },
+					#extensionMethods : IdentityDictionary { }
+				},
+				#packageTag : #Uncategorized,
+				#sharedPools : OrderedCollection [ ]
+			}
+		},
+		#protocol : #'as yet unclassified'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '2' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizTemas:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas: cantJugadores\r| file contents elements matrix matrixSize |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\relements := elements shuffled.\r"Crear la matriz"\rmatrixSize := cantJugadores sqrt.\rmatrix := Matrix rows: matrixSize columns: matrixSize.\r\r"Recorrer los elementos y asignarlos a la matriz"\r1 to: (matrixSize * matrixSize) do: [:i |\r    | row col |\r    row := (i - 1) // matrixSize + 1.  "Calcula la fila"\r    col := (i - 1) \\\\ matrixSize + 1.   "Calcula la columna"\r    (i <= elements size) ifTrue: [\r        matrix at: row column: col put: (elements at: i).\r    ] ifFalse: [\r        matrix at: row column: col put: nil. "O algún valor por defecto"\r    ].\r].\rmatrix inspect.\relements inspect.',
+			#stamp : '1/25/2025 22:12',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '3' ],
+		#self : OmReference [ '4' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #TableroLogico\r\tslots: {};\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #TableroLogico,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [ ],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << TableroLogico class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'TableroLogico class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #TableroLogico,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#protocol : #'as yet unclassified'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '4' ],
+		#self : OmReference [ '5' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #TableroLogico,
+				#isMeta : false
+			},
+			#name : #'crearMatrizTemas:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas: cantJugadores \r\t^ self class crearMatrizTemas: cantJugadores ',
+			#stamp : '1/25/2025 22:12',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '5' ],
+		#self : OmReference [ '6' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #TableroLogico,
+				#isMeta : false
+			},
+			#name : #'crearMatrizTemas:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas: cantJugadores \r\t^ self class crearMatrizTemas: cantJugadores ',
+			#stamp : '1/25/2025 22:12',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '6' ],
+		#self : OmReference [ '7' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerCantJugadores,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'obtenerCantJugadores\r    | flag MatrizTemas|\r    flag := false.\r    "Solicitar la cantidad de NPCs"\r    [ flag not ] whileTrue: [\r        CantNPC := (UIManager default request: \'¿Cuántos participantes hay?\') asNumber.\r        ((CantNPC sqrt isInteger)) \r            ifTrue: [ flag := true ]\r            ifFalse: [ UIManager default inform: \'Valor inválido\' ].\r    ].\r\r    "Solicitar la cantidad de jugadores humanos"\r    CantJugadores := (UIManager default request: \'¿Cuántos participantes humanos habrá?\') asNumber.\rMatrizTemas := TableroLogico new.\rMatrizTemas crearMatrizTemas: CantNPC.\rMatrizTemas inspect.\rself dibujarFondoTablero .',
+			#stamp : '1/24/2025 09:01',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerCantJugadores,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'obtenerCantJugadores\r    | flag MatrizTemas|\r    flag := false.\r    "Solicitar la cantidad de NPCs"\r    [ flag not ] whileTrue: [\r        CantNPC := (UIManager default request: \'¿Cuántos participantes hay?\') asNumber.\r        ((CantNPC sqrt isInteger)) \r            ifTrue: [ flag := true ]\r            ifFalse: [ UIManager default inform: \'Valor inválido\' ].\r    ].\r\r    "Solicitar la cantidad de jugadores humanos"\r    CantJugadores := (UIManager default request: \'¿Cuántos participantes humanos habrá?\') asNumber.\rMatrizTemas := TableroLogico crearMatrizTemas: CantNPC.\rMatrizTemas inspect.\rself dibujarFondoTablero .',
+			#stamp : '1/25/2025 22:13',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '7' ],
+		#self : OmReference [ '8' ]
+	},
+	#content : EpClassAddition {
+		#class : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #TableroLogico\r\tslots: {};\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #TableroLogico,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [ ],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << TableroLogico class\r\tslots: { #MatrizDeTemas }',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'TableroLogico class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'TableroLogico class',
+							#isMeta : true
+						},
+						#name : #MatrizDeTemas,
+						#parent : @11
+					}
+				],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #TableroLogico,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '8' ],
+		#self : OmReference [ '9' ]
+	},
+	#content : EpClassModification {
+		#oldClass : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #TableroLogico\r\tslots: {};\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #TableroLogico,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [ ],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << TableroLogico class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'TableroLogico class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #TableroLogico,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#newClass : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #TableroLogico\r\tslots: {};\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #TableroLogico,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [ ],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << TableroLogico class\r\tslots: { #MatrizDeTemas }',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'TableroLogico class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'TableroLogico class',
+							#isMeta : true
+						},
+						#name : #MatrizDeTemas,
+						#parent : @29
+					}
+				],
+				#baseClass : @24
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #TableroLogico,
+					#isMeta : false
+				},
+				#parent : @24,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '9' ],
+		#self : OmReference [ '10' ]
+	},
+	#content : EpCompositeRefactoring {
+		#childrenRefactorings : [ ]
+	}
+}OmEntry {
+	#tags : {
+		#trigger : OmReference [ '10' ],
+		#prior : @3,
+		#self : OmReference [ '11' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGMetaclassDefinition {
+			#annotations : IdentityDictionary {
+				#definitionSource : 'Object class << TableroLogico class\r\tslots: { #MatrizDeTemas }',
+				#traitCompositionSource : '{}'
+			},
+			#name : #'TableroLogico class',
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGClassInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #'TableroLogico class',
+						#isMeta : true
+					},
+					#name : #MatrizDeTemas,
+					#parent : @6
+				}
+			],
+			#baseClass : RGClassDefinition {
+				#annotations : IdentityDictionary {
+					#traitCompositionSource : '{}',
+					#definitionSource : 'Object << #TableroLogico\r\tslots: {};\r\tpackage: \'TheConquist\'',
+					#superclassName : #Object
+				},
+				#name : #TableroLogico,
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#metaClass : @6,
+				#comment : RGCommentDefinition {
+					#annotations : IdentityDictionary {
+						#className : #TableroLogico,
+						#isMeta : false
+					},
+					#parent : @13,
+					#content : ''
+				},
+				#classVariables : OrderedCollection [ ],
+				#package : RGPackageDefinition {
+					#name : #TheConquist,
+					#definedClasses : IdentityDictionary { },
+					#definedMethods : IdentityDictionary { },
+					#extensionMethods : IdentityDictionary { }
+				},
+				#packageTag : #Uncategorized,
+				#sharedPools : OrderedCollection [ ]
+			}
+		},
+		#protocol : #accessing
+	}
+}OmEntry {
+	#tags : {
+		#trigger : OmReference [ '10' ],
+		#prior : OmReference [ '11' ],
+		#self : OmReference [ '12' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #matrizDeTemas,
+			#protocol : #accessing,
+			#sourceCode : 'matrizDeTemas\r\r\t^ MatrizDeTemas',
+			#stamp : '1/25/2025 22:14',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#trigger : OmReference [ '10' ],
+		#prior : OmReference [ '12' ],
+		#self : OmReference [ '13' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'matrizDeTemas:',
+			#protocol : #accessing,
+			#sourceCode : 'matrizDeTemas: anObject\r\r\tMatrizDeTemas := anObject',
+			#stamp : '1/25/2025 22:14',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '13' ],
+		#self : OmReference [ '14' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizTemas:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas: cantJugadores\r| file contents elements matrix matrixSize |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\relements := elements shuffled.\r"Crear la matriz"\rmatrixSize := cantJugadores sqrt.\rmatrix := Matrix rows: matrixSize columns: matrixSize.\r\r"Recorrer los elementos y asignarlos a la matriz"\r1 to: (matrixSize * matrixSize) do: [:i |\r    | row col |\r    row := (i - 1) // matrixSize + 1.  "Calcula la fila"\r    col := (i - 1) \\\\ matrixSize + 1.   "Calcula la columna"\r    (i <= elements size) ifTrue: [\r        matrix at: row column: col put: (elements at: i).\r    ] ifFalse: [\r        matrix at: row column: col put: nil. "O algún valor por defecto"\r    ].\r].\rmatrix inspect.\relements inspect.',
+			#stamp : '1/25/2025 22:12',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizTemas:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas: cantJugadores\r| file contents elements matrix matrixSize |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\relements := elements shuffled.\r"Crear la matriz"\rmatrixSize := cantJugadores sqrt.\rmatrix := Matrix rows: matrixSize columns: matrixSize.\r\r"Recorrer los elementos y asignarlos a la matriz"\r1 to: (matrixSize * matrixSize) do: [:i |\r    | row col |\r    row := (i - 1) // matrixSize + 1.  "Calcula la fila"\r    col := (i - 1) \\\\ matrixSize + 1.   "Calcula la columna"\r    (i <= elements size) ifTrue: [\r        matrix at: row column: col put: (elements at: i).\r    ] ifFalse: [\r        matrix at: row column: col put: nil. "O algún valor por defecto"\r    ].\r].\rmatrix inspect.\rMatrizDeTemas := matrix.\relements inspect.',
+			#stamp : '1/25/2025 22:14',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '14' ],
+		#self : OmReference [ '15' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerCantJugadores,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'obtenerCantJugadores\r    | flag MatrizTemas|\r    flag := false.\r    "Solicitar la cantidad de NPCs"\r    [ flag not ] whileTrue: [\r        CantNPC := (UIManager default request: \'¿Cuántos participantes hay?\') asNumber.\r        ((CantNPC sqrt isInteger)) \r            ifTrue: [ flag := true ]\r            ifFalse: [ UIManager default inform: \'Valor inválido\' ].\r    ].\r\r    "Solicitar la cantidad de jugadores humanos"\r    CantJugadores := (UIManager default request: \'¿Cuántos participantes humanos habrá?\') asNumber.\rMatrizTemas := TableroLogico crearMatrizTemas: CantNPC.\rMatrizTemas inspect.\rself dibujarFondoTablero .',
+			#stamp : '1/25/2025 22:13',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerCantJugadores,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'obtenerCantJugadores\r    | flag MatrizTemas|\r    flag := false.\r    "Solicitar la cantidad de NPCs"\r    [ flag not ] whileTrue: [\r        CantNPC := (UIManager default request: \'¿Cuántos participantes hay?\') asNumber.\r        ((CantNPC sqrt isInteger)) \r            ifTrue: [ flag := true ]\r            ifFalse: [ UIManager default inform: \'Valor inválido\' ].\r    ].\r\r    "Solicitar la cantidad de jugadores humanos"\r    CantJugadores := (UIManager default request: \'¿Cuántos participantes humanos habrá?\') asNumber.\rMatrizTemas := TableroLogico crearMatrizTemas: CantNPC.\rTableroLogico matrizDeTemas inspect.\rself dibujarFondoTablero .',
+			#stamp : '1/25/2025 22:16',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '15' ],
+		#self : OmReference [ '16' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizTemas:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas: cantJugadores\r| file contents elements matrix matrixSize |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\relements := elements shuffled.\r"Crear la matriz"\rmatrixSize := cantJugadores sqrt.\rmatrix := Matrix rows: matrixSize columns: matrixSize.\r\r"Recorrer los elementos y asignarlos a la matriz"\r1 to: (matrixSize * matrixSize) do: [:i |\r    | row col |\r    row := (i - 1) // matrixSize + 1.  "Calcula la fila"\r    col := (i - 1) \\\\ matrixSize + 1.   "Calcula la columna"\r    (i <= elements size) ifTrue: [\r        matrix at: row column: col put: (elements at: i).\r    ] ifFalse: [\r        matrix at: row column: col put: nil. "O algún valor por defecto"\r    ].\r].\rmatrix inspect.\rMatrizDeTemas := matrix.\relements inspect.',
+			#stamp : '1/25/2025 22:14',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizTemas:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas: cantJugadores\r| file contents elements matrix matrixSize |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\relements := elements shuffled.\r"Crear la matriz"\rmatrixSize := cantJugadores sqrt.\rmatrix := Matrix rows: matrixSize columns: matrixSize.\r\r"Recorrer los elementos y asignarlos a la matriz"\r1 to: (matrixSize * matrixSize) do: [:i |\r    | row col |\r    row := (i - 1) // matrixSize + 1.  "Calcula la fila"\r    col := (i - 1) \\\\ matrixSize + 1.   "Calcula la columna"\r    (i <= elements size) ifTrue: [\r        matrix at: row column: col put: (elements at: i).\r    ] ifFalse: [\r        matrix at: row column: col put: nil. "O algún valor por defecto"\r    ].\r].\rMatrizDeTemas := matrix.',
+			#stamp : '1/25/2025 22:17',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '16' ],
+		#self : OmReference [ '17' ]
+	},
+	#content : EpSessionSnapshot {
+		#imageName : 'C:\\Users\\Educacion\\Documents\\Pharo\\images\\The Conquist\\The Conquist.image'
+	}
+}

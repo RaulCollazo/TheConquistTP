@@ -1,0 +1,1332 @@
+OmEntry {
+	#tags : {
+		#prior : OmReference [ 'Pharo12.0-SNAPSHOT-64bit-0384a4d925.48B71A645CC0', '17' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : EpClassAddition {
+		#class : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Jugador\r\tslots: { #Nombre . #Tema . #PuntosProbabilidad };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Jugador,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Jugador,
+						#isMeta : false
+					},
+					#name : #Nombre,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Jugador,
+						#isMeta : false
+					},
+					#name : #Tema,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Jugador,
+						#isMeta : false
+					},
+					#name : #PuntosProbabilidad,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Jugador class\r\tslots: { #nombre . #nPC . #puntosProbabilidad . #tema }',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Jugador class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Jugador class',
+							#isMeta : true
+						},
+						#name : #nombre,
+						#parent : @17
+					},
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Jugador class',
+							#isMeta : true
+						},
+						#name : #nPC,
+						#parent : @17
+					},
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Jugador class',
+							#isMeta : true
+						},
+						#name : #puntosProbabilidad,
+						#parent : @17
+					},
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Jugador class',
+							#isMeta : true
+						},
+						#name : #tema,
+						#parent : @17
+					}
+				],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Jugador,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '1' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : EpClassModification {
+		#oldClass : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Jugador\r\tslots: { #Nombre . #Tema . #PuntosProbabilidad };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Jugador,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Jugador,
+						#isMeta : false
+					},
+					#name : #Nombre,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Jugador,
+						#isMeta : false
+					},
+					#name : #Tema,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Jugador,
+						#isMeta : false
+					},
+					#name : #PuntosProbabilidad,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Jugador class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Jugador class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Jugador,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#newClass : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Jugador\r\tslots: { #Nombre . #Tema . #PuntosProbabilidad };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Jugador,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Jugador,
+						#isMeta : false
+					},
+					#name : #Nombre,
+					#parent : @30
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Jugador,
+						#isMeta : false
+					},
+					#name : #Tema,
+					#parent : @30
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Jugador,
+						#isMeta : false
+					},
+					#name : #PuntosProbabilidad,
+					#parent : @30
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Jugador class\r\tslots: { #nombre . #nPC . #puntosProbabilidad . #tema }',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Jugador class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Jugador class',
+							#isMeta : true
+						},
+						#name : #nombre,
+						#parent : @41
+					},
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Jugador class',
+							#isMeta : true
+						},
+						#name : #nPC,
+						#parent : @41
+					},
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Jugador class',
+							#isMeta : true
+						},
+						#name : #puntosProbabilidad,
+						#parent : @41
+					},
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Jugador class',
+							#isMeta : true
+						},
+						#name : #tema,
+						#parent : @41
+					}
+				],
+				#baseClass : @30
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Jugador,
+					#isMeta : false
+				},
+				#parent : @30,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '2' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : EpCompositeRefactoring {
+		#childrenRefactorings : [ ]
+	}
+}OmEntry {
+	#tags : {
+		#trigger : OmReference [ '3' ],
+		#prior : @3,
+		#self : OmReference [ '4' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Jugador\r\tslots: { #Nombre . #Tema . #PuntosProbabilidad };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Jugador,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Jugador,
+						#isMeta : false
+					},
+					#name : #Nombre,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Jugador,
+						#isMeta : false
+					},
+					#name : #Tema,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Jugador,
+						#isMeta : false
+					},
+					#name : #PuntosProbabilidad,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Jugador class\r\tslots: { #nombre . #nPC . #puntosProbabilidad . #tema }',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Jugador class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Jugador class',
+							#isMeta : true
+						},
+						#name : #nombre,
+						#parent : @17
+					},
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Jugador class',
+							#isMeta : true
+						},
+						#name : #nPC,
+						#parent : @17
+					},
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Jugador class',
+							#isMeta : true
+						},
+						#name : #puntosProbabilidad,
+						#parent : @17
+					},
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Jugador class',
+							#isMeta : true
+						},
+						#name : #tema,
+						#parent : @17
+					}
+				],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Jugador,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#protocol : #accessing
+	}
+}OmEntry {
+	#tags : {
+		#trigger : OmReference [ '3' ],
+		#prior : OmReference [ '4' ],
+		#self : OmReference [ '5' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Jugador,
+				#isMeta : false
+			},
+			#name : #nombre,
+			#protocol : #accessing,
+			#sourceCode : 'nombre\r\r\t^ Nombre',
+			#stamp : '1/26/2025 07:19',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#trigger : OmReference [ '3' ],
+		#prior : OmReference [ '5' ],
+		#self : OmReference [ '6' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Jugador,
+				#isMeta : false
+			},
+			#name : #'nombre:',
+			#protocol : #accessing,
+			#sourceCode : 'nombre: anObject\r\r\tNombre := anObject',
+			#stamp : '1/26/2025 07:19',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#trigger : OmReference [ '3' ],
+		#prior : OmReference [ '6' ],
+		#self : OmReference [ '7' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Jugador,
+				#isMeta : false
+			},
+			#name : #tema,
+			#protocol : #accessing,
+			#sourceCode : 'tema\r\r\t^ Tema',
+			#stamp : '1/26/2025 07:19',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#trigger : OmReference [ '3' ],
+		#prior : OmReference [ '7' ],
+		#self : OmReference [ '8' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Jugador,
+				#isMeta : false
+			},
+			#name : #'tema:',
+			#protocol : #accessing,
+			#sourceCode : 'tema: anObject\r\r\tTema := anObject',
+			#stamp : '1/26/2025 07:19',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#trigger : OmReference [ '3' ],
+		#prior : OmReference [ '8' ],
+		#self : OmReference [ '9' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Jugador,
+				#isMeta : false
+			},
+			#name : #puntosProbabilidad,
+			#protocol : #accessing,
+			#sourceCode : 'puntosProbabilidad\r\r\t^ PuntosProbabilidad',
+			#stamp : '1/26/2025 07:19',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#trigger : OmReference [ '3' ],
+		#prior : OmReference [ '9' ],
+		#self : OmReference [ '10' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Jugador,
+				#isMeta : false
+			},
+			#name : #'puntosProbabilidad:',
+			#protocol : #accessing,
+			#sourceCode : 'puntosProbabilidad: anObject\r\r\tPuntosProbabilidad := anObject',
+			#stamp : '1/26/2025 07:19',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '10' ],
+		#self : OmReference [ '11' ]
+	},
+	#content : EpClassAddition {
+		#class : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Jugador\r\tslots: { #Nombre . #Tema . #PuntosProbabilidad };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Jugador,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Jugador,
+						#isMeta : false
+					},
+					#name : #Nombre,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Jugador,
+						#isMeta : false
+					},
+					#name : #Tema,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Jugador,
+						#isMeta : false
+					},
+					#name : #PuntosProbabilidad,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Jugador class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Jugador class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Jugador,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '11' ],
+		#self : OmReference [ '12' ]
+	},
+	#content : EpClassModification {
+		#oldClass : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Jugador\r\tslots: { #Nombre . #Tema . #PuntosProbabilidad };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Jugador,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Jugador,
+						#isMeta : false
+					},
+					#name : #Nombre,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Jugador,
+						#isMeta : false
+					},
+					#name : #Tema,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Jugador,
+						#isMeta : false
+					},
+					#name : #PuntosProbabilidad,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Jugador class\r\tslots: { #nombre . #nPC . #puntosProbabilidad . #tema }',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Jugador class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Jugador class',
+							#isMeta : true
+						},
+						#name : #nombre,
+						#parent : @17
+					},
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Jugador class',
+							#isMeta : true
+						},
+						#name : #nPC,
+						#parent : @17
+					},
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Jugador class',
+							#isMeta : true
+						},
+						#name : #puntosProbabilidad,
+						#parent : @17
+					},
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Jugador class',
+							#isMeta : true
+						},
+						#name : #tema,
+						#parent : @17
+					}
+				],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Jugador,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#newClass : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Jugador\r\tslots: { #Nombre . #Tema . #PuntosProbabilidad };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Jugador,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Jugador,
+						#isMeta : false
+					},
+					#name : #Nombre,
+					#parent : @38
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Jugador,
+						#isMeta : false
+					},
+					#name : #Tema,
+					#parent : @38
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Jugador,
+						#isMeta : false
+					},
+					#name : #PuntosProbabilidad,
+					#parent : @38
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Jugador class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Jugador class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @38
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Jugador,
+					#isMeta : false
+				},
+				#parent : @38,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '12' ],
+		#self : OmReference [ '13' ]
+	},
+	#content : EpClassAddition {
+		#class : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Jugador\r\tslots: { #Nombre . #Tema . #PuntosProbabilidad . #nPC };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Jugador,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Jugador,
+						#isMeta : false
+					},
+					#name : #Nombre,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Jugador,
+						#isMeta : false
+					},
+					#name : #Tema,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Jugador,
+						#isMeta : false
+					},
+					#name : #PuntosProbabilidad,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Jugador,
+						#isMeta : false
+					},
+					#name : #nPC,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Jugador class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Jugador class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Jugador,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '13' ],
+		#self : OmReference [ '14' ]
+	},
+	#content : EpClassModification {
+		#oldClass : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Jugador\r\tslots: { #Nombre . #Tema . #PuntosProbabilidad };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Jugador,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Jugador,
+						#isMeta : false
+					},
+					#name : #Nombre,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Jugador,
+						#isMeta : false
+					},
+					#name : #Tema,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Jugador,
+						#isMeta : false
+					},
+					#name : #PuntosProbabilidad,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Jugador class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Jugador class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Jugador,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#newClass : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Jugador\r\tslots: { #Nombre . #Tema . #PuntosProbabilidad . #nPC };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Jugador,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Jugador,
+						#isMeta : false
+					},
+					#name : #Nombre,
+					#parent : @30
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Jugador,
+						#isMeta : false
+					},
+					#name : #Tema,
+					#parent : @30
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Jugador,
+						#isMeta : false
+					},
+					#name : #PuntosProbabilidad,
+					#parent : @30
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Jugador,
+						#isMeta : false
+					},
+					#name : #nPC,
+					#parent : @30
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Jugador class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Jugador class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @30
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Jugador,
+					#isMeta : false
+				},
+				#parent : @30,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '14' ],
+		#self : OmReference [ '15' ]
+	},
+	#content : EpCompositeRefactoring {
+		#childrenRefactorings : [ ]
+	}
+}OmEntry {
+	#tags : {
+		#trigger : OmReference [ '15' ],
+		#prior : @3,
+		#self : OmReference [ '16' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Jugador,
+				#isMeta : false
+			},
+			#name : #nPC,
+			#protocol : #accessing,
+			#sourceCode : 'nPC\r\r\t^ nPC',
+			#stamp : '1/26/2025 07:20',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#trigger : OmReference [ '15' ],
+		#prior : OmReference [ '16' ],
+		#self : OmReference [ '17' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Jugador,
+				#isMeta : false
+			},
+			#name : #'nPC:',
+			#protocol : #accessing,
+			#sourceCode : 'nPC: anObject\r\r\tnPC := anObject',
+			#stamp : '1/26/2025 07:20',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '17' ],
+		#self : OmReference [ '18' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizTablero:NPCs:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTablero: cantJugadores NPCs: cantNPCs\r|matrizTablero fila columna jugador cantNPClocal random booleanValue file contents elements|\rfile := FileSystem workingDirectory / \'assets\' / \'nombresNPC.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\rfila := 1.\rcolumna := 1.\rrandom := Random new.\rcantNPClocal := cantNPCs.\r"La matriz tablero va a estar compuesta por el objeto jugadores, que contendrá en cada posición los datos del jugador, si es NPC o no, su tema y sus puntos"\rjugador := Jugador new.\rmatrizTablero := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r1 to: cantJugadores  do: [\r\t(cantNPClocal = 0) ifFalse:[   \r\t(booleanValue := random next < 0.2) ifTrue: [ \r\t\t(cantNPClocal := cantNPClocal - 1).\r\t\t(jugador nombre: (UIManager default request: \'Por favor ingrese el nombre del participante\')).\r\t\t(jugador nPC: false).\r\t\t(jugador puntosProbabilidad: 0).\r\t\t(jugador tema: (TableroLogico matrizDeTemas at: fila column:columna)).\r\t\t[ (fila = cantJugadores sqrt) ifTrue: [ fila := 0. columna := columna + 1]].\r\t\t(fila := fila + 1)\r\t\t ]\r\t ifFalse: [ \r\t\t(jugador nombre: (elements atRandom)).\r\t\t(jugador nPC: true).\r\t\t(jugador puntosProbabilidad: 0).\r\t\t(jugador tema: (TableroLogico matrizDeTemas at: fila column:columna)).\r\t\t[ (fila = cantJugadores sqrt) ifTrue: [ fila := 0. columna := columna + 1]].\r\t\t(fila := fila + 1)\r\t\t ].\t\r\t ] ifTrue: [ \r\t\t(jugador nombre: (elements atRandom)).\r\t\t(jugador nPC: true).\r\t\t(jugador puntosProbabilidad: 0).\r\t\t(jugador tema: (TableroLogico matrizDeTemas at: fila column:columna)).\r\t\t[ (fila = cantJugadores sqrt) ifTrue: [ fila := 0. columna := columna + 1]].\r\t\t(fila := fila + 1)]\r].\r\rmatrizTablero inspect.\r',
+			#stamp : '1/26/2025 07:22',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '18' ],
+		#self : OmReference [ '19' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizTablero:NPCs:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTablero: cantJugadores NPCs: cantNPCs\r|matrizTablero fila columna jugador cantNPClocal random booleanValue file contents elements|\rfile := FileSystem workingDirectory / \'assets\' / \'nombresNPC.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\rfila := 1.\rcolumna := 1.\rrandom := Random new.\rcantNPClocal := cantNPCs.\r"La matriz tablero va a estar compuesta por el objeto jugadores, que contendrá en cada posición los datos del jugador, si es NPC o no, su tema y sus puntos"\rjugador := Jugador new.\rmatrizTablero := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r1 to: cantJugadores  do: [\r\t(cantNPClocal = 0) ifFalse:[   \r\t(booleanValue := random next < 0.2) ifTrue: [ \r\t\t(cantNPClocal := cantNPClocal - 1).\r\t\t(jugador nombre: (UIManager default request: \'Por favor ingrese el nombre del participante\')).\r\t\t(jugador nPC: false).\r\t\t(jugador puntosProbabilidad: 0).\r\t\t(jugador tema: (TableroLogico matrizDeTemas at: fila column:columna)).\r\t\t[ (fila = cantJugadores sqrt) ifTrue: [ fila := 0. columna := columna + 1]].\r\t\t(fila := fila + 1)\r\t\t ]\r\t ifFalse: [ \r\t\t(jugador nombre: (elements atRandom)).\r\t\t(jugador nPC: true).\r\t\t(jugador puntosProbabilidad: 0).\r\t\t(jugador tema: (TableroLogico matrizDeTemas at: fila column:columna)).\r\t\t[ (fila = cantJugadores sqrt) ifTrue: [ fila := 0. columna := columna + 1]].\r\t\t(fila := fila + 1)\r\t\t ].\t\r\t ] ifTrue: [ \r\t\t(jugador nombre: (elements atRandom)).\r\t\t(jugador nPC: true).\r\t\t(jugador puntosProbabilidad: 0).\r\t\t(jugador tema: (TableroLogico matrizDeTemas at: fila column:columna)).\r\t\t[ (fila = cantJugadores sqrt) ifTrue: [ fila := 0. columna := columna + 1]].\r\t\t(fila := fila + 1)]\r].\r\rmatrizTablero inspect.\r',
+			#stamp : '1/26/2025 07:22',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizTablero:NPCs:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTablero: cantJugadores NPCs: cantNPCs\r|matrizTablero fila columna jugador cantNPClocal random booleanValue file contents elements|\rfile := FileSystem workingDirectory / \'assets\' / \'nombresNPC.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\rfila := 1.\rcolumna := 1.\rrandom := Random new.\rcantNPClocal := cantNPCs.\r"La matriz tablero va a estar compuesta por el objeto jugadores, que contendrá en cada posición los datos del jugador, si es NPC o no, su tema y sus puntos"\rjugador := Jugador new.\rmatrizTablero := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r1 to: cantJugadores  do: [\r\t(cantNPClocal = 0) ifFalse:[   \r\t(booleanValue := random next < 0.2) ifTrue: [ \r\t\t(cantNPClocal := cantNPClocal - 1).\r\t\t(jugador nombre: (UIManager default request: \'Por favor ingrese el nombre del participante\')).\r\t\t(jugador nPC: false).\r\t\t(jugador puntosProbabilidad: 0).\r\t\t(jugador tema: (TableroLogico matrizDeTemas at: fila column:columna)).\r\t\t[ (fila = cantJugadores sqrt) ifTrue: [ fila := 0. columna := columna + 1]].\r\t\t(fila := fila + 1)\r\t\t ]\r\t ifFalse: [ \r\t\t(jugador nombre: (elements atRandom)).\r\t\t(jugador nPC: true).\r\t\t(jugador puntosProbabilidad: 0).\r\t\t(jugador tema: (self matrizDeTemas at: fila column:columna)).\r\t\t[ (fila = cantJugadores sqrt) ifTrue: [ fila := 0. columna := columna + 1]].\r\t\t(fila := fila + 1)\r\t\t ].\t\r\t ] ifTrue: [ \r\t\t(jugador nombre: (elements atRandom)).\r\t\t(jugador nPC: true).\r\t\t(jugador puntosProbabilidad: 0).\r\t\t(jugador tema: (TableroLogico matrizDeTemas at: fila column:columna)).\r\t\t[ (fila = cantJugadores sqrt) ifTrue: [ fila := 0. columna := columna + 1]].\r\t\t(fila := fila + 1)]\r].\r\rmatrizTablero inspect.\r',
+			#stamp : '1/26/2025 07:23',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '19' ],
+		#self : OmReference [ '20' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizTablero:NPCs:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTablero: cantJugadores NPCs: cantNPCs\r|matrizTablero fila columna jugador cantNPClocal random booleanValue file contents elements|\rfile := FileSystem workingDirectory / \'assets\' / \'nombresNPC.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\rfila := 1.\rcolumna := 1.\rrandom := Random new.\rcantNPClocal := cantNPCs.\r"La matriz tablero va a estar compuesta por el objeto jugadores, que contendrá en cada posición los datos del jugador, si es NPC o no, su tema y sus puntos"\rjugador := Jugador new.\rmatrizTablero := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r1 to: cantJugadores  do: [\r\t(cantNPClocal = 0) ifFalse:[   \r\t(booleanValue := random next < 0.2) ifTrue: [ \r\t\t(cantNPClocal := cantNPClocal - 1).\r\t\t(jugador nombre: (UIManager default request: \'Por favor ingrese el nombre del participante\')).\r\t\t(jugador nPC: false).\r\t\t(jugador puntosProbabilidad: 0).\r\t\t(jugador tema: (TableroLogico matrizDeTemas at: fila column:columna)).\r\t\t[ (fila = cantJugadores sqrt) ifTrue: [ fila := 0. columna := columna + 1]].\r\t\t(fila := fila + 1)\r\t\t ]\r\t ifFalse: [ \r\t\t(jugador nombre: (elements atRandom)).\r\t\t(jugador nPC: true).\r\t\t(jugador puntosProbabilidad: 0).\r\t\t(jugador tema: (self matrizDeTemas at: fila column:columna)).\r\t\t[ (fila = cantJugadores sqrt) ifTrue: [ fila := 0. columna := columna + 1]].\r\t\t(fila := fila + 1)\r\t\t ].\t\r\t ] ifTrue: [ \r\t\t(jugador nombre: (elements atRandom)).\r\t\t(jugador nPC: true).\r\t\t(jugador puntosProbabilidad: 0).\r\t\t(jugador tema: (TableroLogico matrizDeTemas at: fila column:columna)).\r\t\t[ (fila = cantJugadores sqrt) ifTrue: [ fila := 0. columna := columna + 1]].\r\t\t(fila := fila + 1)]\r].\r\rmatrizTablero inspect.\r',
+			#stamp : '1/26/2025 07:23',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizTablero:NPCs:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTablero: cantJugadores NPCs: cantNPCs\r|matrizTablero fila columna jugador cantNPClocal random booleanValue file contents elements|\rfile := FileSystem workingDirectory / \'assets\' / \'nombresNPC.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\rfila := 1.\rcolumna := 1.\rrandom := Random new.\rcantNPClocal := cantNPCs.\r"La matriz tablero va a estar compuesta por el objeto jugadores, que contendrá en cada posición los datos del jugador, si es NPC o no, su tema y sus puntos"\rjugador := Jugador new.\rmatrizTablero := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r1 to: cantJugadores  do: [\r\t(cantNPClocal = 0) ifFalse:[   \r\t(booleanValue := random next < 0.2) ifTrue: [ \r\t\t(cantNPClocal := cantNPClocal - 1).\r\t\t(jugador nombre: (UIManager default request: \'Por favor ingrese el nombre del participante\')).\r\t\t(jugador nPC: false).\r\t\t(jugador puntosProbabilidad: 0).\r\t\t(jugador tema: (self matrizDeTemas at: fila column:columna)).\r\t\t[ (fila = cantJugadores sqrt) ifTrue: [ fila := 0. columna := columna + 1]].\r\t\t(fila := fila + 1)\r\t\t ]\r\t ifFalse: [ \r\t\t(jugador nombre: (elements atRandom)).\r\t\t(jugador nPC: true).\r\t\t(jugador puntosProbabilidad: 0).\r\t\t(jugador tema: (self matrizDeTemas at: fila column:columna)).\r\t\t[ (fila = cantJugadores sqrt) ifTrue: [ fila := 0. columna := columna + 1]].\r\t\t(fila := fila + 1)\r\t\t ].\t\r\t ] ifTrue: [ \r\t\t(jugador nombre: (elements atRandom)).\r\t\t(jugador nPC: true).\r\t\t(jugador puntosProbabilidad: 0).\r\t\t(jugador tema: (TableroLogico matrizDeTemas at: fila column:columna)).\r\t\t[ (fila = cantJugadores sqrt) ifTrue: [ fila := 0. columna := columna + 1]].\r\t\t(fila := fila + 1)]\r].\r\rmatrizTablero inspect.\r',
+			#stamp : '1/26/2025 07:23',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '20' ],
+		#self : OmReference [ '21' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizTablero:NPCs:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTablero: cantJugadores NPCs: cantNPCs\r|matrizTablero fila columna jugador cantNPClocal random booleanValue file contents elements|\rfile := FileSystem workingDirectory / \'assets\' / \'nombresNPC.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\rfila := 1.\rcolumna := 1.\rrandom := Random new.\rcantNPClocal := cantNPCs.\r"La matriz tablero va a estar compuesta por el objeto jugadores, que contendrá en cada posición los datos del jugador, si es NPC o no, su tema y sus puntos"\rjugador := Jugador new.\rmatrizTablero := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r1 to: cantJugadores  do: [\r\t(cantNPClocal = 0) ifFalse:[   \r\t(booleanValue := random next < 0.2) ifTrue: [ \r\t\t(cantNPClocal := cantNPClocal - 1).\r\t\t(jugador nombre: (UIManager default request: \'Por favor ingrese el nombre del participante\')).\r\t\t(jugador nPC: false).\r\t\t(jugador puntosProbabilidad: 0).\r\t\t(jugador tema: (self matrizDeTemas at: fila column:columna)).\r\t\t[ (fila = cantJugadores sqrt) ifTrue: [ fila := 0. columna := columna + 1]].\r\t\t(fila := fila + 1)\r\t\t ]\r\t ifFalse: [ \r\t\t(jugador nombre: (elements atRandom)).\r\t\t(jugador nPC: true).\r\t\t(jugador puntosProbabilidad: 0).\r\t\t(jugador tema: (self matrizDeTemas at: fila column:columna)).\r\t\t[ (fila = cantJugadores sqrt) ifTrue: [ fila := 0. columna := columna + 1]].\r\t\t(fila := fila + 1)\r\t\t ].\t\r\t ] ifTrue: [ \r\t\t(jugador nombre: (elements atRandom)).\r\t\t(jugador nPC: true).\r\t\t(jugador puntosProbabilidad: 0).\r\t\t(jugador tema: (TableroLogico matrizDeTemas at: fila column:columna)).\r\t\t[ (fila = cantJugadores sqrt) ifTrue: [ fila := 0. columna := columna + 1]].\r\t\t(fila := fila + 1)]\r].\r\rmatrizTablero inspect.\r',
+			#stamp : '1/26/2025 07:23',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizTablero:NPCs:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTablero: cantJugadores NPCs: cantNPCs\r| matrizTablero fila columna random cantNPClocal nombreJugador jugador file contents elements |\r(cantJugadores sqrt isInteger) ifFalse: [ \r    self error: \'La cantidad de jugadores debe ser un cuadrado perfecto.\' \r].\r(cantNPCs > cantJugadores) ifTrue: [ \r    self error: \'La cantidad de NPCs no puede ser mayor a la de jugadores.\' \r].\r\rfile := FileSystem workingDirectory / \'assets\' / \'nombresNPC.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\relements := contents substrings: \'|\'.\r\rfila := 1.\rcolumna := 1.\rrandom := Random new.\rcantNPClocal := cantNPCs.\rmatrizTablero := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r1 to: cantJugadores do: [\r    jugador := Jugador new.\r    (cantNPClocal > 0 and: (random next < 0.2)) ifTrue: [\r        cantNPClocal := cantNPClocal - 1.\r        nombreJugador := UIManager default request: \'Por favor ingrese el nombre del participante\'.\r        (nombreJugador isEmptyOrNil) ifTrue: [\r            self error: \'Debe ingresar un nombre válido para continuar.\'\r        ].\r        jugador nombre: nombreJugador.\r        jugador nPC: false.\r    ] ifFalse: [\r        jugador nombre: (elements atRandom).\r        jugador nPC: true.\r    ].\r    jugador puntosProbabilidad: 0.\r    jugador tema: (self matrizDeTemas at: fila column: columna).\r\r    matrizTablero at: fila column: columna put: jugador.\r\r    fila := fila + 1.\r    (fila > cantJugadores sqrt) ifTrue: [\r        fila := 1.\r        columna := columna + 1.\r    ].\r].\r\rmatrizTablero inspect.\r',
+			#stamp : '1/26/2025 07:28',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '21' ],
+		#self : OmReference [ '22' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizTablero:NPCs:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTablero: cantJugadores NPCs: cantNPCs\r| matrizTablero fila columna random cantNPClocal nombreJugador jugador file contents elements |\r(cantJugadores sqrt isInteger) ifFalse: [ \r    self error: \'La cantidad de jugadores debe ser un cuadrado perfecto.\' \r].\r(cantNPCs > cantJugadores) ifTrue: [ \r    self error: \'La cantidad de NPCs no puede ser mayor a la de jugadores.\' \r].\r\rfile := FileSystem workingDirectory / \'assets\' / \'nombresNPC.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\relements := contents substrings: \'|\'.\r\rfila := 1.\rcolumna := 1.\rrandom := Random new.\rcantNPClocal := cantNPCs.\rmatrizTablero := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r1 to: cantJugadores do: [\r    jugador := Jugador new.\r    (cantNPClocal > 0 and: (random next < 0.2)) ifTrue: [\r        cantNPClocal := cantNPClocal - 1.\r        nombreJugador := UIManager default request: \'Por favor ingrese el nombre del participante\'.\r        (nombreJugador isEmptyOrNil) ifTrue: [\r            self error: \'Debe ingresar un nombre válido para continuar.\'\r        ].\r        jugador nombre: nombreJugador.\r        jugador nPC: false.\r    ] ifFalse: [\r        jugador nombre: (elements atRandom).\r        jugador nPC: true.\r    ].\r    jugador puntosProbabilidad: 0.\r    jugador tema: (self matrizDeTemas at: fila column: columna).\r\r    matrizTablero at: fila column: columna put: jugador.\r\r    fila := fila + 1.\r    (fila > cantJugadores sqrt) ifTrue: [\r        fila := 1.\r        columna := columna + 1.\r    ].\r].\r\rmatrizTablero inspect.\r',
+			#stamp : '1/26/2025 07:40',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizTablero:NPCs:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTablero: cantJugadores NPCs: cantNPCs\r|matrizTablero fila columna jugador cantNPClocal random booleanValue file contents elements|\rfile := FileSystem workingDirectory / \'assets\' / \'nombresNPC.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\rfila := 1.\rcolumna := 1.\rrandom := Random new.\rcantNPClocal := cantNPCs.\r"La matriz tablero va a estar compuesta por el objeto jugadores, que contendrá en cada posición los datos del jugador, si es NPC o no, su tema y sus puntos"\rjugador := Jugador new.\rmatrizTablero := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r1 to: cantJugadores  do: [\r\t(cantNPClocal = 0) ifFalse:[   \r\t(booleanValue := random next < 0.2) ifTrue: [ \r\t\t(cantNPClocal := cantNPClocal - 1).\r\t\t(jugador nombre: (UIManager default request: \'Por favor ingrese el nombre del participante\')).\r\t\t(jugador nPC: false).\r\t\t(jugador puntosProbabilidad: 0).\r\t\t(jugador tema: (self matrizDeTemas at: fila column:columna)).\r\t\t[ (fila = cantJugadores sqrt) ifTrue: [ fila := 0. columna := columna + 1]].\r\t\t(fila := fila + 1)\r\t\t ]\r\t ifFalse: [ \r\t\t(jugador nombre: (elements atRandom)).\r\t\t(jugador nPC: true).\r\t\t(jugador puntosProbabilidad: 0).\r\t\t(jugador tema: (self matrizDeTemas at: fila column:columna)).\r\t\t[ (fila = cantJugadores sqrt) ifTrue: [ fila := 0. columna := columna + 1]].\r\t\t(fila := fila + 1)\r\t\t ].\t\r\t ] ifTrue: [ \r\t\t(jugador nombre: (elements atRandom)).\r\t\t(jugador nPC: true).\r\t\t(jugador puntosProbabilidad: 0).\r\t\t(jugador tema: (TableroLogico matrizDeTemas at: fila column:columna)).\r\t\t[ (fila = cantJugadores sqrt) ifTrue: [ fila := 0. columna := columna + 1]].\r\t\t(fila := fila + 1)]\r].\r\rmatrizTablero inspect.\r',
+			#stamp : '1/26/2025 07:43',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '22' ],
+		#self : OmReference [ '23' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizTablero:NPCs:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTablero: cantJugadores NPCs: cantNPCs\r|matrizTablero fila columna jugador cantNPClocal random booleanValue file contents elements|\rfile := FileSystem workingDirectory / \'assets\' / \'nombresNPC.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\rfila := 1.\rcolumna := 1.\rrandom := Random new.\rcantNPClocal := cantNPCs.\r"La matriz tablero va a estar compuesta por el objeto jugadores, que contendrá en cada posición los datos del jugador, si es NPC o no, su tema y sus puntos"\rjugador := Jugador new.\rmatrizTablero := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r1 to: cantJugadores  do: [\r\t(cantNPClocal = 0) ifFalse:[   \r\t(booleanValue := random next < 0.2) ifTrue: [ \r\t\t(cantNPClocal := cantNPClocal - 1).\r\t\t(jugador nombre: (UIManager default request: \'Por favor ingrese el nombre del participante\')).\r\t\t(jugador nPC: false).\r\t\t(jugador puntosProbabilidad: 0).\r\t\t(jugador tema: (self matrizDeTemas at: fila column:columna)).\r\t\t[ (fila = cantJugadores sqrt) ifTrue: [ fila := 0. columna := columna + 1]].\r\t\t(fila := fila + 1)\r\t\t ]\r\t ifFalse: [ \r\t\t(jugador nombre: (elements atRandom)).\r\t\t(jugador nPC: true).\r\t\t(jugador puntosProbabilidad: 0).\r\t\t(jugador tema: (self matrizDeTemas at: fila column:columna)).\r\t\t[ (fila = cantJugadores sqrt) ifTrue: [ fila := 0. columna := columna + 1]].\r\t\t(fila := fila + 1)\r\t\t ].\t\r\t ] ifTrue: [ \r\t\t(jugador nombre: (elements atRandom)).\r\t\t(jugador nPC: true).\r\t\t(jugador puntosProbabilidad: 0).\r\t\t(jugador tema: (TableroLogico matrizDeTemas at: fila column:columna)).\r\t\t[ (fila = cantJugadores sqrt) ifTrue: [ fila := 0. columna := columna + 1]].\r\t\t(fila := fila + 1)]\r].\r\rmatrizTablero inspect.\r',
+			#stamp : '1/26/2025 07:43',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizTablero:NPCs:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTablero: cantJugadores NPCs: cantNPCs\r    | matrizTablero fila columna random cantNPClocal nombreJugador jugador file contents elements |\r\r    (cantJugadores sqrt isInteger) ifFalse: [ \r        self error: \'La cantidad de jugadores debe ser un cuadrado perfecto.\' \r    ].\r    (cantNPCs > cantJugadores) ifTrue: [ \r        self error: \'La cantidad de NPCs no puede ser mayor a la de jugadores.\' \r    ].\r\r    file := FileSystem workingDirectory / \'assets\' / \'nombresNPC.txt\'.\r    contents := file readStreamDo: [ :stream | stream contents ].\r    elements := contents substrings: \'|\'.\r\r    elements isEmpty ifTrue: [\r        self error: \'El archivo de nombresNPC.txt está vacío o no contiene datos válidos.\'\r    ].\r\r    fila := 1.\r    columna := 1.\r    random := Random new.\r    cantNPClocal := cantNPCs.\r    matrizTablero := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r    1 to: cantJugadores do: [\r        jugador := Jugador new.\r\r        (cantNPClocal > 0 and: (random next < 0.2)) ifTrue: [\r            cantNPClocal := cantNPClocal - 1.\r            nombreJugador := UIManager default request: \'Por favor ingrese el nombre del participante\'.\r            (nombreJugador isEmptyOrNil) ifTrue: [\r                self error: \'Debe ingresar un nombre válido para continuar.\'\r            ].\r            jugador nombre: nombreJugador.\r            jugador nPC: false.\r        ] ifFalse: [\r            jugador nombre: (elements atRandom).\r            jugador nPC: true.\r        ].\r\r        jugador puntosProbabilidad: 0.\r\r        (self matrizDeTemas isNil or: [fila > (self matrizDeTemas rows) or: [columna > (self matrizDeTemas cols)]]) ifTrue: [\r            self error: \'Índices de matrizDeTemas fuera de rango\'\r        ].\r        jugador tema: (self matrizDeTemas at: fila column: columna).\r\r        (fila > matrizTablero rows or: [columna > matrizTablero cols]) ifTrue: [\r            self error: \'Índices de matrizTablero fuera de rango\'\r        ].\r        matrizTablero at: fila column: columna put: jugador.\r\r        fila := fila + 1.\r        (fila > cantJugadores sqrt) ifTrue: [\r            fila := 1.\r            columna := columna + 1.\r        ].\r    ].\r\r    matrizTablero inspect.\r',
+			#stamp : '1/26/2025 07:45',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '23' ],
+		#self : OmReference [ '24' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizTablero:NPCs:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTablero: cantJugadores NPCs: cantNPCs\r    | matrizTablero fila columna random cantNPClocal nombreJugador jugador file contents elements |\r\r    (cantJugadores sqrt isInteger) ifFalse: [ \r        self error: \'La cantidad de jugadores debe ser un cuadrado perfecto.\' \r    ].\r    (cantNPCs > cantJugadores) ifTrue: [ \r        self error: \'La cantidad de NPCs no puede ser mayor a la de jugadores.\' \r    ].\r\r    file := FileSystem workingDirectory / \'assets\' / \'nombresNPC.txt\'.\r    contents := file readStreamDo: [ :stream | stream contents ].\r    elements := contents substrings: \'|\'.\r\r    elements isEmpty ifTrue: [\r        self error: \'El archivo de nombresNPC.txt está vacío o no contiene datos válidos.\'\r    ].\r\r    fila := 1.\r    columna := 1.\r    random := Random new.\r    cantNPClocal := cantNPCs.\r    matrizTablero := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r    1 to: cantJugadores do: [\r        jugador := Jugador new.\r\r        (cantNPClocal > 0 and: (random next < 0.2)) ifTrue: [\r            cantNPClocal := cantNPClocal - 1.\r            nombreJugador := UIManager default request: \'Por favor ingrese el nombre del participante\'.\r            (nombreJugador isEmptyOrNil) ifTrue: [\r                self error: \'Debe ingresar un nombre válido para continuar.\'\r            ].\r            jugador nombre: nombreJugador.\r            jugador nPC: false.\r        ] ifFalse: [\r            jugador nombre: (elements atRandom).\r            jugador nPC: true.\r        ].\r\r        jugador puntosProbabilidad: 0.\r\r        (self matrizDeTemas isNil or: [fila > (self matrizDeTemas rows) or: [columna > (self matrizDeTemas cols)]]) ifTrue: [\r            self error: \'Índices de matrizDeTemas fuera de rango\'\r        ].\r        jugador tema: (self matrizDeTemas at: fila column: columna).\r\r        (fila > matrizTablero rows or: [columna > matrizTablero cols]) ifTrue: [\r            self error: \'Índices de matrizTablero fuera de rango\'\r        ].\r        matrizTablero at: fila column: columna put: jugador.\r\r        fila := fila + 1.\r        (fila > cantJugadores sqrt) ifTrue: [\r            fila := 1.\r            columna := columna + 1.\r        ].\r    ].\r\r    matrizTablero inspect.\r',
+			#stamp : '1/26/2025 07:45',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizTablero:NPCs:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTablero: cantJugadores NPCs: cantNPCs\r    | matrizTablero fila columna random cantNPClocal nombreJugador jugador file contents elements cantJugadoreslocal |\rcantJugadoreslocal := cantJugadores asNumber.\r\r    (cantJugadoreslocal sqrt isInteger) ifFalse: [ \r        self error: \'La cantidad de jugadores debe ser un cuadrado perfecto.\' \r    ].\r    (cantNPCs > cantJugadoreslocal) ifTrue: [ \r        self error: \'La cantidad de NPCs no puede ser mayor a la de jugadores.\' \r    ].\r\r    file := FileSystem workingDirectory / \'assets\' / \'nombresNPC.txt\'.\r    contents := file readStreamDo: [ :stream | stream contents ].\r    elements := contents substrings: \'|\'.\r\r    elements isEmpty ifTrue: [\r        self error: \'El archivo de nombresNPC.txt está vacío o no contiene datos válidos.\'\r    ].\r\r    fila := 1.\r    columna := 1.\r    random := Random new.\r    cantNPClocal := cantNPCs.\r    matrizTablero := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r    1 to: cantJugadoreslocal do: [\r        jugador := Jugador new.\r\r        (cantNPClocal > 0 and: (random next < 0.2)) ifTrue: [\r            cantNPClocal := cantNPClocal - 1.\r            nombreJugador := UIManager default request: \'Por favor ingrese el nombre del participante\'.\r            (nombreJugador isEmptyOrNil) ifTrue: [\r                self error: \'Debe ingresar un nombre válido para continuar.\'\r            ].\r            jugador nombre: nombreJugador.\r            jugador nPC: false.\r        ] ifFalse: [\r            jugador nombre: (elements atRandom).\r            jugador nPC: true.\r        ].\r\r        jugador puntosProbabilidad: 0.\r\r        (self matrizDeTemas isNil or: [fila > (self matrizDeTemas rows) or: [columna > (self matrizDeTemas cols)]]) ifTrue: [\r            self error: \'Índices de matrizDeTemas fuera de rango\'\r        ].\r        jugador tema: (self matrizDeTemas at: fila column: columna).\r\r        (fila > matrizTablero rows or: [columna > matrizTablero cols]) ifTrue: [\r            self error: \'Índices de matrizTablero fuera de rango\'\r        ].\r        matrizTablero at: fila column: columna put: jugador.\r\r        fila := fila + 1.\r        (fila > cantJugadores sqrt) ifTrue: [\r            fila := 1.\r            columna := columna + 1.\r        ].\r    ].\r\r    matrizTablero inspect.\r',
+			#stamp : '1/26/2025 07:47',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '24' ],
+		#self : OmReference [ '25' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizTablero:NPCs:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTablero: cantJugadores NPCs: cantNPCs\r    | matrizTablero fila columna random cantNPClocal nombreJugador jugador file contents elements cantJugadoreslocal |\rcantJugadoreslocal := cantJugadores asNumber.\r\r    (cantJugadoreslocal sqrt isInteger) ifFalse: [ \r        self error: \'La cantidad de jugadores debe ser un cuadrado perfecto.\' \r    ].\r    (cantNPCs > cantJugadoreslocal) ifTrue: [ \r        self error: \'La cantidad de NPCs no puede ser mayor a la de jugadores.\' \r    ].\r\r    file := FileSystem workingDirectory / \'assets\' / \'nombresNPC.txt\'.\r    contents := file readStreamDo: [ :stream | stream contents ].\r    elements := contents substrings: \'|\'.\r\r    elements isEmpty ifTrue: [\r        self error: \'El archivo de nombresNPC.txt está vacío o no contiene datos válidos.\'\r    ].\r\r    fila := 1.\r    columna := 1.\r    random := Random new.\r    cantNPClocal := cantNPCs.\r    matrizTablero := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r    1 to: cantJugadoreslocal do: [\r        jugador := Jugador new.\r\r        (cantNPClocal > 0 and: (random next < 0.2)) ifTrue: [\r            cantNPClocal := cantNPClocal - 1.\r            nombreJugador := UIManager default request: \'Por favor ingrese el nombre del participante\'.\r            (nombreJugador isEmptyOrNil) ifTrue: [\r                self error: \'Debe ingresar un nombre válido para continuar.\'\r            ].\r            jugador nombre: nombreJugador.\r            jugador nPC: false.\r        ] ifFalse: [\r            jugador nombre: (elements atRandom).\r            jugador nPC: true.\r        ].\r\r        jugador puntosProbabilidad: 0.\r\r        (self matrizDeTemas isNil or: [fila > (self matrizDeTemas rows) or: [columna > (self matrizDeTemas cols)]]) ifTrue: [\r            self error: \'Índices de matrizDeTemas fuera de rango\'\r        ].\r        jugador tema: (self matrizDeTemas at: fila column: columna).\r\r        (fila > matrizTablero rows or: [columna > matrizTablero cols]) ifTrue: [\r            self error: \'Índices de matrizTablero fuera de rango\'\r        ].\r        matrizTablero at: fila column: columna put: jugador.\r\r        fila := fila + 1.\r        (fila > cantJugadores sqrt) ifTrue: [\r            fila := 1.\r            columna := columna + 1.\r        ].\r    ].\r\r    matrizTablero inspect.\r',
+			#stamp : '1/26/2025 07:47',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizTablero:NPCs:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTablero: cantJugadores NPCs: cantNPCs\r|matrizTablero fila columna jugador cantNPClocal random booleanValue file contents elements|\rfile := FileSystem workingDirectory / \'assets\' / \'nombresNPC.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\rfila := 1.\rcolumna := 1.\rrandom := Random new.\rcantNPClocal := cantNPCs.\r"La matriz tablero va a estar compuesta por el objeto jugadores, que contendrá en cada posición los datos del jugador, si es NPC o no, su tema y sus puntos"\rjugador := Jugador new.\rmatrizTablero := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r1 to: cantJugadores  do: [\r\t(cantNPClocal = 0) ifFalse:[   \r\t(booleanValue := random next < 0.2) ifTrue: [ \r\t\t(cantNPClocal := cantNPClocal - 1).\r\t\t(jugador nombre: (UIManager default request: \'Por favor ingrese el nombre del participante\')).\r\t\t(jugador nPC: false).\r\t\t(jugador puntosProbabilidad: 0).\r\t\t(jugador tema: (self matrizDeTemas at: fila column:columna)).\r\t\t[ (fila = cantJugadores sqrt) ifTrue: [ fila := 0. columna := columna + 1]].\r\t\t(fila := fila + 1)\r\t\t ]\r\t ifFalse: [ \r\t\t(jugador nombre: (elements atRandom)).\r\t\t(jugador nPC: true).\r\t\t(jugador puntosProbabilidad: 0).\r\t\t(jugador tema: (self matrizDeTemas at: fila column:columna)).\r\t\t[ (fila = cantJugadores sqrt) ifTrue: [ fila := 0. columna := columna + 1]].\r\t\t(fila := fila + 1)\r\t\t ].\t\r\t ] ifTrue: [ \r\t\t(jugador nombre: (elements atRandom)).\r\t\t(jugador nPC: true).\r\t\t(jugador puntosProbabilidad: 0).\r\t\t(jugador tema: (TableroLogico matrizDeTemas at: fila column:columna)).\r\t\t[ (fila = cantJugadores sqrt) ifTrue: [ fila := 0. columna := columna + 1]].\r\t\t(fila := fila + 1)]\r].\r\rmatrizTablero inspect.\r',
+			#stamp : '1/26/2025 07:48',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '25' ],
+		#self : OmReference [ '26' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizTablero:NPCs:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTablero: cantJugadores NPCs: cantNPCs\r|matrizTablero fila columna jugador cantNPClocal random booleanValue file contents elements|\rfile := FileSystem workingDirectory / \'assets\' / \'nombresNPC.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\rfila := 1.\rcolumna := 1.\rrandom := Random new.\rcantNPClocal := cantNPCs.\r"La matriz tablero va a estar compuesta por el objeto jugadores, que contendrá en cada posición los datos del jugador, si es NPC o no, su tema y sus puntos"\rjugador := Jugador new.\rmatrizTablero := Matrix rows: (cantJugadores sqrt) columns: (cantJugadores sqrt).\r\r1 to: cantJugadores  do: [\r\t(cantNPClocal = 0) ifFalse:[   \r\t(booleanValue := random next < 0.2) ifTrue: [ \r\t\t(cantNPClocal := cantNPClocal - 1).\r\t\t(jugador nombre: (UIManager default request: \'Por favor ingrese el nombre del participante\')).\r\t\t(jugador nPC: false).\r\t\t(jugador puntosProbabilidad: 0).\r\t\t(jugador tema: (self matrizDeTemas at: fila column:columna)).\r\t\t[ (fila = cantJugadores sqrt) ifTrue: [ fila := 0. columna := columna + 1]].\r\t\t(fila := fila + 1)\r\t\t ]\r\t ifFalse: [ \r\t\t(jugador nombre: (elements atRandom)).\r\t\t(jugador nPC: true).\r\t\t(jugador puntosProbabilidad: 0).\r\t\t(jugador tema: (self matrizDeTemas at: fila column:columna)).\r\t\t[ (fila = cantJugadores sqrt) ifTrue: [ fila := 0. columna := columna + 1]].\r\t\t(fila := fila + 1)\r\t\t ].\t\r\t ] ifTrue: [ \r\t\t(jugador nombre: (elements atRandom)).\r\t\t(jugador nPC: true).\r\t\t(jugador puntosProbabilidad: 0).\r\t\t(jugador tema: (TableroLogico matrizDeTemas at: fila column:columna)).\r\t\t[ (fila = cantJugadores sqrt) ifTrue: [ fila := 0. columna := columna + 1]].\r\t\t(fila := fila + 1)]\r].\r\rmatrizTablero inspect.\r',
+			#stamp : '1/26/2025 07:48',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizTablero:NPCs:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTablero: cantJugadores NPCs: cantNPCs\r| matrizTablero fila columna cantNPClocal random booleanValue file contents elements |\rfile := FileSystem workingDirectory / \'assets\' / \'nombresNPC.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\relements := elements shuffled. "Mezclar los elementos"\r\rfila := 1.\rcolumna := 1.\rrandom := Random new.\rcantNPClocal := cantNPCs.\r\r"La matriz tablero va a estar compuesta por el objeto jugadores, que contendrá en cada posición los datos del jugador, si es NPC o no, su tema y sus puntos"\rmatrizTablero := Matrix rows: (cantJugadores sqrt ceiling) columns: (cantJugadores sqrt ceiling).\r\r1 to: cantJugadores do: [\r    | jugador |\r    jugador := Jugador new.\r    (cantNPClocal > 0 and: [random next < 0.2]) ifTrue: [\r        cantNPClocal := cantNPClocal - 1.\r        jugador nombre: (UIManager default request: \'Por favor ingrese el nombre del participante\').\r        jugador nPC: false.\r    ] ifFalse: [\r        jugador nombre: (elements atRandom).\r        jugador nPC: true.\r    ].\r    jugador puntosProbabilidad: 0.\r    jugador tema: (TableroLogico matrizDeTemas at: fila column: columna).\r\r    matrizTablero at: fila column: columna put: jugador.\r\r    (fila = matrizTablero rows) ifTrue: [\r        fila := 1.\r        columna := columna + 1.\r    ] ifFalse: [\r        fila := fila + 1.\r    ].\r].\r\rmatrizTablero inspect.',
+			#stamp : '1/26/2025 07:51',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '26' ],
+		#self : OmReference [ '27' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizTablero:NPCs:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTablero: cantJugadores NPCs: cantNPCs\r| matrizTablero fila columna cantNPClocal random booleanValue file contents elements |\rfile := FileSystem workingDirectory / \'assets\' / \'nombresNPC.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\relements := elements shuffled. "Mezclar los elementos"\r\rfila := 1.\rcolumna := 1.\rrandom := Random new.\rcantNPClocal := cantNPCs.\r\r"La matriz tablero va a estar compuesta por el objeto jugadores, que contendrá en cada posición los datos del jugador, si es NPC o no, su tema y sus puntos"\rmatrizTablero := Matrix rows: (cantJugadores sqrt ceiling) columns: (cantJugadores sqrt ceiling).\r\r1 to: cantJugadores do: [\r    | jugador |\r    jugador := Jugador new.\r    (cantNPClocal > 0 and: [random next < 0.2]) ifTrue: [\r        cantNPClocal := cantNPClocal - 1.\r        jugador nombre: (UIManager default request: \'Por favor ingrese el nombre del participante\').\r        jugador nPC: false.\r    ] ifFalse: [\r        jugador nombre: (elements atRandom).\r        jugador nPC: true.\r    ].\r    jugador puntosProbabilidad: 0.\r    jugador tema: (TableroLogico matrizDeTemas at: fila column: columna).\r\r    matrizTablero at: fila column: columna put: jugador.\r\r    (fila = matrizTablero rows) ifTrue: [\r        fila := 1.\r        columna := columna + 1.\r    ] ifFalse: [\r        fila := fila + 1.\r    ].\r].\r\rmatrizTablero inspect.',
+			#stamp : '1/26/2025 07:52',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizTablero:NPCs:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTablero: cantJugadores NPCs: cantNPCs\r| matrizTablero fila columna cantNPClocal random booleanValue file contents elements |\rfile := FileSystem workingDirectory / \'assets\' / \'nombresNPC.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\relements := elements shuffled. "Mezclar los elementos"\r\rfila := 1.\rcolumna := 1.\rrandom := Random new.\rcantNPClocal := cantNPCs.\r\r"La matriz tablero va a estar compuesta por el objeto jugadores, que contendrá en cada posición los datos del jugador, si es NPC o no, su tema y sus puntos"\rmatrizTablero := Matrix rows: (cantJugadores sqrt ceiling) columns: (cantJugadores sqrt ceiling).\r\r1 to: cantJugadores do: [\r    | jugador |\r    jugador := Jugador new.\r    (cantNPClocal > 0 and: [random next < 0.2]) ifTrue: [\r        cantNPClocal := cantNPClocal - 1.\r        jugador nombre: (UIManager default request: \'Por favor ingrese el nombre del participante\').\r        jugador nPC: false.\r    ] ifFalse: [\r        jugador nombre: (elements atRandom).\r        jugador nPC: true.\r    ].\r    jugador puntosProbabilidad: 0.\r    jugador tema: ((TableroLogico matrizDeTemas) at: fila column: columna).\r\r    matrizTablero at: fila column: columna put: jugador.\r\r    (fila = matrizTablero rows) ifTrue: [\r        fila := 1.\r        columna := columna + 1.\r    ] ifFalse: [\r        fila := fila + 1.\r    ].\r].\r\rmatrizTablero inspect.',
+			#stamp : '1/26/2025 07:54',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '27' ],
+		#self : OmReference [ '28' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizTablero:NPCs:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTablero: cantJugadores NPCs: cantNPCs\r| matrizTablero fila columna cantNPClocal random booleanValue file contents elements |\rfile := FileSystem workingDirectory / \'assets\' / \'nombresNPC.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\relements := elements shuffled. "Mezclar los elementos"\r\rfila := 1.\rcolumna := 1.\rrandom := Random new.\rcantNPClocal := cantNPCs.\r\r"La matriz tablero va a estar compuesta por el objeto jugadores, que contendrá en cada posición los datos del jugador, si es NPC o no, su tema y sus puntos"\rmatrizTablero := Matrix rows: (cantJugadores sqrt ceiling) columns: (cantJugadores sqrt ceiling).\r\r1 to: cantJugadores do: [\r    | jugador |\r    jugador := Jugador new.\r    (cantNPClocal > 0 and: [random next < 0.2]) ifTrue: [\r        cantNPClocal := cantNPClocal - 1.\r        jugador nombre: (UIManager default request: \'Por favor ingrese el nombre del participante\').\r        jugador nPC: false.\r    ] ifFalse: [\r        jugador nombre: (elements atRandom).\r        jugador nPC: true.\r    ].\r    jugador puntosProbabilidad: 0.\r    jugador tema: ((TableroLogico matrizDeTemas) at: fila column: columna).\r\r    matrizTablero at: fila column: columna put: jugador.\r\r    (fila = matrizTablero rows) ifTrue: [\r        fila := 1.\r        columna := columna + 1.\r    ] ifFalse: [\r        fila := fila + 1.\r    ].\r].\r\rmatrizTablero inspect.',
+			#stamp : '1/26/2025 07:54',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizTablero:NPCs:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTablero: cantJugadores NPCs: cantNPCs\r| matrizTablero fila columna cantNPClocal random booleanValue file contents elements jugador |\rfile := FileSystem workingDirectory / \'assets\' / \'nombresNPC.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\relements := elements shuffled. "Mezclar los elementos"\r\rfila := 1.\rcolumna := 1.\rrandom := Random new.\rcantNPClocal := cantNPCs.\r\r"La matriz tablero va a estar compuesta por el objeto jugadores, que contendrá en cada posición los datos del jugador, si es NPC o no, su tema y sus puntos"\rmatrizTablero := Matrix rows: (cantJugadores sqrt ceiling) columns: (cantJugadores sqrt ceiling).\r\r1 to: cantJugadores do: [:i |\r    jugador := Jugador new.\r    (cantNPClocal > 0 and: [random next < 0.2]) ifTrue: [\r        cantNPClocal := cantNPClocal - 1.\r        jugador nombre: (UIManager default request: \'Por favor ingrese el nombre del participante\').\r        jugador nPC: false.\r    ] ifFalse: [\r        jugador nombre: (elements atRandom).\r        jugador nPC: true.\r    ].\r    jugador puntosProbabilidad: 0.\r    jugador tema: (TableroLogico matrizDeTemas at: fila column: columna).\r\r    matrizTablero at: fila column: columna put: jugador.\r\r    (fila = matrizTablero rows) ifTrue: [\r        fila := 1.\r        columna := columna + 1.\r    ] ifFalse: [\r        fila := fila + 1.\r    ].\r].\r\rmatrizTablero inspect.',
+			#stamp : '1/26/2025 07:56',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '28' ],
+		#self : OmReference [ '29' ]
+	},
+	#content : EpSessionSnapshot {
+		#imageName : 'C:\\Users\\Educacion\\Documents\\Pharo\\images\\The Conquist\\The Conquist.image'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '29' ],
+		#self : OmReference [ '30' ]
+	},
+	#content : EpSessionSnapshot {
+		#imageName : 'C:\\Users\\Educacion\\Documents\\Pharo\\images\\The Conquist\\The Conquist.image'
+	}
+}

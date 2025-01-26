@@ -1,0 +1,19 @@
+OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-25T20:36:10.35-03:00' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : '|matriz|\rmatriz := TableroLogico new.\rmatriz crearMatrizTablero: 2 NPCs:3  matrizDeTemas: 3.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-25T20:36:42.411-03:00' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : '|matriz|\rmatriz := TableroLogico new.\rmatriz crearMatrizTablero: 2 NPCs: 3  matrizDeTemas: 3.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-25T20:49:25.661-03:00' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : '| random booleanValue |\rrandom := Random new.\rbooleanValue := random next < 0.5. "Devuelve true si el número aleatorio es menor a 0.5, false en caso contrario"\rTranscript show: booleanValue asString; cr.\r'
+}

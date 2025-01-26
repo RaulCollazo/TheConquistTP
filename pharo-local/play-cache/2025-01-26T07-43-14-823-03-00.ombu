@@ -1,0 +1,19 @@
+OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-26T07:43:38.768-03:00' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : '||\rTableroLogico crearMatrizTemas: 64.\rTableroLogico inspect.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-26T07:43:59.917-03:00' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : '||\rTableroLogico crearMatrizTemas: 64.\rTableroLogico matrizDeTemas inspect.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-26T07:44:12.546-03:00' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : '||\rTableroLogico crearMatrizTemas: 64.\rTableroLogico matrizDeTemas inspect.\rTableroLogico crearMatrizTablero: 64 NPCs: 3.'
+}
