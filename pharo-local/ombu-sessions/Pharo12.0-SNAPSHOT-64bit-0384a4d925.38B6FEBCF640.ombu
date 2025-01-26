@@ -1,0 +1,59 @@
+OmEntry {
+	#tags : {
+		#prior : OmReference [ 'Pharo12.0-SNAPSHOT-64bit-0384a4d925.17B317083A40', '31' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizTemas:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas: cantJugadores\r| file contents elements matrix matrixSize |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\relements := elements shuffled.\r"Crear la matriz"\rmatrixSize := cantJugadores sqrt.\rmatrix := Matrix rows: matrixSize columns: matrixSize.\r\r"Recorrer los elementos y asignarlos a la matriz"\r1 to: (matrixSize * matrixSize) do: [:i |\r    | row col |\r    row := (i - 1) // matrixSize + 1.  "Calcula la fila"\r    col := (i - 1) \\\\ matrixSize + 1.   "Calcula la columna"\r    (i <= elements size) ifTrue: [\r        matrix at: row column: col put: (elements at: i).\r    ] ifFalse: [\r        matrix at: row column: col put: nil. "O algún valor por defecto"\r    ].\r].\rMatrizDeTemas := matrix.',
+			#stamp : '1/25/2025 22:17',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizTemas:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas: cantJugadores\r| file contents elements matrixtemas matrixSize |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\relements := elements shuffled.\r"Crear la matriz"\rmatrixSize := cantJugadores sqrt.\rmatrixtemas := Matrix rows: matrixSize columns: matrixSize.\r\r"Recorrer los elementos y asignarlos a la matriz"\r1 to: (matrixSize * matrixSize) do: [:i |\r    | row col |\r    row := (i - 1) // matrixSize + 1.  "Calcula la fila"\r    col := (i - 1) \\\\ matrixSize + 1.   "Calcula la columna"\r    (i <= elements size) ifTrue: [\r        matrixtemas at: row column: col put: (elements at: i).\r    ] ifFalse: [\r        matrixtemas at: row column: col put: nil. "O algún valor por defecto"\r    ].\r].\rMatrizDeTemas := matrixtemas.',
+			#stamp : '1/26/2025 17:20',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '1' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizTemas:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas: cantJugadores\r| file contents elements matrixtemas matrixSize |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\relements := elements shuffled.\r"Crear la matriz"\rmatrixSize := cantJugadores sqrt.\rmatrixtemas := Matrix rows: matrixSize columns: matrixSize.\r\r"Recorrer los elementos y asignarlos a la matriz"\r1 to: (matrixSize * matrixSize) do: [:i |\r    | row col |\r    row := (i - 1) // matrixSize + 1.  "Calcula la fila"\r    col := (i - 1) \\\\ matrixSize + 1.   "Calcula la columna"\r    (i <= elements size) ifTrue: [\r        matrixtemas at: row column: col put: (elements at: i).\r    ] ifFalse: [\r        matrixtemas at: row column: col put: nil. "O algún valor por defecto"\r    ].\r].\rMatrizDeTemas := matrixtemas.',
+			#stamp : '1/26/2025 17:20',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizTemas:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas: cantJugadores\r| file contents elements matrixtemas matrixSize |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\relements := elements shuffled.\r"Crear la matriz"\rmatrixSize := cantJugadores sqrt.\rmatrixtemas := Matrix rows: matrixSize columns: matrixSize.\r\r"Recorrer los elementos y asignarlos a la matriz"\r1 to: (matrixSize * matrixSize) do: [:i |\r    | row col |\r    row := (i - 1) // matrixSize + 1.  "Calcula la fila"\r    col := (i - 1) \\\\ matrixSize + 1.   "Calcula la columna"\r    (i <= elements size) ifTrue: [\r        matrixtemas at: row column: col put: (elements at: i).\r    ] ifFalse: [\r        matrixtemas at: row column: col put: nil. "O algún valor por defecto"\r    ].\r].\rMatrizDeTemas := matrixtemas.\rMatrizDeTemas inspect.',
+			#stamp : '1/26/2025 17:20',
+			#package : #TheConquist
+		}
+	}
+}

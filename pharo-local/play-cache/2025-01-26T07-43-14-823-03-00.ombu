@@ -16,4 +16,10 @@ OmEntry {
 		#self : OmReference [ '3' ]
 	},
 	#content : '||\rTableroLogico crearMatrizTemas: 64.\rTableroLogico matrizDeTemas inspect.\rTableroLogico crearMatrizTablero: 64 NPCs: 3.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-26T17:10:02.237-03:00' ],
+		#self : OmReference [ '4' ]
+	},
+	#content : 'TableroLogico crearMatrizTemas: 64.\rTableroLogico matrizDeTemas inspect.\rTableroLogico crearMatrizTablero: 64 NPCs: 3.'
 }

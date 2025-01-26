@@ -1,0 +1,88 @@
+OmEntry {
+	#tags : {
+		#prior : OmReference [ 'Pharo12.0-SNAPSHOT-64bit-0384a4d925.17B317083A40', '31' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r|imagen casilla|\rcasilla := Casilla new.\rcasilla crearCasilla: 1 and: 1. \rimagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.jpg\'.\rimagenMorph removeAllMorphs.\rimagenMorph image: imagen.\rimagenMorph addMorph: casilla morph.',
+			#stamp : '1/24/2025 14:50',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r|imagen casilla|\rcasilla := Casilla new.\rcasilla crearCasilla: 1 and: 1. \rimagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.jpg\'.\rimagenMorph removeAllMorphs.\rimagenMorph image: imagen.\rimagenMorph addMorph: casilla morph.\rTableroLogico crearMatrizTablero: 64 NPCs: 3. ',
+			#stamp : '1/26/2025 17:15',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '1' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r|imagen casilla|\rcasilla := Casilla new.\rcasilla crearCasilla: 1 and: 1. \rimagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.jpg\'.\rimagenMorph removeAllMorphs.\rimagenMorph image: imagen.\rimagenMorph addMorph: casilla morph.\rTableroLogico crearMatrizTablero: 64 NPCs: 3. ',
+			#stamp : '1/26/2025 17:15',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r|imagen casilla|\rcasilla := Casilla new.\rcasilla crearCasilla: 1 and: 1. \rimagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.jpg\'.\rimagenMorph removeAllMorphs.\rimagenMorph image: imagen.\rimagenMorph addMorph: casilla morph.\rTableroLogico crearMatrizTablero: CantJugadores asNumber NPCs: CantNPC . ',
+			#stamp : '1/26/2025 17:16',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '2' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r|imagen casilla|\rcasilla := Casilla new.\rcasilla crearCasilla: 1 and: 1. \rimagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.jpg\'.\rimagenMorph removeAllMorphs.\rimagenMorph image: imagen.\rimagenMorph addMorph: casilla morph.\rTableroLogico crearMatrizTablero: CantJugadores asNumber NPCs: CantNPC . ',
+			#stamp : '1/26/2025 17:16',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r|imagen casilla|\rcasilla := Casilla new.\rcasilla crearCasilla: 1 and: 1. \rimagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.jpg\'.\rimagenMorph removeAllMorphs.\rimagenMorph image: imagen.\rimagenMorph addMorph: casilla morph.\rCantNPC inspect.\rCantJugadores inspect.\rTableroLogico crearMatrizTablero: 64 NPCs: 3. ',
+			#stamp : '1/26/2025 17:17',
+			#package : #TheConquist
+		}
+	}
+}

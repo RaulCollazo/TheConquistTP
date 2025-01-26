@@ -1,0 +1,88 @@
+OmEntry {
+	#tags : {
+		#prior : OmReference [ 'Pharo12.0-SNAPSHOT-64bit-0384a4d925.17B317083A40', '31' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizTablero:NPCs:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTablero: cantJugadores NPCs: cantNPCs\r| matrizTablero fila columna cantNPClocal random booleanValue file contents elements jugador |\rfile := FileSystem workingDirectory / \'assets\' / \'nombresNPC.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\relements := elements shuffled. "Mezclar los elementos"\r\rfila := 1.\rcolumna := 1.\rrandom := Random new.\rcantNPClocal := cantNPCs.\r\r"La matriz tablero va a estar compuesta por el objeto jugadores, que contendrá en cada posición los datos del jugador, si es NPC o no, su tema y sus puntos"\rmatrizTablero := Matrix rows: (cantJugadores sqrt ceiling) columns: (cantJugadores sqrt ceiling).\r\r1 to: cantJugadores do: [:i |\r    jugador := Jugador new.\r    (cantNPClocal > 0 and: [random next < 0.2]) ifTrue: [\r        cantNPClocal := cantNPClocal - 1.\r        jugador nombre: (UIManager default request: \'Por favor ingrese el nombre del participante\').\r        jugador nPC: false.\r    ] ifFalse: [\r        jugador nombre: (elements atRandom).\r        jugador nPC: true.\r    ].\r    jugador puntosProbabilidad: 0.\r    jugador tema: (TableroLogico matrizDeTemas at: fila column: columna).\r\r    matrizTablero at: fila column: columna put: jugador.\r\r    (fila = matrizTablero rows) ifTrue: [\r        fila := 1.\r        columna := columna + 1.\r    ] ifFalse: [\r        fila := fila + 1.\r    ].\r].\r\rmatrizTablero inspect.',
+			#stamp : '1/26/2025 07:56',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizTablero:NPCs:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTablero: cantJugadores NPCs: cantNPCs\r| matrizTablero fila columna cantNPClocal random file contents elements jugador |\rfile := FileSystem workingDirectory / \'assets\' / \'nombresNPC.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\relements := elements shuffled. "Mezclar los elementos"\r\rfila := 1.\rcolumna := 1.\rrandom := Random new.\rcantNPClocal := cantNPCs.\r\r"La matriz tablero va a estar compuesta por el objeto jugadores, que contendrá en cada posición los datos del jugador, si es NPC o no, su tema y sus puntos"\rmatrizTablero := Matrix rows: (cantJugadores sqrt ceiling) columns: (cantJugadores sqrt ceiling).\r\r1 to: cantJugadores do: [:i |\r    jugador := Jugador new.\r    (cantNPClocal > 0 and: [random next < 0.2]) ifTrue: [\r        cantNPClocal := cantNPClocal - 1.\r        jugador nombre: (UIManager default request: \'Por favor ingrese el nombre del participante\').\r        jugador nPC: false.\r    ] ifFalse: [\r        jugador nombre: (elements atRandom).\r        jugador nPC: true.\r    ].\r    jugador puntosProbabilidad: 0.\r    jugador tema: (TableroLogico matrizDeTemas at: fila column: columna).\r\r    matrizTablero at: fila column: columna put: jugador.\r\r    (fila = matrizTablero rows) ifTrue: [\r        fila := 1.\r        columna := columna + 1.\r    ] ifFalse: [\r        fila := fila + 1.\r    ].\r].\r\rmatrizTablero inspect.',
+			#stamp : '1/26/2025 16:20',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '1' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerCantJugadores,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'obtenerCantJugadores\r    | flag MatrizTemas|\r    flag := false.\r    "Solicitar la cantidad de NPCs"\r    [ flag not ] whileTrue: [\r        CantNPC := (UIManager default request: \'¿Cuántos participantes hay?\') asNumber.\r        ((CantNPC sqrt isInteger)) \r            ifTrue: [ flag := true ]\r            ifFalse: [ UIManager default inform: \'Valor inválido\' ].\r    ].\r\r    "Solicitar la cantidad de jugadores humanos"\r    CantJugadores := (UIManager default request: \'¿Cuántos participantes humanos habrá?\') asNumber.\rMatrizTemas := TableroLogico crearMatrizTemas: CantNPC.\rTableroLogico matrizDeTemas inspect.\rself dibujarFondoTablero .',
+			#stamp : '1/25/2025 22:16',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerCantJugadores,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'obtenerCantJugadores\r    | flag MatrizTemas|\r    flag := false.\r    "Solicitar la cantidad de NPCs"\r    [ flag not ] whileTrue: [\r        CantNPC := (UIManager default request: \'¿Cuántos participantes hay?\') asNumber.\r        ((CantNPC sqrt isInteger)) \r            ifTrue: [ flag := true ]\r            ifFalse: [ UIManager default inform: \'Valor inválido\' ].\r    ].\r\r    "Solicitar la cantidad de jugadores humanos"\r    CantJugadores := (UIManager default request: \'¿Cuántos participantes humanos habrá?\') asNumber.\rMatrizTemas := TableroLogico crearMatrizTemas: CantJugadores.\rTableroLogico matrizDeTemas inspect.\rself dibujarFondoTablero .',
+			#stamp : '1/26/2025 16:21',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '2' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerCantJugadores,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'obtenerCantJugadores\r    | flag MatrizTemas|\r    flag := false.\r    "Solicitar la cantidad de NPCs"\r    [ flag not ] whileTrue: [\r        CantNPC := (UIManager default request: \'¿Cuántos participantes hay?\') asNumber.\r        ((CantNPC sqrt isInteger)) \r            ifTrue: [ flag := true ]\r            ifFalse: [ UIManager default inform: \'Valor inválido\' ].\r    ].\r\r    "Solicitar la cantidad de jugadores humanos"\r    CantJugadores := (UIManager default request: \'¿Cuántos participantes humanos habrá?\') asNumber.\rMatrizTemas := TableroLogico crearMatrizTemas: CantJugadores.\rTableroLogico matrizDeTemas inspect.\rself dibujarFondoTablero .',
+			#stamp : '1/26/2025 16:21',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerCantJugadores,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'obtenerCantJugadores\r    | flag MatrizTemas|\r    flag := false.\r    "Solicitar la cantidad de NPCs"\r    [ flag not ] whileTrue: [\r        CantNPC := (UIManager default request: \'¿Cuántos participantes hay?\') asNumber.\r        ((CantNPC sqrt isInteger)) \r            ifTrue: [ flag := true ]\r            ifFalse: [ UIManager default inform: \'Valor inválido\' ].\r    ].\r\r    "Solicitar la cantidad de jugadores humanos"\r    CantJugadores := (UIManager default request: \'¿Cuántos participantes humanos habrá?\') asNumber.\rMatrizTemas := TableroLogico crearMatrizTemas: CantJugadores.\rTableroLogico crearMatrizTablero: CantJugadores NPCs: CantNPC.\rself dibujarFondoTablero .',
+			#stamp : '1/26/2025 16:23',
+			#package : #TheConquist
+		}
+	}
+}
