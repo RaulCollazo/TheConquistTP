@@ -1,0 +1,1 @@
+TableroLogico crearMatrizTemas: 64.TableroLogico matrizDeTemas inspect.TableroLogico crearMatrizMorphs: 64.TableroLogico matrizDeMorphs inspect.

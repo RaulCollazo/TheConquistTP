@@ -1,0 +1,7 @@
+OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-27T12:19:33.698-03:00' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : '|matrizMorphs|\rmatrizMorphs := Matrix rows: 64 columns: 64.'
+}

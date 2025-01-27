@@ -1,0 +1,13 @@
+OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-26T20:17:17.023-03:00' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : 'Metacello new\r    baseline: \'NeoJSON\';\r    repository: \'github://pharo-contributions/NeoJSON:main/src\';\r    load.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-01-26T20:19:34.664-03:00' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : 'Metacello new\r  repository: \'github://svenvc/NeoJSON/repository\';\r  baseline: \'NeoJSON\';\r  load.'
+}

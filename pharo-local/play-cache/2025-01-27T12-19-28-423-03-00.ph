@@ -1,0 +1,1 @@
+|matrizMorphs|matrizMorphs := Matrix rows: 64 columns: 64.
