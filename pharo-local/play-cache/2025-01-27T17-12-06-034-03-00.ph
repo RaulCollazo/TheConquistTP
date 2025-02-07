@@ -1,1 +1,1 @@
-TableroLogico crearMatrizTemas: 64.TableroLogico matrizDeTemas inspect.TableroLogico crearMatrizMorphs: 64.TableroLogico matrizDeMorphs inspect.
+TableroLogico crearMatrizTemas: 64.TableroLogico matrizDeTemas inspect.TableroLogico crearMatrizMorphs: 64.TableroLogico matrizDeMorphs inspect.TableroLogico crearMatrizTablero: 64 NPCs: 3.TableroLogico matrizTableroLógico inspect.TableroLogico obtenerJugadorTurnoActual: 64.

@@ -34,4 +34,58 @@ OmEntry {
 		#self : OmReference [ '6' ]
 	},
 	#content : 'TableroLogico crearMatrizTemas: 64.\rTableroLogico matrizDeTemas inspect.\rTableroLogico crearMatrizMorphs: 64.\rTableroLogico matrizDeMorphs inspect.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-07T14:16:08.609-03:00' ],
+		#self : OmReference [ '7' ]
+	},
+	#content : 'Juego turnoActual '
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-07T14:16:17.353-03:00' ],
+		#self : OmReference [ '8' ]
+	},
+	#content : 'TableroLogico crearMatrizTemas: 64.\rTableroLogico matrizDeTemas inspect.\rTableroLogico crearMatrizMorphs: 64.\rTableroLogico matrizDeMorphs inspect.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-07T14:54:10.199-03:00' ],
+		#self : OmReference [ '9' ]
+	},
+	#content : 'TableroLogico crearMatrizTemas: 64.\rTableroLogico matrizDeTemas inspect.\rTableroLogico crearMatrizMorphs: 64.\rTableroLogico matrizDeMorphs inspect.\rTableroLogico matrizDe'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-07T14:54:33.341-03:00' ],
+		#self : OmReference [ '10' ]
+	},
+	#content : 'TableroLogico crearMatrizTemas: 64.\rTableroLogico matrizDeTemas inspect.\rTableroLogico crearMatrizMorphs: 64.\rTableroLogico matrizDeMorphs inspect.\rTableroLogico matrizTableroLógico inspect.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-07T15:15:27.418-03:00' ],
+		#self : OmReference [ '11' ]
+	},
+	#content : 'TableroLogico crearMatrizTemas: 64.\rTableroLogico matrizDeTemas inspect.\rTableroLogico crearMatrizMorphs: 64.\rTableroLogico matrizDeMorphs inspect.\rTableroLogico matrizTableroLógico inspect.\rTableroLogico obtenerJugadorTurnoActual '
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-07T15:16:12.422-03:00' ],
+		#self : OmReference [ '12' ]
+	},
+	#content : 'TableroLogico crearMatrizTemas: 64.\rTableroLogico matrizDeTemas inspect.\rTableroLogico crearMatrizMorphs: 64.\rTableroLogico matrizDeMorphs inspect.\rTableroLogico matrizTableroLógico inspect.\rTableroLogico obtenerJugadorTurnoActual: 64.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-07T15:16:59.425-03:00' ],
+		#self : OmReference [ '13' ]
+	},
+	#content : 'TableroLogico crearMatrizTemas: 64.\rTableroLogico matrizDeTemas inspect.\rTableroLogico crearMatrizMorphs: 64.\rTableroLogico matrizDeMorphs inspect.\rTableroLogico crearMatrizTablero:  NPCs: \rTableroLogico matrizTableroLógico inspect.\rTableroLogico obtenerJugadorTurnoActual: 64.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-07T15:17:14.422-03:00' ],
+		#self : OmReference [ '14' ]
+	},
+	#content : 'TableroLogico crearMatrizTemas: 64.\rTableroLogico matrizDeTemas inspect.\rTableroLogico crearMatrizMorphs: 64.\rTableroLogico matrizDeMorphs inspect.\rTableroLogico crearMatrizTablero: 3 NPCs: 64.\rTableroLogico matrizTableroLógico inspect.\rTableroLogico obtenerJugadorTurnoActual: 64.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-07T15:17:30.949-03:00' ],
+		#self : OmReference [ '15' ]
+	},
+	#content : 'TableroLogico crearMatrizTemas: 64.\rTableroLogico matrizDeTemas inspect.\rTableroLogico crearMatrizMorphs: 64.\rTableroLogico matrizDeMorphs inspect.\rTableroLogico crearMatrizTablero: 64 NPCs: 3.\rTableroLogico matrizTableroLógico inspect.\rTableroLogico obtenerJugadorTurnoActual: 64.'
 }
