@@ -1,0 +1,25 @@
+OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-07T11:54:34.138-03:00' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : 'SourceFiles reset.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-07T11:55:14.075-03:00' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : 'SystemNavigation default flushCache.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-07T11:55:51.307-03:00' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : 'Smalltalk globals keys.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-07T11:56:32.992-03:00' ],
+		#self : OmReference [ '4' ]
+	},
+	#content : 'SystemNavigation default flushCache.'
+}

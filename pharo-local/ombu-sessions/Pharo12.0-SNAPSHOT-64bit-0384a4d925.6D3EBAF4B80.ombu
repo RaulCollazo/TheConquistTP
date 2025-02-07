@@ -1,0 +1,59 @@
+OmEntry {
+	#tags : {
+		#prior : OmReference [ 'Pharo12.0-SNAPSHOT-64bit-0384a4d925.4538894CD900', '44' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r    | imagen imagenMorph scrollPane ventanaExistente |\r\r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.jpg\'.\r\r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r\r    "Crear un ScrollPane y agregar el ImageMorph"\r    scrollPane := ScrollPane new.\r    scrollPane scroller addMorph: imagenMorph.\r    scrollPane extent: (300@300). "Ajustar el tamaño del ScrollPane según sea necesario"\r\r    "Dibujar el tablero en el ImageMorph"\r    TableroLogico dibujarTablero: imagenMorph cantNPC: CantNPC.\r\r    "Cerrar cualquier ventana existente etiquetada \'TheConquist Board\'"\r    ventanaExistente := SystemWindow allInstances detect: [ :each | each label = \'TheConquist\' ] ifNone: [ nil ].\r    ventanaExistente ifNotNil: [ ventanaExistente close ].\r\r    "Abrir el ScrollPane en una ventana"\r    scrollPane openInWindowLabeled: \'TheConquist Board\'.',
+			#stamp : '1/31/2025 22:12',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r    | imagen imagenMorph scrollPane ventanaExistente |\r\r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.jpg\'.\r\r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r\r    "Crear un ScrollPane y agregar el ImageMorph"\r    scrollPane := ScrollPane new.\r    scrollPane scroller addMorph: imagenMorph.\r    scrollPane extent: (300@300). "Ajustar el tamaño del ScrollPane según sea necesario"\r\r    "Dibujar el tablero en el ImageMorph"\r    TableroLogico dibujarTablero: imagenMorph cantNPC: CantNPC.\r\r    "Cerrar cualquier ventana existente etiquetada \'TheConquist Board\'"\r    ventanaExistente := SystemWindow allInstances detect: [ :each | each label = \'TheConquist\' ] ifNone: [ nil ].\r    ventanaExistente ifNotNil: [ ventanaExistente close ].\r\r    "Abrir el ScrollPane en una ventana"\r    scrollPane openInWindowLabeled: \'TheConquist Board\'.\r\tUIManager default inform: \'¡Hola! Esta es una alerta en Pharo 12\'.',
+			#stamp : '2/7/2025 02:07',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '1' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r    | imagen imagenMorph scrollPane ventanaExistente |\r\r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.jpg\'.\r\r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r\r    "Crear un ScrollPane y agregar el ImageMorph"\r    scrollPane := ScrollPane new.\r    scrollPane scroller addMorph: imagenMorph.\r    scrollPane extent: (300@300). "Ajustar el tamaño del ScrollPane según sea necesario"\r\r    "Dibujar el tablero en el ImageMorph"\r    TableroLogico dibujarTablero: imagenMorph cantNPC: CantNPC.\r\r    "Cerrar cualquier ventana existente etiquetada \'TheConquist Board\'"\r    ventanaExistente := SystemWindow allInstances detect: [ :each | each label = \'TheConquist\' ] ifNone: [ nil ].\r    ventanaExistente ifNotNil: [ ventanaExistente close ].\r\r    "Abrir el ScrollPane en una ventana"\r    scrollPane openInWindowLabeled: \'TheConquist Board\'.\r\tUIManager default inform: \'¡Hola! Esta es una alerta en Pharo 12\'.',
+			#stamp : '2/7/2025 02:07',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r    | imagen imagenMorph scrollPane ventanaExistente |\r\r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.jpg\'.\r\r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r\r    "Crear un ScrollPane y agregar el ImageMorph"\r    scrollPane := ScrollPane new.\r    scrollPane scroller addMorph: imagenMorph.\r    scrollPane extent: (300@300). "Ajustar el tamaño del ScrollPane según sea necesario"\r\r    "Dibujar el tablero en el ImageMorph"\r    TableroLogico dibujarTablero: imagenMorph cantNPC: CantNPC.\r\r    "Cerrar cualquier ventana existente etiquetada \'TheConquist Board\'"\r    ventanaExistente := SystemWindow allInstances detect: [ :each | each label = \'TheConquist\' ] ifNone: [ nil ].\r    ventanaExistente ifNotNil: [ ventanaExistente close ].\r\r    "Abrir el ScrollPane en una ventana"\r    scrollPane openInWindowLabeled: \'TheConquist Board\'.\r\tUIManager default inform: \'Inicio del Juego!\'.\r\tUIManager default inform: \'Buscando Jugador!\'.',
+			#stamp : '2/7/2025 02:08',
+			#package : #TheConquist
+		}
+	}
+}

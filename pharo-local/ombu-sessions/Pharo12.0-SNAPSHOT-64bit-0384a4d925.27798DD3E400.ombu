@@ -1,0 +1,30 @@
+OmEntry {
+	#tags : {
+		#prior : OmReference [ 'Pharo12.0-SNAPSHOT-64bit-0384a4d925.4538894CD900', '44' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'dibujarTablero:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarTablero: imagenMorph\r|Casilla fila columna|\rfila := 0.\rcolumna := 1.\r1 to: (Juego cantNPC) do:\r[:i|\r\tfila := fila + 1.\r\tCasilla := TableroLogico matrizDeMorphs at: fila column: columna.\r\t(fila = (Juego cantNPC sqrt)) ifTrue: [fila := 1. columna := columna + 1].\r\timagenMorph addMorph: Casilla.\r\tCasilla position: (10*i)@(10*i).\r\t]',
+			#stamp : '1/31/2025 21:24',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'dibujarTablero:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarTablero: imagenMorph\r|Casillax fila columna|\rfila := 0.\rcolumna := 1.\r1 to: (Juego cantNPC) do:\r[:i|\r\tfila := fila + 1.\r\tCasillax := TableroLogico matrizDeMorphs at: fila column: columna.\r\t(fila = (Juego cantNPC sqrt)) ifTrue: [fila := 1. columna := columna + 1].\r\timagenMorph addMorph: Casillax.\r\tCasillax position: (10*i)@(10*i).\r\t]',
+			#stamp : '2/7/2025 12:06',
+			#package : #TheConquist
+		}
+	}
+}

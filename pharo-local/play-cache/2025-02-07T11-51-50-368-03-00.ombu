@@ -1,0 +1,7 @@
+OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-07T11:51:51.665-03:00' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : 'Smalltalk garbageCollect.\rSmalltalk cleanUp.'
+}

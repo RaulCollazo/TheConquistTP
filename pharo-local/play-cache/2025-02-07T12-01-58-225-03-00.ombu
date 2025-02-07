@@ -1,0 +1,19 @@
+OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-07T12:02:14.165-03:00' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : 'TableroLogico matrizDeTemas inspect.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-07T12:02:28.966-03:00' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : 'TableroLogico matrizDeMorphs inspect.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-07T12:02:44.446-03:00' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : 'TableroLogico matrizDeMorphs: nil.'
+}

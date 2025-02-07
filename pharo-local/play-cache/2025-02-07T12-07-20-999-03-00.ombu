@@ -1,0 +1,19 @@
+OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-07T12:07:37.439-03:00' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : 'TableroLogico matrizDeMorphs inspect.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-07T12:07:56.46-03:00' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : '| file contents |\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream reset. stream contents ].'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-07T12:08:47.021-03:00' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : 'matrizMorphs := nil.  "Elimina referencia a los datos antiguos"\rself crearMatrizMorphs.  "Vuelve a generar la matriz"'
+}

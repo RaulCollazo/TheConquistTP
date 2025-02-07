@@ -1,0 +1,1 @@
+TableroLogico matrizDeTemas inspect.

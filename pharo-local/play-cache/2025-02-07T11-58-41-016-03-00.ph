@@ -1,0 +1,1 @@
+TableroLogico matrizDeMorphs: nil.

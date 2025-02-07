@@ -1,0 +1,1 @@
+matrizMorphs := nil.  "Elimina referencia a los datos antiguos"self crearMatrizMorphs.  "Vuelve a generar la matriz"

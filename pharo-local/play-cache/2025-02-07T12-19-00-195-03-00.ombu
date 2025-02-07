@@ -1,0 +1,7 @@
+OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-07T12:19:10.644-03:00' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : 'TableroLogico matrizDeTemas inspect.'
+}
