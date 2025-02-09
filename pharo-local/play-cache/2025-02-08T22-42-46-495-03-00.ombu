@@ -1,0 +1,19 @@
+OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-08T22:42:55.872-03:00' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : '|juego|\rjuego := Juego iniciar.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-09T00:23:10.343-03:00' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : '|juego|\rjuego := Juego iniciar.\rCasilla allInstances inspect'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-09T00:23:19.671-03:00' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : '|juego|\rjuego := Juego iniciar.\r'
+}

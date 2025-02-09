@@ -1,0 +1,480 @@
+OmEntry {
+	#tags : {
+		#prior : OmReference [ 'Pharo12.0-SNAPSHOT-64bit-0384a4d925.269220B7D80', '15' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #botonClickeado,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'botonClickeado\rTranscript show: self tema asString.\r        "Juego jugadaVálida: (Juego cantNPCClase) nombreJugador: (Juego jugadordelTurnoActualClase ) labelMorph: labelMorph."',
+			#stamp : '2/9/2025 01:00',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #botonClickeado,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'botonClickeado\r\r        Juego jugadaVálida: (Juego cantNPCClase) nombreJugador: (Juego jugadordelTurnoActualClase ) labelMorph: tema.',
+			#stamp : '2/9/2025 01:32',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '1' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r    | fila columna listaDeFilasValidas listatema maxFila maxColumna |\r    listaDeFilasValidas := OrderedCollection new.\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\r\r    1 to: cantNPC do: [ :i |\r        fila := (i - 1) // maxColumna + 1.\r        columna := (i - 1) \\\\ maxColumna + 1.\r\r        "Verifica si el tema del jugador coincide en la posición actual"\r        ((TableroLogico matrizDeTemas at: fila column: columna) = nombreJugador tema ) ifTrue: [\r            "Agrega las posiciones válidas en base a la posición actual"\r            (fila = 1 and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: 2@1.\r                listaDeFilasValidas add: 1@2.\r            ].\r            (fila = 1 and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: 1@(maxColumna - 1).\r                listaDeFilasValidas add: 2@maxColumna.\r            ].\r            (fila = maxFila and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: (maxFila - 1)@1.\r                listaDeFilasValidas add: maxFila@2.\r            ].\r            (fila = maxFila and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: maxFila@(maxColumna - 1).\r                listaDeFilasValidas add: (maxFila - 1)@maxColumna.\r            ].\r            (fila = 1 and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: 1@(columna - 1).\r                listaDeFilasValidas add: 1@(columna + 1).\r                listaDeFilasValidas add: 2@columna.\r            ].\r            (fila = maxFila and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: maxFila@(columna - 1).\r                listaDeFilasValidas add: maxFila@(columna + 1).\r                listaDeFilasValidas add: (maxFila - 1)@columna.\r            ].\r            (columna = 1 and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@1.\r                listaDeFilasValidas add: (fila + 1)@1.\r                listaDeFilasValidas add: fila@2.\r            ].\r            (columna = maxColumna and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@maxColumna.\r                listaDeFilasValidas add: (fila + 1)@maxColumna.\r                listaDeFilasValidas add: fila@(maxColumna - 1).\r            ].\r            ((1 < fila and: fila < maxFila) and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@columna.\r                listaDeFilasValidas add: (fila + 1)@columna.\r                listaDeFilasValidas add: fila@(columna - 1).\r                listaDeFilasValidas add: fila@(columna + 1).\r            ].\r        ].\r    ].\rlistaDeFilasValidas inspect.\r\r    listatema := OrderedCollection new.\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\r\r    1 to: cantNPC do: [ :i |\r        fila := (i - 1) // maxColumna + 1.\r        columna := (i - 1) \\\\ maxColumna + 1.\r\r        "Verifica si el tema del jugador coincide en la posición actual"\r\t\tTranscript show: labelMorph; cr.\r\t\tTranscript show: (TableroLogico matrizDeTemas at: fila column: columna);cr.\r        ((TableroLogico matrizDeTemas at: fila column: columna) = labelMorph ) ifTrue: [listatema add: fila@columna ].].\rlabelMorph inspect.\rlistatema inspect.',
+			#stamp : '2/8/2025 22:38',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r    | fila columna listaDeFilasValidas listatema maxFila maxColumna |\r    listaDeFilasValidas := OrderedCollection new.\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\r\r    1 to: cantNPC do: [ :i |\r        fila := (i - 1) // maxColumna + 1.\r        columna := (i - 1) \\\\ maxColumna + 1.\r\r        "Verifica si el tema del jugador coincide en la posición actual"\r        ((TableroLogico matrizDeTemas at: fila column: columna) = nombreJugador tema ) ifTrue: [\r            "Agrega las posiciones válidas en base a la posición actual"\r            (fila = 1 and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: 2@1.\r                listaDeFilasValidas add: 1@2.\r            ].\r            (fila = 1 and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: 1@(maxColumna - 1).\r                listaDeFilasValidas add: 2@maxColumna.\r            ].\r            (fila = maxFila and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: (maxFila - 1)@1.\r                listaDeFilasValidas add: maxFila@2.\r            ].\r            (fila = maxFila and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: maxFila@(maxColumna - 1).\r                listaDeFilasValidas add: (maxFila - 1)@maxColumna.\r            ].\r            (fila = 1 and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: 1@(columna - 1).\r                listaDeFilasValidas add: 1@(columna + 1).\r                listaDeFilasValidas add: 2@columna.\r            ].\r            (fila = maxFila and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: maxFila@(columna - 1).\r                listaDeFilasValidas add: maxFila@(columna + 1).\r                listaDeFilasValidas add: (maxFila - 1)@columna.\r            ].\r            (columna = 1 and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@1.\r                listaDeFilasValidas add: (fila + 1)@1.\r                listaDeFilasValidas add: fila@2.\r            ].\r            (columna = maxColumna and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@maxColumna.\r                listaDeFilasValidas add: (fila + 1)@maxColumna.\r                listaDeFilasValidas add: fila@(maxColumna - 1).\r            ].\r            ((1 < fila and: fila < maxFila) and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@columna.\r                listaDeFilasValidas add: (fila + 1)@columna.\r                listaDeFilasValidas add: fila@(columna - 1).\r                listaDeFilasValidas add: fila@(columna + 1).\r            ].\r        ].\r    ].\rlistaDeFilasValidas inspect.\r\r    listatema := OrderedCollection new.\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\r\r    1 to: cantNPC do: [ :i |\r        fila := (i - 1) // maxColumna + 1.\r        columna := (i - 1) \\\\ maxColumna + 1.\r        "Verifica si el tema del jugador coincide en la posición actual"\r\t\tTranscript show: labelMorph; cr.\r\t\tTranscript show: (TableroLogico matrizDeTemas at: fila column: columna);cr.\r        ((TableroLogico matrizDeTemas at: fila column: columna) = labelMorph ) ifTrue: [listatema add: fila@columna ].].\r',
+			#stamp : '2/9/2025 01:34',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '2' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r    | fila columna listaDeFilasValidas listatema maxFila maxColumna |\r    listaDeFilasValidas := OrderedCollection new.\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\r\r    1 to: cantNPC do: [ :i |\r        fila := (i - 1) // maxColumna + 1.\r        columna := (i - 1) \\\\ maxColumna + 1.\r\r        "Verifica si el tema del jugador coincide en la posición actual"\r        ((TableroLogico matrizDeTemas at: fila column: columna) = nombreJugador tema ) ifTrue: [\r            "Agrega las posiciones válidas en base a la posición actual"\r            (fila = 1 and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: 2@1.\r                listaDeFilasValidas add: 1@2.\r            ].\r            (fila = 1 and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: 1@(maxColumna - 1).\r                listaDeFilasValidas add: 2@maxColumna.\r            ].\r            (fila = maxFila and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: (maxFila - 1)@1.\r                listaDeFilasValidas add: maxFila@2.\r            ].\r            (fila = maxFila and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: maxFila@(maxColumna - 1).\r                listaDeFilasValidas add: (maxFila - 1)@maxColumna.\r            ].\r            (fila = 1 and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: 1@(columna - 1).\r                listaDeFilasValidas add: 1@(columna + 1).\r                listaDeFilasValidas add: 2@columna.\r            ].\r            (fila = maxFila and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: maxFila@(columna - 1).\r                listaDeFilasValidas add: maxFila@(columna + 1).\r                listaDeFilasValidas add: (maxFila - 1)@columna.\r            ].\r            (columna = 1 and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@1.\r                listaDeFilasValidas add: (fila + 1)@1.\r                listaDeFilasValidas add: fila@2.\r            ].\r            (columna = maxColumna and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@maxColumna.\r                listaDeFilasValidas add: (fila + 1)@maxColumna.\r                listaDeFilasValidas add: fila@(maxColumna - 1).\r            ].\r            ((1 < fila and: fila < maxFila) and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@columna.\r                listaDeFilasValidas add: (fila + 1)@columna.\r                listaDeFilasValidas add: fila@(columna - 1).\r                listaDeFilasValidas add: fila@(columna + 1).\r            ].\r        ].\r    ].\rlistaDeFilasValidas inspect.\r\r    listatema := OrderedCollection new.\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\r\r    1 to: cantNPC do: [ :i |\r        fila := (i - 1) // maxColumna + 1.\r        columna := (i - 1) \\\\ maxColumna + 1.\r        "Verifica si el tema del jugador coincide en la posición actual"\r\t\tTranscript show: labelMorph; cr.\r\t\tTranscript show: (TableroLogico matrizDeTemas at: fila column: columna);cr.\r        ((TableroLogico matrizDeTemas at: fila column: columna) = labelMorph ) ifTrue: [listatema add: fila@columna ].].\r',
+			#stamp : '2/9/2025 01:34',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r    | fila columna listaDeFilasValidas listatema maxFila maxColumna |\r    listaDeFilasValidas := OrderedCollection new.\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\r\r    1 to: cantNPC do: [ :i |\r        fila := (i - 1) // maxColumna + 1.\r        columna := (i - 1) \\\\ maxColumna + 1.\r\r        "Verifica si el tema del jugador coincide en la posición actual"\r        ((TableroLogico matrizDeTemas at: fila column: columna) = nombreJugador tema ) ifTrue: [\r            "Agrega las posiciones válidas en base a la posición actual"\r            (fila = 1 and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: 2@1.\r                listaDeFilasValidas add: 1@2.\r            ].\r            (fila = 1 and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: 1@(maxColumna - 1).\r                listaDeFilasValidas add: 2@maxColumna.\r            ].\r            (fila = maxFila and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: (maxFila - 1)@1.\r                listaDeFilasValidas add: maxFila@2.\r            ].\r            (fila = maxFila and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: maxFila@(maxColumna - 1).\r                listaDeFilasValidas add: (maxFila - 1)@maxColumna.\r            ].\r            (fila = 1 and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: 1@(columna - 1).\r                listaDeFilasValidas add: 1@(columna + 1).\r                listaDeFilasValidas add: 2@columna.\r            ].\r            (fila = maxFila and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: maxFila@(columna - 1).\r                listaDeFilasValidas add: maxFila@(columna + 1).\r                listaDeFilasValidas add: (maxFila - 1)@columna.\r            ].\r            (columna = 1 and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@1.\r                listaDeFilasValidas add: (fila + 1)@1.\r                listaDeFilasValidas add: fila@2.\r            ].\r            (columna = maxColumna and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@maxColumna.\r                listaDeFilasValidas add: (fila + 1)@maxColumna.\r                listaDeFilasValidas add: fila@(maxColumna - 1).\r            ].\r            ((1 < fila and: fila < maxFila) and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@columna.\r                listaDeFilasValidas add: (fila + 1)@columna.\r                listaDeFilasValidas add: fila@(columna - 1).\r                listaDeFilasValidas add: fila@(columna + 1).\r            ].\r        ].\r    ].\r\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\r\r    1 to: cantNPC do: [ :i |\r        fila := (i - 1) // maxColumna + 1.\r        columna := (i - 1) \\\\ maxColumna + 1.\r        "Verifica si el tema del jugador coincide en la posición actual"\r        ((TableroLogico matrizDeTemas at: fila column: columna) = labelMorph ) ifTrue: [listatema := fila@columna ].].\rlistaDeFilasValidas includes: listatema.\r\r\r',
+			#stamp : '2/9/2025 01:38',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '3' ],
+		#self : OmReference [ '4' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #'crearCasilla:and:label:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearCasilla: x and: y label: label\r|buttonMorph labelMorph|\rbuttonMorph := Morph new.\rbuttonMorph bounds: (25@25 extent: 125@125).\rbuttonMorph color: Color random.\rbuttonMorph borderWidth: 2.\rbuttonMorph borderColor: Color black.\rbuttonMorph on: #mouseUp send: #botonClickeado to: self.\rlabelMorph := StringMorph new.\rlabelMorph contents: label.\rself tema: label.\rlabelMorph position: (buttonMorph bounds center - (labelMorph extent / 2)).\r"Agregar la etiqueta al botón"\rbuttonMorph addMorph: labelMorph.\rself morph: buttonMorph.\rself morph: buttonMorph.',
+			#stamp : '2/8/2025 23:31',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #'crearCasilla:and:label:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearCasilla: x and: y label: label\r|buttonMorph labelMorph|\rfilaCasilla:=x. columnaCasilla := y.\rbuttonMorph := Morph new.\rbuttonMorph bounds: (25@25 extent: 125@125).\rbuttonMorph color: Color random.\rbuttonMorph borderWidth: 2.\rbuttonMorph borderColor: Color black.\rbuttonMorph on: #mouseUp send: #botonClickeado to: self.\rlabelMorph := StringMorph new.\rlabelMorph contents: label.\rself tema: label.\rlabelMorph position: (buttonMorph bounds center - (labelMorph extent / 2)).\r"Agregar la etiqueta al botón"\rbuttonMorph addMorph: labelMorph.\rself morph: buttonMorph.\rself morph: buttonMorph.',
+			#stamp : '2/9/2025 01:39',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '4' ],
+		#self : OmReference [ '5' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #botonClickeado,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'botonClickeado\r\r        Juego jugadaVálida: (Juego cantNPCClase) nombreJugador: (Juego jugadordelTurnoActualClase ) labelMorph: tema.',
+			#stamp : '2/9/2025 01:32',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #botonClickeado,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'botonClickeado\r\r        Juego jugadaVálida: (Juego cantNPCClase) nombreJugador: (Juego jugadordelTurnoActualClase ) labelMorph: self.',
+			#stamp : '2/9/2025 01:41',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '5' ],
+		#self : OmReference [ '6' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r    | fila columna listaDeFilasValidas listatema maxFila maxColumna |\r    listaDeFilasValidas := OrderedCollection new.\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\r\r    1 to: cantNPC do: [ :i |\r        fila := (i - 1) // maxColumna + 1.\r        columna := (i - 1) \\\\ maxColumna + 1.\r\r        "Verifica si el tema del jugador coincide en la posición actual"\r        ((TableroLogico matrizDeTemas at: fila column: columna) = nombreJugador tema ) ifTrue: [\r            "Agrega las posiciones válidas en base a la posición actual"\r            (fila = 1 and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: 2@1.\r                listaDeFilasValidas add: 1@2.\r            ].\r            (fila = 1 and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: 1@(maxColumna - 1).\r                listaDeFilasValidas add: 2@maxColumna.\r            ].\r            (fila = maxFila and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: (maxFila - 1)@1.\r                listaDeFilasValidas add: maxFila@2.\r            ].\r            (fila = maxFila and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: maxFila@(maxColumna - 1).\r                listaDeFilasValidas add: (maxFila - 1)@maxColumna.\r            ].\r            (fila = 1 and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: 1@(columna - 1).\r                listaDeFilasValidas add: 1@(columna + 1).\r                listaDeFilasValidas add: 2@columna.\r            ].\r            (fila = maxFila and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: maxFila@(columna - 1).\r                listaDeFilasValidas add: maxFila@(columna + 1).\r                listaDeFilasValidas add: (maxFila - 1)@columna.\r            ].\r            (columna = 1 and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@1.\r                listaDeFilasValidas add: (fila + 1)@1.\r                listaDeFilasValidas add: fila@2.\r            ].\r            (columna = maxColumna and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@maxColumna.\r                listaDeFilasValidas add: (fila + 1)@maxColumna.\r                listaDeFilasValidas add: fila@(maxColumna - 1).\r            ].\r            ((1 < fila and: fila < maxFila) and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@columna.\r                listaDeFilasValidas add: (fila + 1)@columna.\r                listaDeFilasValidas add: fila@(columna - 1).\r                listaDeFilasValidas add: fila@(columna + 1).\r            ].\r        ].\r    ].\r\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\r\r    1 to: cantNPC do: [ :i |\r        fila := (i - 1) // maxColumna + 1.\r        columna := (i - 1) \\\\ maxColumna + 1.\r        "Verifica si el tema del jugador coincide en la posición actual"\r        ((TableroLogico matrizDeTemas at: fila column: columna) = labelMorph ) ifTrue: [listatema := fila@columna ].].\rlistaDeFilasValidas includes: listatema.\r\r\r',
+			#stamp : '2/9/2025 01:38',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: casilla\r    | fila columna listaDeFilasValidas listatema maxFila maxColumna |\r    listaDeFilasValidas := OrderedCollection new.\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\r\r    1 to: cantNPC do: [ :i |\r        fila := (i - 1) // maxColumna + 1.\r        columna := (i - 1) \\\\ maxColumna + 1.\r\r        "Verifica si el tema del jugador coincide en la posición actual"\r        ((TableroLogico matrizDeTemas at: fila column: columna) = nombreJugador tema ) ifTrue: [\r            "Agrega las posiciones válidas en base a la posición actual"\r            (fila = 1 and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: 2@1.\r                listaDeFilasValidas add: 1@2.\r            ].\r            (fila = 1 and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: 1@(maxColumna - 1).\r                listaDeFilasValidas add: 2@maxColumna.\r            ].\r            (fila = maxFila and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: (maxFila - 1)@1.\r                listaDeFilasValidas add: maxFila@2.\r            ].\r            (fila = maxFila and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: maxFila@(maxColumna - 1).\r                listaDeFilasValidas add: (maxFila - 1)@maxColumna.\r            ].\r            (fila = 1 and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: 1@(columna - 1).\r                listaDeFilasValidas add: 1@(columna + 1).\r                listaDeFilasValidas add: 2@columna.\r            ].\r            (fila = maxFila and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: maxFila@(columna - 1).\r                listaDeFilasValidas add: maxFila@(columna + 1).\r                listaDeFilasValidas add: (maxFila - 1)@columna.\r            ].\r            (columna = 1 and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@1.\r                listaDeFilasValidas add: (fila + 1)@1.\r                listaDeFilasValidas add: fila@2.\r            ].\r            (columna = maxColumna and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@maxColumna.\r                listaDeFilasValidas add: (fila + 1)@maxColumna.\r                listaDeFilasValidas add: fila@(maxColumna - 1).\r            ].\r            ((1 < fila and: fila < maxFila) and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@columna.\r                listaDeFilasValidas add: (fila + 1)@columna.\r                listaDeFilasValidas add: fila@(columna - 1).\r                listaDeFilasValidas add: fila@(columna + 1).\r            ].\r        ].\r    ].\r\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\r\r(listaDeFilasValidas includes: ((casilla filaCasilla)@(casilla columnaCasilla)) )ifTrue: [ Transcript show: \'Ataque Válido\' ]\r\r\r',
+			#stamp : '2/9/2025 01:44',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '6' ],
+		#self : OmReference [ '7' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: casilla\r    | fila columna listaDeFilasValidas listatema maxFila maxColumna |\r    listaDeFilasValidas := OrderedCollection new.\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\r\r    1 to: cantNPC do: [ :i |\r        fila := (i - 1) // maxColumna + 1.\r        columna := (i - 1) \\\\ maxColumna + 1.\r\r        "Verifica si el tema del jugador coincide en la posición actual"\r        ((TableroLogico matrizDeTemas at: fila column: columna) = nombreJugador tema ) ifTrue: [\r            "Agrega las posiciones válidas en base a la posición actual"\r            (fila = 1 and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: 2@1.\r                listaDeFilasValidas add: 1@2.\r            ].\r            (fila = 1 and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: 1@(maxColumna - 1).\r                listaDeFilasValidas add: 2@maxColumna.\r            ].\r            (fila = maxFila and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: (maxFila - 1)@1.\r                listaDeFilasValidas add: maxFila@2.\r            ].\r            (fila = maxFila and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: maxFila@(maxColumna - 1).\r                listaDeFilasValidas add: (maxFila - 1)@maxColumna.\r            ].\r            (fila = 1 and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: 1@(columna - 1).\r                listaDeFilasValidas add: 1@(columna + 1).\r                listaDeFilasValidas add: 2@columna.\r            ].\r            (fila = maxFila and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: maxFila@(columna - 1).\r                listaDeFilasValidas add: maxFila@(columna + 1).\r                listaDeFilasValidas add: (maxFila - 1)@columna.\r            ].\r            (columna = 1 and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@1.\r                listaDeFilasValidas add: (fila + 1)@1.\r                listaDeFilasValidas add: fila@2.\r            ].\r            (columna = maxColumna and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@maxColumna.\r                listaDeFilasValidas add: (fila + 1)@maxColumna.\r                listaDeFilasValidas add: fila@(maxColumna - 1).\r            ].\r            ((1 < fila and: fila < maxFila) and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@columna.\r                listaDeFilasValidas add: (fila + 1)@columna.\r                listaDeFilasValidas add: fila@(columna - 1).\r                listaDeFilasValidas add: fila@(columna + 1).\r            ].\r        ].\r    ].\r\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\r\r(listaDeFilasValidas includes: ((casilla filaCasilla)@(casilla columnaCasilla)) )ifTrue: [ Transcript show: \'Ataque Válido\' ]\r\r\r',
+			#stamp : '2/9/2025 01:44',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: casilla\r    | fila columna listaDeFilasValidas listatema maxFila maxColumna |\r    listaDeFilasValidas := OrderedCollection new.\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\r\r    1 to: cantNPC do: [ :i |\r        fila := (i - 1) // maxColumna + 1.\r        columna := (i - 1) \\\\ maxColumna + 1.\r\r        "Verifica si el tema del jugador coincide en la posición actual"\r        ((TableroLogico matrizDeTemas at: fila column: columna) = nombreJugador tema ) ifTrue: [\r            "Agrega las posiciones válidas en base a la posición actual"\r            (fila = 1 and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: 2@1.\r                listaDeFilasValidas add: 1@2.\r            ].\r            (fila = 1 and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: 1@(maxColumna - 1).\r                listaDeFilasValidas add: 2@maxColumna.\r            ].\r            (fila = maxFila and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: (maxFila - 1)@1.\r                listaDeFilasValidas add: maxFila@2.\r            ].\r            (fila = maxFila and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: maxFila@(maxColumna - 1).\r                listaDeFilasValidas add: (maxFila - 1)@maxColumna.\r            ].\r            (fila = 1 and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: 1@(columna - 1).\r                listaDeFilasValidas add: 1@(columna + 1).\r                listaDeFilasValidas add: 2@columna.\r            ].\r            (fila = maxFila and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: maxFila@(columna - 1).\r                listaDeFilasValidas add: maxFila@(columna + 1).\r                listaDeFilasValidas add: (maxFila - 1)@columna.\r            ].\r            (columna = 1 and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@1.\r                listaDeFilasValidas add: (fila + 1)@1.\r                listaDeFilasValidas add: fila@2.\r            ].\r            (columna = maxColumna and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@maxColumna.\r                listaDeFilasValidas add: (fila + 1)@maxColumna.\r                listaDeFilasValidas add: fila@(maxColumna - 1).\r            ].\r            ((1 < fila and: fila < maxFila) and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@columna.\r                listaDeFilasValidas add: (fila + 1)@columna.\r                listaDeFilasValidas add: fila@(columna - 1).\r                listaDeFilasValidas add: fila@(columna + 1).\r            ].\r        ].\r    ].\r\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\rcasilla inspect.\r(listaDeFilasValidas includes: ((casilla filaCasilla)@(casilla columnaCasilla)) )ifTrue: [ Transcript show: \'Ataque Válido\' ]\r\r\r',
+			#stamp : '2/9/2025 01:44',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '7' ],
+		#self : OmReference [ '8' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: casilla\r    | fila columna listaDeFilasValidas listatema maxFila maxColumna |\r    listaDeFilasValidas := OrderedCollection new.\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\r\r    1 to: cantNPC do: [ :i |\r        fila := (i - 1) // maxColumna + 1.\r        columna := (i - 1) \\\\ maxColumna + 1.\r\r        "Verifica si el tema del jugador coincide en la posición actual"\r        ((TableroLogico matrizDeTemas at: fila column: columna) = nombreJugador tema ) ifTrue: [\r            "Agrega las posiciones válidas en base a la posición actual"\r            (fila = 1 and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: 2@1.\r                listaDeFilasValidas add: 1@2.\r            ].\r            (fila = 1 and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: 1@(maxColumna - 1).\r                listaDeFilasValidas add: 2@maxColumna.\r            ].\r            (fila = maxFila and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: (maxFila - 1)@1.\r                listaDeFilasValidas add: maxFila@2.\r            ].\r            (fila = maxFila and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: maxFila@(maxColumna - 1).\r                listaDeFilasValidas add: (maxFila - 1)@maxColumna.\r            ].\r            (fila = 1 and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: 1@(columna - 1).\r                listaDeFilasValidas add: 1@(columna + 1).\r                listaDeFilasValidas add: 2@columna.\r            ].\r            (fila = maxFila and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: maxFila@(columna - 1).\r                listaDeFilasValidas add: maxFila@(columna + 1).\r                listaDeFilasValidas add: (maxFila - 1)@columna.\r            ].\r            (columna = 1 and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@1.\r                listaDeFilasValidas add: (fila + 1)@1.\r                listaDeFilasValidas add: fila@2.\r            ].\r            (columna = maxColumna and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@maxColumna.\r                listaDeFilasValidas add: (fila + 1)@maxColumna.\r                listaDeFilasValidas add: fila@(maxColumna - 1).\r            ].\r            ((1 < fila and: fila < maxFila) and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@columna.\r                listaDeFilasValidas add: (fila + 1)@columna.\r                listaDeFilasValidas add: fila@(columna - 1).\r                listaDeFilasValidas add: fila@(columna + 1).\r            ].\r        ].\r    ].\r\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\rcasilla inspect.\r(listaDeFilasValidas includes: ((casilla filaCasilla)@(casilla columnaCasilla)) )ifTrue: [ Transcript show: \'Ataque Válido\' ]\r\r\r',
+			#stamp : '2/9/2025 01:44',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: casilla\r    | fila columna listaDeFilasValidas listatema maxFila maxColumna |\r    listaDeFilasValidas := OrderedCollection new.\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\r\r    1 to: cantNPC do: [ :i |\r        fila := (i - 1) // maxColumna + 1.\r        columna := (i - 1) \\\\ maxColumna + 1.\r\r        "Verifica si el tema del jugador coincide en la posición actual"\r        ((TableroLogico matrizDeTemas at: fila column: columna) = nombreJugador tema ) ifTrue: [\r            "Agrega las posiciones válidas en base a la posición actual"\r            (fila = 1 and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: 2@1.\r                listaDeFilasValidas add: 1@2.\r            ].\r            (fila = 1 and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: 1@(maxColumna - 1).\r                listaDeFilasValidas add: 2@maxColumna.\r            ].\r            (fila = maxFila and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: (maxFila - 1)@1.\r                listaDeFilasValidas add: maxFila@2.\r            ].\r            (fila = maxFila and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: maxFila@(maxColumna - 1).\r                listaDeFilasValidas add: (maxFila - 1)@maxColumna.\r            ].\r            (fila = 1 and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: 1@(columna - 1).\r                listaDeFilasValidas add: 1@(columna + 1).\r                listaDeFilasValidas add: 2@columna.\r            ].\r            (fila = maxFila and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: maxFila@(columna - 1).\r                listaDeFilasValidas add: maxFila@(columna + 1).\r                listaDeFilasValidas add: (maxFila - 1)@columna.\r            ].\r            (columna = 1 and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@1.\r                listaDeFilasValidas add: (fila + 1)@1.\r                listaDeFilasValidas add: fila@2.\r            ].\r            (columna = maxColumna and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@maxColumna.\r                listaDeFilasValidas add: (fila + 1)@maxColumna.\r                listaDeFilasValidas add: fila@(maxColumna - 1).\r            ].\r            ((1 < fila and: fila < maxFila) and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@columna.\r                listaDeFilasValidas add: (fila + 1)@columna.\r                listaDeFilasValidas add: fila@(columna - 1).\r                listaDeFilasValidas add: fila@(columna + 1).\r            ].\r        ].\r    ].\r\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\rcasilla inspect.\rlistaDeFilasValidas inspect.\r(listaDeFilasValidas includes: ((casilla filaCasilla)@(casilla columnaCasilla)) )ifTrue: [ Transcript show: \'Ataque Válido\' ]\r\r\r',
+			#stamp : '2/9/2025 01:44',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '8' ],
+		#self : OmReference [ '9' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: casilla\r    | fila columna listaDeFilasValidas listatema maxFila maxColumna |\r    listaDeFilasValidas := OrderedCollection new.\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\r\r    1 to: cantNPC do: [ :i |\r        fila := (i - 1) // maxColumna + 1.\r        columna := (i - 1) \\\\ maxColumna + 1.\r\r        "Verifica si el tema del jugador coincide en la posición actual"\r        ((TableroLogico matrizDeTemas at: fila column: columna) = nombreJugador tema ) ifTrue: [\r            "Agrega las posiciones válidas en base a la posición actual"\r            (fila = 1 and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: 2@1.\r                listaDeFilasValidas add: 1@2.\r            ].\r            (fila = 1 and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: 1@(maxColumna - 1).\r                listaDeFilasValidas add: 2@maxColumna.\r            ].\r            (fila = maxFila and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: (maxFila - 1)@1.\r                listaDeFilasValidas add: maxFila@2.\r            ].\r            (fila = maxFila and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: maxFila@(maxColumna - 1).\r                listaDeFilasValidas add: (maxFila - 1)@maxColumna.\r            ].\r            (fila = 1 and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: 1@(columna - 1).\r                listaDeFilasValidas add: 1@(columna + 1).\r                listaDeFilasValidas add: 2@columna.\r            ].\r            (fila = maxFila and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: maxFila@(columna - 1).\r                listaDeFilasValidas add: maxFila@(columna + 1).\r                listaDeFilasValidas add: (maxFila - 1)@columna.\r            ].\r            (columna = 1 and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@1.\r                listaDeFilasValidas add: (fila + 1)@1.\r                listaDeFilasValidas add: fila@2.\r            ].\r            (columna = maxColumna and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@maxColumna.\r                listaDeFilasValidas add: (fila + 1)@maxColumna.\r                listaDeFilasValidas add: fila@(maxColumna - 1).\r            ].\r            ((1 < fila and: fila < maxFila) and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@columna.\r                listaDeFilasValidas add: (fila + 1)@columna.\r                listaDeFilasValidas add: fila@(columna - 1).\r                listaDeFilasValidas add: fila@(columna + 1).\r            ].\r        ].\r    ].\r\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\rcasilla inspect.\rlistaDeFilasValidas inspect.\r(listaDeFilasValidas includes: ((casilla filaCasilla)@(casilla columnaCasilla)) )ifTrue: [ Transcript show: \'Ataque Válido\' ]\r\r\r',
+			#stamp : '2/9/2025 01:44',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: casilla\r    | fila columna listaDeFilasValidas listatema maxFila maxColumna |\r    listaDeFilasValidas := OrderedCollection new.\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\r\r    1 to: cantNPC do: [ :i |\r        fila := (i - 1) // maxColumna + 1.\r        columna := (i - 1) \\\\ maxColumna + 1.\r\r        "Verifica si el tema del jugador coincide en la posición actual"\r        ((TableroLogico matrizDeTemas at: fila column: columna) = nombreJugador tema ) ifTrue: [\r            "Agrega las posiciones válidas en base a la posición actual"\r            (fila = 1 and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: 2@1.\r                listaDeFilasValidas add: 1@2.\r            ].\r            (fila = 1 and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: 1@(maxColumna - 1).\r                listaDeFilasValidas add: 2@maxColumna.\r            ].\r            (fila = maxFila and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: (maxFila - 1)@1.\r                listaDeFilasValidas add: maxFila@2.\r            ].\r            (fila = maxFila and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: maxFila@(maxColumna - 1).\r                listaDeFilasValidas add: (maxFila - 1)@maxColumna.\r            ].\r            (fila = 1 and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: 1@(columna - 1).\r                listaDeFilasValidas add: 1@(columna + 1).\r                listaDeFilasValidas add: 2@columna.\r            ].\r            (fila = maxFila and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: maxFila@(columna - 1).\r                listaDeFilasValidas add: maxFila@(columna + 1).\r                listaDeFilasValidas add: (maxFila - 1)@columna.\r            ].\r            (columna = 1 and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@1.\r                listaDeFilasValidas add: (fila + 1)@1.\r                listaDeFilasValidas add: fila@2.\r            ].\r            (columna = maxColumna and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@maxColumna.\r                listaDeFilasValidas add: (fila + 1)@maxColumna.\r                listaDeFilasValidas add: fila@(maxColumna - 1).\r            ].\r            ((1 < fila and: fila < maxFila) and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@columna.\r                listaDeFilasValidas add: (fila + 1)@columna.\r                listaDeFilasValidas add: fila@(columna - 1).\r                listaDeFilasValidas add: fila@(columna + 1).\r            ].\r        ].\r    ].\r\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\rcasilla inspect.\rlistaDeFilasValidas inspect.\r(listaDeFilasValidas includes: ((casilla filaCasilla)@(casilla columnaCasilla)) )ifTrue: [^true] ifFalse: [ ^false]\r\r\r',
+			#stamp : '2/9/2025 01:46',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '9' ],
+		#self : OmReference [ '10' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #'respuestaClick:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'respuestaClick: argumento\r||',
+			#stamp : '2/9/2025 01:49',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '10' ],
+		#self : OmReference [ '11' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #botonClickeado,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'botonClickeado\r\r        Juego jugadaVálida: (Juego cantNPCClase) nombreJugador: (Juego jugadordelTurnoActualClase ) labelMorph: self.',
+			#stamp : '2/9/2025 01:41',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #botonClickeado,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'botonClickeado\r||\r       self respuestaClick:( Juego jugadaVálida: (Juego cantNPCClase) nombreJugador: (Juego jugadordelTurnoActualClase ) labelMorph: self).',
+			#stamp : '2/9/2025 01:52',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '11' ],
+		#self : OmReference [ '12' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #'SosElMismo:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'SosElMismo: Casilla\r(Casilla tema) = (Juego jugadordelTurnoActualClase tema) ifTrue:[UIManager default inform: \'No puedes desafiarte a ti mismo...\'] ifFalse: [ UIManager default inform:\'Dueloo\' ]',
+			#stamp : '2/9/2025 01:55',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '12' ],
+		#self : OmReference [ '13' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #'SosElMismo:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'SosElMismo: Casilla\r(Casilla tema) = (Juego jugadordelTurnoActualClase tema) ifTrue:[UIManager default inform: \'No puedes desafiarte a ti mismo...\'] ifFalse: [ UIManager default inform:\'Dueloo\' ]',
+			#stamp : '2/9/2025 01:55',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #'SosElMismo:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'SosElMismo: Casillalocal\r(Casillalocal tema) = (Juego jugadordelTurnoActualClase tema) ifTrue:[UIManager default inform: \'No puedes desafiarte a ti mismo...\'] ifFalse: [ UIManager default inform:\'Dueloo\' ]',
+			#stamp : '2/9/2025 01:55',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '13' ],
+		#self : OmReference [ '14' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #'respuestaClick:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'respuestaClick: argumento\r||',
+			#stamp : '2/9/2025 01:49',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #'respuestaClick:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'respuestaClick: argumento\rargumento ifTrue:[self SosElMismo: self] ifFalse: [ UIManager default inform: \'Movimiento no válido\' ].',
+			#stamp : '2/9/2025 01:56',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '14' ],
+		#self : OmReference [ '15' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerJugadorActual,
+			#protocol : #ManageJuego,
+			#sourceCode : 'obtenerJugadorActual\rself jugadorActual: (TableroLogico obtenerJugadorTurnoActual: self cantNPC).\rself class jugadordelTurnoActualClase: self jugadorActual.\rUIManager default inform: ((\'Jugador actual: \'),  jugadorActual nombre).',
+			#stamp : '2/8/2025 19:34',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerJugadorActual,
+			#protocol : #ManageJuego,
+			#sourceCode : 'obtenerJugadorActual\rself jugadorActual: (TableroLogico obtenerJugadorTurnoActual: self cantNPC).\rself class jugadordelTurnoActualClase: self jugadorActual.\rUIManager default inform: ((\'Jugador actual: \'),  jugadorActual nombre, \'Tema: \' jugadorActual tema).',
+			#stamp : '2/9/2025 01:59',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '15' ],
+		#self : OmReference [ '16' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerJugadorActual,
+			#protocol : #ManageJuego,
+			#sourceCode : 'obtenerJugadorActual\rself jugadorActual: (TableroLogico obtenerJugadorTurnoActual: self cantNPC).\rself class jugadordelTurnoActualClase: self jugadorActual.\rUIManager default inform: ((\'Jugador actual: \'),  jugadorActual nombre, \'Tema: \' jugadorActual tema).',
+			#stamp : '2/9/2025 01:59',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerJugadorActual,
+			#protocol : #ManageJuego,
+			#sourceCode : 'obtenerJugadorActual\rself jugadorActual: (TableroLogico obtenerJugadorTurnoActual: self cantNPC).\rself class jugadordelTurnoActualClase: self jugadorActual.\rUIManager default inform: ((\'Jugador actual: \'),  jugadorActual nombre, \'Tema: \', jugadorActual tema).',
+			#stamp : '2/9/2025 02:00',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '16' ],
+		#self : OmReference [ '17' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerJugadorActual,
+			#protocol : #ManageJuego,
+			#sourceCode : 'obtenerJugadorActual\rself jugadorActual: (TableroLogico obtenerJugadorTurnoActual: self cantNPC).\rself class jugadordelTurnoActualClase: self jugadorActual.\rUIManager default inform: ((\'Jugador actual: \'),  jugadorActual nombre, \'Tema: \', jugadorActual tema).',
+			#stamp : '2/9/2025 02:00',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerJugadorActual,
+			#protocol : #ManageJuego,
+			#sourceCode : 'obtenerJugadorActual\rself jugadorActual: (TableroLogico obtenerJugadorTurnoActual: self cantNPC).\rself class jugadordelTurnoActualClase: self jugadorActual.\rUIManager default inform: ((\'Jugador actual: \'),  jugadorActual nombre,\' \', \'Tema: \', jugadorActual tema).',
+			#stamp : '2/9/2025 02:00',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '17' ],
+		#self : OmReference [ '18' ]
+	},
+	#content : EpSessionSnapshot {
+		#imageName : 'C:\\Users\\Educacion\\Documents\\Pharo\\images\\The Conquist\\The Conquist.image'
+	}
+}

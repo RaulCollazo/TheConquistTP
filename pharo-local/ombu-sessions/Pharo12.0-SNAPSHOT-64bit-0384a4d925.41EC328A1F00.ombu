@@ -1,0 +1,502 @@
+OmEntry {
+	#tags : {
+		#prior : OmReference [ 'Pharo12.0-SNAPSHOT-64bit-0384a4d925.3A4C8C7E1A40', '88' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r| filajugador columnajugador filamorph columnamorph valido |\rfilajugador := 1.\rcolumnajugador := 1.\rfilamorph := 1.\rcolumnamorph := 1.\rvalido := false.\r\r1 to: (cantNPC sqrt ceiling) do: [ :i |\r    (filajugador > cantNPC sqrt ceiling) ifTrue: [\r        filajugador := 1.\r        columnajugador := columnajugador + 1\r    ].\r    (((TableroLogico matrizTableroLógico at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: [\r        1 to: (cantNPC sqrt ceiling) do: [ :j |\r            (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                filamorph := 1.\r                columnamorph := columnamorph + 1\r            ].\r            (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                (((filamorph = filajugador + 1) and: [columnamorph = columnajugador + 1]) or: [\r                    ((filamorph = filajugador - 1) and: [columnamorph = columnajugador + 1]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador - 1])\r                    ]\r                ]) ifTrue: [\r                    valido := true.\r                    Transcript show: \'La jugada es válida\'; cr.\r                    ^self\r                ] ifFalse: [\r                    valido := false\r                ].\r            ].\r            filamorph := filamorph + 1.\r        ].\r    ].\r    filajugador := filajugador + 1.\r].\r\rTranscript show: \'La jugada es:\', valido; cr.\r^valido',
+			#stamp : '2/8/2025 20:01',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r| filajugador columnajugador filamorph columnamorph valido |\rfilajugador := 1.\rcolumnajugador := 1.\rfilamorph := 1.\rcolumnamorph := 1.\rvalido := false.\r\r1 to: (cantNPC sqrt ceiling) do: [ :i |\r    (filajugador > cantNPC sqrt ceiling) ifTrue: [\r        filajugador := 1.\r        columnajugador := columnajugador + 1\r    ].\r    (((TableroLogico matrizTableroLógico at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: [\r        1 to: (cantNPC sqrt ceiling) do: [ :j |\r            (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                filamorph := 1.\r                columnamorph := columnamorph + 1\r            ].\r            (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                (((filamorph = filajugador + 1) and: [columnamorph = columnajugador + 1]) or: [\r                    ((filamorph = filajugador - 1) and: [columnamorph = columnajugador + 1]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador - 1])\r                    ]\r                ]) ifTrue: [\r                    valido := true.\r                    Transcript show: \'La jugada es válida\'; cr.\r                    ^self\r                ] ifFalse: [\r                    valido := false\r                ].\r            ].\r            filamorph := filamorph + 1.\r        ].\r    ].\r    filajugador := filajugador + 1.\r].\r\rTranscript show: \'La jugada es:\', valido asString; cr.\r^valido',
+			#stamp : '2/8/2025 20:08',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '1' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : EpSessionSnapshot {
+		#imageName : 'C:\\Users\\Educacion\\Documents\\Pharo\\images\\The Conquist\\The Conquist.image'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '2' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r| filajugador columnajugador filamorph columnamorph valido |\rfilajugador := 1.\rcolumnajugador := 1.\rfilamorph := 1.\rcolumnamorph := 1.\rvalido := false.\r\r1 to: (cantNPC sqrt ceiling) do: [ :i |\r    (filajugador > cantNPC sqrt ceiling) ifTrue: [\r        filajugador := 1.\r        columnajugador := columnajugador + 1\r    ].\r    (((TableroLogico matrizTableroLógico at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: [\r        1 to: (cantNPC sqrt ceiling) do: [ :j |\r            (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                filamorph := 1.\r                columnamorph := columnamorph + 1\r            ].\r            (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                (((filamorph = filajugador + 1) and: [columnamorph = columnajugador + 1]) or: [\r                    ((filamorph = filajugador - 1) and: [columnamorph = columnajugador + 1]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador - 1])\r                    ]\r                ]) ifTrue: [\r                    valido := true.\r                    Transcript show: \'La jugada es válida\'; cr.\r                    ^self\r                ] ifFalse: [\r                    valido := false\r                ].\r            ].\r            filamorph := filamorph + 1.\r        ].\r    ].\r    filajugador := filajugador + 1.\r].\r\rTranscript show: \'La jugada es:\', valido asString; cr.\r^valido',
+			#stamp : '2/8/2025 20:08',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r    | filajugador columnajugador filamorph columnamorph valido |\r    filajugador := 1.\r    columnajugador := 1.\r    filamorph := 1.\r    columnamorph := 1.\r    valido := false.\r\r    1 to: (cantNPC sqrt ceiling) do: [ :i |\r        (filajugador > cantNPC sqrt ceiling) ifTrue: [\r            filajugador := 1.\r            columnajugador := columnajugador + 1.\r        ].\r        (((TableroLogico matrizTableroLógico at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: [\r            1 to: (cantNPC sqrt ceiling) do: [ :j |\r                (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                    filamorph := 1.\r                    columnamorph := columnamorph + 1.\r                ].\r                (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                    (((filamorph = filajugador + 1) and: [columnamorph = columnajugador]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador]) or: [\r                            ((filamorph = filajugador) and: [columnamorph = columnajugador + 1]) or: [\r                                ((filamorph = filajugador) and: [columnamorph = columnajugador - 1])\r                            ]\r                        ]\r                    ]) ifTrue: [\r                        valido := true.\r                        Transcript show: \'La jugada es válida\'; cr.\r                        ^valido\r                    ].\r                ].\r                filamorph := filamorph + 1.\r            ].\r        ].\r        filajugador := filajugador + 1.\r    ].\r\r    Transcript show: \'La jugada es:\', valido asString; cr.\r    ^valido.',
+			#stamp : '2/8/2025 20:11',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '3' ],
+		#self : OmReference [ '4' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #botonClickeado,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'botonClickeado\r        Juego jugadaVálida: (Juego cantNPCClase) nombreJugador: (Juego jugadordelTurnoActualClase ) labelMorph: self tema.',
+			#stamp : '2/8/2025 19:52',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #botonClickeado,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'botonClickeado\rTranscript show: self tema.\r        Juego jugadaVálida: (Juego cantNPCClase) nombreJugador: (Juego jugadordelTurnoActualClase ) labelMorph: self tema.',
+			#stamp : '2/8/2025 20:13',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '4' ],
+		#self : OmReference [ '5' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r    | filajugador columnajugador filamorph columnamorph valido |\r    filajugador := 1.\r    columnajugador := 1.\r    filamorph := 1.\r    columnamorph := 1.\r    valido := false.\r\r    1 to: (cantNPC sqrt ceiling) do: [ :i |\r        (filajugador > cantNPC sqrt ceiling) ifTrue: [\r            filajugador := 1.\r            columnajugador := columnajugador + 1.\r        ].\r        (((TableroLogico matrizTableroLógico at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: [\r            1 to: (cantNPC sqrt ceiling) do: [ :j |\r                (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                    filamorph := 1.\r                    columnamorph := columnamorph + 1.\r                ].\r                (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                    (((filamorph = filajugador + 1) and: [columnamorph = columnajugador]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador]) or: [\r                            ((filamorph = filajugador) and: [columnamorph = columnajugador + 1]) or: [\r                                ((filamorph = filajugador) and: [columnamorph = columnajugador - 1])\r                            ]\r                        ]\r                    ]) ifTrue: [\r                        valido := true.\r                        Transcript show: \'La jugada es válida\'; cr.\r                        ^valido\r                    ].\r                ].\r                filamorph := filamorph + 1.\r            ].\r        ].\r        filajugador := filajugador + 1.\r    ].\r\r    Transcript show: \'La jugada es:\', valido asString; cr.\r    ^valido.',
+			#stamp : '2/8/2025 20:11',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r    | filajugador columnajugador filamorph columnamorph valido |\r    filajugador := 1.\r    columnajugador := 1.\r    filamorph := 1.\r    columnamorph := 1.\r    valido := false.\r\r    1 to: (cantNPC sqrt ceiling) do: [ :i |\r        (filajugador > cantNPC sqrt ceiling) ifTrue: [\r            filajugador := 1.\r            columnajugador := columnajugador + 1.\r        ].\r        (((TableroLogico matrizTableroLógico at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: [\r            1 to: (cantNPC sqrt ceiling) do: [ :j |\r                (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                    filamorph := 1.\r                    columnamorph := columnamorph + 1.\r                ].\r                (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                    (((filamorph = filajugador + 1) and: [columnamorph = columnajugador]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador]) or: [\r                            ((filamorph = filajugador) and: [columnamorph = columnajugador + 1]) or: [\r                                ((filamorph = filajugador) and: [columnamorph = columnajugador - 1])\r                            ]\r                        ]\r                    ]) ifTrue: [\r                        valido := true.\r                        Transcript show: \'La jugada es válida\'; cr.\r                        ^valido\r                    ].\r                ].\r                filamorph := filamorph + 1.\r            ].\r        ].\r        filajugador := filajugador + 1.\r    ].\rTranscript show: filajugador, filamorph, columnajugador, columnamorph .\r    Transcript show: \'La jugada es:\', valido asString; cr.\r    ^valido.',
+			#stamp : '2/8/2025 20:14',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '5' ],
+		#self : OmReference [ '6' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r    | filajugador columnajugador filamorph columnamorph valido |\r    filajugador := 1.\r    columnajugador := 1.\r    filamorph := 1.\r    columnamorph := 1.\r    valido := false.\r\r    1 to: (cantNPC sqrt ceiling) do: [ :i |\r        (filajugador > cantNPC sqrt ceiling) ifTrue: [\r            filajugador := 1.\r            columnajugador := columnajugador + 1.\r        ].\r        (((TableroLogico matrizTableroLógico at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: [\r            1 to: (cantNPC sqrt ceiling) do: [ :j |\r                (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                    filamorph := 1.\r                    columnamorph := columnamorph + 1.\r                ].\r                (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                    (((filamorph = filajugador + 1) and: [columnamorph = columnajugador]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador]) or: [\r                            ((filamorph = filajugador) and: [columnamorph = columnajugador + 1]) or: [\r                                ((filamorph = filajugador) and: [columnamorph = columnajugador - 1])\r                            ]\r                        ]\r                    ]) ifTrue: [\r                        valido := true.\r                        Transcript show: \'La jugada es válida\'; cr.\r                        ^valido\r                    ].\r                ].\r                filamorph := filamorph + 1.\r            ].\r        ].\r        filajugador := filajugador + 1.\r    ].\rTranscript show: filajugador, filamorph, columnajugador, columnamorph .\r    Transcript show: \'La jugada es:\', valido asString; cr.\r    ^valido.',
+			#stamp : '2/8/2025 20:15',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r    | filajugador columnajugador filamorph columnamorph valido |\r    filajugador := 1.\r    columnajugador := 1.\r    filamorph := 1.\r    columnamorph := 1.\r    valido := false.\r\r    1 to: (cantNPC sqrt ceiling) do: [ :i |\r        (filajugador > cantNPC sqrt ceiling) ifTrue: [\r            filajugador := 1.\r            columnajugador := columnajugador + 1.\r        ].\r        (((TableroLogico matrizTableroLógico at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: [\r            1 to: (cantNPC sqrt ceiling) do: [ :j |\r                (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                    filamorph := 1.\r                    columnamorph := columnamorph + 1.\r                ].\r                (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                    (((filamorph = filajugador + 1) and: [columnamorph = columnajugador]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador]) or: [\r                            ((filamorph = filajugador) and: [columnamorph = columnajugador + 1]) or: [\r                                ((filamorph = filajugador) and: [columnamorph = columnajugador - 1])\r                            ]\r                        ]\r                    ]) ifTrue: [\r                        valido := true.\r                        Transcript show: \'La jugada es válida\'; cr.\r                        ^valido\r                    ].\r                ].\r                filamorph := filamorph + 1.\r            ].\r        ].\r        filajugador := filajugador + 1.\r    ].\rTranscript show: filajugador asString, filamorph asString, columnajugador asString, columnamorph asString.\r    Transcript show: \'La jugada es:\', valido asString; cr.\r    ^valido.',
+			#stamp : '2/8/2025 20:16',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '6' ],
+		#self : OmReference [ '7' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r    | filajugador columnajugador filamorph columnamorph valido |\r    filajugador := 1.\r    columnajugador := 1.\r    filamorph := 1.\r    columnamorph := 1.\r    valido := false.\r\r    1 to: (cantNPC sqrt ceiling) do: [ :i |\r        (filajugador > cantNPC sqrt ceiling) ifTrue: [\r            filajugador := 1.\r            columnajugador := columnajugador + 1.\r        ].\r        (((TableroLogico matrizTableroLógico at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: [\r            1 to: (cantNPC sqrt ceiling) do: [ :j |\r                (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                    filamorph := 1.\r                    columnamorph := columnamorph + 1.\r                ].\r                (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                    (((filamorph = filajugador + 1) and: [columnamorph = columnajugador]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador]) or: [\r                            ((filamorph = filajugador) and: [columnamorph = columnajugador + 1]) or: [\r                                ((filamorph = filajugador) and: [columnamorph = columnajugador - 1])\r                            ]\r                        ]\r                    ]) ifTrue: [\r                        valido := true.\r                        Transcript show: \'La jugada es válida\'; cr.\r                        ^valido\r                    ].\r                ].\r                filamorph := filamorph + 1.\r            ].\r        ].\r        filajugador := filajugador + 1.\r    ].\rTranscript show: filajugador asString, filamorph asString, columnajugador asString, columnamorph asString.\r    Transcript show: \'La jugada es:\', valido asString; cr.\r    ^valido.',
+			#stamp : '2/8/2025 20:16',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r    | filajugador columnajugador filamorph columnamorph valido |\r    filajugador := 1.\r    columnajugador := 1.\r    filamorph := 1.\r    columnamorph := 1.\r    valido := false.\r\r    1 to: (cantNPC sqrt ceiling) do: [ :i |\r        (filajugador > cantNPC sqrt ceiling) ifTrue: [\r            filajugador := 1.\r            columnajugador := columnajugador + 1.\r        ].\r        (((TableroLogico matrizTableroLógico at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: [\r            1 to: (cantNPC sqrt ceiling) do: [ :j |\r                (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                    filamorph := 1.\r                    columnamorph := columnamorph + 1.\r                ].\r                (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                    (((filamorph = filajugador + 1) and: [columnamorph = columnajugador]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador]) or: [\r                            ((filamorph = filajugador) and: [columnamorph = columnajugador + 1]) or: [\r                                ((filamorph = filajugador) and: [columnamorph = columnajugador - 1])\r                            ]\r                        ]\r                    ]) ifTrue: [\r                        valido := true.\r                        Transcript show: \'La jugada es válida\'; cr.\r                        ^valido\r                    ].\r                ].\r                filamorph := filamorph + 1.\r            ].\r        ].\r        filajugador := filajugador + 1.\r    ].\r    Transcript show: filajugador asString, filamorph asString, columnajugador asString, columnamorph asString.\r    Transcript show: \'La jugada es:\', valido asString; cr.\r    ^valido.',
+			#stamp : '2/8/2025 20:21',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '7' ],
+		#self : OmReference [ '8' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r    | filajugador columnajugador filamorph columnamorph valido |\r    filajugador := 1.\r    columnajugador := 1.\r    filamorph := 1.\r    columnamorph := 1.\r    valido := false.\r\r    1 to: (cantNPC sqrt ceiling) do: [ :i |\r        (filajugador > cantNPC sqrt ceiling) ifTrue: [\r            filajugador := 1.\r            columnajugador := columnajugador + 1.\r        ].\r        (((TableroLogico matrizTableroLógico at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: [\r            1 to: (cantNPC sqrt ceiling) do: [ :j |\r                (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                    filamorph := 1.\r                    columnamorph := columnamorph + 1.\r                ].\r                (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                    (((filamorph = filajugador + 1) and: [columnamorph = columnajugador]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador]) or: [\r                            ((filamorph = filajugador) and: [columnamorph = columnajugador + 1]) or: [\r                                ((filamorph = filajugador) and: [columnamorph = columnajugador - 1])\r                            ]\r                        ]\r                    ]) ifTrue: [\r                        valido := true.\r                        Transcript show: \'La jugada es válida\'; cr.\r                        ^valido\r                    ].\r                ].\r                filamorph := filamorph + 1.\r            ].\r        ].\r        filajugador := filajugador + 1.\r    ].\r    Transcript show: filajugador asString, filamorph asString, columnajugador asString, columnamorph asString.\r    Transcript show: \'La jugada es:\', valido asString; cr.\r    ^valido.',
+			#stamp : '2/8/2025 20:21',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r    | filajugador columnajugador filamorph columnamorph valido |\r    filajugador := 1.\r    columnajugador := 1.\r    filamorph := 1.\r    columnamorph := 1.\r    valido := false.\r\r    1 to: (cantNPC sqrt ceiling) do: [ :i |\r        (filajugador > cantNPC sqrt ceiling) ifTrue: [\r            filajugador := 1.\r            columnajugador := columnajugador + 1.\r        ].\r        Transcript show: \'Revisando jugador en fila: \', filajugador asString, \' columna: \', columnajugador asString; cr.\r        (((TableroLogico matrizTableroLógico at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: [\r            1 to: (cantNPC sqrt ceiling) do: [ :j |\r                (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                    filamorph := 1.\r                    columnamorph := columnamorph + 1.\r                ].\r                Transcript show: \'Revisando morph en fila: \', filamorph asString, \' columna: \', columnamorph asString; cr.\r                (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                    (((filamorph = filajugador + 1) and: [columnamorph = columnajugador]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador]) or: [\r                            ((filamorph = filajugador) and: [columnamorph = columnajugador + 1]) or: [\r                                ((filamorph = filajugador) and: [columnamorph = columnajugador - 1])\r                            ]\r                        ]\r                    ]) ifTrue: [\r                        valido := true.\r                        Transcript show: \'La jugada es válida\'; cr.\r                        ^valido\r                    ].\r                ].\r                filamorph := filamorph + 1.\r            ].\r        ].\r        filajugador := filajugador + 1.\r    ].\r    Transcript show: \'La jugada no es válida\'; cr.\r    Transcript show: \'Última posición revisada - filajugador: \', filajugador asString, \' columnajugador: \', columnajugador asString; cr.\r    ^valido.',
+			#stamp : '2/8/2025 20:24',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '8' ],
+		#self : OmReference [ '9' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r    | filajugador columnajugador filamorph columnamorph valido |\r    filajugador := 1.\r    columnajugador := 1.\r    filamorph := 1.\r    columnamorph := 1.\r    valido := false.\r\r    1 to: (cantNPC sqrt ceiling) do: [ :i |\r        (filajugador > cantNPC sqrt ceiling) ifTrue: [\r            filajugador := 1.\r            columnajugador := columnajugador + 1.\r        ].\r        Transcript show: \'Revisando jugador en fila: \', filajugador asString, \' columna: \', columnajugador asString; cr.\r        (((TableroLogico matrizTableroLógico at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: [\r            1 to: (cantNPC sqrt ceiling) do: [ :j |\r                (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                    filamorph := 1.\r                    columnamorph := columnamorph + 1.\r                ].\r                Transcript show: \'Revisando morph en fila: \', filamorph asString, \' columna: \', columnamorph asString; cr.\r                (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                    (((filamorph = filajugador + 1) and: [columnamorph = columnajugador]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador]) or: [\r                            ((filamorph = filajugador) and: [columnamorph = columnajugador + 1]) or: [\r                                ((filamorph = filajugador) and: [columnamorph = columnajugador - 1])\r                            ]\r                        ]\r                    ]) ifTrue: [\r                        valido := true.\r                        Transcript show: \'La jugada es válida\'; cr.\r                        ^valido\r                    ].\r                ].\r                filamorph := filamorph + 1.\r            ].\r        ].\r        filajugador := filajugador + 1.\r    ].\r    Transcript show: \'La jugada no es válida\'; cr.\r    Transcript show: \'Última posición revisada - filajugador: \', filajugador asString, \' columnajugador: \', columnajugador asString; cr.\r    ^valido.',
+			#stamp : '2/8/2025 20:24',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r    | filajugador columnajugador filamorph columnamorph valido |\r    filajugador := 1.\r    columnajugador := 1.\r    filamorph := 1.\r    columnamorph := 1.\r    valido := false.\r\r    1 to: (cantNPC sqrt ceiling) do: [ :i |\r        (filajugador > cantNPC sqrt ceiling) ifTrue: [\r            filajugador := 1.\r            columnajugador := columnajugador + 1.\r        ].\r        Transcript show: \'Revisando jugador en fila: \', filajugador asString, \' columna: \', columnajugador asString; cr.\r        (((TableroLogico matrizTableroLógico at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: [\r            1 to: (cantNPC sqrt ceiling) do: [ :j |\r                (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                    filamorph := 1.\r                    columnamorph := columnamorph + 1.\r                ].\r                Transcript show: \'Revisando morph en fila: \', filamorph asString, \' columna: \', columnamorph asString; cr.\r                (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                    (((filamorph = filajugador + 1) and: [columnamorph = columnajugador]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador]) or: [\r                            ((filamorph = filajugador) and: [columnamorph = columnajugador + 1]) or: [\r                                ((filamorph = filajugador) and: [columnamorph = columnajugador - 1])\r                            ]\r                        ]\r                    ]) ifTrue: [\r                        valido := true.\r                        Transcript show: \'La jugada es válida\'; cr.\r                        ^valido\r                    ].\r                ].\r                filamorph := filamorph + 1.\r            ].\r        ].\r        filajugador := filajugador + 1.\r    ].\r    Transcript show: \'La jugada es\', valido asString; cr.\r    Transcript show: \'Última posición revisada - filajugador: \', filajugador asString, \' columnajugador: \', columnajugador asString; cr.\r    ^valido.',
+			#stamp : '2/8/2025 20:24',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '9' ],
+		#self : OmReference [ '10' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r    | filajugador columnajugador filamorph columnamorph valido |\r    filajugador := 1.\r    columnajugador := 1.\r    filamorph := 1.\r    columnamorph := 1.\r    valido := false.\r\r    1 to: (cantNPC sqrt ceiling) do: [ :i |\r        (filajugador > cantNPC sqrt ceiling) ifTrue: [\r            filajugador := 1.\r            columnajugador := columnajugador + 1.\r        ].\r        Transcript show: \'Revisando jugador en fila: \', filajugador asString, \' columna: \', columnajugador asString; cr.\r        (((TableroLogico matrizTableroLógico at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: [\r            1 to: (cantNPC sqrt ceiling) do: [ :j |\r                (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                    filamorph := 1.\r                    columnamorph := columnamorph + 1.\r                ].\r                Transcript show: \'Revisando morph en fila: \', filamorph asString, \' columna: \', columnamorph asString; cr.\r                (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                    (((filamorph = filajugador + 1) and: [columnamorph = columnajugador]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador]) or: [\r                            ((filamorph = filajugador) and: [columnamorph = columnajugador + 1]) or: [\r                                ((filamorph = filajugador) and: [columnamorph = columnajugador - 1])\r                            ]\r                        ]\r                    ]) ifTrue: [\r                        valido := true.\r                        Transcript show: \'La jugada es válida\'; cr.\r                        ^valido\r                    ].\r                ].\r                filamorph := filamorph + 1.\r            ].\r        ].\r        filajugador := filajugador + 1.\r    ].\r    Transcript show: \'La jugada es\', valido asString; cr.\r    Transcript show: \'Última posición revisada - filajugador: \', filajugador asString, \' columnajugador: \', columnajugador asString; cr.\r    ^valido.',
+			#stamp : '2/8/2025 20:24',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r    | filajugador columnajugador filamorph columnamorph valido |\r    filajugador := 1.\r    columnajugador := 1.\r    filamorph := 1.\r    columnamorph := 1.\r    valido := false.\r\r    1 to: (cantNPC sqrt ceiling) do: [ :i |\r        (filajugador > cantNPC sqrt ceiling) ifTrue: [\r            filajugador := 1.\r            columnajugador := columnajugador + 1.\r        ].\r        (((TableroLogico matrizTableroLógico at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: [\r            1 to: (cantNPC sqrt ceiling) do: [ :j |\r                (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                    filamorph := 1.\r                    columnamorph := columnamorph + 1.\r                ].\r                (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                    (((filamorph = filajugador + 1) and: [columnamorph = columnajugador]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador]) or: [\r                            ((filamorph = filajugador) and: [columnamorph = columnajugador + 1]) or: [\r                                ((filamorph = filajugador) and: [columnamorph = columnajugador - 1])\r                            ]\r                        ]\r                    ]) ifTrue: [\r                        valido := true.\r                        Transcript show: \'La jugada es válida\'; cr.\r                        ^valido\r                    ].\r                ].\r                filamorph := filamorph + 1.\r            ].\r        ].\r        filajugador := filajugador + 1.\r    ].\r    Transcript show: filajugador asString, filamorph asString, columnajugador asString, columnamorph asString.\r    Transcript show: \'La jugada es:\', valido asString; cr.\r    ^valido.',
+			#stamp : '2/8/2025 20:25',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '10' ],
+		#self : OmReference [ '11' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r    | filajugador columnajugador filamorph columnamorph valido |\r    filajugador := 1.\r    columnajugador := 1.\r    filamorph := 1.\r    columnamorph := 1.\r    valido := false.\r\r    1 to: (cantNPC sqrt ceiling) do: [ :i |\r        (filajugador > cantNPC sqrt ceiling) ifTrue: [\r            filajugador := 1.\r            columnajugador := columnajugador + 1.\r        ].\r        (((TableroLogico matrizTableroLógico at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: [\r            1 to: (cantNPC sqrt ceiling) do: [ :j |\r                (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                    filamorph := 1.\r                    columnamorph := columnamorph + 1.\r                ].\r                (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                    (((filamorph = filajugador + 1) and: [columnamorph = columnajugador]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador]) or: [\r                            ((filamorph = filajugador) and: [columnamorph = columnajugador + 1]) or: [\r                                ((filamorph = filajugador) and: [columnamorph = columnajugador - 1])\r                            ]\r                        ]\r                    ]) ifTrue: [\r                        valido := true.\r                        Transcript show: \'La jugada es válida\'; cr.\r                        ^valido\r                    ].\r                ].\r                filamorph := filamorph + 1.\r            ].\r        ].\r        filajugador := filajugador + 1.\r    ].\r    Transcript show: filajugador asString, filamorph asString, columnajugador asString, columnamorph asString.\r    Transcript show: \'La jugada es:\', valido asString; cr.\r    ^valido.',
+			#stamp : '2/8/2025 20:25',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r    | filajugador columnajugador filamorph columnamorph valido |\r    filajugador := 1.\r    columnajugador := 1.\r    filamorph := 1.\r    columnamorph := 1.\r    valido := false.\r\r    1 to: (cantNPC sqrt ceiling) do: [ :i |\r        (filajugador > cantNPC sqrt ceiling) ifTrue: [\r            filajugador := 1.\r            columnajugador := columnajugador + 1.\r        ].\r        (((TableroLogico matrizTableroLógico at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: [\r            1 to: (cantNPC sqrt ceiling) do: [ :j |\r                (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                    filamorph := 1.\r                    columnamorph := columnamorph + 1.\r                ].\r                    (((filamorph = filajugador + 1) and: [columnamorph = columnajugador]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador]) or: [\r                            ((filamorph = filajugador) and: [columnamorph = columnajugador + 1]) or: [\r                                ((filamorph = filajugador) and: [columnamorph = columnajugador - 1])\r                            ]\r                        ]\r                    ]) ifTrue: [\r                        valido := true.\r                        Transcript show: \'La jugada es válida\'; cr.\r                        ^valido\r                    ].\r                ].\r                filamorph := filamorph + 1.\r            ].\r        ].\r        filajugador := filajugador + 1.\r    Transcript show: filajugador asString, filamorph asString, columnajugador asString, columnamorph asString.\r    Transcript show: \'La jugada es:\', valido asString; cr.\r    ^valido.',
+			#stamp : '2/8/2025 20:29',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '11' ],
+		#self : OmReference [ '12' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r    | filajugador columnajugador filamorph columnamorph valido |\r    filajugador := 1.\r    columnajugador := 1.\r    filamorph := 1.\r    columnamorph := 1.\r    valido := false.\r\r    1 to: (cantNPC sqrt ceiling) do: [ :i |\r        (filajugador > cantNPC sqrt ceiling) ifTrue: [\r            filajugador := 1.\r            columnajugador := columnajugador + 1.\r        ].\r        (((TableroLogico matrizTableroLógico at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: [\r            1 to: (cantNPC sqrt ceiling) do: [ :j |\r                (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                    filamorph := 1.\r                    columnamorph := columnamorph + 1.\r                ].\r                    (((filamorph = filajugador + 1) and: [columnamorph = columnajugador]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador]) or: [\r                            ((filamorph = filajugador) and: [columnamorph = columnajugador + 1]) or: [\r                                ((filamorph = filajugador) and: [columnamorph = columnajugador - 1])\r                            ]\r                        ]\r                    ]) ifTrue: [\r                        valido := true.\r                        Transcript show: \'La jugada es válida\'; cr.\r                        ^valido\r                    ].\r                ].\r                filamorph := filamorph + 1.\r            ].\r        ].\r        filajugador := filajugador + 1.\r    Transcript show: filajugador asString, filamorph asString, columnajugador asString, columnamorph asString.\r    Transcript show: \'La jugada es:\', valido asString; cr.\r    ^valido.',
+			#stamp : '2/8/2025 20:29',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r    | filajugador columnajugador filamorph columnamorph valido |\r    filajugador := 1.\r    columnajugador := 1.\r    filamorph := 1.\r    columnamorph := 1.\r    valido := false.\r\r    1 to: (cantNPC sqrt ceiling) do: [ :i |\r        (filajugador > cantNPC sqrt ceiling) ifTrue: [\r            filajugador := 1.\r            columnajugador := columnajugador + 1.\r        ].\r        (((TableroLogico matrizDeMorphs at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: [\r            1 to: (cantNPC sqrt ceiling) do: [ :j |\r                (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                    filamorph := 1.\r                    columnamorph := columnamorph + 1.\r                ].\r                (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                    (((filamorph = filajugador + 1) and: [columnamorph = columnajugador]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador]) or: [\r                            ((filamorph = filajugador) and: [columnamorph = columnajugador + 1]) or: [\r                                ((filamorph = filajugador) and: [columnamorph = columnajugador - 1])\r                            ]\r                        ]\r                    ]) ifTrue: [\r                        valido := true.\r                        Transcript show: \'La jugada es válida\'; cr.\r                        ^valido\r                    ].\r                ].\r                filamorph := filamorph + 1.\r            ].\r        ].\r        filajugador := filajugador + 1.\r    ].\r    Transcript show: filajugador asString, filamorph asString, columnajugador asString, columnamorph asString.\r    Transcript show: \'La jugada es:\', valido asString; cr.\r    ^valido.',
+			#stamp : '2/8/2025 20:31',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '12' ],
+		#self : OmReference [ '13' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #botonClickeado,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'botonClickeado\rTranscript show: self tema.\r        Juego jugadaVálida: (Juego cantNPCClase) nombreJugador: (Juego jugadordelTurnoActualClase ) labelMorph: self tema.',
+			#stamp : '2/8/2025 20:13',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #botonClickeado,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'botonClickeado\rTranscript show: self tema.\r        Juego jugadaVálida: (Juego cantNPCClase) nombreJugador: (Juego jugadordelTurnoActualClase tema ) labelMorph: self tema.',
+			#stamp : '2/8/2025 20:32',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '13' ],
+		#self : OmReference [ '14' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #botonClickeado,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'botonClickeado\rTranscript show: self tema.\r        Juego jugadaVálida: (Juego cantNPCClase) nombreJugador: (Juego jugadordelTurnoActualClase tema ) labelMorph: self tema.',
+			#stamp : '2/8/2025 20:32',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #botonClickeado,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'botonClickeado\rTranscript show: self tema.\r        Juego jugadaVálida: (Juego cantNPCClase) nombreJugador: (Juego jugadordelTurnoActualClase ) labelMorph: self tema.',
+			#stamp : '2/8/2025 20:32',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '14' ],
+		#self : OmReference [ '15' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r    | filajugador columnajugador filamorph columnamorph valido |\r    filajugador := 1.\r    columnajugador := 1.\r    filamorph := 1.\r    columnamorph := 1.\r    valido := false.\r\r    1 to: (cantNPC sqrt ceiling) do: [ :i |\r        (filajugador > cantNPC sqrt ceiling) ifTrue: [\r            filajugador := 1.\r            columnajugador := columnajugador + 1.\r        ].\r        (((TableroLogico matrizDeMorphs at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: [\r            1 to: (cantNPC sqrt ceiling) do: [ :j |\r                (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                    filamorph := 1.\r                    columnamorph := columnamorph + 1.\r                ].\r                (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                    (((filamorph = filajugador + 1) and: [columnamorph = columnajugador]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador]) or: [\r                            ((filamorph = filajugador) and: [columnamorph = columnajugador + 1]) or: [\r                                ((filamorph = filajugador) and: [columnamorph = columnajugador - 1])\r                            ]\r                        ]\r                    ]) ifTrue: [\r                        valido := true.\r                        Transcript show: \'La jugada es válida\'; cr.\r                        ^valido\r                    ].\r                ].\r                filamorph := filamorph + 1.\r            ].\r        ].\r        filajugador := filajugador + 1.\r    ].\r    Transcript show: filajugador asString, filamorph asString, columnajugador asString, columnamorph asString.\r    Transcript show: \'La jugada es:\', valido asString; cr.\r    ^valido.',
+			#stamp : '2/8/2025 20:31',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r    | filajugador columnajugador filamorph columnamorph valido |\r    filajugador := 1.\r    columnajugador := 1.\r    filamorph := 1.\r    columnamorph := 1.\r    valido := false.\r\r    1 to: (cantNPC sqrt ceiling) do: [ :i |\r        (filajugador > cantNPC sqrt ceiling) ifTrue: [\r            filajugador := 1.\r            columnajugador := columnajugador + 1.\r        ].\r        (((TableroLogico matrizDeMorphs at: filajugador column: columnajugador) tema) = nombreJugador) ifTrue: [\r            1 to: (cantNPC sqrt ceiling) do: [ :j |\r                (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                    filamorph := 1.\r                    columnamorph := columnamorph + 1.\r                ].\r                (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                    (((filamorph = filajugador + 1) and: [columnamorph = columnajugador]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador]) or: [\r                            ((filamorph = filajugador) and: [columnamorph = columnajugador + 1]) or: [\r                                ((filamorph = filajugador) and: [columnamorph = columnajugador - 1])\r                            ]\r                        ]\r                    ]) ifTrue: [\r                        valido := true.\r                        Transcript show: \'La jugada es válida\'; cr.\r                        ^valido\r                    ].\r                ].\r                filamorph := filamorph + 1.\r            ].\r        ].\r        filajugador := filajugador + 1.\r    ].\r    Transcript show: filajugador asString, filamorph asString, columnajugador asString, columnamorph asString.\r    Transcript show: \'La jugada es:\', valido asString; cr.\r    ^valido.',
+			#stamp : '2/8/2025 20:33',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '15' ],
+		#self : OmReference [ '16' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r    | filajugador columnajugador filamorph columnamorph valido |\r    filajugador := 1.\r    columnajugador := 1.\r    filamorph := 1.\r    columnamorph := 1.\r    valido := false.\r\r    1 to: (cantNPC sqrt ceiling) do: [ :i |\r        (filajugador > cantNPC sqrt ceiling) ifTrue: [\r            filajugador := 1.\r            columnajugador := columnajugador + 1.\r        ].\r        (((TableroLogico matrizDeMorphs at: filajugador column: columnajugador) tema) = nombreJugador) ifTrue: [\r            1 to: (cantNPC sqrt ceiling) do: [ :j |\r                (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                    filamorph := 1.\r                    columnamorph := columnamorph + 1.\r                ].\r                (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                    (((filamorph = filajugador + 1) and: [columnamorph = columnajugador]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador]) or: [\r                            ((filamorph = filajugador) and: [columnamorph = columnajugador + 1]) or: [\r                                ((filamorph = filajugador) and: [columnamorph = columnajugador - 1])\r                            ]\r                        ]\r                    ]) ifTrue: [\r                        valido := true.\r                        Transcript show: \'La jugada es válida\'; cr.\r                        ^valido\r                    ].\r                ].\r                filamorph := filamorph + 1.\r            ].\r        ].\r        filajugador := filajugador + 1.\r    ].\r    Transcript show: filajugador asString, filamorph asString, columnajugador asString, columnamorph asString.\r    Transcript show: \'La jugada es:\', valido asString; cr.\r    ^valido.',
+			#stamp : '2/8/2025 20:33',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r    | filajugador columnajugador filamorph columnamorph valido |\r    filajugador := 1.\r    columnajugador := 1.\r    filamorph := 1.\r    columnamorph := 1.\r    valido := false.\r\r    1 to: (cantNPC sqrt ceiling) do: [ :i |\r        (filajugador > cantNPC sqrt ceiling) ifTrue: [\r            filajugador := 1.\r            columnajugador := columnajugador + 1.\r        ].\r        (((TableroLogico matrizDeMorphs at: filajugador column: columnajugador) tema) = nombreJugador tema) ifTrue: [\r            1 to: (cantNPC sqrt ceiling) do: [ :j |\r                (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                    filamorph := 1.\r                    columnamorph := columnamorph + 1.\r                ].\r                (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                    (((filamorph = filajugador + 1) and: [columnamorph = columnajugador]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador]) or: [\r                            ((filamorph = filajugador) and: [columnamorph = columnajugador + 1]) or: [\r                                ((filamorph = filajugador) and: [columnamorph = columnajugador - 1])\r                            ]\r                        ]\r                    ]) ifTrue: [\r                        valido := true.\r                        Transcript show: \'La jugada es válida\'; cr.\r                        ^valido\r                    ].\r                ].\r                filamorph := filamorph + 1.\r            ].\r        ].\r        filajugador := filajugador + 1.\r    ].\r    Transcript show: filajugador asString, filamorph asString, columnajugador asString, columnamorph asString.\r    Transcript show: \'La jugada es:\', valido asString; cr.\r    ^valido.',
+			#stamp : '2/8/2025 20:34',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '16' ],
+		#self : OmReference [ '17' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r    | filajugador columnajugador filamorph columnamorph valido |\r    filajugador := 1.\r    columnajugador := 1.\r    filamorph := 1.\r    columnamorph := 1.\r    valido := false.\r\r    1 to: (cantNPC sqrt ceiling) do: [ :i |\r        (filajugador > cantNPC sqrt ceiling) ifTrue: [\r            filajugador := 1.\r            columnajugador := columnajugador + 1.\r        ].\r        (((TableroLogico matrizDeMorphs at: filajugador column: columnajugador) tema) = nombreJugador tema) ifTrue: [\r            1 to: (cantNPC sqrt ceiling) do: [ :j |\r                (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                    filamorph := 1.\r                    columnamorph := columnamorph + 1.\r                ].\r                (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                    (((filamorph = filajugador + 1) and: [columnamorph = columnajugador]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador]) or: [\r                            ((filamorph = filajugador) and: [columnamorph = columnajugador + 1]) or: [\r                                ((filamorph = filajugador) and: [columnamorph = columnajugador - 1])\r                            ]\r                        ]\r                    ]) ifTrue: [\r                        valido := true.\r                        Transcript show: \'La jugada es válida\'; cr.\r                        ^valido\r                    ].\r                ].\r                filamorph := filamorph + 1.\r            ].\r        ].\r        filajugador := filajugador + 1.\r    ].\r    Transcript show: filajugador asString, filamorph asString, columnajugador asString, columnamorph asString.\r    Transcript show: \'La jugada es:\', valido asString; cr.\r    ^valido.',
+			#stamp : '2/8/2025 20:34',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r    | filajugador columnajugador filamorph columnamorph valido |\r    filajugador := 1.\r    columnajugador := 1.\r    filamorph := 1.\r    columnamorph := 1.\r    valido := false.\r\r    1 to: (cantNPC sqrt ceiling) do: [ :i |\r        (filajugador > cantNPC sqrt ceiling) ifTrue: [\r            filajugador := 1.\r            columnajugador := columnajugador + 1.\r        ].\r        (((TableroLogico matrizDeMorphs at: filajugador column: columnajugador) tema) = nombreJugador tema) ifTrue: [\r            1 to: (cantNPC sqrt ceiling) do: [ :j |\r                (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                    filamorph := 1.\r                    columnamorph := columnamorph + 1.\r                ].\r                (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph)) = labelMorph) ifTrue: [\r                    (((filamorph = filajugador + 1) and: [columnamorph = columnajugador]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador]) or: [\r                            ((filamorph = filajugador) and: [columnamorph = columnajugador + 1]) or: [\r                                ((filamorph = filajugador) and: [columnamorph = columnajugador - 1])\r                            ]\r                        ]\r                    ]) ifTrue: [\r                        valido := true.\r                        Transcript show: \'La jugada es válida\'; cr.\r                        ^valido\r                    ].\r                ].\r                filamorph := filamorph + 1.\r            ].\r        ].\r        filajugador := filajugador + 1.\r    ].\r    Transcript show: filajugador asString, filamorph asString, columnajugador asString, columnamorph asString.\r    Transcript show: \'La jugada es:\', valido asString; cr.\r    ^valido.',
+			#stamp : '2/8/2025 20:35',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '17' ],
+		#self : OmReference [ '18' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r    | filajugador columnajugador filamorph columnamorph valido |\r    filajugador := 1.\r    columnajugador := 1.\r    filamorph := 1.\r    columnamorph := 1.\r    valido := false.\r\r    1 to: (cantNPC sqrt ceiling) do: [ :i |\r        (filajugador > cantNPC sqrt ceiling) ifTrue: [\r            filajugador := 1.\r            columnajugador := columnajugador + 1.\r        ].\r        (((TableroLogico matrizDeMorphs at: filajugador column: columnajugador) tema) = nombreJugador tema) ifTrue: [\r            1 to: (cantNPC sqrt ceiling) do: [ :j |\r                (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                    filamorph := 1.\r                    columnamorph := columnamorph + 1.\r                ].\r                (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph)) = labelMorph) ifTrue: [\r                    (((filamorph = filajugador + 1) and: [columnamorph = columnajugador]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador]) or: [\r                            ((filamorph = filajugador) and: [columnamorph = columnajugador + 1]) or: [\r                                ((filamorph = filajugador) and: [columnamorph = columnajugador - 1])\r                            ]\r                        ]\r                    ]) ifTrue: [\r                        valido := true.\r                        Transcript show: \'La jugada es válida\'; cr.\r                        ^valido\r                    ].\r                ].\r                filamorph := filamorph + 1.\r            ].\r        ].\r        filajugador := filajugador + 1.\r    ].\r    Transcript show: filajugador asString, filamorph asString, columnajugador asString, columnamorph asString.\r    Transcript show: \'La jugada es:\', valido asString; cr.\r    ^valido.',
+			#stamp : '2/8/2025 20:35',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r    | filajugador columnajugador filamorph columnamorph valido |\r    filajugador := 1.\r    columnajugador := 1.\r    filamorph := 1.\r    columnamorph := 1.\r    valido := false.\r\r    1 to: (cantNPC sqrt ceiling) do: [ :i |\r        (filajugador > cantNPC sqrt ceiling) ifTrue: [\r            filajugador := 1.\r            columnajugador := columnajugador + 1.\r        ].\r        (((TableroLogico matrizDeMorphs at: filajugador column: columnajugador)) = nombreJugador tema) ifTrue: [\r            1 to: (cantNPC sqrt ceiling) do: [ :j |\r                (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                    filamorph := 1.\r                    columnamorph := columnamorph + 1.\r                ].\r                (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                    (((filamorph = filajugador + 1) and: [columnamorph = columnajugador]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador]) or: [\r                            ((filamorph = filajugador) and: [columnamorph = columnajugador + 1]) or: [\r                                ((filamorph = filajugador) and: [columnamorph = columnajugador - 1])\r                            ]\r                        ]\r                    ]) ifTrue: [\r                        valido := true.\r                        Transcript show: \'La jugada es válida\'; cr.\r                        ^valido\r                    ].\r                ].\r                filamorph := filamorph + 1.\r            ].\r        ].\r        filajugador := filajugador + 1.\r    ].\r    Transcript show: filajugador asString, filamorph asString, columnajugador asString, columnamorph asString.\r    Transcript show: \'La jugada es:\', valido asString; cr.\r    ^valido.',
+			#stamp : '2/8/2025 20:36',
+			#package : #TheConquist
+		}
+	}
+}

@@ -1,0 +1,394 @@
+OmEntry {
+	#tags : {
+		#prior : OmReference [ 'Pharo12.0-SNAPSHOT-64bit-0384a4d925.4CF229ACFF40', '4' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizMorphs:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizMorphs: cantMorphs\r| matrizMorphs filas columnas fila columna morphcasilla|\rmorphcasilla := Casilla new.\rfilas := cantMorphs sqrt truncated.\rcolumnas := cantMorphs sqrt truncated.\rmatrizMorphs := Matrix rows: filas columns: columnas.\rfila := 1.\rcolumna := 1.\r1 to: cantMorphs do: [:i |\r\tmorphcasilla crearCasilla: fila and: columna  label: (self matrizDeTemas at: fila column: columna).\r    matrizMorphs at: fila column: columna put: (morphcasilla morph).\r    columna := columna + 1.\r    (columna > columnas) ifTrue: [\r        columna := 1.\r        fila := fila + 1.\r    ].\r].\rself matrizDeMorphs: matrizMorphs.',
+			#stamp : '2/8/2025 22:02',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizMorphs:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizMorphs: cantMorphs\r| matrizMorphs filas columnas fila columna morphcasilla|\rmorphcasilla := Casilla new.\rfilas := cantMorphs sqrt truncated.\rcolumnas := cantMorphs sqrt truncated.\rmatrizMorphs := Matrix rows: filas columns: columnas.\rfila := 1.\rcolumna := 1.\r1 to: cantMorphs do: [:i |\r\tmorphcasilla crearCasilla: fila and: columna  label: (self matrizDeTemas at: fila column: columna).\r    matrizMorphs at: fila column: columna put: (morphcasilla).\r    columna := columna + 1.\r    (columna > columnas) ifTrue: [\r        columna := 1.\r        fila := fila + 1.\r    ].\r].\rself matrizDeMorphs: matrizMorphs.',
+			#stamp : '2/9/2025 00:45',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '1' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'dibujarTablero:cantNPC:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarTablero: imagenMorph cantNPC: cantNPC\r| temaCasilla fila columna |\rfila := 1.\rcolumna := 1.\r1 to: cantNPC do: [:i |\r    temaCasilla := TableroLogico matrizDeMorphs at: fila column: columna.\r    imagenMorph addMorph: temaCasilla.\r    temaCasilla position: (columna * 120) @ (fila * 120). "Ajusta la posición según sea necesario"\r    fila := fila + 1.\r    (fila > (cantNPC sqrt) ceiling) ifTrue: [\r        fila := 1.\r        columna := columna + 1.\r    ].\r]',
+			#stamp : '1/31/2025 21:48',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'dibujarTablero:cantNPC:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarTablero: imagenMorph cantNPC: cantNPC\r| temaCasilla fila columna |\rfila := 1.\rcolumna := 1.\r1 to: cantNPC do: [:i |\r    temaCasilla := (TableroLogico matrizDeMorphs at: fila column: columna) morph.\r    imagenMorph addMorph: temaCasilla.\r    temaCasilla position: (columna * 120) @ (fila * 120). "Ajusta la posición según sea necesario"\r    fila := fila + 1.\r    (fila > (cantNPC sqrt) ceiling) ifTrue: [\r        fila := 1.\r        columna := columna + 1.\r    ].\r]',
+			#stamp : '2/9/2025 00:48',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '2' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'dibujarTablero:cantNPC:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarTablero: imagenMorph cantNPC: cantNPC\r| temaCasilla fila columna |\rfila := 1.\rcolumna := 1.\r1 to: cantNPC do: [:i |\r    temaCasilla := (TableroLogico matrizDeMorphs at: fila column: columna) morph.\r    imagenMorph addMorph: temaCasilla.\r    temaCasilla position: (columna * 120) @ (fila * 120). "Ajusta la posición según sea necesario"\r    fila := fila + 1.\r    (fila > (cantNPC sqrt) ceiling) ifTrue: [\r        fila := 1.\r        columna := columna + 1.\r    ].\r]',
+			#stamp : '2/9/2025 00:48',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'dibujarTablero:cantNPC:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarTablero: imagenMorph cantNPC: cantNPC\r| temaCasilla fila columna |\rfila := 1.\rcolumna := 1.\r1 to: cantNPC do: [:i |\r    temaCasilla := (TableroLogico matrizDeMorphs at: fila column: columna).\r    imagenMorph addMorph: temaCasilla morph.\r    temaCasilla position: (columna * 120) @ (fila * 120). "Ajusta la posición según sea necesario"\r    fila := fila + 1.\r    (fila > (cantNPC sqrt) ceiling) ifTrue: [\r        fila := 1.\r        columna := columna + 1.\r    ].\r]',
+			#stamp : '2/9/2025 00:50',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '3' ],
+		#self : OmReference [ '4' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'dibujarTablero:cantNPC:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarTablero: imagenMorph cantNPC: cantNPC\r| temaCasilla fila columna |\rfila := 1.\rcolumna := 1.\r1 to: cantNPC do: [:i |\r    temaCasilla := (TableroLogico matrizDeMorphs at: fila column: columna).\r    imagenMorph addMorph: temaCasilla morph.\r    temaCasilla position: (columna * 120) @ (fila * 120). "Ajusta la posición según sea necesario"\r    fila := fila + 1.\r    (fila > (cantNPC sqrt) ceiling) ifTrue: [\r        fila := 1.\r        columna := columna + 1.\r    ].\r]',
+			#stamp : '2/9/2025 00:50',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'dibujarTablero:cantNPC:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarTablero: imagenMorph cantNPC: cantNPC\r| temaCasilla fila columna |\rfila := 1.\rcolumna := 1.\r1 to: cantNPC do: [:i |\r    temaCasilla := (TableroLogico matrizDeMorphs at: fila column: columna).\r    imagenMorph addMorph: temaCasilla morph.\r    temaCasilla morph position: (columna * 120) @ (fila * 120). "Ajusta la posición según sea necesario"\r    fila := fila + 1.\r    (fila > (cantNPC sqrt) ceiling) ifTrue: [\r        fila := 1.\r        columna := columna + 1.\r    ].\r]',
+			#stamp : '2/9/2025 00:51',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '4' ],
+		#self : OmReference [ '5' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'dibujarTablero:cantNPC:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarTablero: imagenMorph cantNPC: cantNPC\r| temaCasilla fila columna |\rfila := 1.\rcolumna := 1.\r1 to: cantNPC do: [:i |\r    temaCasilla := (TableroLogico matrizDeMorphs at: fila column: columna).\r    imagenMorph addMorph: temaCasilla morph.\r    temaCasilla morph position: (columna * 120) @ (fila * 120). "Ajusta la posición según sea necesario"\r    fila := fila + 1.\r    (fila > (cantNPC sqrt) ceiling) ifTrue: [\r        fila := 1.\r        columna := columna + 1.\r    ].\r]',
+			#stamp : '2/9/2025 00:51',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'dibujarTablero:cantNPC:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarTablero: imagenMorph cantNPC: cantNPC\r| temaCasilla fila columna |\rfila := 1.\rcolumna := 1.\r1 to: cantNPC do: [:i |\r    temaCasilla := (TableroLogico matrizDeMorphs at: fila column: columna) morph.\r    imagenMorph addMorph: temaCasilla.\r    temaCasilla position: (columna * 120) @ (fila * 120). "Ajusta la posición según sea necesario"\r    fila := fila + 1.\r    (fila > (cantNPC sqrt) ceiling) ifTrue: [\r        fila := 1.\r        columna := columna + 1.\r    ].\r]',
+			#stamp : '2/9/2025 00:51',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '5' ],
+		#self : OmReference [ '6' ]
+	},
+	#content : EpSessionSnapshot {
+		#imageName : 'C:\\Users\\Educacion\\Documents\\Pharo\\images\\The Conquist\\The Conquist.image'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '6' ],
+		#self : OmReference [ '7' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'dibujarTablero:cantNPC:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarTablero: imagenMorph cantNPC: cantNPC\r| temaCasilla fila columna |\rfila := 1.\rcolumna := 1.\r1 to: cantNPC do: [:i |\r    temaCasilla := (TableroLogico matrizDeMorphs at: fila column: columna) morph.\r    imagenMorph addMorph: temaCasilla.\r    temaCasilla position: (columna * 120) @ (fila * 120). "Ajusta la posición según sea necesario"\r    fila := fila + 1.\r    (fila > (cantNPC sqrt) ceiling) ifTrue: [\r        fila := 1.\r        columna := columna + 1.\r    ].\r]',
+			#stamp : '2/9/2025 00:51',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'dibujarTablero:cantNPC:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarTablero: imagenMorph cantNPC: cantNPC\r    | temaCasilla fila columna maxFila maxColumna |\r    fila := 1.\r    columna := 1.\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\r    1 to: cantNPC do: [:i |\r        temaCasilla := TableroLogico matrizDeMorphs at: fila column: columna.\r        imagenMorph addMorph: temaCasilla.\r        temaCasilla position: ((columna - 1) * 120) @ ((fila - 1) * 120). "Ajusta la posición según sea necesario"\r        columna := columna + 1.\r        (columna > maxColumna) ifTrue: [\r            columna := 1.\r            fila := fila + 1.\r        ].\r    ].\r',
+			#stamp : '2/9/2025 00:52',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '7' ],
+		#self : OmReference [ '8' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'dibujarTablero:cantNPC:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarTablero: imagenMorph cantNPC: cantNPC\r    | temaCasilla fila columna maxFila maxColumna |\r    fila := 1.\r    columna := 1.\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\r    1 to: cantNPC do: [:i |\r        temaCasilla := TableroLogico matrizDeMorphs at: fila column: columna.\r        imagenMorph addMorph: temaCasilla.\r        temaCasilla position: ((columna - 1) * 120) @ ((fila - 1) * 120). "Ajusta la posición según sea necesario"\r        columna := columna + 1.\r        (columna > maxColumna) ifTrue: [\r            columna := 1.\r            fila := fila + 1.\r        ].\r    ].\r',
+			#stamp : '2/9/2025 00:52',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'dibujarTablero:cantNPC:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarTablero: imagenMorph cantNPC: cantNPC\r    | temaCasilla fila columna maxFila maxColumna |\r    fila := 1.\r    columna := 1.\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\r    1 to: cantNPC do: [:i |\r        temaCasilla := TableroLogico matrizDeMorphs at: fila column: columna.\r        imagenMorph addMorph: temaCasilla.\r        temaCasilla position: ((columna - 1) * 120) @ ((fila - 1) * 120). "Ajusta la posición según sea necesario"\r        columna := columna + 1.\r        (columna > maxColumna) ifTrue: [\r            columna := 1.\r            fila := fila + 1.\r        ].\r    ].',
+			#stamp : '2/9/2025 00:53',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '8' ],
+		#self : OmReference [ '9' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'dibujarTablero:cantNPC:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarTablero: imagenMorph cantNPC: cantNPC\r    | temaCasilla fila columna maxFila maxColumna |\r    fila := 1.\r    columna := 1.\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\r    1 to: cantNPC do: [:i |\r        temaCasilla := TableroLogico matrizDeMorphs at: fila column: columna.\r        imagenMorph addMorph: temaCasilla.\r        temaCasilla position: ((columna - 1) * 120) @ ((fila - 1) * 120). "Ajusta la posición según sea necesario"\r        columna := columna + 1.\r        (columna > maxColumna) ifTrue: [\r            columna := 1.\r            fila := fila + 1.\r        ].\r    ].',
+			#stamp : '2/9/2025 00:53',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'dibujarTablero:cantNPC:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarTablero: imagenMorph cantNPC: cantNPC\r    | temaCasilla fila columna maxFila maxColumna |\r    fila := 1.\r    columna := 1.\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\r    1 to: cantNPC do: [:i |\r        temaCasilla := TableroLogico matrizDeMorphs at: fila column: columna.\r        imagenMorph addMorph: temaCasilla morph.\r        temaCasilla position: ((columna - 1) * 120) @ ((fila - 1) * 120). "Ajusta la posición según sea necesario"\r        columna := columna + 1.\r        (columna > maxColumna) ifTrue: [\r            columna := 1.\r            fila := fila + 1.\r        ].\r    ].',
+			#stamp : '2/9/2025 00:54',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '9' ],
+		#self : OmReference [ '10' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'dibujarTablero:cantNPC:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarTablero: imagenMorph cantNPC: cantNPC\r    | temaCasilla fila columna maxFila maxColumna |\r    fila := 1.\r    columna := 1.\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\r    1 to: cantNPC do: [:i |\r        temaCasilla := TableroLogico matrizDeMorphs at: fila column: columna.\r        imagenMorph addMorph: temaCasilla morph.\r        temaCasilla position: ((columna - 1) * 120) @ ((fila - 1) * 120). "Ajusta la posición según sea necesario"\r        columna := columna + 1.\r        (columna > maxColumna) ifTrue: [\r            columna := 1.\r            fila := fila + 1.\r        ].\r    ].',
+			#stamp : '2/9/2025 00:54',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'dibujarTablero:cantNPC:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarTablero: imagenMorph cantNPC: cantNPC\r    | temaCasilla fila columna maxFila maxColumna |\r    fila := 1.\r    columna := 1.\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\r    1 to: cantNPC do: [:i |\r        temaCasilla := TableroLogico matrizDeMorphs at: fila column: columna morph.\r        imagenMorph addMorph: temaCasilla.\r        temaCasilla position: ((columna - 1) * 120) @ ((fila - 1) * 120). "Ajusta la posición según sea necesario"\r        columna := columna + 1.\r        (columna > maxColumna) ifTrue: [\r            columna := 1.\r            fila := fila + 1.\r        ].\r    ].',
+			#stamp : '2/9/2025 00:55',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '10' ],
+		#self : OmReference [ '11' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'dibujarTablero:cantNPC:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarTablero: imagenMorph cantNPC: cantNPC\r    | temaCasilla fila columna maxFila maxColumna |\r    fila := 1.\r    columna := 1.\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\r    1 to: cantNPC do: [:i |\r        temaCasilla := TableroLogico matrizDeMorphs at: fila column: columna morph.\r        imagenMorph addMorph: temaCasilla.\r        temaCasilla position: ((columna - 1) * 120) @ ((fila - 1) * 120). "Ajusta la posición según sea necesario"\r        columna := columna + 1.\r        (columna > maxColumna) ifTrue: [\r            columna := 1.\r            fila := fila + 1.\r        ].\r    ].',
+			#stamp : '2/9/2025 00:55',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'dibujarTablero:cantNPC:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarTablero: imagenMorph cantNPC: cantNPC\r    | temaCasilla fila columna maxFila maxColumna |\r    fila := 1.\r    columna := 1.\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\r    1 to: cantNPC do: [:i |\r        temaCasilla := (TableroLogico matrizDeMorphs at: fila column: columna) morph.\r        imagenMorph addMorph: temaCasilla.\r        temaCasilla position: ((columna - 1) * 120) @ ((fila - 1) * 120). "Ajusta la posición según sea necesario"\r        columna := columna + 1.\r        (columna > maxColumna) ifTrue: [\r            columna := 1.\r            fila := fila + 1.\r        ].\r    ].',
+			#stamp : '2/9/2025 00:55',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '11' ],
+		#self : OmReference [ '12' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'dibujarTablero:cantNPC:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarTablero: imagenMorph cantNPC: cantNPC\r    | temaCasilla fila columna maxFila maxColumna |\r    fila := 1.\r    columna := 1.\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\r    1 to: cantNPC do: [:i |\r        temaCasilla := (TableroLogico matrizDeMorphs at: fila column: columna) morph.\r        imagenMorph addMorph: temaCasilla.\r        temaCasilla position: ((columna - 1) * 120) @ ((fila - 1) * 120). "Ajusta la posición según sea necesario"\r        columna := columna + 1.\r        (columna > maxColumna) ifTrue: [\r            columna := 1.\r            fila := fila + 1.\r        ].\r    ].',
+			#stamp : '2/9/2025 00:55',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'dibujarTablero:cantNPC:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarTablero: imagenMorph cantNPC: cantNPC\r    | casilla fila columna maxFila maxColumna |\r    fila := 1.\r    columna := 1.\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\r    1 to: cantNPC do: [:i |\r        casilla := (TableroLogico matrizDeMorphs at: fila column: columna) morph.\r        imagenMorph addMorph: casilla.\r        casilla position: ((columna - 1) * 120) @ ((fila - 1) * 120). "Ajusta la posición según sea necesario"\r        columna := columna + 1.\r        (columna > maxColumna) ifTrue: [\r            columna := 1.\r            fila := fila + 1.\r        ].\r    ].',
+			#stamp : '2/9/2025 00:58',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '12' ],
+		#self : OmReference [ '13' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizMorphs:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizMorphs: cantMorphs\r| matrizMorphs filas columnas fila columna morphcasilla|\rmorphcasilla := Casilla new.\rfilas := cantMorphs sqrt truncated.\rcolumnas := cantMorphs sqrt truncated.\rmatrizMorphs := Matrix rows: filas columns: columnas.\rfila := 1.\rcolumna := 1.\r1 to: cantMorphs do: [:i |\r\tmorphcasilla crearCasilla: fila and: columna  label: (self matrizDeTemas at: fila column: columna).\r    matrizMorphs at: fila column: columna put: (morphcasilla).\r    columna := columna + 1.\r    (columna > columnas) ifTrue: [\r        columna := 1.\r        fila := fila + 1.\r    ].\r].\rself matrizDeMorphs: matrizMorphs.',
+			#stamp : '2/9/2025 00:45',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizMorphs:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizMorphs: cantMorphs\r    | matrizMorphs filas columnas fila columna |\r    filas := cantMorphs sqrt ceiling.\r    columnas := cantMorphs sqrt ceiling.\r    matrizMorphs := Matrix rows: filas columns: columnas.\r    fila := 1.\r    columna := 1.\r    1 to: cantMorphs do: [:i |\r        | morphcasilla |\r        morphcasilla := Casilla new.\r        morphcasilla crearCasilla: fila and: columna label: (self matrizDeTemas at: fila column: columna).\r        matrizMorphs at: fila column: columna put: morphcasilla.\r        columna := columna + 1.\r        (columna > columnas) ifTrue: [\r            columna := 1.\r            fila := fila + 1.\r        ].\r    ].\r    self matrizDeMorphs: matrizMorphs.',
+			#stamp : '2/9/2025 00:58',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '13' ],
+		#self : OmReference [ '14' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #botonClickeado,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'botonClickeado\r        Juego jugadaVálida: (Juego cantNPCClase) nombreJugador: (Juego jugadordelTurnoActualClase ) labelMorph: labelMorph.',
+			#stamp : '2/8/2025 23:30',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #botonClickeado,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'botonClickeado\rTranscript show: self tema asString.\r        "Juego jugadaVálida: (Juego cantNPCClase) nombreJugador: (Juego jugadordelTurnoActualClase ) labelMorph: labelMorph."',
+			#stamp : '2/9/2025 01:00',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '14' ],
+		#self : OmReference [ '15' ]
+	},
+	#content : EpSessionSnapshot {
+		#imageName : 'C:\\Users\\Educacion\\Documents\\Pharo\\images\\The Conquist\\The Conquist.image'
+	}
+}

@@ -1,0 +1,1 @@
+| casilla texto |casilla := Casilla new.casilla crearCasilla: 1 and: 1 label: 'Ejemplo'.texto := casilla obtenerTextoDelLabel.Transcript show: texto.  "Esto mostrará 'Ejemplo' en el Transcript"

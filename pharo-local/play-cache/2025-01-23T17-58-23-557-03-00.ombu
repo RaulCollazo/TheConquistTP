@@ -4,4 +4,16 @@ OmEntry {
 		#self : OmReference [ '1' ]
 	},
 	#content : '|juego|\rjuego := Juego iniciar.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-08T19:35:22.459-03:00' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : '|juego|\rjuego := Juego iniciar.\rjuego inspect.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-08T19:37:27.484-03:00' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : '|juego|\rjuego := Juego iniciar.\r'
 }

@@ -1,0 +1,13 @@
+OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-09T00:22:47.561-03:00' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : 'Casilla allInstances inspect'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-09T00:27:46.771-03:00' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : 'NombreDeTuClase allInstances inspect'
+}

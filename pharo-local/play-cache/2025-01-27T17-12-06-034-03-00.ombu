@@ -88,4 +88,34 @@ OmEntry {
 		#self : OmReference [ '15' ]
 	},
 	#content : 'TableroLogico crearMatrizTemas: 64.\rTableroLogico matrizDeTemas inspect.\rTableroLogico crearMatrizMorphs: 64.\rTableroLogico matrizDeMorphs inspect.\rTableroLogico crearMatrizTablero: 64 NPCs: 3.\rTableroLogico matrizTableroLógico inspect.\rTableroLogico obtenerJugadorTurnoActual: 64.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-08T19:09:20.045-03:00' ],
+		#self : OmReference [ '16' ]
+	},
+	#content : 'TableroLogico crearMatrizTemas: 64.\rTableroLogico matrizDeTemas inspect.\rTableroLogico crearMatrizMorphs: 64.\rTableroLogico matrizDeMorphs inspect.\rTableroLogico crearMatrizTablero: 64 NPCs: 3.\rTableroLogico matrizTableroLógico inspect.\rTableroLogico obtenerJugadorTurnoActual: 64.\rJuego jugadaVálida: 9 nombreJugador: Junior labelMorph: waifus'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-08T19:09:32.803-03:00' ],
+		#self : OmReference [ '17' ]
+	},
+	#content : 'TableroLogico crearMatrizTemas: 64.\rTableroLogico matrizDeTemas inspect.\rTableroLogico crearMatrizMorphs: 64.\rTableroLogico matrizDeMorphs inspect.\rTableroLogico crearMatrizTablero: 64 NPCs: 3.\rTableroLogico matrizTableroLógico inspect.\rTableroLogico obtenerJugadorTurnoActual: 64.\rJuego jugadaVálida: 9 nombreJugador: \'Junior\' labelMorph: \'waifus\''
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-08T19:09:59.072-03:00' ],
+		#self : OmReference [ '18' ]
+	},
+	#content : 'TableroLogico crearMatrizTemas: 64.\rTableroLogico matrizDeTemas inspect.\rTableroLogico crearMatrizMorphs: 64.\rTableroLogico matrizDeMorphs inspect.\rTableroLogico crearMatrizTablero: 64 NPCs: 3.\rTableroLogico matrizTableroLógico inspect.\rTableroLogico obtenerJugadorTurnoActual: 64.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-08T23:06:06.95-03:00' ],
+		#self : OmReference [ '19' ]
+	},
+	#content : 'TableroLogico crearMatrizTemas: 64.\rTableroLogico matrizDeTemas inspect.\rTableroLogico crearMatrizMorphs: 64.\rTableroLogico matrizDeMorphs inspect.\rTableroLogico crearMatrizTablero: 64 NPCs: 3.\rTableroLogico matrizTableroLógico inspect.\rTableroLogico obtenerJugadorTurnoActual: 64.\rCasilla inspect.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-08T23:10:23.236-03:00' ],
+		#self : OmReference [ '20' ]
+	},
+	#content : 'TableroLogico crearMatrizTemas: 64.\rTableroLogico matrizDeTemas inspect.\rTableroLogico crearMatrizMorphs: 64.\rTableroLogico matrizDeMorphs inspect.\rTableroLogico crearMatrizTablero: 64 NPCs: 1.\rTableroLogico matrizTableroLógico inspect.\rTableroLogico obtenerJugadorTurnoActual: 64.\rCasilla inspect.'
 }

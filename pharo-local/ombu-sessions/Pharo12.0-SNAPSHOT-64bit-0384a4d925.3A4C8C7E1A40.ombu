@@ -1,0 +1,2757 @@
+OmEntry {
+	#tags : {
+		#prior : OmReference [ 'Pharo12.0-SNAPSHOT-64bit-0384a4d925.2E5A37ACB600', '69' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerJugadorActual,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'obtenerJugadorActual\rself jugadorActual: (TableroLogico obtenerJugadorTurnoActual: self cantNPC).\rUIManager default inform: ("Jugador actual: "  jugadorActual nombre).',
+			#stamp : '2/7/2025 15:32',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerJugadorActual,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'obtenerJugadorActual\rself jugadorActual: (TableroLogico obtenerJugadorTurnoActual: self cantNPC).\rUIManager default inform: (\'Jugador actual: \'  jugadorActual nombre).',
+			#stamp : '2/8/2025 17:49',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '1' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerJugadorActual,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'obtenerJugadorActual\rself jugadorActual: (TableroLogico obtenerJugadorTurnoActual: self cantNPC).\rUIManager default inform: (\'Jugador actual: \'  jugadorActual nombre).',
+			#stamp : '2/8/2025 17:49',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerJugadorActual,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'obtenerJugadorActual\rself jugadorActual: (TableroLogico obtenerJugadorTurnoActual: self cantNPC).\rUIManager default inform: (\'Jugador actual: \').  jugadorActual nombre.',
+			#stamp : '2/8/2025 17:49',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '2' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerJugadorActual,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'obtenerJugadorActual\rself jugadorActual: (TableroLogico obtenerJugadorTurnoActual: self cantNPC).\rUIManager default inform: (\'Jugador actual: \').  jugadorActual nombre.',
+			#stamp : '2/8/2025 17:49',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerJugadorActual,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'obtenerJugadorActual\rself jugadorActual: (TableroLogico obtenerJugadorTurnoActual: self cantNPC).\rUIManager default inform: ((\'Jugador actual: \'),  jugadorActual nombre).',
+			#stamp : '2/8/2025 17:50',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '3' ],
+		#self : OmReference [ '4' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Juego\r\tslots: { #CantNPC . #CantJugadores . #PantallaActual . #imagenMorph . #turnoActual . #jugadorActual };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Juego,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #CantNPC,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #CantJugadores,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #PantallaActual,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #imagenMorph,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #turnoActual,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #jugadorActual,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Juego class\r\tslots: { #desafiante . #desafiado }',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Juego class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Juego class',
+							#isMeta : true
+						},
+						#name : #desafiante,
+						#parent : @23
+					},
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Juego class',
+							#isMeta : true
+						},
+						#name : #desafiado,
+						#parent : @23
+					}
+				],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Juego,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#protocol : #ManageJuego
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '4' ],
+		#self : OmReference [ '5' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #borrarVentanasLabeledParticular,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'borrarVentanasLabeledParticular\r SystemWindow allInstances do: [ :each | \r        (each label = \'TheConquist\') ifTrue: [\r            each close. "Cierra la ventana"\r        ].\r    ].',
+			#stamp : '1/23/2025 16:32',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #borrarVentanasLabeledParticular,
+			#protocol : #ManageJuego,
+			#sourceCode : 'borrarVentanasLabeledParticular\r SystemWindow allInstances do: [ :each | \r        (each label = \'TheConquist\') ifTrue: [\r            each close. "Cierra la ventana"\r        ].\r    ].',
+			#stamp : '1/23/2025 16:32',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '5' ],
+		#self : OmReference [ '6' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2) + 120).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #borrarVentanasLabeledParticular. "Definir el método a llamar cuando se presiona el botón"\r    boton2 extent: 120@50.\r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2))  @ (imagenMorph height // 2 - (boton2 height // 2) + 220).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWindowLabeled: \'TheConquist\'.',
+			#stamp : '1/31/2025 22:05',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #ManageJuego,
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2) + 120).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #borrarVentanasLabeledParticular. "Definir el método a llamar cuando se presiona el botón"\r    boton2 extent: 120@50.\r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2))  @ (imagenMorph height // 2 - (boton2 height // 2) + 220).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWindowLabeled: \'TheConquist\'.',
+			#stamp : '1/31/2025 22:05',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '6' ],
+		#self : OmReference [ '7' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarFondoTablero\r    | imagen imagenMorph scrollPane ventanaExistente |\r\r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.jpg\'.\r\r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r\r    "Crear un ScrollPane y agregar el ImageMorph"\r    scrollPane := ScrollPane new.\r    scrollPane scroller addMorph: imagenMorph.\r    scrollPane extent: (300@300). "Ajustar el tamaño del ScrollPane según sea necesario"\r\r    "Dibujar el tablero en el ImageMorph"\r    TableroLogico dibujarTablero: imagenMorph cantNPC: CantNPC.\r\r    "Cerrar cualquier ventana existente etiquetada \'TheConquist Board\'"\r    ventanaExistente := SystemWindow allInstances detect: [ :each | each label = \'TheConquist\' ] ifNone: [ nil ].\r    ventanaExistente ifNotNil: [ ventanaExistente close ].\r    "Abrir el ScrollPane en una ventana"\r    scrollPane openInWindowLabeled: \'TheConquist Board\'.',
+			#stamp : '2/7/2025 14:11',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #ManageJuego,
+			#sourceCode : 'dibujarFondoTablero\r    | imagen imagenMorph scrollPane ventanaExistente |\r\r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.jpg\'.\r\r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r\r    "Crear un ScrollPane y agregar el ImageMorph"\r    scrollPane := ScrollPane new.\r    scrollPane scroller addMorph: imagenMorph.\r    scrollPane extent: (300@300). "Ajustar el tamaño del ScrollPane según sea necesario"\r\r    "Dibujar el tablero en el ImageMorph"\r    TableroLogico dibujarTablero: imagenMorph cantNPC: CantNPC.\r\r    "Cerrar cualquier ventana existente etiquetada \'TheConquist Board\'"\r    ventanaExistente := SystemWindow allInstances detect: [ :each | each label = \'TheConquist\' ] ifNone: [ nil ].\r    ventanaExistente ifNotNil: [ ventanaExistente close ].\r    "Abrir el ScrollPane en una ventana"\r    scrollPane openInWindowLabeled: \'TheConquist Board\'.',
+			#stamp : '2/7/2025 14:11',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '7' ],
+		#self : OmReference [ '8' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #eliminarMorphs,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'eliminarMorphs\rWorld submorphs "Selecciona a todos los submorphs y descide si es un ImageMorph para eliminarlo"\r        select: [ :morph | morph isKindOf: ImageMorph ]\r        thenDo: [ :morph | morph delete ].',
+			#stamp : '1/22/2025 05:28',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #eliminarMorphs,
+			#protocol : #ManageJuego,
+			#sourceCode : 'eliminarMorphs\rWorld submorphs "Selecciona a todos los submorphs y descide si es un ImageMorph para eliminarlo"\r        select: [ :morph | morph isKindOf: ImageMorph ]\r        thenDo: [ :morph | morph delete ].',
+			#stamp : '1/22/2025 05:28',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '8' ],
+		#self : OmReference [ '9' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #nuevoJuego,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'nuevoJuego\rTranscript show: [\'Nuevo juego\'].',
+			#stamp : '1/21/2025 22:43',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #nuevoJuego,
+			#protocol : #ManageJuego,
+			#sourceCode : 'nuevoJuego\rTranscript show: [\'Nuevo juego\'].',
+			#stamp : '1/21/2025 22:43',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '9' ],
+		#self : OmReference [ '10' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerCantJugadores,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'obtenerCantJugadores\r    | flag MatrizTemas|\r    flag := false.\r    "Solicitar la cantidad de NPCs"\r    [ flag not ] whileTrue: [\r        CantNPC := (UIManager default request: \'¿Cuántos participantes hay?\') asNumber.\r        ((CantNPC sqrt isInteger)) \r            ifTrue: [ flag := true ]\r            ifFalse: [ UIManager default inform: \'Valor inválido\' ].\r    ].\r\r    "Solicitar la cantidad de jugadores humanos"\r    CantJugadores := (UIManager default request: \'¿Cuántos participantes humanos habrá?\') asNumber.\rMatrizTemas := TableroLogico crearMatrizTemas: CantNPC.\rTableroLogico crearMatrizTablero: CantNPC NPCs: CantJugadores.\rTableroLogico crearMatrizMorphs: CantNPC.\rTableroLogico inspect.\rself dibujarFondoTablero.\rself turnoActualmente.\rself obtenerJugadorActual.',
+			#stamp : '2/7/2025 15:31',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerCantJugadores,
+			#protocol : #ManageJuego,
+			#sourceCode : 'obtenerCantJugadores\r    | flag MatrizTemas|\r    flag := false.\r    "Solicitar la cantidad de NPCs"\r    [ flag not ] whileTrue: [\r        CantNPC := (UIManager default request: \'¿Cuántos participantes hay?\') asNumber.\r        ((CantNPC sqrt isInteger)) \r            ifTrue: [ flag := true ]\r            ifFalse: [ UIManager default inform: \'Valor inválido\' ].\r    ].\r\r    "Solicitar la cantidad de jugadores humanos"\r    CantJugadores := (UIManager default request: \'¿Cuántos participantes humanos habrá?\') asNumber.\rMatrizTemas := TableroLogico crearMatrizTemas: CantNPC.\rTableroLogico crearMatrizTablero: CantNPC NPCs: CantJugadores.\rTableroLogico crearMatrizMorphs: CantNPC.\rTableroLogico inspect.\rself dibujarFondoTablero.\rself turnoActualmente.\rself obtenerJugadorActual.',
+			#stamp : '2/7/2025 15:31',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '10' ],
+		#self : OmReference [ '11' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerJugadorActual,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'obtenerJugadorActual\rself jugadorActual: (TableroLogico obtenerJugadorTurnoActual: self cantNPC).\rUIManager default inform: ((\'Jugador actual: \'),  jugadorActual nombre).',
+			#stamp : '2/8/2025 17:50',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerJugadorActual,
+			#protocol : #ManageJuego,
+			#sourceCode : 'obtenerJugadorActual\rself jugadorActual: (TableroLogico obtenerJugadorTurnoActual: self cantNPC).\rUIManager default inform: ((\'Jugador actual: \'),  jugadorActual nombre).',
+			#stamp : '2/8/2025 17:50',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '11' ],
+		#self : OmReference [ '12' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #turnoActualmente,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'turnoActualmente\r(turnoActual = 0 ) ifTrue: [ UIManager default inform: \'Primer Turno...Buscando primer Jugador\' ] ifFalse: [ UIManager default inform: (\'Turno número \' turnoActual). ]',
+			#stamp : '2/7/2025 14:17',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #turnoActualmente,
+			#protocol : #accessing,
+			#sourceCode : 'turnoActualmente\r(turnoActual = 0 ) ifTrue: [ UIManager default inform: \'Primer Turno...Buscando primer Jugador\' ] ifFalse: [ UIManager default inform: (\'Turno número \' turnoActual). ]',
+			#stamp : '2/7/2025 14:17',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '12' ],
+		#self : OmReference [ '13' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #turnoActualmente,
+			#protocol : #accessing,
+			#sourceCode : 'turnoActualmente\r(turnoActual = 0 ) ifTrue: [ UIManager default inform: \'Primer Turno...Buscando primer Jugador\' ] ifFalse: [ UIManager default inform: (\'Turno número \' turnoActual). ]',
+			#stamp : '2/7/2025 14:17',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #turnoActualmente,
+			#protocol : #ManageJuego,
+			#sourceCode : 'turnoActualmente\r(turnoActual = 0 ) ifTrue: [ UIManager default inform: \'Primer Turno...Buscando primer Jugador\' ] ifFalse: [ UIManager default inform: (\'Turno número \' turnoActual). ]',
+			#stamp : '2/7/2025 14:17',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '13' ],
+		#self : OmReference [ '14' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #'jugadaVálida:nombreJugador:',
+			#protocol : #ManageJuego,
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador\r|fila columna desafiante fin|\rfila := 0.\rcolumna := 1.\rfin := false.\r(fin) whileFalse:  [\r\tfila := fila + 1.\r\t desafiante := (TableroLogico matrizTableroLógico at: fila column: columna).\r\t (desafiante nombre = nombreJugador) ifTrue: [ fin := true].\r\t(fila = cantNPC sqrt) ifTrue: [ columna := columna + 1 ].\r\t ]\r',
+			#stamp : '2/8/2025 18:10',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '14' ],
+		#self : OmReference [ '15' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #'jugadaVálida:nombreJugador:',
+			#protocol : #ManageJuego,
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador\r|fila columna desafiante fin|\rfila := 0.\rcolumna := 1.\rfin := false.\r(fin) whileFalse:  [\r\tfila := fila + 1.\r\t desafiante := (TableroLogico matrizTableroLógico at: fila column: columna).\r\t (desafiante nombre = nombreJugador) ifTrue: [ fin := true].\r\t(fila = cantNPC sqrt) ifTrue: [ columna := columna + 1 ].\r\t ]\r',
+			#stamp : '2/8/2025 18:10',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #'jugadaVálida:nombreJugador:',
+			#protocol : #ManageJuego,
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador\r| fila columna desafiante fin |\rfila := 1.\rcolumna := 1.\rfin := false.\r[fila <= (cantNPC sqrt ceiling) and: [fin not]] whileTrue: [\r    desafiante := (TableroLogico matrizTableroLógico at: fila column: columna).\r    (desafiante nombre = nombreJugador) ifTrue: [ fin := true].\r    fila := fila + 1.\r    (fila > (cantNPC sqrt ceiling)) ifTrue: [\r        fila := 1.\r        columna := columna + 1.\r        (columna > (cantNPC sqrt ceiling)) ifTrue: [ fin := true ].\r    ].\r].',
+			#stamp : '2/8/2025 18:12',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '15' ],
+		#self : OmReference [ '16' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #'jugadaVálida:nombreJugador:filarival:filacomuna:',
+			#protocol : #ManageJuego,
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador filarival: filarival filacomuna: filacolumna\r| fila columna desafiante fin |\rfila := 1.\rcolumna := 1.\rfin := false.\r[fila <= (cantNPC sqrt ceiling) and: [fin not]] whileTrue: [\r    desafiante := (TableroLogico matrizTableroLógico at: fila column: columna).\r    (desafiante nombre = nombreJugador) ifTrue: [ fin := true].\r    fila := fila + 1.\r    (fila > (cantNPC sqrt ceiling)) ifTrue: [\r        fila := 1.\r        columna := columna + 1.\r        (columna > (cantNPC sqrt ceiling)) ifTrue: [ fin := true ].\r    ].\r].\r\r',
+			#stamp : '2/8/2025 18:18',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '16' ],
+		#self : OmReference [ '17' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #'jugadaVálida:nombreJugador:',
+			#protocol : #ManageJuego,
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador\r| fila columna desafiante fin |\rfila := 1.\rcolumna := 1.\rfin := false.\r[fila <= (cantNPC sqrt ceiling) and: [fin not]] whileTrue: [\r    desafiante := (TableroLogico matrizTableroLógico at: fila column: columna).\r    (desafiante nombre = nombreJugador) ifTrue: [ fin := true].\r    fila := fila + 1.\r    (fila > (cantNPC sqrt ceiling)) ifTrue: [\r        fila := 1.\r        columna := columna + 1.\r        (columna > (cantNPC sqrt ceiling)) ifTrue: [ fin := true ].\r    ].\r].',
+			#stamp : '2/8/2025 18:12',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '17' ],
+		#self : OmReference [ '18' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #ManageJuego,
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r| fila columna desafiante fin |\rfila := 1.\rcolumna := 1.\rfin := false.\r[fila <= (cantNPC sqrt ceiling) and: [fin not]] whileTrue: [\r    desafiante := (TableroLogico matrizTableroLógico at: fila column: columna).\r    (desafiante nombre = nombreJugador) ifTrue: [ fin := true].\r    fila := fila + 1.\r    (fila > (cantNPC sqrt ceiling)) ifTrue: [\r        fila := 1.\r        columna := columna + 1.\r        (columna > (cantNPC sqrt ceiling)) ifTrue: [ fin := true ].\r    ].\r].\r\r',
+			#stamp : '2/8/2025 18:34',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '18' ],
+		#self : OmReference [ '19' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #'jugadaVálida:nombreJugador:filarival:filacomuna:',
+			#protocol : #ManageJuego,
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador filarival: filarival filacomuna: filacolumna\r| fila columna desafiante fin |\rfila := 1.\rcolumna := 1.\rfin := false.\r[fila <= (cantNPC sqrt ceiling) and: [fin not]] whileTrue: [\r    desafiante := (TableroLogico matrizTableroLógico at: fila column: columna).\r    (desafiante nombre = nombreJugador) ifTrue: [ fin := true].\r    fila := fila + 1.\r    (fila > (cantNPC sqrt ceiling)) ifTrue: [\r        fila := 1.\r        columna := columna + 1.\r        (columna > (cantNPC sqrt ceiling)) ifTrue: [ fin := true ].\r    ].\r].\r\r',
+			#stamp : '2/8/2025 18:18',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '19' ],
+		#self : OmReference [ '20' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #ManageJuego,
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r| fila columna desafiante fin |\rfila := 1.\rcolumna := 1.\rfin := false.\r[fila <= (cantNPC sqrt ceiling) and: [fin not]] whileTrue: [\r    desafiante := (TableroLogico matrizTableroLógico at: fila column: columna).\r    (desafiante nombre = nombreJugador) ifTrue: [ fin := true].\r    fila := fila + 1.\r    (fila > (cantNPC sqrt ceiling)) ifTrue: [\r        fila := 1.\r        columna := columna + 1.\r        (columna > (cantNPC sqrt ceiling)) ifTrue: [ fin := true ].\r    ].\r].\r\r',
+			#stamp : '2/8/2025 18:34',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #ManageJuego,
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r| filajugador columnajugador desafiante fin |\rfilajugador := 1.\rcolumnajugador := 1.\rfin := false.\r[filajugador <= (cantNPC sqrt ceiling) and: [fin not]] whileTrue: [\r    desafiante := (TableroLogico matrizTableroLógico at: filajugador column: columnajugador).\r    (desafiante nombre = nombreJugador) ifTrue: [ fin := true].\r    filajugador := filajugador + 1.\r    (filajugador > (cantNPC sqrt ceiling)) ifTrue: [\r        filajugador := 1.\r        columnajugador := columnajugador + 1.\r        (columnajugador > (cantNPC sqrt ceiling)) ifTrue: [ fin := true ].\r    ].\r].\r\r',
+			#stamp : '2/8/2025 18:35',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '20' ],
+		#self : OmReference [ '21' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #ManageJuego,
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r| filajugador columnajugador desafiante fin |\rfilajugador := 1.\rcolumnajugador := 1.\rfin := false.\r[filajugador <= (cantNPC sqrt ceiling) and: [fin not]] whileTrue: [\r    desafiante := (TableroLogico matrizTableroLógico at: filajugador column: columnajugador).\r    (desafiante nombre = nombreJugador) ifTrue: [ fin := true].\r    filajugador := filajugador + 1.\r    (filajugador > (cantNPC sqrt ceiling)) ifTrue: [\r        filajugador := 1.\r        columnajugador := columnajugador + 1.\r        (columnajugador > (cantNPC sqrt ceiling)) ifTrue: [ fin := true ].\r    ].\r].\r\r',
+			#stamp : '2/8/2025 18:35',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #ManageJuego,
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r| filajugador columnajugador desafiante fin filamorph columnamorph |\rfilajugador := 1.\rcolumnajugador := 1.\rfin := false.\r[filajugador <= (cantNPC sqrt ceiling) and: [fin not]] whileTrue: [\r    desafiante := (TableroLogico matrizTableroLógico at: filajugador column: columnajugador).\r    (desafiante nombre = nombreJugador) ifTrue: [ fin := true].\r    filajugador := filajugador + 1.\r    (filajugador > (cantNPC sqrt ceiling)) ifTrue: [\r        filajugador := 1.\r        columnajugador := columnajugador + 1.\r        (columnajugador > (cantNPC sqrt ceiling)) ifTrue: [ fin := true ].\r    ].\r].\rfilamorph := 1.\rcolumnamorph := 1.\rfin := false.\r[filamorph <= (cantNPC sqrt ceiling) and: [fin not]] whileTrue: [\r    desafiante := (TableroLogico matrizDeMorphs at: filamorph column: columnamorph).\r    (desafiante nombre = nombreJugador) ifTrue: [ fin := true].\r    filamorph := filamorph + 1.\r    (filamorph > (cantNPC sqrt ceiling)) ifTrue: [\r        filamorph := 1.\r        columnamorph := columnamorph + 1.\r        (columnamorph > (cantNPC sqrt ceiling)) ifTrue: [ fin := true ].\r    ].\r].\r\r',
+			#stamp : '2/8/2025 18:37',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '21' ],
+		#self : OmReference [ '22' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #ManageJuego,
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r| filajugador columnajugador desafiante fin filamorph columnamorph |\rfilajugador := 1.\rcolumnajugador := 1.\rfin := false.\r[filajugador <= (cantNPC sqrt ceiling) and: [fin not]] whileTrue: [\r    desafiante := (TableroLogico matrizTableroLógico at: filajugador column: columnajugador).\r    (desafiante nombre = nombreJugador) ifTrue: [ fin := true].\r    filajugador := filajugador + 1.\r    (filajugador > (cantNPC sqrt ceiling)) ifTrue: [\r        filajugador := 1.\r        columnajugador := columnajugador + 1.\r        (columnajugador > (cantNPC sqrt ceiling)) ifTrue: [ fin := true ].\r    ].\r].\rfilamorph := 1.\rcolumnamorph := 1.\rfin := false.\r[filamorph <= (cantNPC sqrt ceiling) and: [fin not]] whileTrue: [\r    desafiante := (TableroLogico matrizDeMorphs at: filamorph column: columnamorph).\r    (desafiante nombre = nombreJugador) ifTrue: [ fin := true].\r    filamorph := filamorph + 1.\r    (filamorph > (cantNPC sqrt ceiling)) ifTrue: [\r        filamorph := 1.\r        columnamorph := columnamorph + 1.\r        (columnamorph > (cantNPC sqrt ceiling)) ifTrue: [ fin := true ].\r    ].\r].\r\r',
+			#stamp : '2/8/2025 18:37',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #ManageJuego,
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r|filajugador columnajugador filamorph columnamorph valido|\rfilajugador := 1.\rcolumnajugador := 1.\rfilamorph := 1.\rcolumnamorph := 1.\r1 to: (cantNPC sqrt ceiling) do: \r[ \r\t(filajugador>cantNPC sqrt ceiling) ifTrue:[filajugador  := 1. columnajugador  := columnajugador + 1 ].\r\t(((TableroLogico matrizTableroLógico at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: \r\t[ 1 to: (cantNPC sqrt ceiling) do:\r\t\t[ (filamorph>cantNPC sqrt ceiling) ifTrue:[filamorph  := 1. columnamorph  := columnamorph + 1 ].  \r\t\t(((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue:\r\t\t[ \r((filamorph = filajugador + 1) and: [columnamorph = columnajugador + 1]) or: [\r    ((filamorph = filajugador - 1) and: [columnamorph = columnajugador + 1]) or: [\r        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador - 1]) ifTrue: [ valido := True. ^self ] ifFalse: [ valido := false ].\r]\r]\r].\rfilamorph := filamorph + 1.\r]\r].\rfilajugador := filajugador + 1.\r]',
+			#stamp : '2/8/2025 19:05',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '22' ],
+		#self : OmReference [ '23' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #ManageJuego,
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r|filajugador columnajugador filamorph columnamorph valido|\rfilajugador := 1.\rcolumnajugador := 1.\rfilamorph := 1.\rcolumnamorph := 1.\r1 to: (cantNPC sqrt ceiling) do: \r[ \r\t(filajugador>cantNPC sqrt ceiling) ifTrue:[filajugador  := 1. columnajugador  := columnajugador + 1 ].\r\t(((TableroLogico matrizTableroLógico at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: \r\t[ 1 to: (cantNPC sqrt ceiling) do:\r\t\t[ (filamorph>cantNPC sqrt ceiling) ifTrue:[filamorph  := 1. columnamorph  := columnamorph + 1 ].  \r\t\t(((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue:\r\t\t[ \r((filamorph = filajugador + 1) and: [columnamorph = columnajugador + 1]) or: [\r    ((filamorph = filajugador - 1) and: [columnamorph = columnajugador + 1]) or: [\r        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador - 1]) ifTrue: [ valido := True. ^self ] ifFalse: [ valido := false ].\r]\r]\r].\rfilamorph := filamorph + 1.\r]\r].\rfilajugador := filajugador + 1.\r]',
+			#stamp : '2/8/2025 19:05',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #ManageJuego,
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r|filajugador columnajugador filamorph columnamorph valido|\rfilajugador := 1.\rcolumnajugador := 1.\rfilamorph := 1.\rcolumnamorph := 1.\r1 to: (cantNPC sqrt ceiling) do: \r[ \r\t(filajugador>cantNPC sqrt ceiling) ifTrue:[filajugador  := 1. columnajugador  := columnajugador + 1 ].\r\t(((TableroLogico matrizTableroLógico at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: \r\t[ 1 to: (cantNPC sqrt ceiling) do:\r\t\t[ (filamorph>cantNPC sqrt ceiling) ifTrue:[filamorph  := 1. columnamorph  := columnamorph + 1 ].  \r\t\t(((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue:\r\t\t[ \r((filamorph = filajugador + 1) and: [columnamorph = columnajugador + 1]) or: [\r    ((filamorph = filajugador - 1) and: [columnamorph = columnajugador + 1]) or: [\r        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador - 1]) ifTrue: [ valido := true. ^self ] ifFalse: [ valido := false ].\r]\r]\r].\rfilamorph := filamorph + 1.\r]\r].\rfilajugador := filajugador + 1.\r]',
+			#stamp : '2/8/2025 19:06',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '23' ],
+		#self : OmReference [ '24' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #ManageJuego,
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r|filajugador columnajugador filamorph columnamorph valido|\rfilajugador := 1.\rcolumnajugador := 1.\rfilamorph := 1.\rcolumnamorph := 1.\r1 to: (cantNPC sqrt ceiling) do: \r[ \r\t(filajugador>cantNPC sqrt ceiling) ifTrue:[filajugador  := 1. columnajugador  := columnajugador + 1 ].\r\t(((TableroLogico matrizTableroLógico at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: \r\t[ 1 to: (cantNPC sqrt ceiling) do:\r\t\t[ (filamorph>cantNPC sqrt ceiling) ifTrue:[filamorph  := 1. columnamorph  := columnamorph + 1 ].  \r\t\t(((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue:\r\t\t[ \r((filamorph = filajugador + 1) and: [columnamorph = columnajugador + 1]) or: [\r    ((filamorph = filajugador - 1) and: [columnamorph = columnajugador + 1]) or: [\r        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador - 1]) ifTrue: [ valido := true. ^self ] ifFalse: [ valido := false ].\r]\r]\r].\rfilamorph := filamorph + 1.\r]\r].\rfilajugador := filajugador + 1.\r]',
+			#stamp : '2/8/2025 19:06',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #ManageJuego,
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r| filajugador columnajugador filamorph columnamorph valido |\rfilajugador := 1.\rcolumnajugador := 1.\rfilamorph := 1.\rcolumnamorph := 1.\rvalido := false.\r\r1 to: (cantNPC sqrt ceiling) do: [ :i |\r    (filajugador > cantNPC sqrt ceiling) ifTrue: [\r        filajugador := 1.\r        columnajugador := columnajugador + 1\r    ].\r    (((TableroLogico matrizTableroLógico at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: [\r        1 to: (cantNPC sqrt ceiling) do: [ :j |\r            (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                filamorph := 1.\r                columnamorph := columnamorph + 1\r            ].\r            (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                (((filamorph = filajugador + 1) and: [columnamorph = columnajugador + 1]) or: [\r                    ((filamorph = filajugador - 1) and: [columnamorph = columnajugador + 1]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador - 1])\r                    ]\r                ]) ifTrue: [\r                    valido := true.\r                    ^self\r                ] ifFalse: [\r                    valido := false\r                ].\r            ].\r            filamorph := filamorph + 1.\r        ].\r    ].\r    filajugador := filajugador + 1.\r].\r\r^valido',
+			#stamp : '2/8/2025 19:07',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '24' ],
+		#self : OmReference [ '25' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #ManageJuego,
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r| filajugador columnajugador filamorph columnamorph valido |\rfilajugador := 1.\rcolumnajugador := 1.\rfilamorph := 1.\rcolumnamorph := 1.\rvalido := false.\r\r1 to: (cantNPC sqrt ceiling) do: [ :i |\r    (filajugador > cantNPC sqrt ceiling) ifTrue: [\r        filajugador := 1.\r        columnajugador := columnajugador + 1\r    ].\r    (((TableroLogico matrizTableroLógico at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: [\r        1 to: (cantNPC sqrt ceiling) do: [ :j |\r            (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                filamorph := 1.\r                columnamorph := columnamorph + 1\r            ].\r            (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                (((filamorph = filajugador + 1) and: [columnamorph = columnajugador + 1]) or: [\r                    ((filamorph = filajugador - 1) and: [columnamorph = columnajugador + 1]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador - 1])\r                    ]\r                ]) ifTrue: [\r                    valido := true.\r                    ^self\r                ] ifFalse: [\r                    valido := false\r                ].\r            ].\r            filamorph := filamorph + 1.\r        ].\r    ].\r    filajugador := filajugador + 1.\r].\r\r^valido',
+			#stamp : '2/8/2025 19:07',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #ManageJuego,
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r| filajugador columnajugador filamorph columnamorph valido |\rfilajugador := 1.\rcolumnajugador := 1.\rfilamorph := 1.\rcolumnamorph := 1.\rvalido := false.\r\r1 to: (cantNPC sqrt ceiling) do: [ :i |\r    (filajugador > cantNPC sqrt ceiling) ifTrue: [\r        filajugador := 1.\r        columnajugador := columnajugador + 1\r    ].\r    (((TableroLogico matrizTableroLógico at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: [\r        1 to: (cantNPC sqrt ceiling) do: [ :j |\r            (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                filamorph := 1.\r                columnamorph := columnamorph + 1\r            ].\r            (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                (((filamorph = filajugador + 1) and: [columnamorph = columnajugador + 1]) or: [\r                    ((filamorph = filajugador - 1) and: [columnamorph = columnajugador + 1]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador - 1])\r                    ]\r                ]) ifTrue: [\r                    valido := true.\r                    Transcript show: \'La jugada es válida\'; cr.\r                    ^self\r                ] ifFalse: [\r                    valido := false\r                ].\r            ].\r            filamorph := filamorph + 1.\r        ].\r    ].\r    filajugador := filajugador + 1.\r].\r\rTranscript show: \'La jugada no es válida\'; cr.\r^valido',
+			#stamp : '2/8/2025 19:11',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '25' ],
+		#self : OmReference [ '26' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #ManageJuego,
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r| filajugador columnajugador filamorph columnamorph valido |\rfilajugador := 1.\rcolumnajugador := 1.\rfilamorph := 1.\rcolumnamorph := 1.\rvalido := false.\r\r1 to: (cantNPC sqrt ceiling) do: [ :i |\r    (filajugador > cantNPC sqrt ceiling) ifTrue: [\r        filajugador := 1.\r        columnajugador := columnajugador + 1\r    ].\r    (((TableroLogico matrizTableroLógico at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: [\r        1 to: (cantNPC sqrt ceiling) do: [ :j |\r            (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                filamorph := 1.\r                columnamorph := columnamorph + 1\r            ].\r            (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                (((filamorph = filajugador + 1) and: [columnamorph = columnajugador + 1]) or: [\r                    ((filamorph = filajugador - 1) and: [columnamorph = columnajugador + 1]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador - 1])\r                    ]\r                ]) ifTrue: [\r                    valido := true.\r                    Transcript show: \'La jugada es válida\'; cr.\r                    ^self\r                ] ifFalse: [\r                    valido := false\r                ].\r            ].\r            filamorph := filamorph + 1.\r        ].\r    ].\r    filajugador := filajugador + 1.\r].\r\rTranscript show: \'La jugada no es válida\'; cr.\r^valido',
+			#stamp : '2/8/2025 19:11',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '26' ],
+		#self : OmReference [ '27' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #'crearCasilla:and:label:cantNPC:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearCasilla: x and: y label: label cantNPC: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r|buttonMorph labelMorphInstance|\rbuttonMorph := Morph new.\rbuttonMorph bounds: (25@25 extent: 125@125).\rbuttonMorph color: Color random.\rbuttonMorph borderWidth: 2.\rbuttonMorph borderColor: Color black.\rbuttonMorph on: #mouseUp send: #jugadaVálida: to: self withArguments: {cantNPC. nombreJugador. labelMorph}.\rlabelMorphInstance := StringMorph new.\rlabelMorphInstance contents: label.\rlabelMorphInstance position: (buttonMorph bounds center - (labelMorphInstance extent / 2)).\r"Agregar la etiqueta al botón"\rbuttonMorph addMorph: labelMorphInstance.\rself morph: buttonMorph.',
+			#stamp : '2/8/2025 19:15',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '27' ],
+		#self : OmReference [ '28' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #'crearCasilla:and:label:cantNPC:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearCasilla: x and: y label: label cantNPC: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r|buttonMorph labelMorphInstance|\rbuttonMorph := Morph new.\rbuttonMorph bounds: (25@25 extent: 125@125).\rbuttonMorph color: Color random.\rbuttonMorph borderWidth: 2.\rbuttonMorph borderColor: Color black.\rbuttonMorph on: #mouseUp send: #jugadaVálida: to: self withArguments: {cantNPC. nombreJugador. labelMorph}.\rlabelMorphInstance := StringMorph new.\rlabelMorphInstance contents: label.\rlabelMorphInstance position: (buttonMorph bounds center - (labelMorphInstance extent / 2)).\r"Agregar la etiqueta al botón"\rbuttonMorph addMorph: labelMorphInstance.\rself morph: buttonMorph.',
+			#stamp : '2/8/2025 19:15',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '28' ],
+		#self : OmReference [ '29' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #ManageJuego,
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r| filajugador columnajugador filamorph columnamorph valido |\rfilajugador := 1.\rcolumnajugador := 1.\rfilamorph := 1.\rcolumnamorph := 1.\rvalido := false.\r\r1 to: (cantNPC sqrt ceiling) do: [ :i |\r    (filajugador > cantNPC sqrt ceiling) ifTrue: [\r        filajugador := 1.\r        columnajugador := columnajugador + 1\r    ].\r    (((TableroLogico matrizTableroLógico at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: [\r        1 to: (cantNPC sqrt ceiling) do: [ :j |\r            (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                filamorph := 1.\r                columnamorph := columnamorph + 1\r            ].\r            (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                (((filamorph = filajugador + 1) and: [columnamorph = columnajugador + 1]) or: [\r                    ((filamorph = filajugador - 1) and: [columnamorph = columnajugador + 1]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador - 1])\r                    ]\r                ]) ifTrue: [\r                    valido := true.\r                    Transcript show: \'La jugada es válida\'; cr.\r                    ^self\r                ] ifFalse: [\r                    valido := false\r                ].\r            ].\r            filamorph := filamorph + 1.\r        ].\r    ].\r    filajugador := filajugador + 1.\r].\r\rTranscript show: \'La jugada no es válida\'; cr.\r^valido',
+			#stamp : '2/8/2025 19:16',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '29' ],
+		#self : OmReference [ '30' ]
+	},
+	#content : EpSessionSnapshot {
+		#imageName : 'C:\\Users\\Educacion\\Documents\\Pharo\\images\\The Conquist\\The Conquist.image'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '30' ],
+		#self : OmReference [ '31' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #'crearCasilla:and:label:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearCasilla: x and: y label: label\r|buttonMorph labelMorph|\rbuttonMorph := Morph new.\rbuttonMorph bounds: (25@25 extent: 125@125).\rbuttonMorph color: Color random.\rbuttonMorph borderWidth: 2.\rbuttonMorph borderColor: Color black.\rbuttonMorph on: #mouseUp send: #value to: [ Transcript show: \'Botón clickeado\'; cr ].\rlabelMorph := StringMorph new.\rlabelMorph contents: label.\rlabelMorph position: (buttonMorph bounds center - (labelMorph extent / 2)).\r"Agregar la etiqueta al botón"\rbuttonMorph addMorph: labelMorph.\rself morph: buttonMorph.',
+			#stamp : '2/7/2025 12:21',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #'crearCasilla:and:label:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearCasilla: x and: y label: label\r|buttonMorph labelMorph|\rbuttonMorph := Morph new.\rbuttonMorph bounds: (25@25 extent: 125@125).\rbuttonMorph color: Color random.\rbuttonMorph borderWidth: 2.\rbuttonMorph borderColor: Color black.\rbuttonMorph on: #mouseUp send: #botonClickeado to: self.\rlabelMorph := StringMorph new.\rlabelMorph contents: label.\rlabelMorph position: (buttonMorph bounds center - (labelMorph extent / 2)).\r"Agregar la etiqueta al botón"\rbuttonMorph addMorph: labelMorph.\rself morph: buttonMorph.',
+			#stamp : '2/8/2025 19:22',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '31' ],
+		#self : OmReference [ '32' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #botonClickeado,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'botonClickeado [\r        Transcript show: \'Botón clickeado\'; cr.\r    ]',
+			#stamp : '2/8/2025 19:22',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '32' ],
+		#self : OmReference [ '33' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #botonClickeado,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'botonClickeado [\r        Transcript show: \'Botón clickeado\'; cr.\r    ]',
+			#stamp : '2/8/2025 19:22',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #botonClickeado,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'botonClickeado \r        Transcript show: \'Botón clickeado\'; cr.\r    ',
+			#stamp : '2/8/2025 19:23',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '33' ],
+		#self : OmReference [ '34' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #'botonClickeado:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'botonClickeado: label\r        Juego jugadaVálida: (Juego cantNPC) nombreJugador: (Juego jugadorActual nombre) labelMorph: label.\r    ',
+			#stamp : '2/8/2025 19:25',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '34' ],
+		#self : OmReference [ '35' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #botonClickeado,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'botonClickeado \r        Transcript show: \'Botón clickeado\'; cr.\r    ',
+			#stamp : '2/8/2025 19:23',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '35' ],
+		#self : OmReference [ '36' ]
+	},
+	#content : EpClassAddition {
+		#class : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Juego\r\tslots: { #CantNPC . #CantJugadores . #PantallaActual . #imagenMorph . #turnoActual . #jugadorActual };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Juego,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #CantNPC,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #CantJugadores,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #PantallaActual,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #imagenMorph,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #turnoActual,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #jugadorActual,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Juego class\r\tslots: { #desafiante . #desafiado . #cantNPC . #jugadordelTurnoActual }',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Juego class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Juego class',
+							#isMeta : true
+						},
+						#name : #desafiante,
+						#parent : @23
+					},
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Juego class',
+							#isMeta : true
+						},
+						#name : #desafiado,
+						#parent : @23
+					},
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Juego class',
+							#isMeta : true
+						},
+						#name : #cantNPC,
+						#parent : @23
+					},
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Juego class',
+							#isMeta : true
+						},
+						#name : #jugadordelTurnoActual,
+						#parent : @23
+					}
+				],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Juego,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '36' ],
+		#self : OmReference [ '37' ]
+	},
+	#content : EpClassModification {
+		#oldClass : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Juego\r\tslots: { #CantNPC . #CantJugadores . #PantallaActual . #imagenMorph . #turnoActual . #jugadorActual };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Juego,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #CantNPC,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #CantJugadores,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #PantallaActual,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #imagenMorph,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #turnoActual,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #jugadorActual,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Juego class\r\tslots: { #desafiante . #desafiado }',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Juego class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Juego class',
+							#isMeta : true
+						},
+						#name : #desafiante,
+						#parent : @23
+					},
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Juego class',
+							#isMeta : true
+						},
+						#name : #desafiado,
+						#parent : @23
+					}
+				],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Juego,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#newClass : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Juego\r\tslots: { #CantNPC . #CantJugadores . #PantallaActual . #imagenMorph . #turnoActual . #jugadorActual };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Juego,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #CantNPC,
+					#parent : @40
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #CantJugadores,
+					#parent : @40
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #PantallaActual,
+					#parent : @40
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #imagenMorph,
+					#parent : @40
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #turnoActual,
+					#parent : @40
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #jugadorActual,
+					#parent : @40
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Juego class\r\tslots: { #desafiante . #desafiado . #cantNPC . #jugadordelTurnoActual }',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Juego class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Juego class',
+							#isMeta : true
+						},
+						#name : #desafiante,
+						#parent : @57
+					},
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Juego class',
+							#isMeta : true
+						},
+						#name : #desafiado,
+						#parent : @57
+					},
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Juego class',
+							#isMeta : true
+						},
+						#name : #cantNPC,
+						#parent : @57
+					},
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Juego class',
+							#isMeta : true
+						},
+						#name : #jugadordelTurnoActual,
+						#parent : @57
+					}
+				],
+				#baseClass : @40
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Juego,
+					#isMeta : false
+				},
+				#parent : @40,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '37' ],
+		#self : OmReference [ '38' ]
+	},
+	#content : EpCompositeRefactoring {
+		#childrenRefactorings : [ ]
+	}
+}OmEntry {
+	#tags : {
+		#trigger : OmReference [ '38' ],
+		#prior : @3,
+		#self : OmReference [ '39' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #cantNPC,
+			#protocol : #accessing,
+			#sourceCode : 'cantNPC\r\r\t^ cantNPC',
+			#stamp : '2/8/2025 19:31',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#trigger : OmReference [ '38' ],
+		#prior : OmReference [ '39' ],
+		#self : OmReference [ '40' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'cantNPC:',
+			#protocol : #accessing,
+			#sourceCode : 'cantNPC: anObject\r\r\tcantNPC := anObject',
+			#stamp : '2/8/2025 19:31',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#trigger : OmReference [ '38' ],
+		#prior : OmReference [ '40' ],
+		#self : OmReference [ '41' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #jugadordelTurnoActual,
+			#protocol : #accessing,
+			#sourceCode : 'jugadordelTurnoActual\r\r\t^ jugadordelTurnoActual',
+			#stamp : '2/8/2025 19:31',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#trigger : OmReference [ '38' ],
+		#prior : OmReference [ '41' ],
+		#self : OmReference [ '42' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadordelTurnoActual:',
+			#protocol : #accessing,
+			#sourceCode : 'jugadordelTurnoActual: anObject\r\r\tjugadordelTurnoActual := anObject',
+			#stamp : '2/8/2025 19:31',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '42' ],
+		#self : OmReference [ '43' ]
+	},
+	#content : EpClassAddition {
+		#class : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Juego\r\tslots: { #CantNPC . #CantJugadores . #PantallaActual . #imagenMorph . #turnoActual . #jugadorActual };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Juego,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #CantNPC,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #CantJugadores,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #PantallaActual,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #imagenMorph,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #turnoActual,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #jugadorActual,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Juego class\r\tslots: { #desafiante . #desafiado . #cantNPCClase . #jugadordelTurnoActualClase }',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Juego class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Juego class',
+							#isMeta : true
+						},
+						#name : #desafiante,
+						#parent : @23
+					},
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Juego class',
+							#isMeta : true
+						},
+						#name : #desafiado,
+						#parent : @23
+					},
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Juego class',
+							#isMeta : true
+						},
+						#name : #cantNPCClase,
+						#parent : @23
+					},
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Juego class',
+							#isMeta : true
+						},
+						#name : #jugadordelTurnoActualClase,
+						#parent : @23
+					}
+				],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Juego,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '43' ],
+		#self : OmReference [ '44' ]
+	},
+	#content : EpClassModification {
+		#oldClass : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Juego\r\tslots: { #CantNPC . #CantJugadores . #PantallaActual . #imagenMorph . #turnoActual . #jugadorActual };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Juego,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #CantNPC,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #CantJugadores,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #PantallaActual,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #imagenMorph,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #turnoActual,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #jugadorActual,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Juego class\r\tslots: { #desafiante . #desafiado . #cantNPC . #jugadordelTurnoActual }',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Juego class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Juego class',
+							#isMeta : true
+						},
+						#name : #desafiante,
+						#parent : @23
+					},
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Juego class',
+							#isMeta : true
+						},
+						#name : #desafiado,
+						#parent : @23
+					},
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Juego class',
+							#isMeta : true
+						},
+						#name : #cantNPC,
+						#parent : @23
+					},
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Juego class',
+							#isMeta : true
+						},
+						#name : #jugadordelTurnoActual,
+						#parent : @23
+					}
+				],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Juego,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#newClass : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Juego\r\tslots: { #CantNPC . #CantJugadores . #PantallaActual . #imagenMorph . #turnoActual . #jugadorActual };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Juego,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #CantNPC,
+					#parent : @44
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #CantJugadores,
+					#parent : @44
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #PantallaActual,
+					#parent : @44
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #imagenMorph,
+					#parent : @44
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #turnoActual,
+					#parent : @44
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #jugadorActual,
+					#parent : @44
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Juego class\r\tslots: { #desafiante . #desafiado . #cantNPCClase . #jugadordelTurnoActualClase }',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Juego class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Juego class',
+							#isMeta : true
+						},
+						#name : #desafiante,
+						#parent : @61
+					},
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Juego class',
+							#isMeta : true
+						},
+						#name : #desafiado,
+						#parent : @61
+					},
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Juego class',
+							#isMeta : true
+						},
+						#name : #cantNPCClase,
+						#parent : @61
+					},
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Juego class',
+							#isMeta : true
+						},
+						#name : #jugadordelTurnoActualClase,
+						#parent : @61
+					}
+				],
+				#baseClass : @44
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Juego,
+					#isMeta : false
+				},
+				#parent : @44,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '44' ],
+		#self : OmReference [ '45' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #cantNPC,
+			#protocol : #accessing,
+			#sourceCode : 'cantNPC\r\r\t^ cantNPC',
+			#stamp : '2/8/2025 19:31',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '45' ],
+		#self : OmReference [ '46' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'cantNPC:',
+			#protocol : #accessing,
+			#sourceCode : 'cantNPC: anObject\r\r\tcantNPC := anObject',
+			#stamp : '2/8/2025 19:31',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '46' ],
+		#self : OmReference [ '47' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #jugadorActual,
+			#protocol : #accessing,
+			#sourceCode : 'jugadorActual\r\r\t^ jugadorActual',
+			#stamp : '2/7/2025 14:19',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '47' ],
+		#self : OmReference [ '48' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadorActual:',
+			#protocol : #accessing,
+			#sourceCode : 'jugadorActual: anObject\r\r\tjugadorActual := anObject',
+			#stamp : '2/7/2025 14:19',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '48' ],
+		#self : OmReference [ '49' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #jugadordelTurnoActual,
+			#protocol : #accessing,
+			#sourceCode : 'jugadordelTurnoActual\r\r\t^ jugadordelTurnoActual',
+			#stamp : '2/8/2025 19:31',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '49' ],
+		#self : OmReference [ '50' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadordelTurnoActual:',
+			#protocol : #accessing,
+			#sourceCode : 'jugadordelTurnoActual: anObject\r\r\tjugadordelTurnoActual := anObject',
+			#stamp : '2/8/2025 19:31',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '50' ],
+		#self : OmReference [ '51' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #turnoActual,
+			#protocol : #accessing,
+			#sourceCode : 'turnoActual\r\r\t^ turnoActual',
+			#stamp : '2/7/2025 14:19',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '51' ],
+		#self : OmReference [ '52' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'turnoActual:',
+			#protocol : #accessing,
+			#sourceCode : 'turnoActual: anObject\r\r\tturnoActual := anObject',
+			#stamp : '2/7/2025 14:19',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '52' ],
+		#self : OmReference [ '53' ]
+	},
+	#content : EpCompositeRefactoring {
+		#childrenRefactorings : [ ]
+	}
+}OmEntry {
+	#tags : {
+		#trigger : OmReference [ '53' ],
+		#prior : @3,
+		#self : OmReference [ '54' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #cantNPCClase,
+			#protocol : #accessing,
+			#sourceCode : 'cantNPCClase\r\r\t^ cantNPCClase',
+			#stamp : '2/8/2025 19:33',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#trigger : OmReference [ '53' ],
+		#prior : OmReference [ '54' ],
+		#self : OmReference [ '55' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'cantNPCClase:',
+			#protocol : #accessing,
+			#sourceCode : 'cantNPCClase: anObject\r\r\tcantNPCClase := anObject',
+			#stamp : '2/8/2025 19:33',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#trigger : OmReference [ '53' ],
+		#prior : OmReference [ '55' ],
+		#self : OmReference [ '56' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #jugadordelTurnoActualClase,
+			#protocol : #accessing,
+			#sourceCode : 'jugadordelTurnoActualClase\r\r\t^ jugadordelTurnoActualClase',
+			#stamp : '2/8/2025 19:33',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#trigger : OmReference [ '53' ],
+		#prior : OmReference [ '56' ],
+		#self : OmReference [ '57' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadordelTurnoActualClase:',
+			#protocol : #accessing,
+			#sourceCode : 'jugadordelTurnoActualClase: anObject\r\r\tjugadordelTurnoActualClase := anObject',
+			#stamp : '2/8/2025 19:33',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '57' ],
+		#self : OmReference [ '58' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerJugadorActual,
+			#protocol : #ManageJuego,
+			#sourceCode : 'obtenerJugadorActual\rself jugadorActual: (TableroLogico obtenerJugadorTurnoActual: self cantNPC).\rUIManager default inform: ((\'Jugador actual: \'),  jugadorActual nombre).',
+			#stamp : '2/8/2025 17:50',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerJugadorActual,
+			#protocol : #ManageJuego,
+			#sourceCode : 'obtenerJugadorActual\rself jugadorActual: (TableroLogico obtenerJugadorTurnoActual: self cantNPC).\rself jugadordelTurnoActualClase: self jugadorActual.\rUIManager default inform: ((\'Jugador actual: \'),  jugadorActual nombre).',
+			#stamp : '2/8/2025 19:34',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '58' ],
+		#self : OmReference [ '59' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerJugadorActual,
+			#protocol : #ManageJuego,
+			#sourceCode : 'obtenerJugadorActual\rself jugadorActual: (TableroLogico obtenerJugadorTurnoActual: self cantNPC).\rself jugadordelTurnoActualClase: self jugadorActual.\rUIManager default inform: ((\'Jugador actual: \'),  jugadorActual nombre).',
+			#stamp : '2/8/2025 19:34',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerJugadorActual,
+			#protocol : #ManageJuego,
+			#sourceCode : 'obtenerJugadorActual\rself jugadorActual: (TableroLogico obtenerJugadorTurnoActual: self cantNPC).\rJuego class jugadordelTurnoActualClase: self jugadorActual.\rUIManager default inform: ((\'Jugador actual: \'),  jugadorActual nombre).',
+			#stamp : '2/8/2025 19:34',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '59' ],
+		#self : OmReference [ '60' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerJugadorActual,
+			#protocol : #ManageJuego,
+			#sourceCode : 'obtenerJugadorActual\rself jugadorActual: (TableroLogico obtenerJugadorTurnoActual: self cantNPC).\rJuego class jugadordelTurnoActualClase: self jugadorActual.\rUIManager default inform: ((\'Jugador actual: \'),  jugadorActual nombre).',
+			#stamp : '2/8/2025 19:34',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerJugadorActual,
+			#protocol : #ManageJuego,
+			#sourceCode : 'obtenerJugadorActual\rself jugadorActual: (TableroLogico obtenerJugadorTurnoActual: self cantNPC).\rself class jugadordelTurnoActualClase: self jugadorActual.\rUIManager default inform: ((\'Jugador actual: \'),  jugadorActual nombre).',
+			#stamp : '2/8/2025 19:34',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '60' ],
+		#self : OmReference [ '61' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerCantJugadores,
+			#protocol : #ManageJuego,
+			#sourceCode : 'obtenerCantJugadores\r    | flag MatrizTemas|\r    flag := false.\r    "Solicitar la cantidad de NPCs"\r    [ flag not ] whileTrue: [\r        CantNPC := (UIManager default request: \'¿Cuántos participantes hay?\') asNumber.\r        ((CantNPC sqrt isInteger)) \r            ifTrue: [ flag := true ]\r            ifFalse: [ UIManager default inform: \'Valor inválido\' ].\r    ].\r\r    "Solicitar la cantidad de jugadores humanos"\r    CantJugadores := (UIManager default request: \'¿Cuántos participantes humanos habrá?\') asNumber.\rMatrizTemas := TableroLogico crearMatrizTemas: CantNPC.\rTableroLogico crearMatrizTablero: CantNPC NPCs: CantJugadores.\rTableroLogico crearMatrizMorphs: CantNPC.\rTableroLogico inspect.\rself dibujarFondoTablero.\rself turnoActualmente.\rself obtenerJugadorActual.',
+			#stamp : '2/7/2025 15:31',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerCantJugadores,
+			#protocol : #ManageJuego,
+			#sourceCode : 'obtenerCantJugadores\r    | flag MatrizTemas|\r    flag := false.\r    "Solicitar la cantidad de NPCs"\r    [ flag not ] whileTrue: [\r        CantNPC := (UIManager default request: \'¿Cuántos participantes hay?\') asNumber.\r        ((CantNPC sqrt isInteger)) \r            ifTrue: [ flag := true ]\r            ifFalse: [ UIManager default inform: \'Valor inválido\' ].\r    ].\rself class cantNPCClase: CantNPC.\r    "Solicitar la cantidad de jugadores humanos"\r    CantJugadores := (UIManager default request: \'¿Cuántos participantes humanos habrá?\') asNumber.\rMatrizTemas := TableroLogico crearMatrizTemas: CantNPC.\rTableroLogico crearMatrizTablero: CantNPC NPCs: CantJugadores.\rTableroLogico crearMatrizMorphs: CantNPC.\rTableroLogico inspect.\rself dibujarFondoTablero.\rself turnoActualmente.\rself obtenerJugadorActual.',
+			#stamp : '2/8/2025 19:35',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '61' ],
+		#self : OmReference [ '62' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #'botonClickeado:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'botonClickeado: label\r        Juego jugadaVálida: (Juego cantNPC) nombreJugador: (Juego jugadorActual nombre) labelMorph: label.\r    ',
+			#stamp : '2/8/2025 19:25',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #'botonClickeado:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'botonClickeado: label\r        Juego jugadaVálida: (Juego cantNPCClase) nombreJugador: (Juego jugadordelTurnoActualClase) labelMorph: label.\r    ',
+			#stamp : '2/8/2025 19:36',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '62' ],
+		#self : OmReference [ '63' ]
+	},
+	#content : EpSessionSnapshot {
+		#imageName : 'C:\\Users\\Educacion\\Documents\\Pharo\\images\\The Conquist\\The Conquist.image'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '63' ],
+		#self : OmReference [ '64' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #'botonClickeado:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'botonClickeado: label\r        Juego jugadaVálida: (Juego cantNPCClase) nombreJugador: (Juego jugadordelTurnoActualClase) labelMorph: label.\r    ',
+			#stamp : '2/8/2025 19:36',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '64' ],
+		#self : OmReference [ '65' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGMetaclassDefinition {
+			#annotations : IdentityDictionary {
+				#definitionSource : 'Object class << Casilla class\r\tslots: {}',
+				#traitCompositionSource : '{}'
+			},
+			#name : #'Casilla class',
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [ ],
+			#baseClass : RGClassDefinition {
+				#annotations : IdentityDictionary {
+					#traitCompositionSource : '{}',
+					#definitionSource : 'Object << #Casilla\r\tslots: { #morph . #color . #tema };\r\tpackage: \'TheConquist\'',
+					#superclassName : #Object
+				},
+				#name : #Casilla,
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [
+					RGInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #Casilla,
+							#isMeta : false
+						},
+						#name : #morph,
+						#parent : @11
+					},
+					RGInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #Casilla,
+							#isMeta : false
+						},
+						#name : #color,
+						#parent : @11
+					},
+					RGInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #Casilla,
+							#isMeta : false
+						},
+						#name : #tema,
+						#parent : @11
+					}
+				],
+				#metaClass : @6,
+				#comment : RGCommentDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Casilla,
+						#isMeta : false
+					},
+					#parent : @11,
+					#content : ''
+				},
+				#classVariables : OrderedCollection [ ],
+				#package : RGPackageDefinition {
+					#name : #TheConquist,
+					#definedClasses : IdentityDictionary { },
+					#definedMethods : IdentityDictionary { },
+					#extensionMethods : IdentityDictionary { }
+				},
+				#packageTag : #Uncategorized,
+				#sharedPools : OrderedCollection [ ]
+			}
+		},
+		#protocol : #'as yet unclassified'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '65' ],
+		#self : OmReference [ '66' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Casilla class',
+				#isMeta : true
+			},
+			#name : #'botonClickeado:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'botonClickeado: label\r        Juego jugadaVálida: (Juego cantNPCClase) nombreJugador: (Juego jugadordelTurnoActualClase) labelMorph: label.\r    ',
+			#stamp : '2/8/2025 19:40',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '66' ],
+		#self : OmReference [ '67' ]
+	},
+	#content : EpSessionSnapshot {
+		#imageName : 'C:\\Users\\Educacion\\Documents\\Pharo\\images\\The Conquist\\The Conquist.image'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '67' ],
+		#self : OmReference [ '68' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Casilla class',
+				#isMeta : true
+			},
+			#name : #'botonClickeado:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'botonClickeado: label\r        Juego jugadaVálida: (Juego cantNPCClase) nombreJugador: (Juego jugadordelTurnoActualClase) labelMorph: label.\r    ',
+			#stamp : '2/8/2025 19:40',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '68' ],
+		#self : OmReference [ '69' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #'botonClickeado:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'botonClickeado: label\r        Juego jugadaVálida: (Juego cantNPCClase) nombreJugador: (Juego jugadordelTurnoActualClase) labelMorph: label.',
+			#stamp : '2/8/2025 19:42',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '69' ],
+		#self : OmReference [ '70' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #ManageJuego,
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r| filajugador columnajugador filamorph columnamorph valido |\rfilajugador := 1.\rcolumnajugador := 1.\rfilamorph := 1.\rcolumnamorph := 1.\rvalido := false.\r\r1 to: (cantNPC sqrt ceiling) do: [ :i |\r    (filajugador > cantNPC sqrt ceiling) ifTrue: [\r        filajugador := 1.\r        columnajugador := columnajugador + 1\r    ].\r    (((TableroLogico matrizTableroLógico at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: [\r        1 to: (cantNPC sqrt ceiling) do: [ :j |\r            (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                filamorph := 1.\r                columnamorph := columnamorph + 1\r            ].\r            (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                (((filamorph = filajugador + 1) and: [columnamorph = columnajugador + 1]) or: [\r                    ((filamorph = filajugador - 1) and: [columnamorph = columnajugador + 1]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador - 1])\r                    ]\r                ]) ifTrue: [\r                    valido := true.\r                    Transcript show: \'La jugada es válida\'; cr.\r                    ^self\r                ] ifFalse: [\r                    valido := false\r                ].\r            ].\r            filamorph := filamorph + 1.\r        ].\r    ].\r    filajugador := filajugador + 1.\r].\r\rTranscript show: \'La jugada no es válida\'; cr.\r^valido',
+			#stamp : '2/8/2025 19:16',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '70' ],
+		#self : OmReference [ '71' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r| filajugador columnajugador filamorph columnamorph valido |\rfilajugador := 1.\rcolumnajugador := 1.\rfilamorph := 1.\rcolumnamorph := 1.\rvalido := false.\r\r1 to: (cantNPC sqrt ceiling) do: [ :i |\r    (filajugador > cantNPC sqrt ceiling) ifTrue: [\r        filajugador := 1.\r        columnajugador := columnajugador + 1\r    ].\r    (((TableroLogico matrizTableroLógico at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: [\r        1 to: (cantNPC sqrt ceiling) do: [ :j |\r            (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                filamorph := 1.\r                columnamorph := columnamorph + 1\r            ].\r            (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                (((filamorph = filajugador + 1) and: [columnamorph = columnajugador + 1]) or: [\r                    ((filamorph = filajugador - 1) and: [columnamorph = columnajugador + 1]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador - 1])\r                    ]\r                ]) ifTrue: [\r                    valido := true.\r                    Transcript show: \'La jugada es válida\'; cr.\r                    ^self\r                ] ifFalse: [\r                    valido := false\r                ].\r            ].\r            filamorph := filamorph + 1.\r        ].\r    ].\r    filajugador := filajugador + 1.\r].\r\rTranscript show: \'La jugada no es válida\'; cr.\r^valido',
+			#stamp : '2/8/2025 19:48',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '71' ],
+		#self : OmReference [ '72' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #'botonClickeado:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'botonClickeado: label\r        Juego jugadaVálida: (Juego cantNPCClase) nombreJugador: (Juego jugadordelTurnoActualClase) labelMorph: label.',
+			#stamp : '2/8/2025 19:42',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #'botonClickeado:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'botonClickeado: label\r        Juego jugadaVálida: (Juego cantNPCClase) nombreJugador: (Juego jugadordelTurnoActualClase ) labelMorph: label.',
+			#stamp : '2/8/2025 19:49',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '72' ],
+		#self : OmReference [ '73' ]
+	},
+	#content : EpSessionSnapshot {
+		#imageName : 'C:\\Users\\Educacion\\Documents\\Pharo\\images\\The Conquist\\The Conquist.image'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '73' ],
+		#self : OmReference [ '74' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #botonClickeado,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'botonClickeado\r        Juego jugadaVálida: (Juego cantNPCClase) nombreJugador: (Juego jugadordelTurnoActualClase ) labelMorph: self labelMorph.',
+			#stamp : '2/8/2025 19:50',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '74' ],
+		#self : OmReference [ '75' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #'botonClickeado:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'botonClickeado: label\r        Juego jugadaVálida: (Juego cantNPCClase) nombreJugador: (Juego jugadordelTurnoActualClase ) labelMorph: label.',
+			#stamp : '2/8/2025 19:49',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '75' ],
+		#self : OmReference [ '76' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #botonClickeado,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'botonClickeado\r        Juego jugadaVálida: (Juego cantNPCClase) nombreJugador: (Juego jugadordelTurnoActualClase ) labelMorph: self labelMorph.',
+			#stamp : '2/8/2025 19:50',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #botonClickeado,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'botonClickeado\r        Juego jugadaVálida: (Juego cantNPCClase) nombreJugador: (Juego jugadordelTurnoActualClase ) labelMorph: self tema.',
+			#stamp : '2/8/2025 19:51',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '76' ],
+		#self : OmReference [ '77' ]
+	},
+	#content : EpCompositeRefactoring {
+		#childrenRefactorings : [ ]
+	}
+}OmEntry {
+	#tags : {
+		#trigger : OmReference [ '77' ],
+		#prior : @3,
+		#self : OmReference [ '78' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #color,
+			#protocol : #accessing,
+			#sourceCode : 'color\r\r\t^ color',
+			#stamp : '2/8/2025 19:52',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#trigger : OmReference [ '77' ],
+		#prior : OmReference [ '78' ],
+		#self : OmReference [ '79' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #'color:',
+			#protocol : #accessing,
+			#sourceCode : 'color: anObject\r\r\tcolor := anObject',
+			#stamp : '2/8/2025 19:52',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#trigger : OmReference [ '77' ],
+		#prior : OmReference [ '79' ],
+		#self : OmReference [ '80' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #tema,
+			#protocol : #accessing,
+			#sourceCode : 'tema\r\r\t^ tema',
+			#stamp : '2/8/2025 19:52',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#trigger : OmReference [ '77' ],
+		#prior : OmReference [ '80' ],
+		#self : OmReference [ '81' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #'tema:',
+			#protocol : #accessing,
+			#sourceCode : 'tema: anObject\r\r\ttema := anObject',
+			#stamp : '2/8/2025 19:52',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '81' ],
+		#self : OmReference [ '82' ]
+	},
+	#content : EpSessionSnapshot {
+		#imageName : 'C:\\Users\\Educacion\\Documents\\Pharo\\images\\The Conquist\\The Conquist.image'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '82' ],
+		#self : OmReference [ '83' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r| filajugador columnajugador filamorph columnamorph valido |\rfilajugador := 1.\rcolumnajugador := 1.\rfilamorph := 1.\rcolumnamorph := 1.\rvalido := false.\r\r1 to: (cantNPC sqrt ceiling) do: [ :i |\r    (filajugador > cantNPC sqrt ceiling) ifTrue: [\r        filajugador := 1.\r        columnajugador := columnajugador + 1\r    ].\r    (((TableroLogico matrizTableroLógico at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: [\r        1 to: (cantNPC sqrt ceiling) do: [ :j |\r            (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                filamorph := 1.\r                columnamorph := columnamorph + 1\r            ].\r            (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                (((filamorph = filajugador + 1) and: [columnamorph = columnajugador + 1]) or: [\r                    ((filamorph = filajugador - 1) and: [columnamorph = columnajugador + 1]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador - 1])\r                    ]\r                ]) ifTrue: [\r                    valido := true.\r                    Transcript show: \'La jugada es válida\'; cr.\r                    ^self\r                ] ifFalse: [\r                    valido := false\r                ].\r            ].\r            filamorph := filamorph + 1.\r        ].\r    ].\r    filajugador := filajugador + 1.\r].\r\rTranscript show: \'La jugada no es válida\'; cr.\r^valido',
+			#stamp : '2/8/2025 19:48',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r| filajugador columnajugador filamorph columnamorph valido |\rfilajugador := 1.\rcolumnajugador := 1.\rfilamorph := 1.\rcolumnamorph := 1.\rvalido := false.\r1 to: (cantNPC sqrt ceiling) do: [ :i |\r    (filajugador > cantNPC sqrt ceiling) ifTrue: [\r        filajugador := 1.\r        columnajugador := columnajugador + 1\r    ].\r    (((TableroLogico matrizTableroLógico at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: [\r        1 to: (cantNPC sqrt ceiling) do: [ :j |\r            (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                filamorph := 1.\r                columnamorph := columnamorph + 1\r            ].\r            (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                (((filamorph = filajugador + 1) and: [columnamorph = columnajugador + 1]) or: [\r                    ((filamorph = filajugador - 1) and: [columnamorph = columnajugador + 1]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador - 1])\r                    ]\r                ]) ifTrue: [\r                    valido := true.\r                    Transcript show: \'La jugada es válida\'; cr.\r                    ^self\r                ] ifFalse: [\r                    valido := false\r                ].\r            ].\r            filamorph := filamorph + 1.\r        ].\r    ].\r    filajugador := filajugador + 1.\r].\r\rTranscript show: \'La jugada es:\', valido; cr.\r^valido',
+			#stamp : '2/8/2025 19:57',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '83' ],
+		#self : OmReference [ '84' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaValida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaValida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r    | filajugador columnajugador filamorph columnamorph valido |\r    filajugador := 1.\r    columnajugador := 1.\r    filamorph := 1.\r    columnamorph := 1.\r    valido := false.\r    \r    1 to: (cantNPC sqrt ceiling) do: [ :i |\r        (filajugador > cantNPC sqrt ceiling) ifTrue: [\r            filajugador := 1.\r            columnajugador := columnajugador + 1\r        ].\r        (((TableroLogico matrizTableroLógico at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: [\r            1 to: (cantNPC sqrt ceiling) do: [ :j |\r                (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                    filamorph := 1.\r                    columnamorph := columnamorph + 1\r                ].\r                (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                    (((filamorph = filajugador + 1) and: [columnamorph = columnajugador + 1]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador + 1]) or: [\r                            ((filamorph = filajugador - 1) and: [columnamorph = columnajugador - 1])\r                        ]\r                    ]) ifTrue: [\r                        valido := true.\r                        Transcript show: \'La jugada es válida\'; cr.\r                        ^valido\r                    ].\r                ].\r                filamorph := filamorph + 1.\r            ].\r        ].\r        filajugador := filajugador + 1.\r    ].\r    \r    Transcript show: \'La jugada es:\', valido; cr.\r    ^valido',
+			#stamp : '2/8/2025 19:59',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '84' ],
+		#self : OmReference [ '85' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r| filajugador columnajugador filamorph columnamorph valido |\rfilajugador := 1.\rcolumnajugador := 1.\rfilamorph := 1.\rcolumnamorph := 1.\rvalido := false.\r1 to: (cantNPC sqrt ceiling) do: [ :i |\r    (filajugador > cantNPC sqrt ceiling) ifTrue: [\r        filajugador := 1.\r        columnajugador := columnajugador + 1\r    ].\r    (((TableroLogico matrizTableroLógico at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: [\r        1 to: (cantNPC sqrt ceiling) do: [ :j |\r            (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                filamorph := 1.\r                columnamorph := columnamorph + 1\r            ].\r            (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                (((filamorph = filajugador + 1) and: [columnamorph = columnajugador + 1]) or: [\r                    ((filamorph = filajugador - 1) and: [columnamorph = columnajugador + 1]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador - 1])\r                    ]\r                ]) ifTrue: [\r                    valido := true.\r                    Transcript show: \'La jugada es válida\'; cr.\r                    ^self\r                ] ifFalse: [\r                    valido := false\r                ].\r            ].\r            filamorph := filamorph + 1.\r        ].\r    ].\r    filajugador := filajugador + 1.\r].\r\rTranscript show: \'La jugada es:\', valido; cr.\r^valido',
+			#stamp : '2/8/2025 19:57',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r| filajugador columnajugador filamorph columnamorph valido |\rfilajugador := 1.\rcolumnajugador := 1.\rfilamorph := 1.\rcolumnamorph := 1.\rvalido := false.\r\r1 to: (cantNPC sqrt ceiling) do: [ :i |\r    (filajugador > cantNPC sqrt ceiling) ifTrue: [\r        filajugador := 1.\r        columnajugador := columnajugador + 1\r    ].\r    (((TableroLogico matrizTableroLógico at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: [\r        1 to: (cantNPC sqrt ceiling) do: [ :j |\r            (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                filamorph := 1.\r                columnamorph := columnamorph + 1\r            ].\r            (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                (((filamorph = filajugador + 1) and: [columnamorph = columnajugador + 1]) or: [\r                    ((filamorph = filajugador - 1) and: [columnamorph = columnajugador + 1]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador - 1])\r                    ]\r                ]) ifTrue: [\r                    valido := true.\r                    Transcript show: \'La jugada es válida\'; cr.\r                    ^self\r                ] ifFalse: [\r                    valido := false\r                ].\r            ].\r            filamorph := filamorph + 1.\r        ].\r    ].\r    filajugador := filajugador + 1.\r].\r\rTranscript show: \'La jugada no es válida\'; cr.\r^valido',
+			#stamp : '2/8/2025 20:00',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '85' ],
+		#self : OmReference [ '86' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaValida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaValida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r    | filajugador columnajugador filamorph columnamorph valido |\r    filajugador := 1.\r    columnajugador := 1.\r    filamorph := 1.\r    columnamorph := 1.\r    valido := false.\r    \r    1 to: (cantNPC sqrt ceiling) do: [ :i |\r        (filajugador > cantNPC sqrt ceiling) ifTrue: [\r            filajugador := 1.\r            columnajugador := columnajugador + 1\r        ].\r        (((TableroLogico matrizTableroLógico at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: [\r            1 to: (cantNPC sqrt ceiling) do: [ :j |\r                (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                    filamorph := 1.\r                    columnamorph := columnamorph + 1\r                ].\r                (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                    (((filamorph = filajugador + 1) and: [columnamorph = columnajugador + 1]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador + 1]) or: [\r                            ((filamorph = filajugador - 1) and: [columnamorph = columnajugador - 1])\r                        ]\r                    ]) ifTrue: [\r                        valido := true.\r                        Transcript show: \'La jugada es válida\'; cr.\r                        ^valido\r                    ].\r                ].\r                filamorph := filamorph + 1.\r            ].\r        ].\r        filajugador := filajugador + 1.\r    ].\r    \r    Transcript show: \'La jugada es:\', valido; cr.\r    ^valido',
+			#stamp : '2/8/2025 19:59',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '86' ],
+		#self : OmReference [ '87' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r| filajugador columnajugador filamorph columnamorph valido |\rfilajugador := 1.\rcolumnajugador := 1.\rfilamorph := 1.\rcolumnamorph := 1.\rvalido := false.\r\r1 to: (cantNPC sqrt ceiling) do: [ :i |\r    (filajugador > cantNPC sqrt ceiling) ifTrue: [\r        filajugador := 1.\r        columnajugador := columnajugador + 1\r    ].\r    (((TableroLogico matrizTableroLógico at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: [\r        1 to: (cantNPC sqrt ceiling) do: [ :j |\r            (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                filamorph := 1.\r                columnamorph := columnamorph + 1\r            ].\r            (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                (((filamorph = filajugador + 1) and: [columnamorph = columnajugador + 1]) or: [\r                    ((filamorph = filajugador - 1) and: [columnamorph = columnajugador + 1]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador - 1])\r                    ]\r                ]) ifTrue: [\r                    valido := true.\r                    Transcript show: \'La jugada es válida\'; cr.\r                    ^self\r                ] ifFalse: [\r                    valido := false\r                ].\r            ].\r            filamorph := filamorph + 1.\r        ].\r    ].\r    filajugador := filajugador + 1.\r].\r\rTranscript show: \'La jugada no es válida\'; cr.\r^valido',
+			#stamp : '2/8/2025 20:00',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r| filajugador columnajugador filamorph columnamorph valido |\rfilajugador := 1.\rcolumnajugador := 1.\rfilamorph := 1.\rcolumnamorph := 1.\rvalido := false.\r\r1 to: (cantNPC sqrt ceiling) do: [ :i |\r    (filajugador > cantNPC sqrt ceiling) ifTrue: [\r        filajugador := 1.\r        columnajugador := columnajugador + 1\r    ].\r    (((TableroLogico matrizTableroLógico at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: [\r        1 to: (cantNPC sqrt ceiling) do: [ :j |\r            (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                filamorph := 1.\r                columnamorph := columnamorph + 1\r            ].\r            (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                (((filamorph = filajugador + 1) and: [columnamorph = columnajugador + 1]) or: [\r                    ((filamorph = filajugador - 1) and: [columnamorph = columnajugador + 1]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador - 1])\r                    ]\r                ]) ifTrue: [\r                    valido := true.\r                    Transcript show: \'La jugada es válida\'; cr.\r                    ^self\r                ] ifFalse: [\r                    valido := false\r                ].\r            ].\r            filamorph := filamorph + 1.\r        ].\r    ].\r    filajugador := filajugador + 1.\r].\r\rTranscript show: \'La jugada es:\', valido; cr.\r^valido',
+			#stamp : '2/8/2025 20:01',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '87' ],
+		#self : OmReference [ '88' ]
+	},
+	#content : EpSessionSnapshot {
+		#imageName : 'C:\\Users\\Educacion\\Documents\\Pharo\\images\\The Conquist\\The Conquist.image'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '88' ],
+		#self : OmReference [ '89' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaValida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaValida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r| filas columnas valido posJugador posMorph |\r    \r    filas := cantNPC sqrt ceiling.\r    columnas := filas.\r    valido := false.\r    \r    "Buscar posición del jugador"\r    posJugador := nil.\r    1 to: filas do: [ :fila |\r        1 to: columnas do: [ :columna |\r            ((TableroLogico matrizTableroLógico at: fila column: columna) nombre) = nombreJugador ifTrue: [\r                posJugador := {fila. columna}.\r            ].\r        ].\r    ].\r    \r    posJugador isNil ifTrue: [\r        Transcript show: \'El jugador no fue encontrado\'; cr.\r        ^ false.\r    ].\r    \r    "Buscar posición del Morph"\r    posMorph := nil.\r    1 to: filas do: [ :fila |\r        1 to: columnas do: [ :columna |\r            ((TableroLogico matrizDeMorphs at: fila column: columna) tema) = labelMorph ifTrue: [\r                posMorph := {fila. columna}.\r            ].\r        ].\r    ].\r    \r    posMorph isNil ifTrue: [\r        Transcript show: \'El Morph no fue encontrado\'; cr.\r        ^ false.\r    ].\r    \r    "Validar si el movimiento es válido (diagonal arriba/abajo)"\r    ((posMorph first = posJugador first + 1 and: [ posMorph second = posJugador second + 1 ]) or: \r    [ (posMorph first = posJugador first - 1 and: [ posMorph second = posJugador second + 1 ]) or: \r    [ (posMorph first = posJugador first - 1 and: [ posMorph second = posJugador second - 1 ]) ] ]) \r        ifTrue: [\r            valido := true.\r            Transcript show: \'La jugada es válida\'; cr.\r        ].\r    \r    Transcript show: \'La jugada es: \', valido asString; cr.\r    ^ valido.\r',
+			#stamp : '2/8/2025 20:03',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '89' ],
+		#self : OmReference [ '90' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaValida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaValida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r| filas columnas valido posJugador posMorph |\r    \r    filas := cantNPC sqrt ceiling.\r    columnas := filas.\r    valido := false.\r    \r    "Buscar posición del jugador"\r    posJugador := nil.\r    1 to: filas do: [ :fila |\r        1 to: columnas do: [ :columna |\r            ((TableroLogico matrizTableroLógico at: fila column: columna) nombre) = nombreJugador ifTrue: [\r                posJugador := {fila. columna}.\r            ].\r        ].\r    ].\r    \r    posJugador isNil ifTrue: [\r        Transcript show: \'El jugador no fue encontrado\'; cr.\r        ^ false.\r    ].\r    \r    "Buscar posición del Morph"\r    posMorph := nil.\r    1 to: filas do: [ :fila |\r        1 to: columnas do: [ :columna |\r            ((TableroLogico matrizDeMorphs at: fila column: columna) tema) = labelMorph ifTrue: [\r                posMorph := {fila. columna}.\r            ].\r        ].\r    ].\r    \r    posMorph isNil ifTrue: [\r        Transcript show: \'El Morph no fue encontrado\'; cr.\r        ^ false.\r    ].\r    \r    "Validar si el movimiento es válido (diagonal arriba/abajo)"\r    ((posMorph first = posJugador first + 1 and: [ posMorph second = posJugador second + 1 ]) or: \r    [ (posMorph first = posJugador first - 1 and: [ posMorph second = posJugador second + 1 ]) or: \r    [ (posMorph first = posJugador first - 1 and: [ posMorph second = posJugador second - 1 ]) ] ]) \r        ifTrue: [\r            valido := true.\r            Transcript show: \'La jugada es válida\'; cr.\r        ].\r    \r    Transcript show: \'La jugada es: \', valido asString; cr.\r    ^ valido.\r',
+			#stamp : '2/8/2025 20:03',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaValida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaValida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r| filas columnas valido posJugador posMorph |\r    \r    filas := cantNPC sqrt ceiling.\r    columnas := filas.\r    valido := false.\r    \r    "Inicializar posiciones con valores fuera de rango"\r    posJugador := #(0 0).\r    posMorph := #(0 0).\r    \r    "Buscar posición del jugador"\r    1 to: filas do: [ :fila |\r        1 to: columnas do: [ :columna |\r            (((TableroLogico matrizTableroLógico at: fila column: columna) nombre) = nombreJugador) ifTrue: [\r                posJugador := {fila. columna}.\r            ].\r        ].\r    ].\r    \r    (posJugador = #(0 0)) ifTrue: [\r        Transcript show: \'El jugador no fue encontrado\'; cr.\r        ^ false.\r    ].\r    \r    "Buscar posición del Morph"\r    1 to: filas do: [ :fila |\r        1 to: columnas do: [ :columna |\r            (((TableroLogico matrizDeMorphs at: fila column: columna) tema) = labelMorph) ifTrue: [\r                posMorph := {fila. columna}.\r            ].\r        ].\r    ].\r    \r    (posMorph = #(0 0)) ifTrue: [\r        Transcript show: \'El Morph no fue encontrado\'; cr.\r        ^ false.\r    ].\r    \r    "Validar si el movimiento es válido (diagonal arriba/abajo)"\r    ((posMorph first = posJugador first + 1 and: [ posMorph second = posJugador second + 1 ]) or: \r    [ (posMorph first = posJugador first - 1 and: [ posMorph second = posJugador second + 1 ]) or: \r    [ (posMorph first = posJugador first - 1 and: [ posMorph second = posJugador second - 1 ]) ] ]) \r        ifTrue: [\r            valido := true.\r            Transcript show: \'La jugada es válida\'; cr.\r        ].\r    \r    Transcript show: \'La jugada es: \', valido asString; cr.\r    ^ valido.\r',
+			#stamp : '2/8/2025 20:04',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '90' ],
+		#self : OmReference [ '91' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r| filajugador columnajugador filamorph columnamorph valido |\rfilajugador := 1.\rcolumnajugador := 1.\rfilamorph := 1.\rcolumnamorph := 1.\rvalido := false.\r\r1 to: (cantNPC sqrt ceiling) do: [ :i |\r    (filajugador > cantNPC sqrt ceiling) ifTrue: [\r        filajugador := 1.\r        columnajugador := columnajugador + 1\r    ].\r    (((TableroLogico matrizTableroLógico at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: [\r        1 to: (cantNPC sqrt ceiling) do: [ :j |\r            (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                filamorph := 1.\r                columnamorph := columnamorph + 1\r            ].\r            (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                (((filamorph = filajugador + 1) and: [columnamorph = columnajugador + 1]) or: [\r                    ((filamorph = filajugador - 1) and: [columnamorph = columnajugador + 1]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador - 1])\r                    ]\r                ]) ifTrue: [\r                    valido := true.\r                    Transcript show: \'La jugada es válida\'; cr.\r                    ^self\r                ] ifFalse: [\r                    valido := false\r                ].\r            ].\r            filamorph := filamorph + 1.\r        ].\r    ].\r    filajugador := filajugador + 1.\r].\r\rTranscript show: \'La jugada es:\', valido; cr.\r^valido',
+			#stamp : '2/8/2025 20:01',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r| filajugador columnajugador filamorph columnamorph valido |\rfilajugador := 1.\rcolumnajugador := 1.\rfilamorph := 1.\rcolumnamorph := 1.\rvalido := false.\r\r1 to: (cantNPC sqrt ceiling) do: [ :i |\r    (filajugador > cantNPC sqrt ceiling) ifTrue: [\r        filajugador := 1.\r        columnajugador := columnajugador + 1\r    ].\r    (((TableroLogico matrizTableroLógico at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: [\r        1 to: (cantNPC sqrt ceiling) do: [ :j |\r            (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                filamorph := 1.\r                columnamorph := columnamorph + 1\r            ].\r            (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                (((filamorph = filajugador + 1) and: [columnamorph = columnajugador + 1]) or: [\r                    ((filamorph = filajugador - 1) and: [columnamorph = columnajugador + 1]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador - 1])\r                    ]\r                ]) ifTrue: [\r                    valido := true.\r                    Transcript show: \'La jugada es válida\'; cr.\r                    ^self\r                ] ifFalse: [\r                    valido := false\r                ].\r            ].\r            filamorph := filamorph + 1.\r        ].\r    ].\r    filajugador := filajugador + 1.\r].\r\rTranscript show: \'La jugada es:\', (valido asString); cr.\r^valido',
+			#stamp : '2/8/2025 20:05',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '91' ],
+		#self : OmReference [ '92' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: labelMorph\r| filajugador columnajugador filamorph columnamorph valido |\rfilajugador := 1.\rcolumnajugador := 1.\rfilamorph := 1.\rcolumnamorph := 1.\rvalido := false.\r\r1 to: (cantNPC sqrt ceiling) do: [ :i |\r    (filajugador > cantNPC sqrt ceiling) ifTrue: [\r        filajugador := 1.\r        columnajugador := columnajugador + 1\r    ].\r    (((TableroLogico matrizTableroLógico at: filajugador column: columnajugador) nombre) = nombreJugador) ifTrue: [\r        1 to: (cantNPC sqrt ceiling) do: [ :j |\r            (filamorph > cantNPC sqrt ceiling) ifTrue: [\r                filamorph := 1.\r                columnamorph := columnamorph + 1\r            ].\r            (((TableroLogico matrizDeMorphs at: filamorph column: columnamorph) tema) = labelMorph) ifTrue: [\r                (((filamorph = filajugador + 1) and: [columnamorph = columnajugador + 1]) or: [\r                    ((filamorph = filajugador - 1) and: [columnamorph = columnajugador + 1]) or: [\r                        ((filamorph = filajugador - 1) and: [columnamorph = columnajugador - 1])\r                    ]\r                ]) ifTrue: [\r                    valido := true.\r                    Transcript show: \'La jugada es válida\'; cr.\r                    ^self\r                ] ifFalse: [\r                    valido := false\r                ].\r            ].\r            filamorph := filamorph + 1.\r        ].\r    ].\r    filajugador := filajugador + 1.\r].\r\rTranscript show: \'La jugada es:\', (valido asString); cr.\r^valido',
+			#stamp : '2/8/2025 20:05',
+			#package : #TheConquist
+		}
+	}
+}

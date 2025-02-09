@@ -1,0 +1,1 @@
+NombreDeTuClase allInstances inspect
