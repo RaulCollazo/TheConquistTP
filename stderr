@@ -1,6 +1,51 @@
-[31mMessage not understood: ByteString >> #jugadorActual
-[0mByteString(Object)>>doesNotUnderstand: #jugadorActual
-Juego>>obtenerJugadorActual
+[31mMessage not understood: SpTreeSingleSelectionMode >> #selectedIndex
+[0mSpTreeSingleSelectionMode(Object)>>doesNotUnderstand: #selectedIndex
+[ :w |
+		w showMenuForIndex: { self presenter selection selectedIndex. 1 } ] in SpMorphicTreeTableAdapter>>showContextMenu in Block: [ :w |...
+FullBlockClosure(BlockClosure)>>cull:
+SpFTTableMorph(ProtoObject)>>ifNotNil:
+SpMorphicTreeTableAdapter(SpAbstractAdapter)>>widgetDo:
+SpMorphicTreeTableAdapter>>showContextMenu
+[ self showContextMenu ] in SpMorphicTreeTableAdapter(SpAbstractMorphicAdapter)>>addContextMenuKeyBindings: in Block: [ self showContextMenu ]
+FullBlockClosure(BlockClosure)>>cull:
+FullBlockClosure(BlockClosure)>>cull:cull:
+FullBlockClosure(BlockClosure)>>cull:cull:cull:
+KMCategoryBinding>>completeMatch:buffer:
+[ :l | l completeMatch: self buffer: aBuffer ] in KMKeymap>>notifyCompleteMatchTo:buffer: in Block: [ :l | l completeMatch: self buffer: aBuffer ]
+Array(SequenceableCollection)>>do:
+KMKeymap>>notifyCompleteMatchTo:buffer:
+KMKeymap>>onMatchWith:notify:andDo:
+[ :entry |
+		entry onMatchWith: anEventBuffer
+			notify: aMatchListener
+			andDo: aBlock ] in KMCategory>>onMatchWith:notify:andDo: in Block: [ :entry |...
+Set>>do:
+KMCategory>>onMatchWith:notify:andDo:
+KMCategoryBinding>>verifyMatchWith:notifying:thenDoing:
+[ :aTarget |
+		"nice hack to stop in the first listener"
+		aTarget
+			verifyMatchWith: anEventBuffer
+			notifying: self
+			thenDoing: [ ^self ] ] in KMDispatcher>>dispatch: in Block: [ :aTarget |...
+OrderedCollection>>do:
+KMDispatcher>>dispatch:
+KMTarget>>dispatch:
+[ :targetToDispatch |
+		targetToDispatch dispatch: KMBuffer uniqueInstance buffer copy.
+		aKeyboardEvent wasHandled ifTrue: [ ^self ].
+	] in KMDispatchChain>>dispatch: in Block: [ :targetToDispatch |...
+KMDispatchChain>>do:
+KMDispatchChain>>dispatch:
+KMDispatcher>>dispatchKeystroke:
+SpFTTableMorph(Morph)>>dispatchKeystrokeForEvent:
+SpFTTableMorph(Morph)>>handleKeystrokeWithKeymappings:
+KMShortcutHandler>>handleKeystroke:inMorph:
+[0m[31mMessage not understood: Casilla >> #labelMorph:
+[0mCasilla(Object)>>doesNotUnderstand: #labelMorph:
+Juego>>ganaDesafiante:desafiado:
+Juego>>simularDuelo
+Juego>>esJugadorBot
 Juego>>obtenerCantJugadores
 [target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
 FullBlockClosure(BlockClosure)>>ensure:
@@ -41,12 +86,11 @@ WorldMorph>>doOneCycle
 			self currentWorld doOneCycle ] ] in WorldMorph class>>doOneCycle in Block: [...
 FullBlockClosure(BlockClosure)>>ensure:
 WorldState class>>doDrawCycleWith:
-WorldMorph class>>doOneCycle
-MorphicRenderLoop>>doOneCycle
-[0mMessage not understood: Casilla >> #position:
-[0mCasilla(Object)>>doesNotUnderstand: #position:
-TableroLogico class>>dibujarTablero:cantNPC:
-Juego>>dibujarFondoTablero
+[0m[31mMessage not understood: Casilla >> #labelMorph:
+[0mCasilla(Object)>>doesNotUnderstand: #labelMorph:
+Juego>>ganaDesafiante:desafiado:
+Juego>>simularDuelo
+Juego>>esJugadorBot
 Juego>>obtenerCantJugadores
 [target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
 FullBlockClosure(BlockClosure)>>ensure:
@@ -87,101 +131,11 @@ WorldMorph>>doOneCycle
 			self currentWorld doOneCycle ] ] in WorldMorph class>>doOneCycle in Block: [...
 FullBlockClosure(BlockClosure)>>ensure:
 WorldState class>>doDrawCycleWith:
-WorldMorph class>>doOneCycle
-[0m[31mMessage not understood: Casilla >> #owner
-[0mCasilla(Object)>>doesNotUnderstand: #owner
-ImageMorph(Morph)>>privateAddMorph:atIndex:
-ImageMorph(Morph)>>addMorphFront:
-ImageMorph(Morph)>>addMorph:
-TableroLogico class>>dibujarTablero:cantNPC:
-Juego>>dibujarFondoTablero
-Juego>>obtenerCantJugadores
-[target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
-FullBlockClosure(BlockClosure)>>ensure:
-CursorWithMask(Cursor)>>showWhile:
-SimpleButtonMorph>>doButtonAction
-SimpleButtonMorph>>mouseUp:
-SimpleButtonMorph(Morph)>>handleMouseUp:
-MouseButtonEvent>>sentTo:
-SimpleButtonMorph(Morph)>>handleEvent:
-SimpleButtonMorph(Morph)>>handleFocusEvent:
-[
-		result := focusHolder handleFocusEvent: transformedEvent.
-	] in HandMorph>>sendFocusEvent:to:clear: in Block: [...
-FullBlockClosure(BlockClosure)>>on:do:
-WorldMorph>>becomeActiveDuring:
-HandMorph>>sendFocusEvent:to:clear:
-HandMorph>>sendEvent:focus:clear:
-HandMorph>>sendMouseEvent:
-HandMorph>>handleEvent:
-[
-		(morphicWorld activeHand isNotNil and: [ anEvent hand isNotNil ]) ifTrue: [
-			morphicWorld activeHand handleEvent: anEvent
-		]
-	] in OSWindowMorphicEventHandler>>dispatchMorphicEvent: in Block: [...
-WorldState>>runStepMethodsIn:
-WorldMorph>>runStepMethods
-WorldState>>doOneCycleFor:
-WorldMorph>>doOneCycleNow
-WorldMorph>>doOneCycle
-[
-		| extraWorldsToDraw |
-		extraWorldsToDraw := ExtraWorldListMutex critical: [
-			                     self extraWorldList ].
-		extraWorldsToDraw do: [ :world | world doOneCycle ].
-
-		(self currentWorld isNotNil and: [
-			 (extraWorldsToDraw includes: self currentWorld) not ]) ifTrue: [
-			self currentWorld doOneCycle ] ] in WorldMorph class>>doOneCycle in Block: [...
-[0m[31mMessage not understood: Casilla >> #owner
-[0mCasilla(Object)>>doesNotUnderstand: #owner
-ImageMorph(Morph)>>privateAddMorph:atIndex:
-ImageMorph(Morph)>>addMorphFront:
-ImageMorph(Morph)>>addMorph:
-TableroLogico class>>dibujarTablero:cantNPC:
-Juego>>dibujarFondoTablero
-Juego>>obtenerCantJugadores
-[target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
-FullBlockClosure(BlockClosure)>>ensure:
-CursorWithMask(Cursor)>>showWhile:
-SimpleButtonMorph>>doButtonAction
-SimpleButtonMorph>>mouseUp:
-SimpleButtonMorph(Morph)>>handleMouseUp:
-MouseButtonEvent>>sentTo:
-SimpleButtonMorph(Morph)>>handleEvent:
-SimpleButtonMorph(Morph)>>handleFocusEvent:
-[
-		result := focusHolder handleFocusEvent: transformedEvent.
-	] in HandMorph>>sendFocusEvent:to:clear: in Block: [...
-FullBlockClosure(BlockClosure)>>on:do:
-WorldMorph>>becomeActiveDuring:
-HandMorph>>sendFocusEvent:to:clear:
-HandMorph>>sendEvent:focus:clear:
-HandMorph>>sendMouseEvent:
-HandMorph>>handleEvent:
-[
-		(morphicWorld activeHand isNotNil and: [ anEvent hand isNotNil ]) ifTrue: [
-			morphicWorld activeHand handleEvent: anEvent
-		]
-	] in OSWindowMorphicEventHandler>>dispatchMorphicEvent: in Block: [...
-WorldState>>runStepMethodsIn:
-WorldMorph>>runStepMethods
-WorldState>>doOneCycleFor:
-WorldMorph>>doOneCycleNow
-WorldMorph>>doOneCycle
-[
-		| extraWorldsToDraw |
-		extraWorldsToDraw := ExtraWorldListMutex critical: [
-			                     self extraWorldList ].
-		extraWorldsToDraw do: [ :world | world doOneCycle ].
-
-		(self currentWorld isNotNil and: [
-			 (extraWorldsToDraw includes: self currentWorld) not ]) ifTrue: [
-			self currentWorld doOneCycle ] ] in WorldMorph class>>doOneCycle in Block: [...
-[0m[31mMessage not understood: Casilla >> #position:
-[0mCasilla(Object)>>doesNotUnderstand: #position:
-TableroLogico class>>dibujarTablero:cantNPC:
-Juego>>dibujarFondoTablero
+[0m[31mMessage not understood: Casilla >> #labelMorph:
+[0mCasilla(Object)>>doesNotUnderstand: #labelMorph:
+Juego>>ganaDesafiante:desafiado:
+Juego>>simularDuelo
+Juego>>esJugadorBot
 Juego>>obtenerCantJugadores
 [target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
 FullBlockClosure(BlockClosure)>>ensure:
@@ -222,11 +176,11 @@ WorldMorph>>doOneCycle
 			self currentWorld doOneCycle ] ] in WorldMorph class>>doOneCycle in Block: [...
 FullBlockClosure(BlockClosure)>>ensure:
 WorldState class>>doDrawCycleWith:
-WorldMorph class>>doOneCycle
-[0m[31mMessage not understood: SmallInteger >> #morph
-[0mSmallInteger(Object)>>doesNotUnderstand: #morph
-TableroLogico class>>dibujarTablero:cantNPC:
-Juego>>dibujarFondoTablero
+[0m[31mMessage not understood: Casilla >> #labelMorph:
+[0mCasilla(Object)>>doesNotUnderstand: #labelMorph:
+Juego>>ganaDesafiante:desafiado:
+Juego>>simularDuelo
+Juego>>esJugadorBot
 Juego>>obtenerCantJugadores
 [target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
 FullBlockClosure(BlockClosure)>>ensure:
@@ -267,51 +221,11 @@ WorldMorph>>doOneCycle
 			self currentWorld doOneCycle ] ] in WorldMorph class>>doOneCycle in Block: [...
 FullBlockClosure(BlockClosure)>>ensure:
 WorldState class>>doDrawCycleWith:
-WorldMorph class>>doOneCycle
-[0m>>handleMouseUp:
-MouseButtonEvent>>sentTo:
-Morph>>handleEvent:
-Morph>>handleFocusEvent:
-[
-		result := focusHolder handleFocusEvent: transformedEvent.
-	] in HandMorph>>sendFocusEvent:to:clear: in Block: [...
-FullBlockClosure(BlockClosure)>>on:do:
-WorldMorph>>becomeActiveDuring:
-HandMorph>>sendFocusEvent:to:clear:
-HandMorph>>sendEvent:focus:clear:
-HandMorph>>sendMouseEvent:
-HandMorph>>handleEvent:
-[
-		(morphicWorld activeHand isNotNil and: [ anEvent hand isNotNil ]) ifTrue: [
-			morphicWorld activeHand handleEvent: anEvent
-		]
-	] in OSWindowMorphicEventHandler>>dispatchMorphicEvent: in Block: [...
-WorldState>>runStepMethodsIn:
-WorldMorph>>runStepMethods
-WorldState>>doOneCycleFor:
-WorldMorph>>doOneCycleNow
-WorldMorph>>doOneCycle
-[
-		| extraWorldsToDraw |
-		extraWorldsToDraw := ExtraWorldListMutex critical: [
-			                     self extraWorldList ].
-		extraWorldsToDraw do: [ :world | world doOneCycle ].
-
-		(self currentWorld isNotNil and: [
-			 (extraWorldsToDraw includes: self currentWorld) not ]) ifTrue: [
-			self currentWorld doOneCycle ] ] in WorldMorph class>>doOneCycle in Block: [...
-FullBlockClosure(BlockClosure)>>ensure:
-WorldState class>>doDrawCycleWith:
-WorldMorph class>>doOneCycle
-MorphicRenderLoop>>doOneCycle
-MorphicRenderLoop>>doOneCycleWhile:
-[0m[31mMessage not understood: Casilla >> #owner
-[0mCasilla(Object)>>doesNotUnderstand: #owner
-ImageMorph(Morph)>>privateAddMorph:atIndex:
-ImageMorph(Morph)>>addMorphFront:
-ImageMorph(Morph)>>addMorph:
-TableroLogico class>>dibujarTablero:cantNPC:
-Juego>>dibujarFondoTablero
+[0m[31mMessage not understood: Morph >> #label:
+[0mMorph(Object)>>doesNotUnderstand: #label:
+Juego>>ganaDesafiante:desafiado:
+Juego>>simularDuelo
+Juego>>esJugadorBot
 Juego>>obtenerCantJugadores
 [target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
 FullBlockClosure(BlockClosure)>>ensure:
@@ -350,10 +264,91 @@ WorldMorph>>doOneCycle
 		(self currentWorld isNotNil and: [
 			 (extraWorldsToDraw includes: self currentWorld) not ]) ifTrue: [
 			self currentWorld doOneCycle ] ] in WorldMorph class>>doOneCycle in Block: [...
-[0m[31mMessage not understood: ByteSymbol >> #label
-[0mByteSymbol(Object)>>doesNotUnderstand: #label
-Casilla>>crearCasilla:and:label:
-TableroLogico class>>crearMatrizMorphs:
+FullBlockClosure(BlockClosure)>>ensure:
+WorldState class>>doDrawCycleWith:
+[0m[31mMessage not understood: Casilla >> #labelMorph
+[0mCasilla(Object)>>doesNotUnderstand: #labelMorph
+Juego>>ganaDesafiante:desafiado:
+Juego>>simularDuelo
+Juego>>esJugadorBot
+Juego>>obtenerCantJugadores
+[target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
+FullBlockClosure(BlockClosure)>>ensure:
+CursorWithMask(Cursor)>>showWhile:
+SimpleButtonMorph>>doButtonAction
+SimpleButtonMorph>>mouseUp:
+SimpleButtonMorph(Morph)>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+SimpleButtonMorph(Morph)>>handleEvent:
+SimpleButtonMorph(Morph)>>handleFocusEvent:
+[
+		result := focusHolder handleFocusEvent: transformedEvent.
+	] in HandMorph>>sendFocusEvent:to:clear: in Block: [...
+FullBlockClosure(BlockClosure)>>on:do:
+WorldMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendMouseEvent:
+HandMorph>>handleEvent:
+[
+		(morphicWorld activeHand isNotNil and: [ anEvent hand isNotNil ]) ifTrue: [
+			morphicWorld activeHand handleEvent: anEvent
+		]
+	] in OSWindowMorphicEventHandler>>dispatchMorphicEvent: in Block: [...
+WorldState>>runStepMethodsIn:
+WorldMorph>>runStepMethods
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycleNow
+WorldMorph>>doOneCycle
+[
+		| extraWorldsToDraw |
+		extraWorldsToDraw := ExtraWorldListMutex critical: [
+			                     self extraWorldList ].
+		extraWorldsToDraw do: [ :world | world doOneCycle ].
+
+		(self currentWorld isNotNil and: [
+			 (extraWorldsToDraw includes: self currentWorld) not ]) ifTrue: [
+			self currentWorld doOneCycle ] ] in WorldMorph class>>doOneCycle in Block: [...
+FullBlockClosure(BlockClosure)>>ensure:
+WorldState class>>doDrawCycleWith:
+[0m[31mRange must be positive
+[0mSharedRandom(Object)>>error:
+SharedRandom(Random)>>nextInteger:
+[ super nextInteger: anInteger ] in SharedRandom>>nextInteger: in Block: [ super nextInteger: anInteger ]
+[
+		caught := true.
+		self wait.
+		blockValue := mutuallyExcludedBlock value
+	] in Semaphore>>critical: in Block: [...
+FullBlockClosure(BlockClosure)>>ensure:
+Semaphore>>critical:
+SharedRandom>>nextInteger:
+OrderedCollection(SequenceableCollection)>>atRandom:
+OrderedCollection(Collection)>>atRandom
+Juego>>simularDuelo
+Juego>>esJugadorBot
+Juego>>esJugadorBot
+Juego>>esJugadorBot
+Juego>>esJugadorBot
+Juego>>esJugadorBot
+Juego>>esJugadorBot
+Juego>>obtenerCantJugadores
+[target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
+FullBlockClosure(BlockClosure)>>ensure:
+CursorWithMask(Cursor)>>showWhile:
+SimpleButtonMorph>>doButtonAction
+SimpleButtonMorph>>mouseUp:
+SimpleButtonMorph(Morph)>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+SimpleButtonMorph(Morph)>>handleEvent:
+SimpleButtonMorph(Morph)>>handleFocusEvent:
+[
+		result := focusHolder handleFocusEvent: transformedEvent.
+	] in HandMorph>>sendFocusEvent:to:clear: in Block: [...
+FullBlockClosure(BlockClosure)>>on:do:
+WorldMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+[0meroLogico class>>crearMatrizMorphs:
 Juego>>obtenerCantJugadores
 [target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
 FullBlockClosure(BlockClosure)>>ensure:
