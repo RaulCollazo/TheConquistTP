@@ -1,0 +1,1049 @@
+OmEntry {
+	#tags : {
+		#prior : OmReference [ 'Pharo12.0-SNAPSHOT-64bit-0384a4d925.C0A9FBA6840', '24' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #esJugadorBot,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'esJugadorBot\r(self jugadorActual nPC) ifTrue: [ self simularDuelo ] ifFalse: [Transcript show: \'Persona BuscaDuelo\'].\r',
+			#stamp : '2/9/2025 04:10',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #esJugadorBot,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'esJugadorBot\r(self jugadorActual nPC) ifTrue: [ self simularDuelo ] ifFalse: [Transcript show: \'Persona Busca Duelo\'].\r',
+			#stamp : '2/10/2025 17:47',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '1' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #flujoPrincipalTableroYaCreado,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'flujoPrincipalTableroYaCreado',
+			#stamp : '2/10/2025 17:48',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '2' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #flujoPrincipalTableroYaCreado,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'flujoPrincipalTableroYaCreado',
+			#stamp : '2/10/2025 17:48',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #flujoPrincipalTableroYaCreado,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'flujoPrincipalTableroYaCreado\rself dibujarFondoTablero.\rself turnoActualmente.\rself obtenerJugadorActual.\rself esJugadorBot.',
+			#stamp : '2/10/2025 17:49',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '3' ],
+		#self : OmReference [ '4' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerCantJugadores,
+			#protocol : #ManageJuego,
+			#sourceCode : 'obtenerCantJugadores\r    | flag MatrizTemas|\r    flag := false.\r    "Solicitar la cantidad de NPCs"\r    [ flag not ] whileTrue: [\r        CantNPC := (UIManager default request: \'¿Cuántos participantes hay?\') asNumber.\r        ((CantNPC sqrt isInteger)) \r            ifTrue: [ flag := true ]\r            ifFalse: [ UIManager default inform: \'Valor inválido\' ].\r    ].\rself class cantNPCClase: CantNPC.\r    "Solicitar la cantidad de jugadores humanos"\r    CantJugadores := (UIManager default request: \'¿Cuántos participantes humanos habrá?\') asNumber.\rMatrizTemas := TableroLogico crearMatrizTemas: CantNPC.\rTableroLogico crearMatrizTablero: CantNPC NPCs: CantJugadores.\rTableroLogico crearMatrizMorphs: CantNPC.\rTableroLogico inspect.\rself dibujarFondoTablero.\rself turnoActualmente.\rself obtenerJugadorActual.\rself esJugadorBot.',
+			#stamp : '2/9/2025 02:27',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerCantJugadores,
+			#protocol : #ManageJuego,
+			#sourceCode : 'obtenerCantJugadores\r    | flag MatrizTemas|\r    flag := false.\r    "Solicitar la cantidad de NPCs"\r    [ flag not ] whileTrue: [\r        CantNPC := (UIManager default request: \'¿Cuántos participantes hay?\') asNumber.\r        ((CantNPC sqrt isInteger)) \r            ifTrue: [ flag := true ]\r            ifFalse: [ UIManager default inform: \'Valor inválido\' ].\r    ].\rself class cantNPCClase: CantNPC.\r    "Solicitar la cantidad de jugadores humanos"\r    CantJugadores := (UIManager default request: \'¿Cuántos participantes humanos habrá?\') asNumber.\rMatrizTemas := TableroLogico crearMatrizTemas: CantNPC.\rTableroLogico crearMatrizTablero: CantNPC NPCs: CantJugadores.\rTableroLogico crearMatrizMorphs: CantNPC.\rself flujoPrincipalTableroYaCreado.',
+			#stamp : '2/10/2025 17:50',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '4' ],
+		#self : OmReference [ '5' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Juego\r\tslots: { #CantNPC . #CantJugadores . #PantallaActual . #imagenMorph . #turnoActual . #jugadorActual };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Juego,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #CantNPC,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #CantJugadores,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #PantallaActual,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #imagenMorph,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #turnoActual,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Juego,
+						#isMeta : false
+					},
+					#name : #jugadorActual,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Juego class\r\tslots: { #desafiante . #desafiado . #cantNPCClase . #jugadordelTurnoActualClase }',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Juego class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Juego class',
+							#isMeta : true
+						},
+						#name : #desafiante,
+						#parent : @23
+					},
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Juego class',
+							#isMeta : true
+						},
+						#name : #desafiado,
+						#parent : @23
+					},
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Juego class',
+							#isMeta : true
+						},
+						#name : #cantNPCClase,
+						#parent : @23
+					},
+					RGClassInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#className : #'Juego class',
+							#isMeta : true
+						},
+						#name : #jugadordelTurnoActualClase,
+						#parent : @23
+					}
+				],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Juego,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#protocol : #Accesorios
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '5' ],
+		#self : OmReference [ '6' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #esJugadorBot,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'esJugadorBot\r(self jugadorActual nPC) ifTrue: [ self simularDuelo ] ifFalse: [Transcript show: \'Persona Busca Duelo\'].\r',
+			#stamp : '2/10/2025 17:47',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #esJugadorBot,
+			#protocol : #Accesorios,
+			#sourceCode : 'esJugadorBot\r(self jugadorActual nPC) ifTrue: [ self simularDuelo ] ifFalse: [Transcript show: \'Persona Busca Duelo\'].\r',
+			#stamp : '2/10/2025 17:47',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '6' ],
+		#self : OmReference [ '7' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerJugadorActual,
+			#protocol : #ManageJuego,
+			#sourceCode : 'obtenerJugadorActual\rself jugadorActual: (TableroLogico obtenerJugadorTurnoActual: self cantNPC).\rself class jugadordelTurnoActualClase: self jugadorActual.\rUIManager default inform: ((\'Jugador actual: \'),  jugadorActual nombre,\' \', \'Tema: \', jugadorActual tema).',
+			#stamp : '2/9/2025 02:10',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #obtenerJugadorActual,
+			#protocol : #Accesorios,
+			#sourceCode : 'obtenerJugadorActual\rself jugadorActual: (TableroLogico obtenerJugadorTurnoActual: self cantNPC).\rself class jugadordelTurnoActualClase: self jugadorActual.\rUIManager default inform: ((\'Jugador actual: \'),  jugadorActual nombre,\' \', \'Tema: \', jugadorActual tema).',
+			#stamp : '2/9/2025 02:10',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '7' ],
+		#self : OmReference [ '8' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #turnoActualmente,
+			#protocol : #ManageJuego,
+			#sourceCode : 'turnoActualmente\r(turnoActual = 0 ) ifTrue: [ UIManager default inform: \'Primer Turno...Buscando primer Jugador\' ] ifFalse: [ UIManager default inform: (\'Turno número \' turnoActual). ]',
+			#stamp : '2/7/2025 14:17',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #turnoActualmente,
+			#protocol : #Accesorios,
+			#sourceCode : 'turnoActualmente\r(turnoActual = 0 ) ifTrue: [ UIManager default inform: \'Primer Turno...Buscando primer Jugador\' ] ifFalse: [ UIManager default inform: (\'Turno número \' turnoActual). ]',
+			#stamp : '2/7/2025 14:17',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '8' ],
+		#self : OmReference [ '9' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #flujoPrincipalTableroYaCreado,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'flujoPrincipalTableroYaCreado\rself dibujarFondoTablero.\rself turnoActualmente.\rself obtenerJugadorActual.\rself esJugadorBot.',
+			#stamp : '2/10/2025 17:49',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #flujoPrincipalTableroYaCreado,
+			#protocol : #ManageJuego,
+			#sourceCode : 'flujoPrincipalTableroYaCreado\rself dibujarFondoTablero.\rself turnoActualmente.\rself obtenerJugadorActual.\rself esJugadorBot.',
+			#stamp : '2/10/2025 17:49',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '9' ],
+		#self : OmReference [ '10' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #'ganaDesafiante:desafiado:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'ganaDesafiante: desafiante desafiado: desafiado\r| fila columna remplazo maxFila maxColumna |\rmaxFila := self cantNPC sqrt ceiling.\rmaxColumna := self cantNPC sqrt ceiling.\rfila := 1.\rcolumna := 1.\rremplazo := nil.\r\r"Buscar el reemplazo en matrizDeMorphs"\r1 to: (self cantNPC) do: [:i |\r    ((TableroLogico matrizDeMorphs at: fila column: columna) tema = desafiante tema) ifTrue: [\r        remplazo := (TableroLogico matrizDeMorphs at: fila column: columna).\r    ].\r    fila := fila + 1.\r    (fila > maxFila) ifTrue: [\r        fila := 1.\r        columna := columna + 1.\r    ].\r].\r\rfila := 1.\rcolumna := 1.\r\r"Actualizar los valores en matrizDeTemas y matrizDeMorphs"\r1 to: (self cantNPC) do: [:i |\r    (fila > maxFila) ifTrue: [ fila := 1. columna := columna + 1 ].\r    ((TableroLogico matrizDeTemas at: fila column: columna) = desafiado tema) ifTrue: [\r        "Actualizar matrizDeTemas"\r        TableroLogico matrizDeTemas at: fila column: columna put: desafiante tema.\r        \r        "Actualizar matrizDeMorphs"\r        ((TableroLogico matrizDeMorphs at: fila column: columna) tema = desafiado tema) ifTrue: [\r            (TableroLogico matrizDeMorphs at: fila column: columna) tema: desafiante tema.\r            (TableroLogico matrizDeMorphs at: fila column: columna) morph color: remplazo morph color.\r\t\t\t\t(TableroLogico matrizDeMorphs at: fila column: columna) labelMorph contents: desafiante tema.\r        ].\r    ].\r    fila := fila + 1.\r    (fila > maxFila) ifTrue: [ fila := 1. columna := columna + 1 ].\r].\r\rTranscript show: (\'Ganó el: \', desafiante nombre, desafiante tema).',
+			#stamp : '2/9/2025 03:58',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #'ganaDesafiante:desafiado:',
+			#protocol : #ManageJuego,
+			#sourceCode : 'ganaDesafiante: desafiante desafiado: desafiado\r| fila columna remplazo maxFila maxColumna |\rmaxFila := self cantNPC sqrt ceiling.\rmaxColumna := self cantNPC sqrt ceiling.\rfila := 1.\rcolumna := 1.\rremplazo := nil.\r\r"Buscar el reemplazo en matrizDeMorphs"\r1 to: (self cantNPC) do: [:i |\r    ((TableroLogico matrizDeMorphs at: fila column: columna) tema = desafiante tema) ifTrue: [\r        remplazo := (TableroLogico matrizDeMorphs at: fila column: columna).\r    ].\r    fila := fila + 1.\r    (fila > maxFila) ifTrue: [\r        fila := 1.\r        columna := columna + 1.\r    ].\r].\r\rfila := 1.\rcolumna := 1.\r\r"Actualizar los valores en matrizDeTemas y matrizDeMorphs"\r1 to: (self cantNPC) do: [:i |\r    (fila > maxFila) ifTrue: [ fila := 1. columna := columna + 1 ].\r    ((TableroLogico matrizDeTemas at: fila column: columna) = desafiado tema) ifTrue: [\r        "Actualizar matrizDeTemas"\r        TableroLogico matrizDeTemas at: fila column: columna put: desafiante tema.\r        \r        "Actualizar matrizDeMorphs"\r        ((TableroLogico matrizDeMorphs at: fila column: columna) tema = desafiado tema) ifTrue: [\r            (TableroLogico matrizDeMorphs at: fila column: columna) tema: desafiante tema.\r            (TableroLogico matrizDeMorphs at: fila column: columna) morph color: remplazo morph color.\r\t\t\t\t(TableroLogico matrizDeMorphs at: fila column: columna) labelMorph contents: desafiante tema.\r        ].\r    ].\r    fila := fila + 1.\r    (fila > maxFila) ifTrue: [ fila := 1. columna := columna + 1 ].\r].\r\rTranscript show: (\'Ganó el: \', desafiante nombre, desafiante tema).',
+			#stamp : '2/9/2025 03:58',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '10' ],
+		#self : OmReference [ '11' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #simularDuelo,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'simularDuelo\r| listaDeFilasValidas maxFila maxColumna fila columna rival rivalfila rivalcolumna gana |\r    listaDeFilasValidas := OrderedCollection new.\r    maxFila := self cantNPC sqrt ceiling.\r    maxColumna := self cantNPC sqrt ceiling.\r\r    1 to: self cantNPC do: [ :i |\r        fila := (i - 1) // maxColumna + 1.\r        columna := (i - 1) \\\\ maxColumna + 1.\r\r        "Verifica si el tema del jugador coincide en la posición actual"\r        ((TableroLogico matrizDeTemas at: fila column: columna) = jugadorActual tema )ifTrue: [\r            "Agrega las posiciones válidas en base a la posición actual"\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (fila = 1 and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: 2@1.\r                listaDeFilasValidas add: 1@2.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (fila = 1 and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: 1@(maxColumna - 1).\r                listaDeFilasValidas add: 2@maxColumna.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (fila = maxFila and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: (maxFila - 1)@1.\r                listaDeFilasValidas add: maxFila@2.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (fila = maxFila and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: maxFila@(maxColumna - 1).\r                listaDeFilasValidas add: (maxFila - 1)@maxColumna.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (fila = 1 and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: 1@(columna - 1).\r                listaDeFilasValidas add: 1@(columna + 1).\r                listaDeFilasValidas add: 2@columna.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (fila = maxFila and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: maxFila@(columna - 1).\r                listaDeFilasValidas add: maxFila@(columna + 1).\r                listaDeFilasValidas add: (maxFila - 1)@columna.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (columna = 1 and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@1.\r                listaDeFilasValidas add: (fila + 1)@1.\r                listaDeFilasValidas add: fila@2.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (columna = maxColumna and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@maxColumna.\r                listaDeFilasValidas add: (fila + 1)@maxColumna.\r                listaDeFilasValidas add: fila@(maxColumna - 1).\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            ((1 < fila and: fila < maxFila) and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@columna.\r                listaDeFilasValidas add: (fila + 1)@columna.\r                listaDeFilasValidas add: fila@(columna - 1).\r                listaDeFilasValidas add: fila@(columna + 1).\r            ].].\r        ].\r    ].\rlistaDeFilasValidas inspect.\rlistaDeFilasValidas := (listaDeFilasValidas atRandom).\rrivalfila := (listaDeFilasValidas) x.\rrivalcolumna := (listaDeFilasValidas) y.\rrival := TableroLogico matrizTableroLógico at: rivalfila column: rivalcolumna.\r(rival nPC) ifFalse: [ "Llama al duelo contra persona" Transcript show: \'Duelo de bot - persona\'] ifTrue:[ Transcript show: \'Duelo de boys\'.\rgana := (Random new next < 0.5).\r(gana) ifTrue: [ self ganaDesafiante: jugadorActual desafiado: rival] ifFalse: [ self ganaDesafiante: rival desafiado: jugadorActual]  ].',
+			#stamp : '2/9/2025 04:04',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #simularDuelo,
+			#protocol : #ManageJuego,
+			#sourceCode : 'simularDuelo\r| listaDeFilasValidas maxFila maxColumna fila columna rival rivalfila rivalcolumna gana |\r    listaDeFilasValidas := OrderedCollection new.\r    maxFila := self cantNPC sqrt ceiling.\r    maxColumna := self cantNPC sqrt ceiling.\r\r    1 to: self cantNPC do: [ :i |\r        fila := (i - 1) // maxColumna + 1.\r        columna := (i - 1) \\\\ maxColumna + 1.\r\r        "Verifica si el tema del jugador coincide en la posición actual"\r        ((TableroLogico matrizDeTemas at: fila column: columna) = jugadorActual tema )ifTrue: [\r            "Agrega las posiciones válidas en base a la posición actual"\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (fila = 1 and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: 2@1.\r                listaDeFilasValidas add: 1@2.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (fila = 1 and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: 1@(maxColumna - 1).\r                listaDeFilasValidas add: 2@maxColumna.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (fila = maxFila and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: (maxFila - 1)@1.\r                listaDeFilasValidas add: maxFila@2.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (fila = maxFila and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: maxFila@(maxColumna - 1).\r                listaDeFilasValidas add: (maxFila - 1)@maxColumna.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (fila = 1 and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: 1@(columna - 1).\r                listaDeFilasValidas add: 1@(columna + 1).\r                listaDeFilasValidas add: 2@columna.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (fila = maxFila and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: maxFila@(columna - 1).\r                listaDeFilasValidas add: maxFila@(columna + 1).\r                listaDeFilasValidas add: (maxFila - 1)@columna.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (columna = 1 and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@1.\r                listaDeFilasValidas add: (fila + 1)@1.\r                listaDeFilasValidas add: fila@2.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (columna = maxColumna and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@maxColumna.\r                listaDeFilasValidas add: (fila + 1)@maxColumna.\r                listaDeFilasValidas add: fila@(maxColumna - 1).\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            ((1 < fila and: fila < maxFila) and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@columna.\r                listaDeFilasValidas add: (fila + 1)@columna.\r                listaDeFilasValidas add: fila@(columna - 1).\r                listaDeFilasValidas add: fila@(columna + 1).\r            ].].\r        ].\r    ].\rlistaDeFilasValidas inspect.\rlistaDeFilasValidas := (listaDeFilasValidas atRandom).\rrivalfila := (listaDeFilasValidas) x.\rrivalcolumna := (listaDeFilasValidas) y.\rrival := TableroLogico matrizTableroLógico at: rivalfila column: rivalcolumna.\r(rival nPC) ifFalse: [ "Llama al duelo contra persona" Transcript show: \'Duelo de bot - persona\'] ifTrue:[ Transcript show: \'Duelo de boys\'.\rgana := (Random new next < 0.5).\r(gana) ifTrue: [ self ganaDesafiante: jugadorActual desafiado: rival] ifFalse: [ self ganaDesafiante: rival desafiado: jugadorActual]  ].',
+			#stamp : '2/9/2025 04:04',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '11' ],
+		#self : OmReference [ '12' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #Casilla\r\tslots: { #morph . #color . #tema . #filaCasilla . #columnaCasilla . #labelMorph };\r\tpackage: \'TheConquist\'',
+				#superclassName : #Object
+			},
+			#name : #Casilla,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Casilla,
+						#isMeta : false
+					},
+					#name : #morph,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Casilla,
+						#isMeta : false
+					},
+					#name : #color,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Casilla,
+						#isMeta : false
+					},
+					#name : #tema,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Casilla,
+						#isMeta : false
+					},
+					#name : #filaCasilla,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Casilla,
+						#isMeta : false
+					},
+					#name : #columnaCasilla,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #Casilla,
+						#isMeta : false
+					},
+					#name : #labelMorph,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#definitionSource : 'Object class << Casilla class\r\tslots: {}',
+					#traitCompositionSource : '{}'
+				},
+				#name : #'Casilla class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#className : #Casilla,
+					#isMeta : false
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #TheConquist,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Uncategorized,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#protocol : #'Crear Casillas y funciones de'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '12' ],
+		#self : OmReference [ '13' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #'crearCasilla:and:label:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearCasilla: x and: y label: label\r|buttonMorph|\rlabelMorph:= label.\rfilaCasilla:=x. columnaCasilla := y.\rbuttonMorph := Morph new.\rbuttonMorph bounds: (25@25 extent: 125@125).\rbuttonMorph color: Color random.\rbuttonMorph borderWidth: 2.\rbuttonMorph borderColor: Color black.\rbuttonMorph on: #mouseUp send: #botonClickeado to: self.\rlabelMorph := StringMorph new.\rlabelMorph contents: label.\rself tema: label.\rlabelMorph position: (buttonMorph bounds center - (labelMorph extent / 2)).\r"Agregar la etiqueta al botón"\rbuttonMorph addMorph: labelMorph.\rself morph: buttonMorph.\rself morph: buttonMorph.',
+			#stamp : '2/9/2025 03:59',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #'crearCasilla:and:label:',
+			#protocol : #'Crear Casillas y funciones de',
+			#sourceCode : 'crearCasilla: x and: y label: label\r|buttonMorph|\rlabelMorph:= label.\rfilaCasilla:=x. columnaCasilla := y.\rbuttonMorph := Morph new.\rbuttonMorph bounds: (25@25 extent: 125@125).\rbuttonMorph color: Color random.\rbuttonMorph borderWidth: 2.\rbuttonMorph borderColor: Color black.\rbuttonMorph on: #mouseUp send: #botonClickeado to: self.\rlabelMorph := StringMorph new.\rlabelMorph contents: label.\rself tema: label.\rlabelMorph position: (buttonMorph bounds center - (labelMorph extent / 2)).\r"Agregar la etiqueta al botón"\rbuttonMorph addMorph: labelMorph.\rself morph: buttonMorph.\rself morph: buttonMorph.',
+			#stamp : '2/9/2025 03:59',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '13' ],
+		#self : OmReference [ '14' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #botonClickeado,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'botonClickeado\r||\r       self respuestaClick:( Juego jugadaVálida: (Juego cantNPCClase) nombreJugador: (Juego jugadordelTurnoActualClase ) labelMorph: self).',
+			#stamp : '2/9/2025 01:52',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #botonClickeado,
+			#protocol : #'Crear Casillas y funciones de',
+			#sourceCode : 'botonClickeado\r||\r       self respuestaClick:( Juego jugadaVálida: (Juego cantNPCClase) nombreJugador: (Juego jugadordelTurnoActualClase ) labelMorph: self).',
+			#stamp : '2/9/2025 01:52',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '14' ],
+		#self : OmReference [ '15' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #'respuestaClick:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'respuestaClick: argumento\rargumento ifTrue:[self SosElMismo: self] ifFalse: [ UIManager default inform: \'Movimiento no válido\' ].',
+			#stamp : '2/9/2025 01:56',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #'respuestaClick:',
+			#protocol : #'Crear Casillas y funciones de',
+			#sourceCode : 'respuestaClick: argumento\rargumento ifTrue:[self SosElMismo: self] ifFalse: [ UIManager default inform: \'Movimiento no válido\' ].',
+			#stamp : '2/9/2025 01:56',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '15' ],
+		#self : OmReference [ '16' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #'SosElMismo:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'SosElMismo: Casillalocal\r(Casillalocal tema) = (Juego jugadordelTurnoActualClase tema) ifTrue:[UIManager default inform: \'No puedes desafiarte a ti mismo...\'] ifFalse: [ UIManager default inform:\'Dueloo\' ]',
+			#stamp : '2/9/2025 01:55',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Casilla,
+				#isMeta : false
+			},
+			#name : #'SosElMismo:',
+			#protocol : #'Crear Casillas y funciones de',
+			#sourceCode : 'SosElMismo: Casillalocal\r(Casillalocal tema) = (Juego jugadordelTurnoActualClase tema) ifTrue:[UIManager default inform: \'No puedes desafiarte a ti mismo...\'] ifFalse: [ UIManager default inform:\'Dueloo\' ]',
+			#stamp : '2/9/2025 01:55',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '16' ],
+		#self : OmReference [ '17' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #'ganaDesafiante:desafiado:',
+			#protocol : #ManageJuego,
+			#sourceCode : 'ganaDesafiante: desafiante desafiado: desafiado\r| fila columna remplazo maxFila maxColumna |\rmaxFila := self cantNPC sqrt ceiling.\rmaxColumna := self cantNPC sqrt ceiling.\rfila := 1.\rcolumna := 1.\rremplazo := nil.\r\r"Buscar el reemplazo en matrizDeMorphs"\r1 to: (self cantNPC) do: [:i |\r    ((TableroLogico matrizDeMorphs at: fila column: columna) tema = desafiante tema) ifTrue: [\r        remplazo := (TableroLogico matrizDeMorphs at: fila column: columna).\r    ].\r    fila := fila + 1.\r    (fila > maxFila) ifTrue: [\r        fila := 1.\r        columna := columna + 1.\r    ].\r].\r\rfila := 1.\rcolumna := 1.\r\r"Actualizar los valores en matrizDeTemas y matrizDeMorphs"\r1 to: (self cantNPC) do: [:i |\r    (fila > maxFila) ifTrue: [ fila := 1. columna := columna + 1 ].\r    ((TableroLogico matrizDeTemas at: fila column: columna) = desafiado tema) ifTrue: [\r        "Actualizar matrizDeTemas"\r        TableroLogico matrizDeTemas at: fila column: columna put: desafiante tema.\r        \r        "Actualizar matrizDeMorphs"\r        ((TableroLogico matrizDeMorphs at: fila column: columna) tema = desafiado tema) ifTrue: [\r            (TableroLogico matrizDeMorphs at: fila column: columna) tema: desafiante tema.\r            (TableroLogico matrizDeMorphs at: fila column: columna) morph color: remplazo morph color.\r\t\t\t\t(TableroLogico matrizDeMorphs at: fila column: columna) labelMorph contents: desafiante tema.\r        ].\r    ].\r    fila := fila + 1.\r    (fila > maxFila) ifTrue: [ fila := 1. columna := columna + 1 ].\r].\r\rTranscript show: (\'Ganó el: \', desafiante nombre, desafiante tema).',
+			#stamp : '2/9/2025 03:58',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #'ganaDesafiante:desafiado:',
+			#protocol : #ManageJuego,
+			#sourceCode : 'ganaDesafiante: desafiante desafiado: desafiado\r| fila columna remplazo maxFila maxColumna |\rmaxFila := self cantNPC sqrt ceiling.\rmaxColumna := self cantNPC sqrt ceiling.\rfila := 1.\rcolumna := 1.\rremplazo := nil.\r\r"Buscar el reemplazo en matrizDeMorphs"\r1 to: (self cantNPC) do: [:i |\r    ((TableroLogico matrizDeMorphs at: fila column: columna) tema = desafiante tema) ifTrue: [\r        remplazo := (TableroLogico matrizDeMorphs at: fila column: columna).\r    ].\r    fila := fila + 1.\r    (fila > maxFila) ifTrue: [\r        fila := 1.\r        columna := columna + 1.\r    ].\r].\r\rfila := 1.\rcolumna := 1.\r\r"Actualizar los valores en matrizDeTemas y matrizDeMorphs"\r1 to: (self cantNPC) do: [:i |\r    (fila > maxFila) ifTrue: [ fila := 1. columna := columna + 1 ].\r    ((TableroLogico matrizDeTemas at: fila column: columna) = desafiado tema) ifTrue: [\r        "Actualizar matrizDeTemas"\r        TableroLogico matrizDeTemas at: fila column: columna put: desafiante tema.\r        \r        "Actualizar matrizDeMorphs"\r        ((TableroLogico matrizDeMorphs at: fila column: columna) tema = desafiado tema) ifTrue: [\r            (TableroLogico matrizDeMorphs at: fila column: columna) tema: desafiante tema.\r            (TableroLogico matrizDeMorphs at: fila column: columna) morph color: remplazo morph color.\r\t\t\t\t(TableroLogico matrizDeMorphs at: fila column: columna) labelMorph contents: desafiante tema.\r        ].\r    ].\r    fila := fila + 1.\r    (fila > maxFila) ifTrue: [ fila := 1. columna := columna + 1 ].\r].',
+			#stamp : '2/10/2025 17:54',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '17' ],
+		#self : OmReference [ '18' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #simularDuelo,
+			#protocol : #ManageJuego,
+			#sourceCode : 'simularDuelo\r| listaDeFilasValidas maxFila maxColumna fila columna rival rivalfila rivalcolumna gana |\r    listaDeFilasValidas := OrderedCollection new.\r    maxFila := self cantNPC sqrt ceiling.\r    maxColumna := self cantNPC sqrt ceiling.\r\r    1 to: self cantNPC do: [ :i |\r        fila := (i - 1) // maxColumna + 1.\r        columna := (i - 1) \\\\ maxColumna + 1.\r\r        "Verifica si el tema del jugador coincide en la posición actual"\r        ((TableroLogico matrizDeTemas at: fila column: columna) = jugadorActual tema )ifTrue: [\r            "Agrega las posiciones válidas en base a la posición actual"\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (fila = 1 and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: 2@1.\r                listaDeFilasValidas add: 1@2.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (fila = 1 and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: 1@(maxColumna - 1).\r                listaDeFilasValidas add: 2@maxColumna.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (fila = maxFila and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: (maxFila - 1)@1.\r                listaDeFilasValidas add: maxFila@2.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (fila = maxFila and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: maxFila@(maxColumna - 1).\r                listaDeFilasValidas add: (maxFila - 1)@maxColumna.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (fila = 1 and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: 1@(columna - 1).\r                listaDeFilasValidas add: 1@(columna + 1).\r                listaDeFilasValidas add: 2@columna.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (fila = maxFila and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: maxFila@(columna - 1).\r                listaDeFilasValidas add: maxFila@(columna + 1).\r                listaDeFilasValidas add: (maxFila - 1)@columna.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (columna = 1 and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@1.\r                listaDeFilasValidas add: (fila + 1)@1.\r                listaDeFilasValidas add: fila@2.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (columna = maxColumna and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@maxColumna.\r                listaDeFilasValidas add: (fila + 1)@maxColumna.\r                listaDeFilasValidas add: fila@(maxColumna - 1).\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            ((1 < fila and: fila < maxFila) and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@columna.\r                listaDeFilasValidas add: (fila + 1)@columna.\r                listaDeFilasValidas add: fila@(columna - 1).\r                listaDeFilasValidas add: fila@(columna + 1).\r            ].].\r        ].\r    ].\rlistaDeFilasValidas inspect.\rlistaDeFilasValidas := (listaDeFilasValidas atRandom).\rrivalfila := (listaDeFilasValidas) x.\rrivalcolumna := (listaDeFilasValidas) y.\rrival := TableroLogico matrizTableroLógico at: rivalfila column: rivalcolumna.\r(rival nPC) ifFalse: [ "Llama al duelo contra persona" Transcript show: \'Duelo de bot - persona\'] ifTrue:[ Transcript show: \'Duelo de boys\'.\rgana := (Random new next < 0.5).\r(gana) ifTrue: [ self ganaDesafiante: jugadorActual desafiado: rival] ifFalse: [ self ganaDesafiante: rival desafiado: jugadorActual]  ].',
+			#stamp : '2/9/2025 04:04',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #simularDuelo,
+			#protocol : #ManageJuego,
+			#sourceCode : 'simularDuelo\r| listaDeFilasValidas maxFila maxColumna fila columna rival rivalfila rivalcolumna gana |\rUIManager default request: \'Va a simularse un duelo\'.\r    listaDeFilasValidas := OrderedCollection new.\r    maxFila := self cantNPC sqrt ceiling.\r    maxColumna := self cantNPC sqrt ceiling.\r\r    1 to: self cantNPC do: [ :i |\r        fila := (i - 1) // maxColumna + 1.\r        columna := (i - 1) \\\\ maxColumna + 1.\r\r        "Verifica si el tema del jugador coincide en la posición actual"\r        ((TableroLogico matrizDeTemas at: fila column: columna) = jugadorActual tema )ifTrue: [\r            "Agrega las posiciones válidas en base a la posición actual"\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (fila = 1 and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: 2@1.\r                listaDeFilasValidas add: 1@2.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (fila = 1 and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: 1@(maxColumna - 1).\r                listaDeFilasValidas add: 2@maxColumna.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (fila = maxFila and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: (maxFila - 1)@1.\r                listaDeFilasValidas add: maxFila@2.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (fila = maxFila and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: maxFila@(maxColumna - 1).\r                listaDeFilasValidas add: (maxFila - 1)@maxColumna.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (fila = 1 and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: 1@(columna - 1).\r                listaDeFilasValidas add: 1@(columna + 1).\r                listaDeFilasValidas add: 2@columna.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (fila = maxFila and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: maxFila@(columna - 1).\r                listaDeFilasValidas add: maxFila@(columna + 1).\r                listaDeFilasValidas add: (maxFila - 1)@columna.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (columna = 1 and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@1.\r                listaDeFilasValidas add: (fila + 1)@1.\r                listaDeFilasValidas add: fila@2.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (columna = maxColumna and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@maxColumna.\r                listaDeFilasValidas add: (fila + 1)@maxColumna.\r                listaDeFilasValidas add: fila@(maxColumna - 1).\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            ((1 < fila and: fila < maxFila) and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@columna.\r                listaDeFilasValidas add: (fila + 1)@columna.\r                listaDeFilasValidas add: fila@(columna - 1).\r                listaDeFilasValidas add: fila@(columna + 1).\r            ].].\r        ].\r    ].\rlistaDeFilasValidas inspect.\rlistaDeFilasValidas := (listaDeFilasValidas atRandom).\rrivalfila := (listaDeFilasValidas) x.\rrivalcolumna := (listaDeFilasValidas) y.\rrival := TableroLogico matrizTableroLógico at: rivalfila column: rivalcolumna.\r(rival nPC) ifFalse: [ "Llama al duelo contra persona" Transcript show: \'Duelo de bot - persona\'] ifTrue:[ Transcript show: \'Duelo de boys\'.\rgana := (Random new next < 0.5).\r(gana) ifTrue: [ self ganaDesafiante: jugadorActual desafiado: rival] ifFalse: [ self ganaDesafiante: rival desafiado: jugadorActual]  ].',
+			#stamp : '2/10/2025 17:56',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '18' ],
+		#self : OmReference [ '19' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGMetaclassDefinition {
+			#annotations : IdentityDictionary {
+				#definitionSource : 'Object class << TableroLogico class\r\tslots: { #MatrizDeTemas . #MatrizTableroLógico . #MatrizDeMorphs }',
+				#traitCompositionSource : '{}'
+			},
+			#name : #'TableroLogico class',
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGClassInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #'TableroLogico class',
+						#isMeta : true
+					},
+					#name : #MatrizDeTemas,
+					#parent : @6
+				},
+				RGClassInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #'TableroLogico class',
+						#isMeta : true
+					},
+					#name : #'MatrizTableroLógico',
+					#parent : @6
+				},
+				RGClassInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#className : #'TableroLogico class',
+						#isMeta : true
+					},
+					#name : #MatrizDeMorphs,
+					#parent : @6
+				}
+			],
+			#baseClass : RGClassDefinition {
+				#annotations : IdentityDictionary {
+					#traitCompositionSource : '{}',
+					#definitionSource : 'Object << #TableroLogico\r\tslots: {};\r\tpackage: \'TheConquist\'',
+					#superclassName : #Object
+				},
+				#name : #TableroLogico,
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#metaClass : @6,
+				#comment : RGCommentDefinition {
+					#annotations : IdentityDictionary {
+						#className : #TableroLogico,
+						#isMeta : false
+					},
+					#parent : @17,
+					#content : ''
+				},
+				#classVariables : OrderedCollection [ ],
+				#package : RGPackageDefinition {
+					#name : #TheConquist,
+					#definedClasses : IdentityDictionary { },
+					#definedMethods : IdentityDictionary { },
+					#extensionMethods : IdentityDictionary { }
+				},
+				#packageTag : #Uncategorized,
+				#sharedPools : OrderedCollection [ ]
+			}
+		},
+		#protocol : #'CreaciónyManejodeMAtrices'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '19' ],
+		#self : OmReference [ '20' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizMorphs:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizMorphs: cantMorphs\r    | matrizMorphs filas columnas fila columna |\r    filas := cantMorphs sqrt ceiling.\r    columnas := cantMorphs sqrt ceiling.\r    matrizMorphs := Matrix rows: filas columns: columnas.\r    fila := 1.\r    columna := 1.\r    1 to: cantMorphs do: [:i |\r        | morphcasilla |\r        morphcasilla := Casilla new.\r        morphcasilla crearCasilla: fila and: columna label: (self matrizDeTemas at: fila column: columna).\r        matrizMorphs at: fila column: columna put: morphcasilla.\r        columna := columna + 1.\r        (columna > columnas) ifTrue: [\r            columna := 1.\r            fila := fila + 1.\r        ].\r    ].\r    self matrizDeMorphs: matrizMorphs.',
+			#stamp : '2/9/2025 00:58',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizMorphs:',
+			#protocol : #'CreaciónyManejodeMAtrices',
+			#sourceCode : 'crearMatrizMorphs: cantMorphs\r    | matrizMorphs filas columnas fila columna |\r    filas := cantMorphs sqrt ceiling.\r    columnas := cantMorphs sqrt ceiling.\r    matrizMorphs := Matrix rows: filas columns: columnas.\r    fila := 1.\r    columna := 1.\r    1 to: cantMorphs do: [:i |\r        | morphcasilla |\r        morphcasilla := Casilla new.\r        morphcasilla crearCasilla: fila and: columna label: (self matrizDeTemas at: fila column: columna).\r        matrizMorphs at: fila column: columna put: morphcasilla.\r        columna := columna + 1.\r        (columna > columnas) ifTrue: [\r            columna := 1.\r            fila := fila + 1.\r        ].\r    ].\r    self matrizDeMorphs: matrizMorphs.',
+			#stamp : '2/9/2025 00:58',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '20' ],
+		#self : OmReference [ '21' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizTablero:NPCs:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTablero: cantJugadores NPCs: cantNPCs\r| matrizTablero fila columna cantNPClocal random booleanValue file contents elements jugador |\rfile := FileSystem workingDirectory / \'assets\' / \'nombresNPC.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\relements := elements shuffled. "Mezclar los elementos"\r\rfila := 1.\rcolumna := 1.\rrandom := Random new.\rcantNPClocal := cantNPCs.\r\r"La matriz tablero va a estar compuesta por el objeto jugadores, que contendrá en cada posición los datos del jugador, si es NPC o no, su tema y sus puntos"\rmatrizTablero := Matrix rows: (cantJugadores sqrt ceiling) columns: (cantJugadores sqrt ceiling).\r\r1 to: cantJugadores do: [:i |\r    jugador := Jugador new.\r    (cantNPClocal > 0 and: [random next < 0.2]) ifTrue: [\r        cantNPClocal := cantNPClocal - 1.\r        jugador nombre: (UIManager default request: \'Por favor ingrese el nombre del participante\').\r        jugador nPC: false.\r    ] ifFalse: [\r        jugador nombre: (elements atRandom).\r        jugador nPC: true.\r    ].\r    jugador puntosProbabilidad: 0.\r    jugador tema: (TableroLogico matrizDeTemas at: fila column: columna).\r\r    matrizTablero at: fila column: columna put: jugador.\r\r    (fila = matrizTablero rows) ifTrue: [\r        fila := 1.\r        columna := columna + 1.\r    ] ifFalse: [\r        fila := fila + 1.\r    ].\r].\rself matrizTableroLógico: matrizTablero.\rself inspect.',
+			#stamp : '1/27/2025 12:36',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizTablero:NPCs:',
+			#protocol : #'CreaciónyManejodeMAtrices',
+			#sourceCode : 'crearMatrizTablero: cantJugadores NPCs: cantNPCs\r| matrizTablero fila columna cantNPClocal random booleanValue file contents elements jugador |\rfile := FileSystem workingDirectory / \'assets\' / \'nombresNPC.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\relements := elements shuffled. "Mezclar los elementos"\r\rfila := 1.\rcolumna := 1.\rrandom := Random new.\rcantNPClocal := cantNPCs.\r\r"La matriz tablero va a estar compuesta por el objeto jugadores, que contendrá en cada posición los datos del jugador, si es NPC o no, su tema y sus puntos"\rmatrizTablero := Matrix rows: (cantJugadores sqrt ceiling) columns: (cantJugadores sqrt ceiling).\r\r1 to: cantJugadores do: [:i |\r    jugador := Jugador new.\r    (cantNPClocal > 0 and: [random next < 0.2]) ifTrue: [\r        cantNPClocal := cantNPClocal - 1.\r        jugador nombre: (UIManager default request: \'Por favor ingrese el nombre del participante\').\r        jugador nPC: false.\r    ] ifFalse: [\r        jugador nombre: (elements atRandom).\r        jugador nPC: true.\r    ].\r    jugador puntosProbabilidad: 0.\r    jugador tema: (TableroLogico matrizDeTemas at: fila column: columna).\r\r    matrizTablero at: fila column: columna put: jugador.\r\r    (fila = matrizTablero rows) ifTrue: [\r        fila := 1.\r        columna := columna + 1.\r    ] ifFalse: [\r        fila := fila + 1.\r    ].\r].\rself matrizTableroLógico: matrizTablero.\rself inspect.',
+			#stamp : '1/27/2025 12:36',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '21' ],
+		#self : OmReference [ '22' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizTemas:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'crearMatrizTemas: cantJugadores\r| file contents elements matrix matrixSize |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\relements := elements shuffled.\r"Crear la matriz"\rmatrixSize := cantJugadores sqrt.\rmatrix := Matrix rows: matrixSize columns: matrixSize.\r\r"Recorrer los elementos y asignarlos a la matriz"\r1 to: (matrixSize * matrixSize) do: [:i |\r    | row col |\r    row := (i - 1) // matrixSize + 1.  "Calcula la fila"\r    col := (i - 1) \\\\ matrixSize + 1.   "Calcula la columna"\r    (i <= elements size) ifTrue: [\r        matrix at: row column: col put: (elements at: i).\r    ] ifFalse: [\r        matrix at: row column: col put: nil. "O algún valor por defecto"\r    ].\r].\rMatrizDeTemas := matrix.',
+			#stamp : '1/25/2025 22:17',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'crearMatrizTemas:',
+			#protocol : #'CreaciónyManejodeMAtrices',
+			#sourceCode : 'crearMatrizTemas: cantJugadores\r| file contents elements matrix matrixSize |\r"Abre el archivo y lee su contenido"\rfile := FileSystem workingDirectory / \'assets\' / \'temas.txt\'.\rcontents := file readStreamDo: [ :stream | stream contents ].\r\r"Divide el contenido del archivo en elementos usando \'|\' como delimitador"\relements := contents substrings: \'|\'.\relements := elements shuffled.\r"Crear la matriz"\rmatrixSize := cantJugadores sqrt.\rmatrix := Matrix rows: matrixSize columns: matrixSize.\r\r"Recorrer los elementos y asignarlos a la matriz"\r1 to: (matrixSize * matrixSize) do: [:i |\r    | row col |\r    row := (i - 1) // matrixSize + 1.  "Calcula la fila"\r    col := (i - 1) \\\\ matrixSize + 1.   "Calcula la columna"\r    (i <= elements size) ifTrue: [\r        matrix at: row column: col put: (elements at: i).\r    ] ifFalse: [\r        matrix at: row column: col put: nil. "O algún valor por defecto"\r    ].\r].\rMatrizDeTemas := matrix.',
+			#stamp : '1/25/2025 22:17',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '22' ],
+		#self : OmReference [ '23' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #dibujarTablero,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarTablero\r|Casilla fila columna|\rfila := 0.\rcolumna := 1.\r1 to: (Juego cantNPC) do:\r[:i|\r\tfila := fila + 1.\r\tCasilla := TableroLogico matrizDeMorphs at: fila column: columna.\r\t(fila = (Juego cantNPC sqrt)) ifTrue: [fila := 1. columna := columna + 1].\r\tJuego imagenMorph addMorph: Casilla.\r\tCasilla position: (10*i)@(10*i).\r\t]',
+			#stamp : '1/31/2025 21:23',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #dibujarTablero,
+			#protocol : #'CreaciónyManejodeMAtrices',
+			#sourceCode : 'dibujarTablero\r|Casilla fila columna|\rfila := 0.\rcolumna := 1.\r1 to: (Juego cantNPC) do:\r[:i|\r\tfila := fila + 1.\r\tCasilla := TableroLogico matrizDeMorphs at: fila column: columna.\r\t(fila = (Juego cantNPC sqrt)) ifTrue: [fila := 1. columna := columna + 1].\r\tJuego imagenMorph addMorph: Casilla.\r\tCasilla position: (10*i)@(10*i).\r\t]',
+			#stamp : '1/31/2025 21:23',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '23' ],
+		#self : OmReference [ '24' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'dibujarTablero:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarTablero: imagenMorph\r|Casilla fila columna|\rfila := 0.\rcolumna := 1.\r1 to: (Juego cantNPC) do:\r[:i|\r\tfila := fila + 1.\r\tCasilla := TableroLogico matrizDeMorphs at: fila column: columna.\r\t(fila = (Juego cantNPC sqrt)) ifTrue: [fila := 1. columna := columna + 1].\r\timagenMorph addMorph: Casilla.\r\tCasilla position: (10*i)@(10*i).\r\t]',
+			#stamp : '1/31/2025 21:24',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'dibujarTablero:',
+			#protocol : #'CreaciónyManejodeMAtrices',
+			#sourceCode : 'dibujarTablero: imagenMorph\r|Casilla fila columna|\rfila := 0.\rcolumna := 1.\r1 to: (Juego cantNPC) do:\r[:i|\r\tfila := fila + 1.\r\tCasilla := TableroLogico matrizDeMorphs at: fila column: columna.\r\t(fila = (Juego cantNPC sqrt)) ifTrue: [fila := 1. columna := columna + 1].\r\timagenMorph addMorph: Casilla.\r\tCasilla position: (10*i)@(10*i).\r\t]',
+			#stamp : '1/31/2025 21:24',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '24' ],
+		#self : OmReference [ '25' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'dibujarTablero:cantNPC:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'dibujarTablero: imagenMorph cantNPC: cantNPC\r    | casilla fila columna maxFila maxColumna |\r    fila := 1.\r    columna := 1.\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\r    1 to: cantNPC do: [:i |\r        casilla := (TableroLogico matrizDeMorphs at: fila column: columna) morph.\r        imagenMorph addMorph: casilla.\r        casilla position: ((columna - 1) * 120) @ ((fila - 1) * 120). "Ajusta la posición según sea necesario"\r        columna := columna + 1.\r        (columna > maxColumna) ifTrue: [\r            columna := 1.\r            fila := fila + 1.\r        ].\r    ].',
+			#stamp : '2/9/2025 00:58',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'dibujarTablero:cantNPC:',
+			#protocol : #'CreaciónyManejodeMAtrices',
+			#sourceCode : 'dibujarTablero: imagenMorph cantNPC: cantNPC\r    | casilla fila columna maxFila maxColumna |\r    fila := 1.\r    columna := 1.\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\r    1 to: cantNPC do: [:i |\r        casilla := (TableroLogico matrizDeMorphs at: fila column: columna) morph.\r        imagenMorph addMorph: casilla.\r        casilla position: ((columna - 1) * 120) @ ((fila - 1) * 120). "Ajusta la posición según sea necesario"\r        columna := columna + 1.\r        (columna > maxColumna) ifTrue: [\r            columna := 1.\r            fila := fila + 1.\r        ].\r    ].',
+			#stamp : '2/9/2025 00:58',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '25' ],
+		#self : OmReference [ '26' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #obtenerJugadorTurnoActual,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'obtenerJugadorTurnoActual\r| listaPrioridad prioridadMáxima fila columna jugadorDeMatriz |\rprioridadMáxima := 0.\rlistaPrioridad := OrderedCollection new.\rfila := 1.\rcolumna := 1.\r\r1 to: Juego class cantNPC do: [ :i |\r    jugadorDeMatriz := (self matrizTableroLógico at: fila column: columna).\r\r    (jugadorDeMatriz puntosProbabilidad = prioridadMáxima) ifTrue: [ \r        listaPrioridad add: jugadorDeMatriz \r    ].\r\r    (jugadorDeMatriz puntosProbabilidad > prioridadMáxima) ifTrue: [ \r        listaPrioridad := OrderedCollection with: jugadorDeMatriz.\r        prioridadMáxima := jugadorDeMatriz puntosProbabilidad \r    ].\r\r    fila := fila + 1.\r    (fila > (Juego class cantNPC sqrt ceiling)) ifTrue: [ \r        fila := 1.\r        columna := columna + 1 \r    ].\r].\r\rjugadorDeMatriz := (listaPrioridad atRandom).\r^jugadorDeMatriz.',
+			#stamp : '2/7/2025 15:23',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #obtenerJugadorTurnoActual,
+			#protocol : #'CreaciónyManejodeMAtrices',
+			#sourceCode : 'obtenerJugadorTurnoActual\r| listaPrioridad prioridadMáxima fila columna jugadorDeMatriz |\rprioridadMáxima := 0.\rlistaPrioridad := OrderedCollection new.\rfila := 1.\rcolumna := 1.\r\r1 to: Juego class cantNPC do: [ :i |\r    jugadorDeMatriz := (self matrizTableroLógico at: fila column: columna).\r\r    (jugadorDeMatriz puntosProbabilidad = prioridadMáxima) ifTrue: [ \r        listaPrioridad add: jugadorDeMatriz \r    ].\r\r    (jugadorDeMatriz puntosProbabilidad > prioridadMáxima) ifTrue: [ \r        listaPrioridad := OrderedCollection with: jugadorDeMatriz.\r        prioridadMáxima := jugadorDeMatriz puntosProbabilidad \r    ].\r\r    fila := fila + 1.\r    (fila > (Juego class cantNPC sqrt ceiling)) ifTrue: [ \r        fila := 1.\r        columna := columna + 1 \r    ].\r].\r\rjugadorDeMatriz := (listaPrioridad atRandom).\r^jugadorDeMatriz.',
+			#stamp : '2/7/2025 15:23',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '26' ],
+		#self : OmReference [ '27' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'obtenerJugadorTurnoActual:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'obtenerJugadorTurnoActual: CantNPC\r| listaPrioridad prioridadMáxima fila columna jugadorDeMatriz |\rprioridadMáxima := 0.\rlistaPrioridad := OrderedCollection new.\rfila := 1.\rcolumna := 1.\r\r1 to: CantNPC do: [ :i |\r    jugadorDeMatriz := (self matrizTableroLógico at: fila column: columna).\r\r    (jugadorDeMatriz puntosProbabilidad = prioridadMáxima) ifTrue: [ \r        listaPrioridad add: jugadorDeMatriz \r    ].\r\r    (jugadorDeMatriz puntosProbabilidad > prioridadMáxima) ifTrue: [ \r        listaPrioridad := OrderedCollection with: jugadorDeMatriz.\r        prioridadMáxima := jugadorDeMatriz puntosProbabilidad \r    ].\r\r    fila := fila + 1.\r    (fila > (CantNPC sqrt ceiling)) ifTrue: [ \r        fila := 1.\r        columna := columna + 1 \r    ].\r].\r\rjugadorDeMatriz := (listaPrioridad atRandom).\r^jugadorDeMatriz.',
+			#stamp : '2/7/2025 15:21',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'TableroLogico class',
+				#isMeta : true
+			},
+			#name : #'obtenerJugadorTurnoActual:',
+			#protocol : #'CreaciónyManejodeMAtrices',
+			#sourceCode : 'obtenerJugadorTurnoActual: CantNPC\r| listaPrioridad prioridadMáxima fila columna jugadorDeMatriz |\rprioridadMáxima := 0.\rlistaPrioridad := OrderedCollection new.\rfila := 1.\rcolumna := 1.\r\r1 to: CantNPC do: [ :i |\r    jugadorDeMatriz := (self matrizTableroLógico at: fila column: columna).\r\r    (jugadorDeMatriz puntosProbabilidad = prioridadMáxima) ifTrue: [ \r        listaPrioridad add: jugadorDeMatriz \r    ].\r\r    (jugadorDeMatriz puntosProbabilidad > prioridadMáxima) ifTrue: [ \r        listaPrioridad := OrderedCollection with: jugadorDeMatriz.\r        prioridadMáxima := jugadorDeMatriz puntosProbabilidad \r    ].\r\r    fila := fila + 1.\r    (fila > (CantNPC sqrt ceiling)) ifTrue: [ \r        fila := 1.\r        columna := columna + 1 \r    ].\r].\r\rjugadorDeMatriz := (listaPrioridad atRandom).\r^jugadorDeMatriz.',
+			#stamp : '2/7/2025 15:21',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '27' ],
+		#self : OmReference [ '28' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: casilla\r    | fila columna listaDeFilasValidas listatema maxFila maxColumna |\r    listaDeFilasValidas := OrderedCollection new.\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\r\r    1 to: cantNPC do: [ :i |\r        fila := (i - 1) // maxColumna + 1.\r        columna := (i - 1) \\\\ maxColumna + 1.\r\r        "Verifica si el tema del jugador coincide en la posición actual"\r        ((TableroLogico matrizDeTemas at: fila column: columna) = nombreJugador tema ) ifTrue: [\r            "Agrega las posiciones válidas en base a la posición actual"\r            (fila = 1 and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: 2@1.\r                listaDeFilasValidas add: 1@2.\r            ].\r            (fila = 1 and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: 1@(maxColumna - 1).\r                listaDeFilasValidas add: 2@maxColumna.\r            ].\r            (fila = maxFila and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: (maxFila - 1)@1.\r                listaDeFilasValidas add: maxFila@2.\r            ].\r            (fila = maxFila and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: maxFila@(maxColumna - 1).\r                listaDeFilasValidas add: (maxFila - 1)@maxColumna.\r            ].\r            (fila = 1 and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: 1@(columna - 1).\r                listaDeFilasValidas add: 1@(columna + 1).\r                listaDeFilasValidas add: 2@columna.\r            ].\r            (fila = maxFila and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: maxFila@(columna - 1).\r                listaDeFilasValidas add: maxFila@(columna + 1).\r                listaDeFilasValidas add: (maxFila - 1)@columna.\r            ].\r            (columna = 1 and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@1.\r                listaDeFilasValidas add: (fila + 1)@1.\r                listaDeFilasValidas add: fila@2.\r            ].\r            (columna = maxColumna and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@maxColumna.\r                listaDeFilasValidas add: (fila + 1)@maxColumna.\r                listaDeFilasValidas add: fila@(maxColumna - 1).\r            ].\r            ((1 < fila and: fila < maxFila) and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@columna.\r                listaDeFilasValidas add: (fila + 1)@columna.\r                listaDeFilasValidas add: fila@(columna - 1).\r                listaDeFilasValidas add: fila@(columna + 1).\r            ].\r        ].\r    ].\r\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\rcasilla inspect.\rlistaDeFilasValidas inspect.\r(listaDeFilasValidas includes: ((casilla filaCasilla)@(casilla columnaCasilla)) )ifTrue: [^true] ifFalse: [ ^false]\r\r\r',
+			#stamp : '2/9/2025 01:46',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: casilla\r    | fila columna listaDeFilasValidas listatema maxFila maxColumna |\r    listaDeFilasValidas := OrderedCollection new.\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\r\r    1 to: cantNPC do: [ :i |\r        fila := (i - 1) // maxColumna + 1.\r        columna := (i - 1) \\\\ maxColumna + 1.\r\r        "Verifica si el tema del jugador coincide en la posición actual"\r        ((TableroLogico matrizDeTemas at: fila column: columna) = nombreJugador tema ) ifTrue: [\r            "Agrega las posiciones válidas en base a la posición actual"\r            (fila = 1 and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: 2@1.\r                listaDeFilasValidas add: 1@2.\r            ].\r            (fila = 1 and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: 1@(maxColumna - 1).\r                listaDeFilasValidas add: 2@maxColumna.\r            ].\r            (fila = maxFila and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: (maxFila - 1)@1.\r                listaDeFilasValidas add: maxFila@2.\r            ].\r            (fila = maxFila and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: maxFila@(maxColumna - 1).\r                listaDeFilasValidas add: (maxFila - 1)@maxColumna.\r            ].\r            (fila = 1 and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: 1@(columna - 1).\r                listaDeFilasValidas add: 1@(columna + 1).\r                listaDeFilasValidas add: 2@columna.\r            ].\r            (fila = maxFila and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: maxFila@(columna - 1).\r                listaDeFilasValidas add: maxFila@(columna + 1).\r                listaDeFilasValidas add: (maxFila - 1)@columna.\r            ].\r            (columna = 1 and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@1.\r                listaDeFilasValidas add: (fila + 1)@1.\r                listaDeFilasValidas add: fila@2.\r            ].\r            (columna = maxColumna and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@maxColumna.\r                listaDeFilasValidas add: (fila + 1)@maxColumna.\r                listaDeFilasValidas add: fila@(maxColumna - 1).\r            ].\r            ((1 < fila and: fila < maxFila) and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@columna.\r                listaDeFilasValidas add: (fila + 1)@columna.\r                listaDeFilasValidas add: fila@(columna - 1).\r                listaDeFilasValidas add: fila@(columna + 1).\r            ].\r        ].\r    ].\r\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\r(listaDeFilasValidas includes: ((casilla filaCasilla)@(casilla columnaCasilla)) )ifTrue: [^true] ifFalse: [ ^false]\r\r\r',
+			#stamp : '2/10/2025 17:57',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '28' ],
+		#self : OmReference [ '29' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: casilla\r    | fila columna listaDeFilasValidas listatema maxFila maxColumna |\r    listaDeFilasValidas := OrderedCollection new.\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\r\r    1 to: cantNPC do: [ :i |\r        fila := (i - 1) // maxColumna + 1.\r        columna := (i - 1) \\\\ maxColumna + 1.\r\r        "Verifica si el tema del jugador coincide en la posición actual"\r        ((TableroLogico matrizDeTemas at: fila column: columna) = nombreJugador tema ) ifTrue: [\r            "Agrega las posiciones válidas en base a la posición actual"\r            (fila = 1 and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: 2@1.\r                listaDeFilasValidas add: 1@2.\r            ].\r            (fila = 1 and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: 1@(maxColumna - 1).\r                listaDeFilasValidas add: 2@maxColumna.\r            ].\r            (fila = maxFila and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: (maxFila - 1)@1.\r                listaDeFilasValidas add: maxFila@2.\r            ].\r            (fila = maxFila and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: maxFila@(maxColumna - 1).\r                listaDeFilasValidas add: (maxFila - 1)@maxColumna.\r            ].\r            (fila = 1 and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: 1@(columna - 1).\r                listaDeFilasValidas add: 1@(columna + 1).\r                listaDeFilasValidas add: 2@columna.\r            ].\r            (fila = maxFila and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: maxFila@(columna - 1).\r                listaDeFilasValidas add: maxFila@(columna + 1).\r                listaDeFilasValidas add: (maxFila - 1)@columna.\r            ].\r            (columna = 1 and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@1.\r                listaDeFilasValidas add: (fila + 1)@1.\r                listaDeFilasValidas add: fila@2.\r            ].\r            (columna = maxColumna and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@maxColumna.\r                listaDeFilasValidas add: (fila + 1)@maxColumna.\r                listaDeFilasValidas add: fila@(maxColumna - 1).\r            ].\r            ((1 < fila and: fila < maxFila) and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@columna.\r                listaDeFilasValidas add: (fila + 1)@columna.\r                listaDeFilasValidas add: fila@(columna - 1).\r                listaDeFilasValidas add: fila@(columna + 1).\r            ].\r        ].\r    ].\r\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\r(listaDeFilasValidas includes: ((casilla filaCasilla)@(casilla columnaCasilla)) )ifTrue: [^true] ifFalse: [ ^false]\r\r\r',
+			#stamp : '2/10/2025 17:57',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #'Juego class',
+				#isMeta : true
+			},
+			#name : #'jugadaVálida:nombreJugador:labelMorph:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'jugadaVálida: cantNPC nombreJugador: nombreJugador labelMorph: casilla\r    | fila columna listaDeFilasValidas listatema maxFila maxColumna |\r    listaDeFilasValidas := OrderedCollection new.\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\r\r    1 to: cantNPC do: [ :i |\r        fila := (i - 1) // maxColumna + 1.\r        columna := (i - 1) \\\\ maxColumna + 1.\r\r        "Verifica si el tema del jugador coincide en la posición actual"\r        ((TableroLogico matrizDeTemas at: fila column: columna) = nombreJugador tema ) ifTrue: [\r            "Agrega las posiciones válidas en base a la posición actual"\r            (fila = 1 and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: 2@1.\r                listaDeFilasValidas add: 1@2.\r            ].\r            (fila = 1 and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: 1@(maxColumna - 1).\r                listaDeFilasValidas add: 2@maxColumna.\r            ].\r            (fila = maxFila and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: (maxFila - 1)@1.\r                listaDeFilasValidas add: maxFila@2.\r            ].\r            (fila = maxFila and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: maxFila@(maxColumna - 1).\r                listaDeFilasValidas add: (maxFila - 1)@maxColumna.\r            ].\r            (fila = 1 and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: 1@(columna - 1).\r                listaDeFilasValidas add: 1@(columna + 1).\r                listaDeFilasValidas add: 2@columna.\r            ].\r            (fila = maxFila and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: maxFila@(columna - 1).\r                listaDeFilasValidas add: maxFila@(columna + 1).\r                listaDeFilasValidas add: (maxFila - 1)@columna.\r            ].\r            (columna = 1 and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@1.\r                listaDeFilasValidas add: (fila + 1)@1.\r                listaDeFilasValidas add: fila@2.\r            ].\r            (columna = maxColumna and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@maxColumna.\r                listaDeFilasValidas add: (fila + 1)@maxColumna.\r                listaDeFilasValidas add: fila@(maxColumna - 1).\r            ].\r            ((1 < fila and: fila < maxFila) and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@columna.\r                listaDeFilasValidas add: (fila + 1)@columna.\r                listaDeFilasValidas add: fila@(columna - 1).\r                listaDeFilasValidas add: fila@(columna + 1).\r            ].\r        ].\r    ].\r    maxFila := cantNPC sqrt ceiling.\r    maxColumna := cantNPC sqrt ceiling.\r(listaDeFilasValidas includes: ((casilla filaCasilla)@(casilla columnaCasilla)) )ifTrue: [^true] ifFalse: [ ^false]\r\r\r',
+			#stamp : '2/10/2025 17:58',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '29' ],
+		#self : OmReference [ '30' ]
+	},
+	#content : EpSessionSnapshot {
+		#imageName : 'C:\\Users\\Educacion\\Documents\\Pharo\\images\\The Conquist\\The Conquist.image'
+	}
+}

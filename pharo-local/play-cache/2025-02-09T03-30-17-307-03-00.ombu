@@ -4,4 +4,10 @@ OmEntry {
 		#self : OmReference [ '1' ]
 	},
 	#content : '|juego|\rjuego := Juego iniciar.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-09T17:27:35-03:00' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : 'Juego iniciar.'
 }
