@@ -1,0 +1,49 @@
+OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-14T00:12:34.602-03:00' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : 'TableroLogico crearMatrizTablero: 9 NPCs: 3.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-14T00:14:46.432-03:00' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : 'TableroLogico crearMatrizTablero: 3 NPCs: 9.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-14T00:15:04.596-03:00' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : 'TableroLogico crearMatrizTablero: 9 NPCs: 3.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-14T00:18:03.504-03:00' ],
+		#self : OmReference [ '4' ]
+	},
+	#content : 'TableroLogico crearMatrizTablero: 9 NPCs: 1.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-14T00:18:42.182-03:00' ],
+		#self : OmReference [ '5' ]
+	},
+	#content : 'TableroLogico crearMatrizTablero: 1 NPCs: 9.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-14T00:19:08.652-03:00' ],
+		#self : OmReference [ '6' ]
+	},
+	#content : 'TableroLogico crearMatrizTablero: 9 NPCs: 1.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-14T00:26:59.915-03:00' ],
+		#self : OmReference [ '7' ]
+	},
+	#content : 'TableroLogico crearMatrizTablero: 9 NPCs: 4.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-14T00:29:30.377-03:00' ],
+		#self : OmReference [ '8' ]
+	},
+	#content : 'TableroLogico crearMatrizTablero: 4 NPCs: 4.'
+}

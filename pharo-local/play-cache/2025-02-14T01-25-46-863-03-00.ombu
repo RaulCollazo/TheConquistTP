@@ -1,0 +1,7 @@
+OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-14T01:26:14.164-03:00' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : 'Process allSubInstances do: [:each | Transcript show: each printString; cr].'
+}

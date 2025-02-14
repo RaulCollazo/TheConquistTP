@@ -1,0 +1,19 @@
+OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-14T01:23:54.52-03:00' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : 'runningProcess terminate.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-14T01:24:37.461-03:00' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : '"Detener todos los procesos excepto el proceso principal"\r[\r    Processor activeProcess.\r    Processor allProcesses do: [:each |\r        (each ~= Processor activeProcess and: [each name ~= \'Main UI Process\']) ifTrue: [\r            each terminate.\r        ].\r    ].\r] fork.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-14T01:24:59.931-03:00' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : '"Script para detener todos los procesos excepto el proceso principal"\r| mainProcess |\rmainProcess := Processor activeProcess.\rProcessor allProcesses do: [:each |\r    (each ~= mainProcess and: [each name ~= \'Main UI Process\']) ifTrue: [\r        each terminate.\r    ].\r].\rTranscript show: \'Todos los procesos han sido detenidos.\'; cr.'
+}

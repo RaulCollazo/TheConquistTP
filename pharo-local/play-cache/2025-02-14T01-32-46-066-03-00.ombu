@@ -1,0 +1,13 @@
+OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-14T01:32:49.722-03:00' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : 'Juego inciiar.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-14T01:32:55.83-03:00' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : 'Juego iniciar.'
+}

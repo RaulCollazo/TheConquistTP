@@ -1,0 +1,261 @@
+[31mMessage not understood: SystemWindow >> #fullscreen:
+[0mSystemWindow(Object)>>doesNotUnderstand: #fullscreen:
+Juego>>dibujarFondoTablero
+Juego>>flujoPrincipalTableroYaCreado
+Juego>>obtenerCantJugadores
+[target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
+FullBlockClosure(BlockClosure)>>ensure:
+CursorWithMask(Cursor)>>showWhile:
+SimpleButtonMorph>>doButtonAction
+SimpleButtonMorph>>mouseUp:
+SimpleButtonMorph(Morph)>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+SimpleButtonMorph(Morph)>>handleEvent:
+SimpleButtonMorph(Morph)>>handleFocusEvent:
+[
+		result := focusHolder handleFocusEvent: transformedEvent.
+	] in HandMorph>>sendFocusEvent:to:clear: in Block: [...
+FullBlockClosure(BlockClosure)>>on:do:
+WorldMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendMouseEvent:
+HandMorph>>handleEvent:
+[
+		(morphicWorld activeHand isNotNil and: [ anEvent hand isNotNil ]) ifTrue: [
+			morphicWorld activeHand handleEvent: anEvent
+		]
+	] in OSWindowMorphicEventHandler>>dispatchMorphicEvent: in Block: [...
+WorldState>>runStepMethodsIn:
+WorldMorph>>runStepMethods
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycleNow
+WorldMorph>>doOneCycle
+[
+		| extraWorldsToDraw |
+		extraWorldsToDraw := ExtraWorldListMutex critical: [
+			                     self extraWorldList ].
+		extraWorldsToDraw do: [ :world | world doOneCycle ].
+
+		(self currentWorld isNotNil and: [
+			 (extraWorldsToDraw includes: self currentWorld) not ]) ifTrue: [
+			self currentWorld doOneCycle ] ] in WorldMorph class>>doOneCycle in Block: [...
+FullBlockClosure(BlockClosure)>>ensure:
+WorldState class>>doDrawCycleWith:
+WorldMorph class>>doOneCycle
+[0m[31mMessage not understood: SystemWindow >> #fullscreen:
+[0mSystemWindow(Object)>>doesNotUnderstand: #fullscreen:
+Juego>>dibujarFondoTablero
+Juego>>flujoPrincipalTableroYaCreado
+Juego>>obtenerCantJugadores
+[target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
+FullBlockClosure(BlockClosure)>>ensure:
+CursorWithMask(Cursor)>>showWhile:
+SimpleButtonMorph>>doButtonAction
+SimpleButtonMorph>>mouseUp:
+SimpleButtonMorph(Morph)>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+SimpleButtonMorph(Morph)>>handleEvent:
+SimpleButtonMorph(Morph)>>handleFocusEvent:
+[
+		result := focusHolder handleFocusEvent: transformedEvent.
+	] in HandMorph>>sendFocusEvent:to:clear: in Block: [...
+FullBlockClosure(BlockClosure)>>on:do:
+WorldMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendMouseEvent:
+HandMorph>>handleEvent:
+[
+		(morphicWorld activeHand isNotNil and: [ anEvent hand isNotNil ]) ifTrue: [
+			morphicWorld activeHand handleEvent: anEvent
+		]
+	] in OSWindowMorphicEventHandler>>dispatchMorphicEvent: in Block: [...
+WorldState>>runStepMethodsIn:
+WorldMorph>>runStepMethods
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycleNow
+WorldMorph>>doOneCycle
+[
+		| extraWorldsToDraw |
+		extraWorldsToDraw := ExtraWorldListMutex critical: [
+			                     self extraWorldList ].
+		extraWorldsToDraw do: [ :world | world doOneCycle ].
+
+		(self currentWorld isNotNil and: [
+			 (extraWorldsToDraw includes: self currentWorld) not ]) ifTrue: [
+			self currentWorld doOneCycle ] ] in WorldMorph class>>doOneCycle in Block: [...
+FullBlockClosure(BlockClosure)>>ensure:
+WorldState class>>doDrawCycleWith:
+WorldMorph class>>doOneCycle
+[0m[31mMessage not understood: SystemWindow >> #fullscreen:
+[0mSystemWindow(Object)>>doesNotUnderstand: #fullscreen:
+Juego>>dibujarFondoTablero
+Juego>>flujoPrincipalTableroYaCreado
+Juego>>obtenerCantJugadores
+[target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
+FullBlockClosure(BlockClosure)>>ensure:
+CursorWithMask(Cursor)>>showWhile:
+SimpleButtonMorph>>doButtonAction
+SimpleButtonMorph>>mouseUp:
+SimpleButtonMorph(Morph)>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+SimpleButtonMorph(Morph)>>handleEvent:
+SimpleButtonMorph(Morph)>>handleFocusEvent:
+[
+		result := focusHolder handleFocusEvent: transformedEvent.
+	] in HandMorph>>sendFocusEvent:to:clear: in Block: [...
+FullBlockClosure(BlockClosure)>>on:do:
+WorldMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendMouseEvent:
+HandMorph>>handleEvent:
+[
+		(morphicWorld activeHand isNotNil and: [ anEvent hand isNotNil ]) ifTrue: [
+			morphicWorld activeHand handleEvent: anEvent
+		]
+	] in OSWindowMorphicEventHandler>>dispatchMorphicEvent: in Block: [...
+WorldState>>runStepMethodsIn:
+WorldMorph>>runStepMethods
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycleNow
+WorldMorph>>doOneCycle
+[
+		| extraWorldsToDraw |
+		extraWorldsToDraw := ExtraWorldListMutex critical: [
+			                     self extraWorldList ].
+		extraWorldsToDraw do: [ :world | world doOneCycle ].
+
+		(self currentWorld isNotNil and: [
+			 (extraWorldsToDraw includes: self currentWorld) not ]) ifTrue: [
+			self currentWorld doOneCycle ] ] in WorldMorph class>>doOneCycle in Block: [...
+FullBlockClosure(BlockClosure)>>ensure:
+WorldState class>>doDrawCycleWith:
+WorldMorph class>>doOneCycle
+[0m[31mMessage not understood: DisplayObject class >> #extent
+[0mDisplayObject class(Object)>>doesNotUnderstand: #extent
+[ventana position: 0@0.
+        ventana extent: DisplayObject extent.
+        ventana borderWidth: 0] in Juego>>dibujarFondoTablero in Block: [ventana position: 0@0....
+FullBlockClosure(BlockClosure)>>ensure:
+Juego>>dibujarFondoTablero
+Juego>>flujoPrincipalTableroYaCreado
+Juego>>obtenerCantJugadores
+[target perform: actionSelector withArguments: arguments] in SimpleButtonMorph>>doButtonAction in Block: [target perform: actionSelector withArguments:[..]
+FullBlockClosure(BlockClosure)>>ensure:
+CursorWithMask(Cursor)>>showWhile:
+SimpleButtonMorph>>doButtonAction
+SimpleButtonMorph>>mouseUp:
+SimpleButtonMorph(Morph)>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+SimpleButtonMorph(Morph)>>handleEvent:
+SimpleButtonMorph(Morph)>>handleFocusEvent:
+[
+		result := focusHolder handleFocusEvent: transformedEvent.
+	] in HandMorph>>sendFocusEvent:to:clear: in Block: [...
+FullBlockClosure(BlockClosure)>>on:do:
+WorldMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendMouseEvent:
+HandMorph>>handleEvent:
+[
+		(morphicWorld activeHand isNotNil and: [ anEvent hand isNotNil ]) ifTrue: [
+			morphicWorld activeHand handleEvent: anEvent
+		]
+	] in OSWindowMorphicEventHandler>>dispatchMorphicEvent: in Block: [...
+WorldState>>runStepMethodsIn:
+WorldMorph>>runStepMethods
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycleNow
+WorldMorph>>doOneCycle
+[
+		| extraWorldsToDraw |
+		extraWorldsToDraw := ExtraWorldListMutex critical: [
+			                     self extraWorldList ].
+		extraWorldsToDraw do: [ :world | world doOneCycle ].
+
+		(self currentWorld isNotNil and: [
+			 (extraWorldsToDraw includes: self currentWorld) not ]) ifTrue: [
+			self currentWorld doOneCycle ] ] in WorldMorph class>>doOneCycle in Block: [...
+FullBlockClosure(BlockClosure)>>ensure:
+[0m[31mreceiver of "findAndSelect:startingAt:searchBackwards:" is nil
+[0mUndefinedObject(Object)>>doesNotUnderstand: #findAndSelect:startingAt:searchBackwards:
+SpRubFindReplaceService>>findAndSelect
+SpRubFindReplaceService>>findAndSelectRegex
+SpRubFindReplaceService>>find
+SpRubFindReplaceDialog>>find
+[ :presenter |
+			self find ] in SpRubFindReplaceDialog>>initializeDialogWindow: in Block: [ :presenter |...
+FullBlockClosure(BlockClosure)>>cull:
+[ aBlock cull: self ] in SpDialogWindowPresenter>>addButton:do: in Block: [ aBlock cull: self ]
+SpButtonPresenter>>performAction
+SpMorphicButtonAdapter>>action
+SpPluggableButtonMorph(PluggableButtonMorph)>>performAction:
+[:m |
+		(m containsPoint: evt cursorPoint) ifTrue: [m enabled ifTrue: [ m performAction: evt ]]] in SpPluggableButtonMorph(PluggableButtonMorph)>>mouseUp: in Block: [:m |...
+Array(SequenceableCollection)>>do:
+SpPluggableButtonMorph(PluggableButtonMorph)>>mouseUp:
+SpPluggableButtonMorph(Morph)>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+SpPluggableButtonMorph(Morph)>>handleEvent:
+SpPluggableButtonMorph(Morph)>>handleFocusEvent:
+[
+		result := focusHolder handleFocusEvent: transformedEvent.
+	] in HandMorph>>sendFocusEvent:to:clear: in Block: [...
+FullBlockClosure(BlockClosure)>>on:do:
+WorldMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendMouseEvent:
+HandMorph>>handleEvent:
+[
+		(morphicWorld activeHand isNotNil and: [ anEvent hand isNotNil ]) ifTrue: [
+			morphicWorld activeHand handleEvent: anEvent
+		]
+	] in OSWindowMorphicEventHandler>>dispatchMorphicEvent: in Block: [...
+WorldState>>runStepMethodsIn:
+WorldMorph>>runStepMethods
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycleNow
+[0m[31mreceiver of "findAndSelect:startingAt:searchBackwards:" is nil
+[0mUndefinedObject(Object)>>doesNotUnderstand: #findAndSelect:startingAt:searchBackwards:
+SpRubFindReplaceService>>findAndSelect
+SpRubFindReplaceService>>findAndSelectRegex
+SpRubFindReplaceService>>find
+SpRubFindReplaceDialog>>find
+[ :presenter |
+			self find ] in SpRubFindReplaceDialog>>initializeDialogWindow: in Block: [ :presenter |...
+FullBlockClosure(BlockClosure)>>cull:
+[ aBlock cull: self ] in SpDialogWindowPresenter>>addButton:do: in Block: [ aBlock cull: self ]
+SpButtonPresenter>>performAction
+SpMorphicButtonAdapter>>action
+SpPluggableButtonMorph(PluggableButtonMorph)>>performAction:
+[:m |
+		(m containsPoint: evt cursorPoint) ifTrue: [m enabled ifTrue: [ m performAction: evt ]]] in SpPluggableButtonMorph(PluggableButtonMorph)>>mouseUp: in Block: [:m |...
+Array(SequenceableCollection)>>do:
+SpPluggableButtonMorph(PluggableButtonMorph)>>mouseUp:
+SpPluggableButtonMorph(Morph)>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+SpPluggableButtonMorph(Morph)>>handleEvent:
+SpPluggableButtonMorph(Morph)>>handleFocusEvent:
+[
+		result := focusHolder handleFocusEvent: transformedEvent.
+	] in HandMorph>>sendFocusEvent:to:clear: in Block: [...
+FullBlockClosure(BlockClosure)>>on:do:
+WorldMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendMouseEvent:
+HandMorph>>handleEvent:
+[
+		(morphicWorld activeHand isNotNil and: [ anEvent hand isNotNil ]) ifTrue: [
+			morphicWorld activeHand handleEvent: anEvent
+		]
+	] in OSWindowMorphicEventHandler>>dispatchMorphicEvent: in Block: [...
+WorldState>>runStepMethodsIn:
+WorldMorph>>runStepMethods
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycleNow
+[0m

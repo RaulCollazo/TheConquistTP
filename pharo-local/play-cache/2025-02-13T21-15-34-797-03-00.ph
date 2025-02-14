@@ -1,0 +1,1 @@
+UIManager default confirm: 'Este es un mensaje de interrupción'

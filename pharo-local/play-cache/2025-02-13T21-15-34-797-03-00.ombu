@@ -1,0 +1,13 @@
+OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-13T21:15:36.22-03:00' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : 'UIManager default inform: \'Este es un mensaje de interrupción\''
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-13T21:16:05.659-03:00' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : 'UIManager default confirm: \'Este es un mensaje de interrupción\''
+}

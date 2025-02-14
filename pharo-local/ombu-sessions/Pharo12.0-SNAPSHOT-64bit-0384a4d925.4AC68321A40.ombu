@@ -1,0 +1,88 @@
+OmEntry {
+	#tags : {
+		#prior : OmReference [ 'Pharo12.0-SNAPSHOT-64bit-0384a4d925.4A0A506625C0', '118' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #simularDuelo,
+			#protocol : #ManageJuego,
+			#sourceCode : 'simularDuelo\r\t| tmp1 tmp2 tmp3 tmp4 tmp5 tmp6 tmp7 tmp8 tmp9 tmp10 tmp11 tmp12 |\r\t(jugadorActual nPC) ifTrue:[\r\tUIManager default confirm: \'Es el turno de un bot\'].\r\ttmp1 := OrderedCollection new.\r\ttmp2 := self cantNPC sqrt ceiling.\r\ttmp3 := self cantNPC sqrt ceiling.\r\ttmp10 := self cantNPC.\r\ttmp11 := tmp10.\r\ttmp12 := tmp11.\r\t1 to: tmp12 do: [ :tmp13 |\r\t\ttmp4 := tmp13 - 1 // tmp3 + 1.\r\t\ttmp5 := tmp13 - 1 \\\\ tmp3 + 1.\r\t\t(TableroLogico matrizDeTemas at: tmp4 column: tmp5)\r\t\t= jugadorActual tema ifTrue: [\r\t\t\t(TableroLogico matrizDeTemas at: tmp4 column: tmp5)\r\t\t\t= jugadorActual tema ifTrue: [\r\t\t\t\t(tmp4 = 1 and: tmp5 = 1) ifTrue: [\r\t\t\t\t\ttmp1\r\t\t\t\t\t\tadd: 2 @ 1;\r\t\t\t\t\t\tadd: 1 @ 2 ] ].\r\t\t\t(TableroLogico matrizDeTemas at: tmp4 column: tmp5)\r\t\t\t= jugadorActual tema ifTrue: [\r\t\t\t\t(tmp4 = 1 and: tmp5 = tmp3) ifTrue: [\r\t\t\t\t\ttmp1\r\t\t\t\t\t\tadd: 1 @ (tmp3 - 1);\r\t\t\t\t\t\tadd: 2 @ tmp3 ] ].\r\t\t\t(TableroLogico matrizDeTemas at: tmp4 column: tmp5)\r\t\t\t= jugadorActual tema ifTrue: [\r\t\t\t\t(tmp4 = tmp2 and: tmp5 = 1) ifTrue: [\r\t\t\t\t\ttmp1\r\t\t\t\t\t\tadd: tmp2 - 1 @ 1;\r\t\t\t\t\t\tadd: tmp2 @ 2 ] ].\r\t\t\t(TableroLogico matrizDeTemas at: tmp4 column: tmp5)\r\t\t\t= jugadorActual tema ifTrue: [\r\t\t\t\t(tmp4 = tmp2 and: tmp5 = tmp3) ifTrue: [\r\t\t\t\t\ttmp1\r\t\t\t\t\t\tadd: tmp2 @ (tmp3 - 1);\r\t\t\t\t\t\tadd: tmp2 - 1 @ tmp3 ] ].\r\t\t\t(TableroLogico matrizDeTemas at: tmp4 column: tmp5)\r\t\t\t= jugadorActual tema ifTrue: [\r\t\t\t\t(tmp4 = 1 and: (1 < tmp5 and: tmp5 < tmp3)) ifTrue: [\r\t\t\t\t\ttmp1\r\t\t\t\t\t\tadd: 1 @ (tmp5 - 1);\r\t\t\t\t\t\tadd: 1 @ (tmp5 + 1);\r\t\t\t\t\t\tadd: 2 @ tmp5 ] ].\r\t\t\t(TableroLogico matrizDeTemas at: tmp4 column: tmp5)\r\t\t\t= jugadorActual tema ifTrue: [\r\t\t\t\t(tmp4 = tmp2 and: (1 < tmp5 and: tmp5 < tmp3)) ifTrue: [\r\t\t\t\t\ttmp1\r\t\t\t\t\t\tadd: tmp2 @ (tmp5 - 1);\r\t\t\t\t\t\tadd: tmp2 @ (tmp5 + 1);\r\t\t\t\t\t\tadd: tmp2 - 1 @ tmp5 ] ].\r\t\t\t(TableroLogico matrizDeTemas at: tmp4 column: tmp5)\r\t\t\t= jugadorActual tema ifTrue: [\r\t\t\t\t(tmp5 = 1 and: (1 < tmp4 and: tmp4 < tmp2)) ifTrue: [\r\t\t\t\t\ttmp1\r\t\t\t\t\t\tadd: tmp4 - 1 @ 1;\r\t\t\t\t\t\tadd: tmp4 + 1 @ 1;\r\t\t\t\t\t\tadd: tmp4 @ 2 ] ].\r\t\t\t(TableroLogico matrizDeTemas at: tmp4 column: tmp5)\r\t\t\t= jugadorActual tema ifTrue: [\r\t\t\t\t(tmp5 = tmp3 and: (1 < tmp4 and: tmp4 < tmp2)) ifTrue: [\r\t\t\t\t\ttmp1\r\t\t\t\t\t\tadd: tmp4 - 1 @ tmp3;\r\t\t\t\t\t\tadd: tmp4 + 1 @ tmp3;\r\t\t\t\t\t\tadd: tmp4 @ (tmp3 - 1) ] ].\r\t\t\t(TableroLogico matrizDeTemas at: tmp4 column: tmp5)\r\t\t\t= jugadorActual tema ifTrue: [\r\t\t\t\t((1 < tmp4 and: tmp4 < tmp2) and: (1 < tmp5 and: tmp5 < tmp3))\r\t\t\t\t\tifTrue: [\r\t\t\t\t\t\ttmp1\r\t\t\t\t\t\t\tadd: tmp4 - 1 @ tmp5;\r\t\t\t\t\t\t\tadd: tmp4 + 1 @ tmp5;\r\t\t\t\t\t\t\tadd: tmp4 @ (tmp5 - 1);\r\t\t\t\t\t\t\tadd: tmp4 @ (tmp5 + 1) ] ] ] ].\r\t1.\r\ttmp1 := tmp1 atRandom.\r\ttmp7 := tmp1 x.\r\ttmp8 := tmp1 y.\r\ttmp6 := TableroLogico matrizTableroLógico at: tmp7 column: tmp8.\r\ttmp6 nPC\r\t\tifTrue: [\r\t\t\tTranscript show: \'Duelo de bot - persona\'.\r\t\t\ttmp9 := Random new next < 0.5.\r\t\t\ttmp9\r\t\t\t\tifTrue: [ self ganaDesafiante: jugadorActual desafiado: tmp6 ]\r\t\t\t\tifFalse: [ self ganaDesafiante: tmp6 desafiado: jugadorActual ] ]\r\t\tifFalse: [ Transcript show: \'Duelo de bots\' ].\rself flujoPrincipalTableroYaCreado .',
+			#stamp : '2/14/2025 00:57',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #simularDuelo,
+			#protocol : #ManageJuego,
+			#sourceCode : 'simularDuelo\r\t| tmp1 tmp2 tmp3 tmp4 tmp5 tmp6 tmp7 tmp8 tmp9 tmp10 tmp11 tmp12 |\r\t"(jugadorActual nPC) ifTrue:[\r\tUIManager default confirm: \'Es el turno de un bot\']."\r\ttmp1 := OrderedCollection new.\r\ttmp2 := self cantNPC sqrt ceiling.\r\ttmp3 := self cantNPC sqrt ceiling.\r\ttmp10 := self cantNPC.\r\ttmp11 := tmp10.\r\ttmp12 := tmp11.\r\t1 to: tmp12 do: [ :tmp13 |\r\t\ttmp4 := tmp13 - 1 // tmp3 + 1.\r\t\ttmp5 := tmp13 - 1 \\\\ tmp3 + 1.\r\t\t(TableroLogico matrizDeTemas at: tmp4 column: tmp5)\r\t\t= jugadorActual tema ifTrue: [\r\t\t\t(TableroLogico matrizDeTemas at: tmp4 column: tmp5)\r\t\t\t= jugadorActual tema ifTrue: [\r\t\t\t\t(tmp4 = 1 and: tmp5 = 1) ifTrue: [\r\t\t\t\t\ttmp1\r\t\t\t\t\t\tadd: 2 @ 1;\r\t\t\t\t\t\tadd: 1 @ 2 ] ].\r\t\t\t(TableroLogico matrizDeTemas at: tmp4 column: tmp5)\r\t\t\t= jugadorActual tema ifTrue: [\r\t\t\t\t(tmp4 = 1 and: tmp5 = tmp3) ifTrue: [\r\t\t\t\t\ttmp1\r\t\t\t\t\t\tadd: 1 @ (tmp3 - 1);\r\t\t\t\t\t\tadd: 2 @ tmp3 ] ].\r\t\t\t(TableroLogico matrizDeTemas at: tmp4 column: tmp5)\r\t\t\t= jugadorActual tema ifTrue: [\r\t\t\t\t(tmp4 = tmp2 and: tmp5 = 1) ifTrue: [\r\t\t\t\t\ttmp1\r\t\t\t\t\t\tadd: tmp2 - 1 @ 1;\r\t\t\t\t\t\tadd: tmp2 @ 2 ] ].\r\t\t\t(TableroLogico matrizDeTemas at: tmp4 column: tmp5)\r\t\t\t= jugadorActual tema ifTrue: [\r\t\t\t\t(tmp4 = tmp2 and: tmp5 = tmp3) ifTrue: [\r\t\t\t\t\ttmp1\r\t\t\t\t\t\tadd: tmp2 @ (tmp3 - 1);\r\t\t\t\t\t\tadd: tmp2 - 1 @ tmp3 ] ].\r\t\t\t(TableroLogico matrizDeTemas at: tmp4 column: tmp5)\r\t\t\t= jugadorActual tema ifTrue: [\r\t\t\t\t(tmp4 = 1 and: (1 < tmp5 and: tmp5 < tmp3)) ifTrue: [\r\t\t\t\t\ttmp1\r\t\t\t\t\t\tadd: 1 @ (tmp5 - 1);\r\t\t\t\t\t\tadd: 1 @ (tmp5 + 1);\r\t\t\t\t\t\tadd: 2 @ tmp5 ] ].\r\t\t\t(TableroLogico matrizDeTemas at: tmp4 column: tmp5)\r\t\t\t= jugadorActual tema ifTrue: [\r\t\t\t\t(tmp4 = tmp2 and: (1 < tmp5 and: tmp5 < tmp3)) ifTrue: [\r\t\t\t\t\ttmp1\r\t\t\t\t\t\tadd: tmp2 @ (tmp5 - 1);\r\t\t\t\t\t\tadd: tmp2 @ (tmp5 + 1);\r\t\t\t\t\t\tadd: tmp2 - 1 @ tmp5 ] ].\r\t\t\t(TableroLogico matrizDeTemas at: tmp4 column: tmp5)\r\t\t\t= jugadorActual tema ifTrue: [\r\t\t\t\t(tmp5 = 1 and: (1 < tmp4 and: tmp4 < tmp2)) ifTrue: [\r\t\t\t\t\ttmp1\r\t\t\t\t\t\tadd: tmp4 - 1 @ 1;\r\t\t\t\t\t\tadd: tmp4 + 1 @ 1;\r\t\t\t\t\t\tadd: tmp4 @ 2 ] ].\r\t\t\t(TableroLogico matrizDeTemas at: tmp4 column: tmp5)\r\t\t\t= jugadorActual tema ifTrue: [\r\t\t\t\t(tmp5 = tmp3 and: (1 < tmp4 and: tmp4 < tmp2)) ifTrue: [\r\t\t\t\t\ttmp1\r\t\t\t\t\t\tadd: tmp4 - 1 @ tmp3;\r\t\t\t\t\t\tadd: tmp4 + 1 @ tmp3;\r\t\t\t\t\t\tadd: tmp4 @ (tmp3 - 1) ] ].\r\t\t\t(TableroLogico matrizDeTemas at: tmp4 column: tmp5)\r\t\t\t= jugadorActual tema ifTrue: [\r\t\t\t\t((1 < tmp4 and: tmp4 < tmp2) and: (1 < tmp5 and: tmp5 < tmp3))\r\t\t\t\t\tifTrue: [\r\t\t\t\t\t\ttmp1\r\t\t\t\t\t\t\tadd: tmp4 - 1 @ tmp5;\r\t\t\t\t\t\t\tadd: tmp4 + 1 @ tmp5;\r\t\t\t\t\t\t\tadd: tmp4 @ (tmp5 - 1);\r\t\t\t\t\t\t\tadd: tmp4 @ (tmp5 + 1) ] ] ] ].\r\t1.\r\ttmp1 := tmp1 atRandom.\r\ttmp7 := tmp1 x.\r\ttmp8 := tmp1 y.\r\ttmp6 := TableroLogico matrizTableroLógico at: tmp7 column: tmp8.\r\ttmp6 nPC\r\t\tifTrue: [\r\t\t\tTranscript show: \'Duelo de bot - persona\'.\r\t\t\ttmp9 := Random new next < 0.5.\r\t\t\ttmp9\r\t\t\t\tifTrue: [ self ganaDesafiante: jugadorActual desafiado: tmp6 ]\r\t\t\t\tifFalse: [ self ganaDesafiante: tmp6 desafiado: jugadorActual ] ]\r\t\tifFalse: [ Transcript show: \'Duelo de bots\' ].\rself flujoPrincipalTableroYaCreado .',
+			#stamp : '2/14/2025 01:28',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '1' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #simularDuelo,
+			#protocol : #ManageJuego,
+			#sourceCode : 'simularDuelo\r\t| tmp1 tmp2 tmp3 tmp4 tmp5 tmp6 tmp7 tmp8 tmp9 tmp10 tmp11 tmp12 |\r\t"(jugadorActual nPC) ifTrue:[\r\tUIManager default confirm: \'Es el turno de un bot\']."\r\ttmp1 := OrderedCollection new.\r\ttmp2 := self cantNPC sqrt ceiling.\r\ttmp3 := self cantNPC sqrt ceiling.\r\ttmp10 := self cantNPC.\r\ttmp11 := tmp10.\r\ttmp12 := tmp11.\r\t1 to: tmp12 do: [ :tmp13 |\r\t\ttmp4 := tmp13 - 1 // tmp3 + 1.\r\t\ttmp5 := tmp13 - 1 \\\\ tmp3 + 1.\r\t\t(TableroLogico matrizDeTemas at: tmp4 column: tmp5)\r\t\t= jugadorActual tema ifTrue: [\r\t\t\t(TableroLogico matrizDeTemas at: tmp4 column: tmp5)\r\t\t\t= jugadorActual tema ifTrue: [\r\t\t\t\t(tmp4 = 1 and: tmp5 = 1) ifTrue: [\r\t\t\t\t\ttmp1\r\t\t\t\t\t\tadd: 2 @ 1;\r\t\t\t\t\t\tadd: 1 @ 2 ] ].\r\t\t\t(TableroLogico matrizDeTemas at: tmp4 column: tmp5)\r\t\t\t= jugadorActual tema ifTrue: [\r\t\t\t\t(tmp4 = 1 and: tmp5 = tmp3) ifTrue: [\r\t\t\t\t\ttmp1\r\t\t\t\t\t\tadd: 1 @ (tmp3 - 1);\r\t\t\t\t\t\tadd: 2 @ tmp3 ] ].\r\t\t\t(TableroLogico matrizDeTemas at: tmp4 column: tmp5)\r\t\t\t= jugadorActual tema ifTrue: [\r\t\t\t\t(tmp4 = tmp2 and: tmp5 = 1) ifTrue: [\r\t\t\t\t\ttmp1\r\t\t\t\t\t\tadd: tmp2 - 1 @ 1;\r\t\t\t\t\t\tadd: tmp2 @ 2 ] ].\r\t\t\t(TableroLogico matrizDeTemas at: tmp4 column: tmp5)\r\t\t\t= jugadorActual tema ifTrue: [\r\t\t\t\t(tmp4 = tmp2 and: tmp5 = tmp3) ifTrue: [\r\t\t\t\t\ttmp1\r\t\t\t\t\t\tadd: tmp2 @ (tmp3 - 1);\r\t\t\t\t\t\tadd: tmp2 - 1 @ tmp3 ] ].\r\t\t\t(TableroLogico matrizDeTemas at: tmp4 column: tmp5)\r\t\t\t= jugadorActual tema ifTrue: [\r\t\t\t\t(tmp4 = 1 and: (1 < tmp5 and: tmp5 < tmp3)) ifTrue: [\r\t\t\t\t\ttmp1\r\t\t\t\t\t\tadd: 1 @ (tmp5 - 1);\r\t\t\t\t\t\tadd: 1 @ (tmp5 + 1);\r\t\t\t\t\t\tadd: 2 @ tmp5 ] ].\r\t\t\t(TableroLogico matrizDeTemas at: tmp4 column: tmp5)\r\t\t\t= jugadorActual tema ifTrue: [\r\t\t\t\t(tmp4 = tmp2 and: (1 < tmp5 and: tmp5 < tmp3)) ifTrue: [\r\t\t\t\t\ttmp1\r\t\t\t\t\t\tadd: tmp2 @ (tmp5 - 1);\r\t\t\t\t\t\tadd: tmp2 @ (tmp5 + 1);\r\t\t\t\t\t\tadd: tmp2 - 1 @ tmp5 ] ].\r\t\t\t(TableroLogico matrizDeTemas at: tmp4 column: tmp5)\r\t\t\t= jugadorActual tema ifTrue: [\r\t\t\t\t(tmp5 = 1 and: (1 < tmp4 and: tmp4 < tmp2)) ifTrue: [\r\t\t\t\t\ttmp1\r\t\t\t\t\t\tadd: tmp4 - 1 @ 1;\r\t\t\t\t\t\tadd: tmp4 + 1 @ 1;\r\t\t\t\t\t\tadd: tmp4 @ 2 ] ].\r\t\t\t(TableroLogico matrizDeTemas at: tmp4 column: tmp5)\r\t\t\t= jugadorActual tema ifTrue: [\r\t\t\t\t(tmp5 = tmp3 and: (1 < tmp4 and: tmp4 < tmp2)) ifTrue: [\r\t\t\t\t\ttmp1\r\t\t\t\t\t\tadd: tmp4 - 1 @ tmp3;\r\t\t\t\t\t\tadd: tmp4 + 1 @ tmp3;\r\t\t\t\t\t\tadd: tmp4 @ (tmp3 - 1) ] ].\r\t\t\t(TableroLogico matrizDeTemas at: tmp4 column: tmp5)\r\t\t\t= jugadorActual tema ifTrue: [\r\t\t\t\t((1 < tmp4 and: tmp4 < tmp2) and: (1 < tmp5 and: tmp5 < tmp3))\r\t\t\t\t\tifTrue: [\r\t\t\t\t\t\ttmp1\r\t\t\t\t\t\t\tadd: tmp4 - 1 @ tmp5;\r\t\t\t\t\t\t\tadd: tmp4 + 1 @ tmp5;\r\t\t\t\t\t\t\tadd: tmp4 @ (tmp5 - 1);\r\t\t\t\t\t\t\tadd: tmp4 @ (tmp5 + 1) ] ] ] ].\r\t1.\r\ttmp1 := tmp1 atRandom.\r\ttmp7 := tmp1 x.\r\ttmp8 := tmp1 y.\r\ttmp6 := TableroLogico matrizTableroLógico at: tmp7 column: tmp8.\r\ttmp6 nPC\r\t\tifTrue: [\r\t\t\tTranscript show: \'Duelo de bot - persona\'.\r\t\t\ttmp9 := Random new next < 0.5.\r\t\t\ttmp9\r\t\t\t\tifTrue: [ self ganaDesafiante: jugadorActual desafiado: tmp6 ]\r\t\t\t\tifFalse: [ self ganaDesafiante: tmp6 desafiado: jugadorActual ] ]\r\t\tifFalse: [ Transcript show: \'Duelo de bots\' ].\rself flujoPrincipalTableroYaCreado .',
+			#stamp : '2/14/2025 01:28',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #simularDuelo,
+			#protocol : #ManageJuego,
+			#sourceCode : 'simularDuelo\r\t| tmp1 tmp2 tmp3 tmp4 tmp5 tmp6 tmp7 tmp8 tmp9 tmp10 tmp11 tmp12 |\r\t(jugadorActual nPC) ifTrue:[\r\tUIManager default confirm: \'Es el turno de un bot\'].\r\ttmp1 := OrderedCollection new.\r\ttmp2 := self cantNPC sqrt ceiling.\r\ttmp3 := self cantNPC sqrt ceiling.\r\ttmp10 := self cantNPC.\r\ttmp11 := tmp10.\r\ttmp12 := tmp11.\r\t1 to: tmp12 do: [ :tmp13 |\r\t\ttmp4 := tmp13 - 1 // tmp3 + 1.\r\t\ttmp5 := tmp13 - 1 \\\\ tmp3 + 1.\r\t\t(TableroLogico matrizDeTemas at: tmp4 column: tmp5)\r\t\t= jugadorActual tema ifTrue: [\r\t\t\t(TableroLogico matrizDeTemas at: tmp4 column: tmp5)\r\t\t\t= jugadorActual tema ifTrue: [\r\t\t\t\t(tmp4 = 1 and: tmp5 = 1) ifTrue: [\r\t\t\t\t\ttmp1\r\t\t\t\t\t\tadd: 2 @ 1;\r\t\t\t\t\t\tadd: 1 @ 2 ] ].\r\t\t\t(TableroLogico matrizDeTemas at: tmp4 column: tmp5)\r\t\t\t= jugadorActual tema ifTrue: [\r\t\t\t\t(tmp4 = 1 and: tmp5 = tmp3) ifTrue: [\r\t\t\t\t\ttmp1\r\t\t\t\t\t\tadd: 1 @ (tmp3 - 1);\r\t\t\t\t\t\tadd: 2 @ tmp3 ] ].\r\t\t\t(TableroLogico matrizDeTemas at: tmp4 column: tmp5)\r\t\t\t= jugadorActual tema ifTrue: [\r\t\t\t\t(tmp4 = tmp2 and: tmp5 = 1) ifTrue: [\r\t\t\t\t\ttmp1\r\t\t\t\t\t\tadd: tmp2 - 1 @ 1;\r\t\t\t\t\t\tadd: tmp2 @ 2 ] ].\r\t\t\t(TableroLogico matrizDeTemas at: tmp4 column: tmp5)\r\t\t\t= jugadorActual tema ifTrue: [\r\t\t\t\t(tmp4 = tmp2 and: tmp5 = tmp3) ifTrue: [\r\t\t\t\t\ttmp1\r\t\t\t\t\t\tadd: tmp2 @ (tmp3 - 1);\r\t\t\t\t\t\tadd: tmp2 - 1 @ tmp3 ] ].\r\t\t\t(TableroLogico matrizDeTemas at: tmp4 column: tmp5)\r\t\t\t= jugadorActual tema ifTrue: [\r\t\t\t\t(tmp4 = 1 and: (1 < tmp5 and: tmp5 < tmp3)) ifTrue: [\r\t\t\t\t\ttmp1\r\t\t\t\t\t\tadd: 1 @ (tmp5 - 1);\r\t\t\t\t\t\tadd: 1 @ (tmp5 + 1);\r\t\t\t\t\t\tadd: 2 @ tmp5 ] ].\r\t\t\t(TableroLogico matrizDeTemas at: tmp4 column: tmp5)\r\t\t\t= jugadorActual tema ifTrue: [\r\t\t\t\t(tmp4 = tmp2 and: (1 < tmp5 and: tmp5 < tmp3)) ifTrue: [\r\t\t\t\t\ttmp1\r\t\t\t\t\t\tadd: tmp2 @ (tmp5 - 1);\r\t\t\t\t\t\tadd: tmp2 @ (tmp5 + 1);\r\t\t\t\t\t\tadd: tmp2 - 1 @ tmp5 ] ].\r\t\t\t(TableroLogico matrizDeTemas at: tmp4 column: tmp5)\r\t\t\t= jugadorActual tema ifTrue: [\r\t\t\t\t(tmp5 = 1 and: (1 < tmp4 and: tmp4 < tmp2)) ifTrue: [\r\t\t\t\t\ttmp1\r\t\t\t\t\t\tadd: tmp4 - 1 @ 1;\r\t\t\t\t\t\tadd: tmp4 + 1 @ 1;\r\t\t\t\t\t\tadd: tmp4 @ 2 ] ].\r\t\t\t(TableroLogico matrizDeTemas at: tmp4 column: tmp5)\r\t\t\t= jugadorActual tema ifTrue: [\r\t\t\t\t(tmp5 = tmp3 and: (1 < tmp4 and: tmp4 < tmp2)) ifTrue: [\r\t\t\t\t\ttmp1\r\t\t\t\t\t\tadd: tmp4 - 1 @ tmp3;\r\t\t\t\t\t\tadd: tmp4 + 1 @ tmp3;\r\t\t\t\t\t\tadd: tmp4 @ (tmp3 - 1) ] ].\r\t\t\t(TableroLogico matrizDeTemas at: tmp4 column: tmp5)\r\t\t\t= jugadorActual tema ifTrue: [\r\t\t\t\t((1 < tmp4 and: tmp4 < tmp2) and: (1 < tmp5 and: tmp5 < tmp3))\r\t\t\t\t\tifTrue: [\r\t\t\t\t\t\ttmp1\r\t\t\t\t\t\t\tadd: tmp4 - 1 @ tmp5;\r\t\t\t\t\t\t\tadd: tmp4 + 1 @ tmp5;\r\t\t\t\t\t\t\tadd: tmp4 @ (tmp5 - 1);\r\t\t\t\t\t\t\tadd: tmp4 @ (tmp5 + 1) ] ] ] ].\r\t1.\r\ttmp1 := tmp1 atRandom.\r\ttmp7 := tmp1 x.\r\ttmp8 := tmp1 y.\r\ttmp6 := TableroLogico matrizTableroLógico at: tmp7 column: tmp8.\r\ttmp6 nPC\r\t\tifTrue: [\r\t\t\tTranscript show: \'Duelo de bot - persona\'.\r\t\t\ttmp9 := Random new next < 0.5.\r\t\t\ttmp9\r\t\t\t\tifTrue: [ self ganaDesafiante: jugadorActual desafiado: tmp6 ]\r\t\t\t\tifFalse: [ self ganaDesafiante: tmp6 desafiado: jugadorActual ] ]\r\t\tifFalse: [ Transcript show: \'Duelo de bots\' ].\rself flujoPrincipalTableroYaCreado .',
+			#stamp : '2/14/2025 01:29',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '2' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #flujoPrincipalTableroYaCreado,
+			#protocol : #ManageJuego,
+			#sourceCode : 'flujoPrincipalTableroYaCreado\r\t\tturnoActual := turnoActual  + 1 .\r        self turnoActualmente.\r        self obtenerJugadorActual.\r        self esJugadorBot.\r\t\t  TableroLogico matrizTableroLógico inspect.',
+			#stamp : '2/14/2025 00:59',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #flujoPrincipalTableroYaCreado,
+			#protocol : #ManageJuego,
+			#sourceCode : 'flujoPrincipalTableroYaCreado"\r\t\tturnoActual := turnoActual  + 1 .\r        self turnoActualmente.\r        self obtenerJugadorActual.\r        self esJugadorBot."',
+			#stamp : '2/14/2025 01:29',
+			#package : #TheConquist
+		}
+	}
+}

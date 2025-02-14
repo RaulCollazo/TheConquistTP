@@ -1,0 +1,307 @@
+OmEntry {
+	#tags : {
+		#prior : OmReference [ 'Pharo12.0-SNAPSHOT-64bit-0384a4d925.3A4082656100', '30' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #ManageJuego,
+			#sourceCode : 'dibujarFondoTablero\r    | imagen imagenMorph scrollPane ventanaExistente |\r\r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.jpg\'.\r\r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r\r    "Crear un ScrollPane y agregar el ImageMorph"\r    scrollPane := ScrollPane new.\r    scrollPane scroller addMorph: imagenMorph.\r    scrollPane extent: (300@300). "Ajustar el tamaño del ScrollPane según sea necesario"\r\r    "Dibujar el tablero en el ImageMorph"\r    TableroLogico dibujarTablero: imagenMorph cantNPC: CantNPC.\r\r    "Cerrar cualquier ventana existente etiquetada \'TheConquist Board\'"\r    ventanaExistente := SystemWindow allInstances detect: [ :each | each label = \'TheConquist\' ] ifNone: [ nil ].\r    ventanaExistente ifNotNil: [ ventanaExistente close ].\r    "Abrir el ScrollPane en una ventana"\r    scrollPane openInWindowLabeled: \'TheConquist Board\'.',
+			#stamp : '2/7/2025 14:11',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #ManageJuego,
+			#sourceCode : 'dibujarFondoTablero\r    | imagen imagenMorph scrollPane ventanaExistente |\r\r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.jpg\'.\r\r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r\r    "Crear un ScrollPane y agregar el ImageMorph"\r    scrollPane := ScrollPane new.\r    scrollPane scroller addMorph: imagenMorph.\r    scrollPane extent: (300@300). "Ajustar el tamaño del ScrollPane según sea necesario"\r\r    "Dibujar el tablero en el ImageMorph"\r    TableroLogico dibujarTablero: imagenMorph cantNPC: CantNPC.\r\r    "Cerrar cualquier ventana existente etiquetada \'TheConquist Board\'"\r    ventanaExistente := SystemWindow allInstances detect: [ :each | each label = \'TheConquist\' ] ifNone: [ nil ].\r    ventanaExistente ifNotNil: [ ventanaExistente close ].\r    "Abrir el ScrollPane en una ventana"\r    (scrollPane openInWindowLabeled: \'TheConquist Board\') fullscreen: true.',
+			#stamp : '',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '1' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #ManageJuego,
+			#sourceCode : 'dibujarFondoTablero\r    | imagen imagenMorph scrollPane ventanaExistente |\r\r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.jpg\'.\r\r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r\r    "Crear un ScrollPane y agregar el ImageMorph"\r    scrollPane := ScrollPane new.\r    scrollPane scroller addMorph: imagenMorph.\r    scrollPane extent: (300@300). "Ajustar el tamaño del ScrollPane según sea necesario"\r\r    "Dibujar el tablero en el ImageMorph"\r    TableroLogico dibujarTablero: imagenMorph cantNPC: CantNPC.\r\r    "Cerrar cualquier ventana existente etiquetada \'TheConquist Board\'"\r    ventanaExistente := SystemWindow allInstances detect: [ :each | each label = \'TheConquist\' ] ifNone: [ nil ].\r    ventanaExistente ifNotNil: [ ventanaExistente close ].\r    "Abrir el ScrollPane en una ventana"\r    (scrollPane openInWindowLabeled: \'TheConquist Board\') fullscreen: true.',
+			#stamp : '',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #ManageJuego,
+			#sourceCode : 'dibujarFondoTablero\r    | imagen imagenMorph scrollPane ventanaExistente |\r\r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.jpg\'.\r\r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r\r    "Crear un ScrollPane y agregar el ImageMorph"\r    scrollPane := ScrollPane new.\r    scrollPane scroller addMorph: imagenMorph.\r    scrollPane extent: (300@300). "Ajustar el tamaño del ScrollPane según sea necesario"\r\r    "Dibujar el tablero en el ImageMorph"\r    TableroLogico dibujarTablero: imagenMorph cantNPC: CantNPC.\r\r    "Cerrar cualquier ventana existente etiquetada \'TheConquist Board\'"\r    ventanaExistente := SystemWindow allInstances detect: [ :each | each label = \'TheConquist\' ] ifNone: [ nil ].\r    ventanaExistente ifNotNil: [ ventanaExistente close ].\r\r    "Abrir el ScrollPane en una ventana y hacerla fullscreen"\r    (scrollPane openInWindowLabeled: \'TheConquist Board\') fullscreen: true.',
+			#stamp : '',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '2' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #ManageJuego,
+			#sourceCode : 'dibujarFondoTablero\r    | imagen imagenMorph scrollPane ventanaExistente |\r\r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.jpg\'.\r\r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r\r    "Crear un ScrollPane y agregar el ImageMorph"\r    scrollPane := ScrollPane new.\r    scrollPane scroller addMorph: imagenMorph.\r    scrollPane extent: (300@300). "Ajustar el tamaño del ScrollPane según sea necesario"\r\r    "Dibujar el tablero en el ImageMorph"\r    TableroLogico dibujarTablero: imagenMorph cantNPC: CantNPC.\r\r    "Cerrar cualquier ventana existente etiquetada \'TheConquist Board\'"\r    ventanaExistente := SystemWindow allInstances detect: [ :each | each label = \'TheConquist\' ] ifNone: [ nil ].\r    ventanaExistente ifNotNil: [ ventanaExistente close ].\r\r    "Abrir el ScrollPane en una ventana y hacerla fullscreen"\r    (scrollPane openInWindowLabeled: \'TheConquist Board\') fullscreen: true.',
+			#stamp : '',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #ManageJuego,
+			#sourceCode : 'dibujarFondoTablero\r    | imagen imagenMorph scrollPane ventanaExistente ventana |\r\r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.jpg\'.\r\r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r\r    "Crear un ScrollPane y agregar el ImageMorph"\r    scrollPane := ScrollPane new.\r    scrollPane scroller addMorph: imagenMorph.\r    scrollPane extent: (300@300). "Ajustar el tamaño del ScrollPane según sea necesario"\r\r    "Dibujar el tablero en el ImageMorph"\r    TableroLogico dibujarTablero: imagenMorph cantNPC: CantNPC.\r\r    "Cerrar cualquier ventana existente etiquetada \'TheConquist Board\'"\r    ventanaExistente := SystemWindow allInstances detect: [ :each | each label = \'TheConquist\' ] ifNone: [ nil ].\r    ventanaExistente ifNotNil: [ ventanaExistente close ].\r    "Abrir el ScrollPane en una ventana"\r   ventana :=  scrollPane openInWindowLabeled: \'TheConquist Board\'.\rventana fullscreen: true.',
+			#stamp : '',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '3' ],
+		#self : OmReference [ '4' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #ManageJuego,
+			#sourceCode : 'dibujarFondoTablero\r    | imagen imagenMorph scrollPane ventanaExistente ventana |\r\r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.jpg\'.\r\r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r\r    "Crear un ScrollPane y agregar el ImageMorph"\r    scrollPane := ScrollPane new.\r    scrollPane scroller addMorph: imagenMorph.\r    scrollPane extent: (300@300). "Ajustar el tamaño del ScrollPane según sea necesario"\r\r    "Dibujar el tablero en el ImageMorph"\r    TableroLogico dibujarTablero: imagenMorph cantNPC: CantNPC.\r\r    "Cerrar cualquier ventana existente etiquetada \'TheConquist Board\'"\r    ventanaExistente := SystemWindow allInstances detect: [ :each | each label = \'TheConquist\' ] ifNone: [ nil ].\r    ventanaExistente ifNotNil: [ ventanaExistente close ].\r    "Abrir el ScrollPane en una ventana"\r   ventana :=  scrollPane openInWindowLabeled: \'TheConquist Board\'.\rventana fullscreen: true.',
+			#stamp : '',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #ManageJuego,
+			#sourceCode : 'dibujarFondoTablero\r    | imagen imagenMorph scrollPane ventanaExistente ventana |\r\r        "Cargar la imagen de fondo"\r        imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.jpg\'.\r\r        "Crear ImageMorph para la imagen de fondo"\r        imagenMorph := ImageMorph new.\r        imagenMorph image: imagen.\r        imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r\r        "Crear un ScrollPane y agregar el ImageMorph"\r        scrollPane := ScrollPane new.\r        scrollPane scroller addMorph: imagenMorph.\r        scrollPane extent: (300@300). "Ajustar el tamaño del ScrollPane según sea necesario"\r\r        "Dibujar el tablero en el ImageMorph"\r        TableroLogico dibujarTablero: imagenMorph cantNPC: CantNPC.\r\r        "Cerrar cualquier ventana existente etiquetada \'TheConquist Board\'"\r        ventanaExistente := SystemWindow allInstances detect: [ :each | each label = \'TheConquist\' ] ifNone: [ nil ].\r        ventanaExistente ifNotNil: [ ventanaExistente close ].\r\r        "Abrir el ScrollPane en una ventana"\r        ventana := scrollPane openInWindowLabeled: \'TheConquist Board\'.\r\r        "Simular pantalla completa"\r        [ventana position: 0@0.\r        ventana extent: DisplayObject extent.\r        ventana borderWidth: 0] ensure: [ventana show].',
+			#stamp : '',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '4' ],
+		#self : OmReference [ '5' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #ManageJuego,
+			#sourceCode : 'dibujarFondoTablero\r    | imagen imagenMorph scrollPane ventanaExistente ventana |\r\r        "Cargar la imagen de fondo"\r        imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.jpg\'.\r\r        "Crear ImageMorph para la imagen de fondo"\r        imagenMorph := ImageMorph new.\r        imagenMorph image: imagen.\r        imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r\r        "Crear un ScrollPane y agregar el ImageMorph"\r        scrollPane := ScrollPane new.\r        scrollPane scroller addMorph: imagenMorph.\r        scrollPane extent: (300@300). "Ajustar el tamaño del ScrollPane según sea necesario"\r\r        "Dibujar el tablero en el ImageMorph"\r        TableroLogico dibujarTablero: imagenMorph cantNPC: CantNPC.\r\r        "Cerrar cualquier ventana existente etiquetada \'TheConquist Board\'"\r        ventanaExistente := SystemWindow allInstances detect: [ :each | each label = \'TheConquist\' ] ifNone: [ nil ].\r        ventanaExistente ifNotNil: [ ventanaExistente close ].\r\r        "Abrir el ScrollPane en una ventana"\r        ventana := scrollPane openInWindowLabeled: \'TheConquist Board\'.\r\r        "Simular pantalla completa"\r        [ventana position: 0@0.\r        ventana extent: DisplayObject extent.\r        ventana borderWidth: 0] ensure: [ventana show].',
+			#stamp : '',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #ManageJuego,
+			#sourceCode : 'dibujarFondoTablero\r    | imagen imagenMorph scrollPane ventanaExistente ventana |\r\r        "Cargar la imagen de fondo"\r        imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.jpg\'.\r\r        "Crear ImageMorph para la imagen de fondo"\r        imagenMorph := ImageMorph new.\r        imagenMorph image: imagen.\r        imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r\r        "Crear un ScrollPane y agregar el ImageMorph"\r        scrollPane := ScrollPane new.\r        scrollPane scroller addMorph: imagenMorph.\r        scrollPane extent: (300@300). "Ajustar el tamaño del ScrollPane según sea necesario"\r\r        "Dibujar el tablero en el ImageMorph"\r        TableroLogico dibujarTablero: imagenMorph cantNPC: CantNPC.\r\r        "Cerrar cualquier ventana existente etiquetada \'TheConquist Board\'"\r        ventanaExistente := SystemWindow allInstances detect: [ :each | each label = \'TheConquist\' ] ifNone: [ nil ].\r        ventanaExistente ifNotNil: [ ventanaExistente close ].\r\r        "Abrir el ScrollPane en una ventana"\r        ventana := scrollPane openInWindowLabeled: \'TheConquist Board\'.\r\r        "Simular pantalla completa"\r        [ventana position: 0@0.\r        ventana extent: DisplayScanner extent.\r        ventana borderWidth: 0] ensure: [ventana show].',
+			#stamp : '',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '5' ],
+		#self : OmReference [ '6' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #ManageJuego,
+			#sourceCode : 'dibujarFondoTablero\r    | imagen imagenMorph scrollPane ventanaExistente ventana |\r\r        "Cargar la imagen de fondo"\r        imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.jpg\'.\r\r        "Crear ImageMorph para la imagen de fondo"\r        imagenMorph := ImageMorph new.\r        imagenMorph image: imagen.\r        imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r\r        "Crear un ScrollPane y agregar el ImageMorph"\r        scrollPane := ScrollPane new.\r        scrollPane scroller addMorph: imagenMorph.\r        scrollPane extent: (300@300). "Ajustar el tamaño del ScrollPane según sea necesario"\r\r        "Dibujar el tablero en el ImageMorph"\r        TableroLogico dibujarTablero: imagenMorph cantNPC: CantNPC.\r\r        "Cerrar cualquier ventana existente etiquetada \'TheConquist Board\'"\r        ventanaExistente := SystemWindow allInstances detect: [ :each | each label = \'TheConquist\' ] ifNone: [ nil ].\r        ventanaExistente ifNotNil: [ ventanaExistente close ].\r\r        "Abrir el ScrollPane en una ventana"\r        ventana := scrollPane openInWindowLabeled: \'TheConquist Board\'.\r\r        "Simular pantalla completa"\r        [ventana position: 0@0.\r        ventana extent: DisplayScanner extent.\r        ventana borderWidth: 0] ensure: [ventana show].',
+			#stamp : '',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondoTablero,
+			#protocol : #ManageJuego,
+			#sourceCode : 'dibujarFondoTablero\r   | imagen imagenMorph scrollPane ventanaExistente ventana screenSize |\r\r        "Cargar la imagen de fondo"\r        imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background-table.jpg\'.\r\r        "Crear ImageMorph para la imagen de fondo"\r        imagenMorph := ImageMorph new.\r        imagenMorph image: imagen.\r        imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r\r        "Crear un ScrollPane y agregar el ImageMorph"\r        scrollPane := ScrollPane new.\r        scrollPane scroller addMorph: imagenMorph.\r        scrollPane extent: (300@300). "Ajustar el tamaño del ScrollPane según sea necesario"\r\r        "Dibujar el tablero en el ImageMorph"\r        TableroLogico dibujarTablero: imagenMorph cantNPC: CantNPC.\r\r        "Cerrar cualquier ventana existente etiquetada \'TheConquist Board\'"\r        ventanaExistente := SystemWindow allInstances detect: [ :each | each label = \'TheConquist\' ] ifNone: [ nil ].\r        ventanaExistente ifNotNil: [ ventanaExistente close ].\r\r        "Obtener el tamaño de la pantalla"\r        screenSize := World extent.\r\r        "Abrir el ScrollPane en una ventana"\r        ventana := scrollPane openInWindowLabeled: \'TheConquist Board\'.\r\r        "Simular pantalla completa"\r        [ventana position: 0@0.\r        ventana extent: screenSize.\r        ventana borderWidth: 0] ensure: [ventana show].\r    ',
+			#stamp : '',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '6' ],
+		#self : OmReference [ '7' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #simularDuelo,
+			#protocol : #ManageJuego,
+			#sourceCode : 'simularDuelo\r| listaDeFilasValidas maxFila maxColumna fila columna rival rivalfila rivalcolumna gana |\rUIManager default request: \'Va a simularse un duelo\'.\r    listaDeFilasValidas := OrderedCollection new.\r    maxFila := self cantNPC sqrt ceiling.\r    maxColumna := self cantNPC sqrt ceiling.\r\r    1 to: self cantNPC do: [ :i |\r        fila := (i - 1) // maxColumna + 1.\r        columna := (i - 1) \\\\ maxColumna + 1.\r\r        "Verifica si el tema del jugador coincide en la posición actual"\r        ((TableroLogico matrizDeTemas at: fila column: columna) = jugadorActual tema )ifTrue: [\r            "Agrega las posiciones válidas en base a la posición actual"\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (fila = 1 and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: 2@1.\r                listaDeFilasValidas add: 1@2.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (fila = 1 and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: 1@(maxColumna - 1).\r                listaDeFilasValidas add: 2@maxColumna.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (fila = maxFila and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: (maxFila - 1)@1.\r                listaDeFilasValidas add: maxFila@2.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (fila = maxFila and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: maxFila@(maxColumna - 1).\r                listaDeFilasValidas add: (maxFila - 1)@maxColumna.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (fila = 1 and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: 1@(columna - 1).\r                listaDeFilasValidas add: 1@(columna + 1).\r                listaDeFilasValidas add: 2@columna.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (fila = maxFila and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: maxFila@(columna - 1).\r                listaDeFilasValidas add: maxFila@(columna + 1).\r                listaDeFilasValidas add: (maxFila - 1)@columna.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (columna = 1 and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@1.\r                listaDeFilasValidas add: (fila + 1)@1.\r                listaDeFilasValidas add: fila@2.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (columna = maxColumna and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@maxColumna.\r                listaDeFilasValidas add: (fila + 1)@maxColumna.\r                listaDeFilasValidas add: fila@(maxColumna - 1).\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            ((1 < fila and: fila < maxFila) and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@columna.\r                listaDeFilasValidas add: (fila + 1)@columna.\r                listaDeFilasValidas add: fila@(columna - 1).\r                listaDeFilasValidas add: fila@(columna + 1).\r            ].].\r        ].\r    ].\rlistaDeFilasValidas inspect.\rlistaDeFilasValidas := (listaDeFilasValidas atRandom).\rrivalfila := (listaDeFilasValidas) x.\rrivalcolumna := (listaDeFilasValidas) y.\rrival := TableroLogico matrizTableroLógico at: rivalfila column: rivalcolumna.\r(rival nPC) ifFalse: [ "Llama al duelo contra persona" Transcript show: \'Duelo de bot - persona\'] ifTrue:[ Transcript show: \'Duelo de boys\'.\rgana := (Random new next < 0.5).\r(gana) ifTrue: [ self ganaDesafiante: jugadorActual desafiado: rival] ifFalse: [ self ganaDesafiante: rival desafiado: jugadorActual]  ].',
+			#stamp : '2/10/2025 17:56',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #simularDuelo,
+			#protocol : #ManageJuego,
+			#sourceCode : 'simularDuelo\r| listaDeFilasValidas maxFila maxColumna fila columna rival rivalfila rivalcolumna gana |\rUIManager default confirm: \'Es el turno de un bot\'.\r    listaDeFilasValidas := OrderedCollection new.\r    maxFila := self cantNPC sqrt ceiling.\r    maxColumna := self cantNPC sqrt ceiling.\r\r    1 to: self cantNPC do: [ :i |\r        fila := (i - 1) // maxColumna + 1.\r        columna := (i - 1) \\\\ maxColumna + 1.\r\r        "Verifica si el tema del jugador coincide en la posición actual"\r        ((TableroLogico matrizDeTemas at: fila column: columna) = jugadorActual tema )ifTrue: [\r            "Agrega las posiciones válidas en base a la posición actual"\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (fila = 1 and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: 2@1.\r                listaDeFilasValidas add: 1@2.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (fila = 1 and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: 1@(maxColumna - 1).\r                listaDeFilasValidas add: 2@maxColumna.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (fila = maxFila and: columna = 1) ifTrue: [\r                listaDeFilasValidas add: (maxFila - 1)@1.\r                listaDeFilasValidas add: maxFila@2.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (fila = maxFila and: columna = maxColumna) ifTrue: [\r                listaDeFilasValidas add: maxFila@(maxColumna - 1).\r                listaDeFilasValidas add: (maxFila - 1)@maxColumna.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (fila = 1 and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: 1@(columna - 1).\r                listaDeFilasValidas add: 1@(columna + 1).\r                listaDeFilasValidas add: 2@columna.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (fila = maxFila and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: maxFila@(columna - 1).\r                listaDeFilasValidas add: maxFila@(columna + 1).\r                listaDeFilasValidas add: (maxFila - 1)@columna.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (columna = 1 and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@1.\r                listaDeFilasValidas add: (fila + 1)@1.\r                listaDeFilasValidas add: fila@2.\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            (columna = maxColumna and: (1 < fila and: fila < maxFila)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@maxColumna.\r                listaDeFilasValidas add: (fila + 1)@maxColumna.\r                listaDeFilasValidas add: fila@(maxColumna - 1).\r            ].].\r(TableroLogico matrizDeTemas at: fila column: columna) = (jugadorActual tema) ifTrue:[\r            ((1 < fila and: fila < maxFila) and: (1 < columna and: columna < maxColumna)) ifTrue: [\r                listaDeFilasValidas add: (fila - 1)@columna.\r                listaDeFilasValidas add: (fila + 1)@columna.\r                listaDeFilasValidas add: fila@(columna - 1).\r                listaDeFilasValidas add: fila@(columna + 1).\r            ].].\r        ].\r    ].\rlistaDeFilasValidas := (listaDeFilasValidas atRandom).\rrivalfila := (listaDeFilasValidas) x.\rrivalcolumna := (listaDeFilasValidas) y.\rrival := TableroLogico matrizTableroLógico at: rivalfila column: rivalcolumna.\r(rival nPC) ifFalse: [ "Llama al duelo contra persona" Transcript show: \'Duelo de bot - persona\'] ifTrue:[ Transcript show: \'Duelo de boys\'.\rgana := (Random new next < 0.5).\r(gana) ifTrue: [ self ganaDesafiante: jugadorActual desafiado: rival] ifFalse: [ self ganaDesafiante: rival desafiado: jugadorActual]  ].',
+			#stamp : '',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '7' ],
+		#self : OmReference [ '8' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #'ganaDesafiante:desafiado:',
+			#protocol : #ManageJuego,
+			#sourceCode : 'ganaDesafiante: desafiante desafiado: desafiado\r| fila columna remplazo maxFila maxColumna |\rmaxFila := self cantNPC sqrt ceiling.\rmaxColumna := self cantNPC sqrt ceiling.\rfila := 1.\rcolumna := 1.\rremplazo := nil.\r\r"Buscar el reemplazo en matrizDeMorphs"\r1 to: (self cantNPC) do: [:i |\r    ((TableroLogico matrizDeMorphs at: fila column: columna) tema = desafiante tema) ifTrue: [\r        remplazo := (TableroLogico matrizDeMorphs at: fila column: columna).\r    ].\r    fila := fila + 1.\r    (fila > maxFila) ifTrue: [\r        fila := 1.\r        columna := columna + 1.\r    ].\r].\r\rfila := 1.\rcolumna := 1.\r\r"Actualizar los valores en matrizDeTemas y matrizDeMorphs"\r1 to: (self cantNPC) do: [:i |\r    (fila > maxFila) ifTrue: [ fila := 1. columna := columna + 1 ].\r    ((TableroLogico matrizDeTemas at: fila column: columna) = desafiado tema) ifTrue: [\r        "Actualizar matrizDeTemas"\r        TableroLogico matrizDeTemas at: fila column: columna put: desafiante tema.\r        \r        "Actualizar matrizDeMorphs"\r        ((TableroLogico matrizDeMorphs at: fila column: columna) tema = desafiado tema) ifTrue: [\r            (TableroLogico matrizDeMorphs at: fila column: columna) tema: desafiante tema.\r            (TableroLogico matrizDeMorphs at: fila column: columna) morph color: remplazo morph color.\r\t\t\t\t(TableroLogico matrizDeMorphs at: fila column: columna) labelMorph contents: desafiante tema.\r        ].\r    ].\r    fila := fila + 1.\r    (fila > maxFila) ifTrue: [ fila := 1. columna := columna + 1 ].\r].',
+			#stamp : '2/10/2025 17:54',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #'ganaDesafiante:desafiado:',
+			#protocol : #ManageJuego,
+			#sourceCode : 'ganaDesafiante: desafiante desafiado: desafiado\r| fila columna remplazo maxFila maxColumna |\rmaxFila := self cantNPC sqrt ceiling.\rmaxColumna := self cantNPC sqrt ceiling.\rfila := 1.\rcolumna := 1.\rremplazo := nil.\r\r"Buscar el reemplazo en matrizDeMorphs"\r1 to: (self cantNPC) do: [:i |\r    ((TableroLogico matrizDeMorphs at: fila column: columna) tema = desafiante tema) ifTrue: [\r        remplazo := (TableroLogico matrizDeMorphs at: fila column: columna).\r    ].\r    fila := fila + 1.\r    (fila > maxFila) ifTrue: [\r        fila := 1.\r        columna := columna + 1.\r    ].\r].\r\rfila := 1.\rcolumna := 1.\r\r"Actualizar los valores en matrizDeTemas y matrizDeMorphs"\r1 to: (self cantNPC) do: [:i |\r    (fila > maxFila) ifTrue: [ fila := 1. columna := columna + 1 ].\r    ((TableroLogico matrizDeTemas at: fila column: columna) = desafiado tema) ifTrue: [\r        "Actualizar matrizDeTemas"\r        TableroLogico matrizDeTemas at: fila column: columna put: desafiante tema.\r        \r        "Actualizar matrizDeMorphs"\r        ((TableroLogico matrizDeMorphs at: fila column: columna) tema = desafiado tema) ifTrue: [\r            (TableroLogico matrizDeMorphs at: fila column: columna) tema: desafiante tema.\r            (TableroLogico matrizDeMorphs at: fila column: columna) morph color: remplazo morph color.\r\t\t\t\t(TableroLogico matrizDeMorphs at: fila column: columna) labelMorph contents: desafiante tema.\r        ].\r    ].\r    fila := fila + 1.\r    (fila > maxFila) ifTrue: [ fila := 1. columna := columna + 1 ].\r].\rUIManager default inform: \'Ganó: \', desafiante nombre, \'tema: \', desafiante tema.',
+			#stamp : '',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '8' ],
+		#self : OmReference [ '9' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #'ganaDesafiante:desafiado:',
+			#protocol : #ManageJuego,
+			#sourceCode : 'ganaDesafiante: desafiante desafiado: desafiado\r| fila columna remplazo maxFila maxColumna |\rmaxFila := self cantNPC sqrt ceiling.\rmaxColumna := self cantNPC sqrt ceiling.\rfila := 1.\rcolumna := 1.\rremplazo := nil.\r\r"Buscar el reemplazo en matrizDeMorphs"\r1 to: (self cantNPC) do: [:i |\r    ((TableroLogico matrizDeMorphs at: fila column: columna) tema = desafiante tema) ifTrue: [\r        remplazo := (TableroLogico matrizDeMorphs at: fila column: columna).\r    ].\r    fila := fila + 1.\r    (fila > maxFila) ifTrue: [\r        fila := 1.\r        columna := columna + 1.\r    ].\r].\r\rfila := 1.\rcolumna := 1.\r\r"Actualizar los valores en matrizDeTemas y matrizDeMorphs"\r1 to: (self cantNPC) do: [:i |\r    (fila > maxFila) ifTrue: [ fila := 1. columna := columna + 1 ].\r    ((TableroLogico matrizDeTemas at: fila column: columna) = desafiado tema) ifTrue: [\r        "Actualizar matrizDeTemas"\r        TableroLogico matrizDeTemas at: fila column: columna put: desafiante tema.\r        \r        "Actualizar matrizDeMorphs"\r        ((TableroLogico matrizDeMorphs at: fila column: columna) tema = desafiado tema) ifTrue: [\r            (TableroLogico matrizDeMorphs at: fila column: columna) tema: desafiante tema.\r            (TableroLogico matrizDeMorphs at: fila column: columna) morph color: remplazo morph color.\r\t\t\t\t(TableroLogico matrizDeMorphs at: fila column: columna) labelMorph contents: desafiante tema.\r        ].\r    ].\r    fila := fila + 1.\r    (fila > maxFila) ifTrue: [ fila := 1. columna := columna + 1 ].\r].\rUIManager default inform: \'Ganó: \', desafiante nombre, \'tema: \', desafiante tema.',
+			#stamp : '',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #'ganaDesafiante:desafiado:',
+			#protocol : #ManageJuego,
+			#sourceCode : 'ganaDesafiante: desafiante desafiado: desafiado\r| fila columna remplazo maxFila maxColumna |\rmaxFila := self cantNPC sqrt ceiling.\rmaxColumna := self cantNPC sqrt ceiling.\rfila := 1.\rcolumna := 1.\rremplazo := nil.\r\r"Buscar el reemplazo en matrizDeMorphs"\r1 to: (self cantNPC) do: [:i |\r    ((TableroLogico matrizDeMorphs at: fila column: columna) tema = desafiante tema) ifTrue: [\r        remplazo := (TableroLogico matrizDeMorphs at: fila column: columna).\r    ].\r    fila := fila + 1.\r    (fila > maxFila) ifTrue: [\r        fila := 1.\r        columna := columna + 1.\r    ].\r].\r\rfila := 1.\rcolumna := 1.\r\r"Actualizar los valores en matrizDeTemas y matrizDeMorphs"\r1 to: (self cantNPC) do: [:i |\r    (fila > maxFila) ifTrue: [ fila := 1. columna := columna + 1 ].\r    ((TableroLogico matrizDeTemas at: fila column: columna) = desafiado tema) ifTrue: [\r        "Actualizar matrizDeTemas"\r        TableroLogico matrizDeTemas at: fila column: columna put: desafiante tema.\r        \r        "Actualizar matrizDeMorphs"\r        ((TableroLogico matrizDeMorphs at: fila column: columna) tema = desafiado tema) ifTrue: [\r            (TableroLogico matrizDeMorphs at: fila column: columna) tema: desafiante tema.\r            (TableroLogico matrizDeMorphs at: fila column: columna) morph color: remplazo morph color.\r\t\t\t\t(TableroLogico matrizDeMorphs at: fila column: columna) labelMorph contents: desafiante tema.\r        ].\r    ].\r    fila := fila + 1.\r    (fila > maxFila) ifTrue: [ fila := 1. columna := columna + 1 ].\r].\rUIManager default inform: \'Ganó: \', desafiante nombre,\' \', \'tema: \', desafiante tema.',
+			#stamp : '',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '9' ],
+		#self : OmReference [ '10' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #ManageJuego,
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 |\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2) + 120).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #borrarVentanasLabeledParticular. "Definir el método a llamar cuando se presiona el botón"\r    boton2 extent: 120@50.\r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2))  @ (imagenMorph height // 2 - (boton2 height // 2) + 220).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    "Abrir el ImageMorph en el mundo"\r    imagenMorph openInWindowLabeled: \'TheConquist\'.',
+			#stamp : '1/31/2025 22:05',
+			#package : #TheConquist
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#className : #Juego,
+				#isMeta : false
+			},
+			#name : #dibujarFondo,
+			#protocol : #ManageJuego,
+			#sourceCode : 'dibujarFondo\r    | imagen  boton1 boton2 ventana screenSize|\r    \r    "Cargar la imagen de fondo"\r    imagen := Form fromFileNamed: FileSystem workingDirectory / \'assets/backgrounds/background.png\'.\r    \r    "Crear ImageMorph para la imagen de fondo"\r    imagenMorph := ImageMorph new.\r    imagenMorph image: imagen.\r    imagenMorph position: 0@0. "Asegurarse de que la imagen de fondo esté en la esquina superior izquierda"\r    \r    "Crear el botón 1"\r    boton1 := SimpleButtonMorph new.\r    boton1 label: \'Nuevo Juego\'. "Definir el texto del botón"\r    boton1 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton1 actionSelector: #obtenerCantJugadores. "Definir el método a llamar cuando se presiona el botón"\r    boton1 extent: 150@50.\r    "Posicionar el botón 1 en el centro de la imagen"\r    boton1 position: (imagenMorph width // 2 - (boton1 width // 2)) @ (imagenMorph height // 2 - (boton1 height // 2) + 120).\r\r    "Crear el botón 2"\r    boton2 := SimpleButtonMorph new.\r    boton2 label: \'Salir\'. "Definir el texto del botón"\r    boton2 target: self. "Definir el objetivo de la acción como la instancia actual"\r    boton2 actionSelector: #borrarVentanasLabeledParticular. "Definir el método a llamar cuando se presiona el botón"\r    boton2 extent: 120@50.\r    "Posicionar el botón 2 debajo del botón 1"\r    boton2 position: (imagenMorph width // 2 - (boton2 width // 2))  @ (imagenMorph height // 2 - (boton2 height // 2) + 220).\r    \r    "Agregar los botones al ImageMorph"\r    imagenMorph addMorph: boton1.\r    imagenMorph addMorph: boton2.\r    "Abrir el ImageMorph en el mundo"\r    ventana := imagenMorph openInWindowLabeled: \'TheConquist\'.\r     [ventana position: 0@0.\r\tscreenSize := World extent.\r        ventana extent: screenSize.\r        ventana borderWidth: 0] ensure: [ventana show].',
+			#stamp : '',
+			#package : #TheConquist
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '10' ],
+		#self : OmReference [ '11' ]
+	},
+	#content : EpSessionSnapshot {
+		#imageName : 'C:\\Users\\Educacion\\Documents\\Pharo\\images\\The Conquist\\The Conquist.image'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '11' ],
+		#self : OmReference [ '12' ]
+	},
+	#content : EpSessionSnapshot {
+		#imageName : 'C:\\Users\\Educacion\\Documents\\Pharo\\images\\The Conquist\\The Conquist.image'
+	}
+}

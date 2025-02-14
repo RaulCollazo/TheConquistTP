@@ -1,1 +1,1 @@
-Juego iniciar.
+|juego|juego := Juego iniciar.

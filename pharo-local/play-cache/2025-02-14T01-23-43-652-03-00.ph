@@ -1,0 +1,1 @@
+Process allSubInstances do: [:each | each terminate]

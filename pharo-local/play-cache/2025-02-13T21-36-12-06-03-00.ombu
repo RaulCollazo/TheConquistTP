@@ -1,0 +1,19 @@
+OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-13T21:36:23.434-03:00' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : 'Smalltalk os windowSize y inspect.'
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-13T21:36:45.01-03:00' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : 'Smalltalk os windowSize '
+}OmEntry {
+	#tags : {
+		#timestamp : DateAndTime [ '2025-02-13T21:36:50.757-03:00' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : 'Smalltalk os windowSize x'
+}

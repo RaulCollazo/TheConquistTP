@@ -1,0 +1,1 @@
+TableroLogico crearMatrizTablero: 4 NPCs: 4.
